@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <BrowserRouter basename={import.meta.env.GITHUB_PAGES ? "/web/" : "/"}>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Provider>
                 <App />
             </Provider>
