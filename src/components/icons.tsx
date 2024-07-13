@@ -2,15 +2,16 @@ import { useContext } from "react";
 
 import { IconSvgProps } from "@/types";
 import { ThemeContext } from "@/context/theme";
+import { Image } from "@nextui-org/image";
 
 export function Logo({ size = 36, height }: IconSvgProps) {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <img
+        <Image
+            src={`logo.${theme}.png`}
             height={size || height}
             width={size || height}
-            src={`/logo.${theme}.png`}
         />
     );
 }

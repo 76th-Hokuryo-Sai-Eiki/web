@@ -3,7 +3,7 @@ import { blurhashToCssGradientString } from "@unpic/placeholder";
 
 type Prop = ImageProps & { blurhash: string };
 
-export function Image({ blurhash, ...props }: Prop) {
+export function SuspendImage({ blurhash, ...props }: Prop) {
     const placeholder = blurhashToCssGradientString(blurhash);
     return <UnpicImage {...props} background={placeholder} />;
 }

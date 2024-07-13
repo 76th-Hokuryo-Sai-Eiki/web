@@ -57,7 +57,7 @@ export default function App() {
                     </div>
                 ) : (
                     <Routes>
-                        <Route element={<IndexPage />} path="" />
+                        <Route element={<IndexPage />} path="/" />
                         <Route element={<AccessPage />} path="/access" />
                         <Route element={<PricingPage />} path="/pricing" />
                         <Route element={<BlogPage />} path="/blog" />

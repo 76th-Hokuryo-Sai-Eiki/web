@@ -14,7 +14,7 @@ import { Fadein, FadeinBottom } from "@/components/animations";
 import { GoogleCalendarIcon } from "@/components/icons";
 import { subtitle, title } from "@/components/primitives";
 import { TimeDisplay } from "@/components/time-display";
-import { Image as Img } from "@/components/image";
+import { SuspendImage as Img } from "@/components/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeContext } from "@/context/theme";
