@@ -2,14 +2,15 @@ import { ReactNode, StrictMode, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import App from "./App.tsx";
-import { Provider } from "./provider.tsx";
-import "@/styles/globals.css";
-
 import { sha256 } from "js-sha256";
 
+import App from "./App.tsx";
+import { Provider } from "./provider.tsx";
+
+import "@/styles/globals.css";
+
 let asked = false;
-function Lock({ children }: { children: ReactNode }) {
+function Guard({ children }: { children: ReactNode }) {
     const HASH = import.meta.env.VITE_PASS_HASH;
     if (!HASH) return children;
 
@@ -33,9 +34,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <BrowserRouter basename={"/web/"}>
             <Provider>
-                <Lock>
+                <Guard>
                     <App />
-                </Lock>
+                </Guard>
             </Provider>
         </BrowserRouter>
     </StrictMode>
