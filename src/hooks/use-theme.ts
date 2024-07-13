@@ -10,7 +10,7 @@ const ThemeProps = {
 
 type Theme = typeof ThemeProps.light | typeof ThemeProps.dark;
 
-export const useTheme = (defaultTheme?: Theme) => {
+export function useTheme(defaultTheme?: Theme) {
     const [theme, setTheme] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem(
             ThemeProps.key
@@ -49,4 +49,4 @@ export const useTheme = (defaultTheme?: Theme) => {
     });
 
     return { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme };
-};
+}

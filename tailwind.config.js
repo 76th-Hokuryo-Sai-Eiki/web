@@ -1,4 +1,5 @@
 import { nextui } from "@nextui-org/theme";
+import { color } from "framer-motion";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,7 +11,11 @@ module.exports = {
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                xs: "480px",
+            },
+        },
     },
     darkMode: "class",
     plugins: [nextui()],

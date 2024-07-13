@@ -1,23 +1,20 @@
-import { FC, useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import clsx from "clsx";
 
-import { useTheme } from "@/hooks/use-theme";
 import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
+import { ThemeContext } from "@/context/theme";
 
 export interface ThemeSwitchProps {
     className?: string;
     classNames?: SwitchProps["classNames"];
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({
-    className,
-    classNames,
-}) => {
+export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
     const [isMounted, setIsMounted] = useState(false);
 
-    const { theme, toggleTheme } = useTheme();
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     const onChange = toggleTheme;
 

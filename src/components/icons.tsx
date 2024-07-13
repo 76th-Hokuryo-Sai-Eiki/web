@@ -1,34 +1,26 @@
-import * as React from "react";
+import { useContext } from "react";
 
 import { IconSvgProps } from "@/types";
+import { ThemeContext } from "@/context/theme";
 
-export const Logo: React.FC<IconSvgProps> = ({
-    size = 36,
-    height,
-    ...props
-}) => (
-    <svg
-        fill="none"
-        height={size || height}
-        viewBox="0 0 32 32"
-        width={size || height}
-        {...props}
-    >
-        <path
-            clipRule="evenodd"
-            d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-            fill="currentColor"
-            fillRule="evenodd"
+export function Logo({ size = 36, height }: IconSvgProps) {
+    const { theme } = useContext(ThemeContext);
+
+    return (
+        <img
+            height={size || height}
+            width={size || height}
+            src={`/logo.${theme}.png`}
         />
-    </svg>
-);
+    );
+}
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({
+export function DiscordIcon({
     size = 24,
     width,
     height,
     ...props
-}) => {
+}: IconSvgProps) {
     return (
         <svg
             height={size || height}
@@ -42,14 +34,14 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({
             />
         </svg>
     );
-};
+}
 
-export const TwitterIcon: React.FC<IconSvgProps> = ({
+export function TwitterIcon({
     size = 24,
     width,
     height,
     ...props
-}) => {
+}: IconSvgProps) {
     return (
         <svg
             height={size || height}
@@ -63,14 +55,81 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
             />
         </svg>
     );
-};
+}
 
-export const GithubIcon: React.FC<IconSvgProps> = ({
+export function GoogleCalendarIcon({
     size = 24,
     width,
     height,
     ...props
-}) => {
+}: IconSvgProps) {
+    return (
+        <svg
+            height={size || height}
+            width={size || width}
+            viewBox="0 0 200 200"
+            {...props}
+        >
+            <g>
+                <g transform="translate(3.75 3.75)">
+                    <path
+                        fill="#FFFFFF"
+                        d="M148.882,43.618l-47.368-5.263l-57.895,5.263L38.355,96.25l5.263,52.632l52.632,6.579l52.632-6.579
+            l5.263-53.947L148.882,43.618z"
+                    />
+                    <path
+                        fill="#1A73E8"
+                        d="M65.211,125.276c-3.934-2.658-6.658-6.539-8.145-11.671l9.132-3.763c0.829,3.158,2.276,5.605,4.342,7.342
+            c2.053,1.737,4.553,2.592,7.474,2.592c2.987,0,5.553-0.908,7.697-2.724s3.224-4.132,3.224-6.934c0-2.868-1.132-5.211-3.395-7.026
+            s-5.105-2.724-8.5-2.724h-5.276v-9.039H76.5c2.921,0,5.382-0.789,7.382-2.368c2-1.579,3-3.737,3-6.487
+            c0-2.447-0.895-4.395-2.684-5.855s-4.053-2.197-6.803-2.197c-2.684,0-4.816,0.711-6.395,2.145s-2.724,3.197-3.447,5.276
+            l-9.039-3.763c1.197-3.395,3.395-6.395,6.618-8.987c3.224-2.592,7.342-3.895,12.342-3.895c3.697,0,7.026,0.711,9.974,2.145
+            c2.947,1.434,5.263,3.421,6.934,5.947c1.671,2.539,2.5,5.382,2.5,8.539c0,3.224-0.776,5.947-2.329,8.184
+            c-1.553,2.237-3.461,3.947-5.724,5.145v0.539c2.987,1.25,5.421,3.158,7.342,5.724c1.908,2.566,2.868,5.632,2.868,9.211
+            s-0.908,6.776-2.724,9.579c-1.816,2.803-4.329,5.013-7.513,6.618c-3.197,1.605-6.789,2.421-10.776,2.421
+            C73.408,129.263,69.145,127.934,65.211,125.276z"
+                    />
+                    <path
+                        fill="#1A73E8"
+                        d="M121.25,79.961l-9.974,7.25l-5.013-7.605l17.987-12.974h6.895v61.197h-9.895L121.25,79.961z"
+                    />
+                    <path
+                        fill="#EA4335"
+                        d="M148.882,196.25l47.368-47.368l-23.684-10.526l-23.684,10.526l-10.526,23.684L148.882,196.25z"
+                    />
+                    <path
+                        fill="#34A853"
+                        d="M33.092,172.566l10.526,23.684h105.263v-47.368H43.618L33.092,172.566z"
+                    />
+                    <path
+                        fill="#4285F4"
+                        d="M12.039-3.75C3.316-3.75-3.75,3.316-3.75,12.039v136.842l23.684,10.526l23.684-10.526V43.618h105.263
+            l10.526-23.684L148.882-3.75H12.039z"
+                    />
+                    <path
+                        fill="#188038"
+                        d="M-3.75,148.882v31.579c0,8.724,7.066,15.789,15.789,15.789h31.579v-47.368H-3.75z"
+                    />
+                    <path
+                        fill="#FBBC04"
+                        d="M148.882,43.618v105.263h47.368V43.618l-23.684-10.526L148.882,43.618z"
+                    />
+                    <path
+                        fill="#1967D2"
+                        d="M196.25,43.618V12.039c0-8.724-7.066-15.789-15.789-15.789h-31.579v47.368H196.25z"
+                    />
+                </g>
+            </g>
+        </svg>
+    );
+}
+
+export function GithubIcon({
+    size = 24,
+    width,
+    height,
+    ...props
+}: IconSvgProps) {
     return (
         <svg
             height={size || height}
@@ -86,106 +145,114 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
             />
         </svg>
     );
-};
+}
 
-export const MoonFilledIcon = ({
+export function MoonFilledIcon({
     size = 24,
     width,
     height,
     ...props
-}: IconSvgProps) => (
-    <svg
-        aria-hidden="true"
-        focusable="false"
-        height={size || height}
-        role="presentation"
-        viewBox="0 0 24 24"
-        width={size || width}
-        {...props}
-    >
-        <path
-            d="M21.53 15.93c-.16-.27-.61-.69-1.73-.49a8.46 8.46 0 01-1.88.13 8.409 8.409 0 01-5.91-2.82 8.068 8.068 0 01-1.44-8.66c.44-1.01.13-1.54-.09-1.76s-.77-.55-1.83-.11a10.318 10.318 0 00-6.32 10.21 10.475 10.475 0 007.04 8.99 10 10 0 002.89.55c.16.01.32.02.48.02a10.5 10.5 0 008.47-4.27c.67-.93.49-1.519.32-1.79z"
-            fill="currentColor"
-        />
-    </svg>
-);
+}: IconSvgProps) {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            height={size || height}
+            role="presentation"
+            viewBox="0 0 24 24"
+            width={size || width}
+            {...props}
+        >
+            <path
+                d="M21.53 15.93c-.16-.27-.61-.69-1.73-.49a8.46 8.46 0 01-1.88.13 8.409 8.409 0 01-5.91-2.82 8.068 8.068 0 01-1.44-8.66c.44-1.01.13-1.54-.09-1.76s-.77-.55-1.83-.11a10.318 10.318 0 00-6.32 10.21 10.475 10.475 0 007.04 8.99 10 10 0 002.89.55c.16.01.32.02.48.02a10.5 10.5 0 008.47-4.27c.67-.93.49-1.519.32-1.79z"
+                fill="currentColor"
+            />
+        </svg>
+    );
+}
 
-export const SunFilledIcon = ({
+export function SunFilledIcon({
     size = 24,
     width,
     height,
     ...props
-}: IconSvgProps) => (
-    <svg
-        aria-hidden="true"
-        focusable="false"
-        height={size || height}
-        role="presentation"
-        viewBox="0 0 24 24"
-        width={size || width}
-        {...props}
-    >
-        <g fill="currentColor">
-            <path d="M19 12a7 7 0 11-7-7 7 7 0 017 7z" />
-            <path d="M12 22.96a.969.969 0 01-1-.96v-.08a1 1 0 012 0 1.038 1.038 0 01-1 1.04zm7.14-2.82a1.024 1.024 0 01-.71-.29l-.13-.13a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.984.984 0 01-.7.29zm-14.28 0a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a1 1 0 01-.7.29zM22 13h-.08a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zM2.08 13H2a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zm16.93-7.01a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a.984.984 0 01-.7.29zm-14.02 0a1.024 1.024 0 01-.71-.29l-.13-.14a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.97.97 0 01-.7.3zM12 3.04a.969.969 0 01-1-.96V2a1 1 0 012 0 1.038 1.038 0 01-1 1.04z" />
-        </g>
-    </svg>
-);
+}: IconSvgProps) {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            height={size || height}
+            role="presentation"
+            viewBox="0 0 24 24"
+            width={size || width}
+            {...props}
+        >
+            <g fill="currentColor">
+                <path d="M19 12a7 7 0 11-7-7 7 7 0 017 7z" />
+                <path d="M12 22.96a.969.969 0 01-1-.96v-.08a1 1 0 012 0 1.038 1.038 0 01-1 1.04zm7.14-2.82a1.024 1.024 0 01-.71-.29l-.13-.13a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.984.984 0 01-.7.29zm-14.28 0a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a1 1 0 01-.7.29zM22 13h-.08a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zM2.08 13H2a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zm16.93-7.01a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a.984.984 0 01-.7.29zm-14.02 0a1.024 1.024 0 01-.71-.29l-.13-.14a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.97.97 0 01-.7.3zM12 3.04a.969.969 0 01-1-.96V2a1 1 0 012 0 1.038 1.038 0 01-1 1.04z" />
+            </g>
+        </svg>
+    );
+}
 
-export const HeartFilledIcon = ({
+export function HeartFilledIcon({
     size = 24,
     width,
     height,
     ...props
-}: IconSvgProps) => (
-    <svg
-        aria-hidden="true"
-        focusable="false"
-        height={size || height}
-        role="presentation"
-        viewBox="0 0 24 24"
-        width={size || width}
-        {...props}
-    >
-        <path
-            d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
-            fill="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-        />
-    </svg>
-);
+}: IconSvgProps) {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            height={size || height}
+            role="presentation"
+            viewBox="0 0 24 24"
+            width={size || width}
+            {...props}
+        >
+            <path
+                d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
+                fill="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+            />
+        </svg>
+    );
+}
 
-export const SearchIcon = (props: IconSvgProps) => (
-    <svg
-        aria-hidden="true"
-        fill="none"
-        focusable="false"
-        height="1em"
-        role="presentation"
-        viewBox="0 0 24 24"
-        width="1em"
-        {...props}
-    >
-        <path
-            d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-        />
-        <path
-            d="M22 22L20 20"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-        />
-    </svg>
-);
+export function SearchIcon(props: IconSvgProps) {
+    return (
+        <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="1em"
+            {...props}
+        >
+            <path
+                d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                d="M22 22L20 20"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </svg>
+    );
+}
 
-export const NextUILogo: React.FC<IconSvgProps> = (props) => {
+export function NextUILogo(props: IconSvgProps) {
     const { width, height = 40 } = props;
 
     return (
@@ -211,4 +278,4 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
             />
         </svg>
     );
-};
+}
