@@ -5,7 +5,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
+        "deploy": "gh-pages -d build",
+        "build": "tsc && vite build && cp dist/index.html dist/404.html",
         "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
         "blurhash": "node ./src/blurhash.js",
         "preview": "vite preview"
