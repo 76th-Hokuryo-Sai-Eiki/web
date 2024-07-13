@@ -1,5 +1,6 @@
 {
-    "name": "vite-template",
+    "name": "76th_hokuryo-sai_web",
+    "homepage": "https://76th-hokuryo-sai-eiki.github.io/web",
     "private": true,
     "version": "0.0.0",
     "type": "module",
