@@ -25,7 +25,7 @@ export function Fadein({
           });
 
     return (
-        <div
+        <span
             className={once || inView ? "fade-in" : "opacity-0"}
             ref={ref}
             style={{
@@ -34,7 +34,7 @@ export function Fadein({
             }}
         >
             {children}
-        </div>
+        </span>
     );
 }
 
@@ -54,13 +54,14 @@ export const FadeinBottom = ({
         triggerOnce: once,
     });
 
-    const className = inView ? "fade-in-bottom" : "opacity-0";
-
     return Children.map(children, (child) => {
         if (isValidElement(child)) {
             return cloneElement(child as ReactElement, {
                 ref,
-                className: [child.props.className, className]
+                className: [
+                    child.props.className,
+                    inView ? "fade-in-bottom" : "opacity-0",
+                ]
                     .filter((e) => e)
                     .join(" "),
                 style: {

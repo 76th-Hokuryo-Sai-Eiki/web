@@ -1,10 +1,12 @@
-import { useState, useEffect, useContext } from "react";
-import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
+import { VisuallyHidden } from "@react-aria/visually-hidden";
 import clsx from "clsx";
+import { useContext, useEffect, useState } from "react";
 
-import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
+import { BsFillSunFill } from "react-icons/bs";
+
 import { ThemeContext } from "@/context/theme";
+import { FaMoon } from "react-icons/fa6";
 
 export interface ThemeSwitchProps {
     className?: string;
@@ -70,9 +72,9 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
                 })}
             >
                 {isSelected ? (
-                    <MoonFilledIcon size={22} />
+                    <FaMoon size={22} />
                 ) : (
-                    <SunFilledIcon size={22} />
+                    <BsFillSunFill size={22} />
                 )}
             </div>
         </Component>

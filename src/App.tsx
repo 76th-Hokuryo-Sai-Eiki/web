@@ -1,13 +1,9 @@
-import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import LoadingScreen from "@/pages/loading";
-import IndexPage from "@/pages/index";
-import AccessPage from "@/pages/access";
-import PricingPage from "@/pages/pricing";
-import BlogPage from "@/pages/blog";
-import AboutPage from "@/pages/about";
 import { useTheme } from "@/hooks/use-theme";
+import IndexPage from "@/pages/index";
+import LoadingScreen from "@/pages/loading";
 import { ThemeContext } from "./context/theme";
 
 export default function App() {
@@ -17,13 +13,19 @@ export default function App() {
         useTheme();
 
     useEffect(() => {
-        const fadeoutId = setTimeout(() => {
-            setFadeout(true);
-        }, 3000);
+        const fadeoutId = setTimeout(
+            () => {
+                setFadeout(true);
+            },
+            import.meta.env.DEV ? 500 : 3000
+        );
 
-        const loadingId = setTimeout(() => {
-            setLoading(false);
-        }, 6000);
+        const loadingId = setTimeout(
+            () => {
+                setLoading(false);
+            },
+            import.meta.env.DEV ? 1000 : 6000
+        );
 
         return () => {
             clearTimeout(loadingId), clearTimeout(fadeoutId);
@@ -58,10 +60,10 @@ export default function App() {
                 ) : (
                     <Routes>
                         <Route element={<IndexPage />} path="/" />
-                        <Route element={<AccessPage />} path="/access" />
+                        {/* <Route element={<AccessPage />} path="/access" />
                         <Route element={<PricingPage />} path="/pricing" />
                         <Route element={<BlogPage />} path="/blog" />
-                        <Route element={<AboutPage />} path="/about" />
+                        <Route element={<AboutPage />} path="/about" /> */}
                     </Routes>
                 )}
             </div>

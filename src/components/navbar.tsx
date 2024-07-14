@@ -11,9 +11,10 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 
-import { GithubIcon, Logo, TwitterIcon } from "@/components/icons";
+import { Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
+import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 export function Navbar() {
     // const searchInput = (
@@ -74,13 +75,13 @@ export function Navbar() {
                 <NavbarItem className="hidden md:flex gap-2">
                     <ThemeSwitch />
                     <Link isExternal href={siteConfig.links.twitter}>
-                        <TwitterIcon className="text-default-500" />
+                        <FaTwitter className="text-default-500" size={22} />
                     </Link>
                     {/* <Link isExternal href={siteConfig.links.discord}>
                         <DiscordIcon className="text-default-500" />
                     </Link> */}
                     <Link isExternal href={siteConfig.links.github}>
-                        <GithubIcon className="text-default-500" />
+                        <FaGithub className="text-default-500" size={22} />
                     </Link>
                 </NavbarItem>
                 {/* <NavbarItem className="hidden lg:flex">
@@ -105,10 +106,10 @@ export function Navbar() {
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <ThemeSwitch />
                 <Link isExternal href={siteConfig.links.twitter}>
-                    <TwitterIcon className="text-default-500" />
+                    <FaTwitter className="text-default-500" size={22} />
                 </Link>
                 <Link isExternal href={siteConfig.links.github}>
-                    <GithubIcon className="text-default-500" />
+                    <FaGithub className="text-default-500" size={22} />
                 </Link>
                 <NavbarMenuToggle />
             </NavbarContent>

@@ -24,9 +24,9 @@ import { chooseRandom } from "@/functions/utility";
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 
-import { Catchphrase } from "./title/catchphrase";
+import { Catchphrase } from "./catchphrase";
 
-export function CountDown({ compact = false }: { compact?: boolean }) {
+function CountDown({ compact = false }: { compact?: boolean }) {
     const [count, { startCountdown }] = useCountdown({
         countStart: Math.floor(
             (siteConfig.eventDate.getTime() - Date.now()) / 250
@@ -52,7 +52,7 @@ export function CountDown({ compact = false }: { compact?: boolean }) {
     );
 }
 
-export function CountDownContainer({ children }: { children: ReactElement }) {
+function CountDownContainer({ children }: { children: ReactElement }) {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
     const subscribe = useCallback((onStoreChange: () => void) => {
@@ -90,7 +90,6 @@ export function CountDownContainer({ children }: { children: ReactElement }) {
                     }}
                 >
                     あと
-                    <span style={{ fontSize: "16pt" }}>...</span>
                 </h1>
                 <div className="sm:ml-6 mt-4">
                     {cloneElement(children, {
@@ -120,10 +119,10 @@ export function Title() {
     const { theme } = useContext(ThemeContext);
 
     return (
-        <section className="grid grid-cols-5 min-w-52 min-h-[90vh]  items-center justify-center gap-4 py-8 xl:px-12">
+        <section className="grid grid-cols-5 min-w-52 min-h-[90vh]  items-center justify-center gap-4 py-8 px-0 xl:px-12">
             <div className="col-span-full 2xl:col-span-3 2xl:col-start-2 text-center justify-center">
                 <div className="flex justify-center">
-                    <div className="max-w-lg sm:px-4">
+                    <div className="max-w-xl sm:max-w-lg sm:px-4">
                         <Img
                             src={`banner.${theme}.png`}
                             layout="constrained"
@@ -135,11 +134,7 @@ export function Title() {
                     </div>
                 </div>
 
-                <FadeinBottom>
-                    <div style={{}}>
-                        <Catchphrase />
-                    </div>
-                </FadeinBottom>
+                <Catchphrase />
             </div>
 
             <div className="col-span-full 2xl:col-start-2 2xl:col-span-3">
@@ -149,10 +144,9 @@ export function Title() {
                             <h1
                                 className={title({
                                     size: "xl",
-                                    class: "m-4 sm:mr-6",
+                                    class: "m-4 pt-1 sm:mr-6 text-[2.5rem] sm:text-5xl",
                                 })}
                                 style={{
-                                    fontSize: "34pt",
                                     fontFamily: "Noto Serif JP",
                                 }}
                             >
@@ -166,13 +160,12 @@ export function Title() {
                             <h1
                                 className={title({
                                     size: "xl",
-                                    class: "-ml-2 sm:ml-0",
+                                    class: "-ml-2 sm:ml-0 2xl:ml-2 text-[4.25rem]  sm:text-7xl 2xl:text-[4.7rem]",
                                     color: chooseRandom(
                                         Object.keys(title.variants.color)
                                     ),
                                 })}
                                 style={{
-                                    fontSize: "52pt",
                                     fontFamily: "Noto Serif JP",
                                 }}
                             >

@@ -6,6 +6,38 @@
     --color: gray;
 }
 
+body {
+    height: 100%;
+}
+
+.simple-scrollbar {
+    margin: 0 auto;
+    overflow-x: scroll;
+    border-radius: 5px;
+}
+
+.simple-scrollbar::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.blurred-border {
+    border-image: linear-gradient(
+            to top,
+            hsl(var(--nextui-default-50)) 0%,
+            hsl(var(--nextui-default-300)) 20%,
+            hsl(var(--nextui-default-300)) 80%,
+            hsl(var(--nextui-default-50)) 100%
+        )
+        1;
+}
+
+.simple-scrollbar::-webkit-scrollbar-thumb {
+    background-color: gray;
+    width: 6px;
+    border-radius: 5px;
+}
+
 .header {
     position: relative;
     line-height: 1.4;
