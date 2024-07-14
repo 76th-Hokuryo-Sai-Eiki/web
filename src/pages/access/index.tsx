@@ -1,4 +1,4 @@
-import { FadeinBottom } from "@/components/animations";
+import { Fadein, FadeinBottom } from "@/components/animations";
 import { Location } from "./location";
 import { Routes } from "./routes";
 import { useRef } from "react";
@@ -31,8 +31,8 @@ export function Access() {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-[2px]">
-                            <FadeinBottom duration="0.8s" distance="40px">
-                                <div className="w-full z-10" id="google-map">
+                            <div className="w-full z-10" id="google-map">
+                                <Fadein duration="0.8s">
                                     <iframe
                                         ref={mapRef}
                                         src={PLANE_MAP}
@@ -41,9 +41,9 @@ export function Access() {
                                         loading="lazy"
                                         allowFullScreen
                                         referrerPolicy="no-referrer-when-downgrade"
-                                    ></iframe>
-                                </div>
-                            </FadeinBottom>
+                                    />
+                                </Fadein>
+                            </div>
 
                             <div className="h-fit">
                                 <Location
