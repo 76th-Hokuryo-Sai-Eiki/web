@@ -22,7 +22,7 @@ import { Link } from "@nextui-org/link";
 import { FaTrainSubway } from "react-icons/fa6";
 import carRoute, { columns as carColumns } from "./info/car.tsx";
 import publicRoute, { columns as publicColumns } from "./info/public.tsx";
-import { Fadein, FadeinBottom } from "@/components/animations.tsx";
+import { FadeinBottom } from "@/components/animations.tsx";
 
 function builder(item: any, key: any, handler: any) {
     const cellValue = item[key];
