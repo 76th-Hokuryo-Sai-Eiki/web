@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Location } from "./location";
 import { Routes } from "./routes";
 
-import { Fadein, FadeinBottom } from "@/components/animations";
+import { Fadein, FadeinSlide } from "@/components/animations";
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 
 const PLANE_MAP =
@@ -26,7 +26,7 @@ export function Access() {
         <section className="flex flex-col m-2">
             <div className="main-inner form-contents">
                 <div>
-                    <FadeinBottom distance="20px" duration="0.8s">
+                    <FadeinSlide distance={20} duration="0.8s">
                         <h1
                             className="header mb-3"
                             style={{
@@ -36,7 +36,7 @@ export function Access() {
                         >
                             Access
                         </h1>
-                    </FadeinBottom>
+                    </FadeinSlide>
 
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-[2px]">

@@ -7,7 +7,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationDot, FaSignsPost } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
 
-import { FadeinBottom } from "@/components/animations";
+import { FadeinSlide } from "@/components/animations";
 
 export function Location({ onRoute }: any) {
     return (
@@ -42,12 +42,12 @@ export function Location({ onRoute }: any) {
                                 );
                             }}
                         >
-                            <FadeinBottom distance="10px" duration="0.5s">
+                            <FadeinSlide distance={10} duration="0.5s">
                                 <p>宮城県仙台第二高等学校</p>
-                            </FadeinBottom>
+                            </FadeinSlide>
                         </Button>
                     </Tooltip>
-                    <FadeinBottom>
+                    <FadeinSlide>
                         <Link
                             isExternal
                             className="text-small text-default-500"
@@ -55,7 +55,7 @@ export function Location({ onRoute }: any) {
                         >
                             sen2-h.myswan.ed.jp
                         </Link>
-                    </FadeinBottom>
+                    </FadeinSlide>
                 </div>
             </CardHeader>
             <Divider />
@@ -63,7 +63,7 @@ export function Location({ onRoute }: any) {
                 <ul className="overflow-hidden">
                     <li className="inline-flex items-start">
                         <FaSignsPost className="mr-3 mt-1.5" />
-                        <FadeinBottom distance="20px" duration="0.5s">
+                        <FadeinSlide distance={20} duration="0.5s">
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -83,7 +83,7 @@ export function Location({ onRoute }: any) {
                                     </Button>
                                 </Tooltip>
                             </div>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </li>
 
                     <li className="inline-flex items-start">
@@ -103,7 +103,7 @@ export function Location({ onRoute }: any) {
                                 <FaLocationDot className="mr-3 mt-[0.35rem]" />
                             </Link>
                         </Tooltip>
-                        <FadeinBottom distance="20px" duration="0.5s">
+                        <FadeinSlide distance={20} duration="0.5s">
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -130,12 +130,12 @@ export function Location({ onRoute }: any) {
                                     </Button>
                                 </Tooltip>
                             </div>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </li>
 
                     <li className="inline-flex items-start">
                         <BsFillTelephoneFill className="mr-3 mt-1.5" />
-                        <FadeinBottom distance="20px" duration="0.5s">
+                        <FadeinSlide distance={20} duration="0.5s">
                             <Link
                                 isExternal
                                 className="text-primary"
@@ -145,7 +145,7 @@ export function Location({ onRoute }: any) {
                                     022-221-5626
                                 </span>
                             </Link>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </li>
                 </ul>
             </CardBody>

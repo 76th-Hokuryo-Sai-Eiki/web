@@ -21,7 +21,7 @@ import { SiGooglemaps } from "react-icons/si";
 import carRoute, { columns as carColumns } from "./info/car.tsx";
 import publicRoute, { columns as publicColumns } from "./info/public.tsx";
 
-import { FadeinBottom } from "@/components/animations.tsx";
+import { FadeinSlide } from "@/components/animations.tsx";
 
 function builder(item: any, key: any, handler: any) {
     const cellValue = item[key];
@@ -36,7 +36,7 @@ function builder(item: any, key: any, handler: any) {
                         fallback: item.icon,
                     }}
                     description={
-                        <FadeinBottom>
+                        <FadeinSlide>
                             <Link
                                 isExternal
                                 className="text-tiny text-default-400 opacity-100"
@@ -45,7 +45,7 @@ function builder(item: any, key: any, handler: any) {
                             >
                                 {item.description}
                             </Link>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     }
                     name={
                         <Link
@@ -72,7 +72,7 @@ function builder(item: any, key: any, handler: any) {
                         </span>
                     </p>
                     <p className="text-bold text-tiny text-default-400">
-                        <FadeinBottom>
+                        <FadeinSlide>
                             <Link
                                 isExternal
                                 className="text-small text-default-400 opacity-100"
@@ -81,7 +81,7 @@ function builder(item: any, key: any, handler: any) {
                             >
                                 {item.epexegesis}
                             </Link>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </p>
                 </div>
             );
@@ -124,18 +124,18 @@ function TopContent({
                         </h4>
                     </div>
                     <BrowserView className="pr-1 flex flex-col justify-end -mb-1">
-                        <FadeinBottom>
+                        <FadeinSlide>
                             <p className="text-tiny text-default-400">
                                 項目クリックでルートを表示
                             </p>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </BrowserView>
                     <MobileView className="pr-1 flex flex-col justify-end -mb-1">
-                        <FadeinBottom>
+                        <FadeinSlide>
                             <p className="text-tiny text-default-400">
                                 項目タップでルートを表示
                             </p>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </MobileView>
                 </div>
             </div>
@@ -202,7 +202,7 @@ function Car({ onRoute }: any) {
                 <>
                     <Divider />
                     <div className="flex text-sm text-default-600">
-                        <FadeinBottom distance="10px">
+                        <FadeinSlide distance={10}>
                             <p>
                                 本校敷地内に駐車場はございません。近隣の有料駐車場をご利用ください。
                                 <br />
@@ -210,7 +210,7 @@ function Car({ onRoute }: any) {
                                     本校敷地及び宮城県美術館様駐車場への駐車はご遠慮ください。
                                 </strong>
                             </p>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </div>
                 </>
             }
@@ -275,19 +275,19 @@ function Bike() {
             <CardBody>
                 <div className="w-fit">
                     <p className="text-[15px] text-default-600">
-                        <FadeinBottom distance="10px">
+                        <FadeinSlide distance={10}>
                             <span className="inline-block">
                                 来場者の方専用の駐輪場がございます。
                             </span>
-                        </FadeinBottom>
+                        </FadeinSlide>
                         <span className="inline lg:hidden 2xl:inline">
                             <br />
                         </span>
-                        <FadeinBottom distance="10px">
+                        <FadeinSlide distance={10}>
                             <span className="inline-block">
                                 係の指示に従ってご利用ください。
                             </span>
-                        </FadeinBottom>
+                        </FadeinSlide>
                     </p>
                 </div>
             </CardBody>

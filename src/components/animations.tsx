@@ -36,19 +36,19 @@ export function Fadein({
     );
 }
 
-export const FadeinBottom = ({
+export function FadeinSlide({
     children,
     duration = "0.7s",
-    distance = "20px",
+    distance = 20,
     once = false,
 }: {
     children: ReactNode;
     duration?: string;
-    distance?: string;
+    distance?: number;
     once?: boolean;
-}) => {
+}) {
     const { ref, inView } = useInView({
-        rootMargin: "-" + distance,
+        rootMargin: `${-distance}px`,
         triggerOnce: once,
     });
 
@@ -64,7 +64,7 @@ export const FadeinBottom = ({
                     .join(" "),
                 style: {
                     "--duration": duration,
-                    "--distance": distance,
+                    "--distance": `${distance}px`,
                     ...child.props.style,
                 },
             });
@@ -72,4 +72,4 @@ export const FadeinBottom = ({
             return child;
         }
     });
-};
+}

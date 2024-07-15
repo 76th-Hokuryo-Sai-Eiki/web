@@ -1,4 +1,4 @@
-import { Fadein, FadeinBottom } from "@/components/animations";
+import { Fadein, FadeinSlide } from "@/components/animations";
 import { subtitle } from "@/components/primitives";
 
 export function Catchphrase() {
@@ -13,7 +13,7 @@ export function Catchphrase() {
                     paddingBottom: "6px",
                 }}
             >
-                <FadeinBottom>
+                <FadeinSlide>
                     <p
                         className={subtitle({
                             class: "max-w-lg my-0",
@@ -141,7 +141,7 @@ export function Catchphrase() {
                             </span>
                         </span>
                     </p>
-                </FadeinBottom>
+                </FadeinSlide>
             </div>
         </Fadein>
     );

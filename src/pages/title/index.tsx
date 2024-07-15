@@ -13,7 +13,7 @@ import { useCountdown } from "usehooks-ts";
 
 import { Catchphrase } from "./catchphrase";
 
-import { Fadein, FadeinBottom } from "@/components/animations";
+import { Fadein, FadeinSlide } from "@/components/animations";
 import { GoogleCalendarIcon } from "@/components/icons";
 import { SuspendImage } from "@/components/image";
 import { subtitle, title } from "@/components/primitives";
@@ -173,14 +173,14 @@ export function Title() {
             </div>
 
             <div className="col-span-full row-start-3 2xl:col-start-2 2xl:col-span-3 text-center justify-center">
-                <FadeinBottom duration="0.5s">
+                <FadeinSlide duration="0.5s">
                     <h4
                         className={subtitle({ class: "mt-6" })}
                         style={{ fontFamily: "Arsenal SC" }}
                     >
                         2024/08/31 ー 2024/09/01
                     </h4>
-                </FadeinBottom>
+                </FadeinSlide>
                 <Link
                     isExternal
                     className={buttonStyles({
