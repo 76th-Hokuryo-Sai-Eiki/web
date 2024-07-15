@@ -3,7 +3,6 @@ import { ReactNode, useEffect, useState } from "react";
 
 export function makeGuard() {
     let asked = false;
-    let view = false;
 
     function Guard({ children }: { children: ReactNode }) {
         const HASH = import.meta.env.VITE_PASS_HASH;
@@ -13,12 +12,10 @@ export function makeGuard() {
             if (HASH && !asked && hash === null) {
                 asked = true;
                 setHash(sha256(window.prompt("Pass?") ?? ""));
-                view = true;
             }
         }, [HASH, hash]);
 
         if (!HASH) return children;
-        if (!view) return null;
 
         return hash === HASH ? (
             children
