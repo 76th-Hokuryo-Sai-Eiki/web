@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --color: gray;
+    --color: hsl(var(--nextui-default-400));
 }
 
 body {
@@ -20,7 +20,7 @@ body {
         width: 8px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: gray;
+        background-color: hsl(var(--nextui-default-400));
         width: 6px;
         border-radius: 5px;
     }

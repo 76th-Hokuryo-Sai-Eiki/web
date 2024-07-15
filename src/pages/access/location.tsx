@@ -12,7 +12,7 @@ import { FadeinSlide } from "@/components/animations";
 export function Location({ onRoute }: any) {
     return (
         <Card
-            className="rounded-b-xl pb-1 pt-2 sm:pt-0 -mt-1 sm:-ml-1 sm:pl-1 sm:max-w-[400px] sm:mt-5 sm:rounded-bl-none sm:rounded-r-xl bg-default-200"
+            className="rounded-b-xl pb-1 pt-1 sm:pt-0 -mt-1 sm:-ml-1 sm:pl-1 sm:max-w-[400px] sm:mt-5 sm:rounded-bl-none sm:rounded-r-xl bg-default-200"
             radius="none"
         >
             <CardHeader className="flex gap-3">
@@ -30,7 +30,6 @@ export function Location({ onRoute }: any) {
                 <div className="flex flex-col">
                     <Tooltip content="クリップボードにコピー">
                         <Button
-                            disableAnimation
                             className="justify-left h-fit p-0 m-0 text-md text-inherit"
                             size="sm"
                             style={{
@@ -43,7 +42,7 @@ export function Location({ onRoute }: any) {
                             }}
                         >
                             <FadeinSlide distance={10} duration="0.5s">
-                                <p>宮城県仙台第二高等学校</p>
+                                <p className="px-1">宮城県仙台第二高等学校</p>
                             </FadeinSlide>
                         </Button>
                     </Tooltip>
@@ -67,7 +66,6 @@ export function Location({ onRoute }: any) {
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
-                                        disableAnimation
                                         className="justify-left h-fit p-0 m-0 text-md text-inherit"
                                         size="sm"
                                         style={{
@@ -79,7 +77,9 @@ export function Location({ onRoute }: any) {
                                             );
                                         }}
                                     >
-                                        <p className="inline-block">980-8631</p>
+                                        <p className="inline-block px-1">
+                                            980-8631
+                                        </p>
                                     </Button>
                                 </Tooltip>
                             </div>
@@ -107,7 +107,6 @@ export function Location({ onRoute }: any) {
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
-                                        disableAnimation
                                         className="justify-left h-fit p-0 m-0 text-md text-inherit"
                                         size="sm"
                                         style={{
@@ -119,7 +118,7 @@ export function Location({ onRoute }: any) {
                                             );
                                         }}
                                     >
-                                        <p>
+                                        <p className="px-1">
                                             <span className="inline-block">
                                                 宮城県仙台市青葉区
                                             </span>
@@ -141,9 +140,11 @@ export function Location({ onRoute }: any) {
                                 className="text-primary"
                                 href="tel:0222215626"
                             >
-                                <span className="inline-block">
-                                    022-221-5626
-                                </span>
+                                <p className="px-1">
+                                    <span className="inline-block">
+                                        022-221-5626
+                                    </span>
+                                </p>
                             </Link>
                         </FadeinSlide>
                     </li>

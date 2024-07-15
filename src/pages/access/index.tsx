@@ -25,10 +25,10 @@ export function Access() {
     return (
         <section className="flex flex-col m-2">
             <div className="main-inner form-contents">
-                <div>
+                <div className="header mb-3">
                     <FadeinSlide distance={20} duration="0.8s">
                         <h1
-                            className="header mb-3"
+                            className="text-default-700"
                             style={{
                                 fontSize: "28pt",
                                 fontFamily: "Kode Mono",
@@ -37,37 +37,37 @@ export function Access() {
                             Access
                         </h1>
                     </FadeinSlide>
+                </div>
 
-                    <div className="flex flex-col gap-2">
-                        <div className="flex flex-col sm:flex-row gap-[2px]">
-                            <div className="w-full z-10">
-                                <Fadein duration="0.8s">
-                                    <iframe
-                                        ref={mapRef}
-                                        allowFullScreen
-                                        className="h-[50vh]"
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        src={PLANE_MAP}
-                                        title="route-map"
-                                        width="100%"
-                                    />
-                                </Fadein>
-                            </div>
-
-                            <div className="h-fit">
-                                <Fadein>
-                                    <Location
-                                        onRoute={() => {
-                                            showRoute(PLANE_MAP);
-                                        }}
-                                    />
-                                </Fadein>
-                            </div>
+                <div className="flex flex-col gap-2">
+                    <div className="flex flex-col sm:flex-row gap-[2px]">
+                        <div className="w-full z-10">
+                            <Fadein duration="0.8s">
+                                <iframe
+                                    ref={mapRef}
+                                    allowFullScreen
+                                    className="h-[50vh]"
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    src={PLANE_MAP}
+                                    title="route-map"
+                                    width="100%"
+                                />
+                            </Fadein>
                         </div>
 
-                        <Routes onRoute={showRoute} />
+                        <div className="h-fit">
+                            <Fadein>
+                                <Location
+                                    onRoute={() => {
+                                        showRoute(PLANE_MAP);
+                                    }}
+                                />
+                            </Fadein>
+                        </div>
                     </div>
+
+                    <Routes onRoute={showRoute} />
                 </div>
             </div>
         </section>

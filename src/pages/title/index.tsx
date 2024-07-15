@@ -77,7 +77,7 @@ function CountDownContainer({ children }: { children: ReactElement }) {
             <div className="text-left">
                 <h1
                     className={title({
-                        class: "-ml-6 sm:ml-0",
+                        class: "-ml-6 sm:ml-0 text-default-600",
                     })}
                     style={{
                         fontFamily: "BIZ UDMincho",

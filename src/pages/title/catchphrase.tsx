@@ -7,8 +7,8 @@ export function Catchphrase() {
             <div
                 className="inline-block w-fit px-4 sm:px-8 mt-5 sm:mt-7 2xl:mt-12"
                 style={{
-                    borderTop: "solid 1px gray",
-                    borderBottom: "solid 1px gray",
+                    borderTop: "solid 1px hsl(var(--nextui-default-400))",
+                    borderBottom: "solid 1px hsl(var(--nextui-default-400))",
                     paddingTop: "6px",
                     paddingBottom: "6px",
                 }}

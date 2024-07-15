@@ -1,3 +1,5 @@
+import { Spacer } from "@nextui-org/spacer";
+
 import { Access } from "./access";
 import { Content } from "./content";
 import { Title } from "./title";
@@ -12,6 +14,7 @@ export default function IndexPage() {
                 <Fadein duration="0.5s" once={true}>
                     <Title />
                     <Access />
+                    <Spacer y={20} />
                     <Content />
                 </Fadein>
             </DefaultLayout>
