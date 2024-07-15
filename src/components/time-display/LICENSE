@@ -20,13 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Part of the components in this project are extracted from Next UI's Vite template, which is subject to the same license.
-Here is the original copyright notice for Next UI:
+The units in this directory were extracted from Amr Labib's react-timer-hook, which is subject to the same license.
+Here is the original copyright notice for Amr Labib:
 
-<Quote>
-MIT License
-
-Copyright (c) 2024 Next UI
+Copyright (c) 2018 Amr Labib
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +42,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-<Unquote>
-
-Also, the units in "src/components/time-display/" were extracted from Amr Labib's react-timer-hook, which is subject to the same license.
-See "src/components/time-display/LICENSE".
