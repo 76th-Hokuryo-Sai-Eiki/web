@@ -1,11 +1,10 @@
-import styled from "styled-components";
 import { useEffect } from "react";
+import styled from "styled-components";
 import { useCountdown } from "usehooks-ts";
 
-import { TimeDisplay } from "../components/time-display";
-
-import { siteConfig } from "@/config/site";
 import { Fadein } from "@/components/animations";
+import { TimeDisplay } from "@/components/time-display";
+import { siteConfig } from "@/config/site";
 
 const LoadingScreenContainer = styled.div`
     background-color: black;
