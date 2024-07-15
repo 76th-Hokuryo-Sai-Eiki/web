@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { ThemeContext } from "@/context/theme";
-import { useTheme } from "@/hooks/use-theme";
+import { useTheme } from "@/hooks/theme";
 import IndexPage from "@/pages/index";
 import LoadingScreen from "@/pages/loading";
 
