@@ -11,7 +11,7 @@ Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web/bl
 - [Vite & NextUI Template](https://github.com/nextui-org/vite-template) ([NextUI Inc.](https://github.com/nextui-org))
 - [react-timer-hook](https://github.com/amrlabib/react-timer-hook) ([Amr Labib](https://github.com/amrlabib))
 
-### Framework & Design
+### Libraries
 - [NextUI](https://nextui.org)
 - [React](https://react.dev/)
 
@@ -32,6 +32,7 @@ Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web/bl
 - [styled-components](https://styled-components.com/)
 - [unpic](https://unpic.pics/)
 - [usehooks-ts](https://usehooks-ts.com/)
+- [tailwind-variants](https://www.tailwind-variants.org/)
 
 #### Icons
 - [FontAwesome](https://fontawesome.com/)
@@ -40,7 +41,6 @@ Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web/bl
 - [Material Design Icons](https://pictogrammers.com/library/mdi/)
 - [Simple Icons](https://simpleicons.org/)
 - [Phosphor](https://phosphoricons.com/)
-	
 
 ### Tools
 - [ESlint](https://eslint.org/)
