@@ -17,14 +17,14 @@ export default function App() {
             () => {
                 setFadeout(true);
             },
-            import.meta.env.DEV ? 500 : 3000
+            import.meta.env.DEV ? 150 : 3000
         );
 
         const loadingId = setTimeout(
             () => {
                 setLoading(false);
             },
-            import.meta.env.DEV ? 1000 : 6000
+            import.meta.env.DEV ? 300 : 6000
         );
 
         return () => {
