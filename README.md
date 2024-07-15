@@ -22,6 +22,8 @@ Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web?ta
 
 ### Components
 - [blurhash](https://github.com/woltapp/blurhash)
+- [clsx](https://github.com/lukeed/clsx)
+- [framer-motion](https://github.com/framer/motion)
 - [js-sha256](https://github.com/emn178/js-sha256)
 - [react-device-detect](https://github.com/duskload/react-device-detect)
 - [react-icons](https://react-icons.github.io/react-icons/)
