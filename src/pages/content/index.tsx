@@ -17,7 +17,7 @@ function DummyCard() {
                     className="text-tiny lg:text-small 2xl:text-medium text-default-500"
                     style={{ fontFamily: "Kode Mono" }}
                 >
-                    {chooseRandom(["Shop", "Stage"])}
+                    {chooseRandom(["Shop", "Shop", "Stage"])}
                 </small>
                 <h4 className="font-bold text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-default-600">
                     {[...new Array(5)]
@@ -54,9 +54,9 @@ function DummyCard() {
     );
 }
 
-export function Content() {
+export default function ContentsSection() {
     return (
-        <section className="flex flex-col m-2">
+        <div className="flex flex-col m-2">
             <div className="main-inner form-contents">
                 <div className="header mb-3">
                     <FadeinSlide distance={20} duration="0.8s">
@@ -68,7 +68,7 @@ export function Content() {
                             }}
                         >
                             Contents
-                        </h1>{" "}
+                        </h1>
                         <p className="text-right text-medium text-default-600 pr-3">
                             近日公開
                         </p>
@@ -77,24 +77,17 @@ export function Content() {
 
                 <div className="blurred-border border-x-1">
                     <div className="simple-scrollbar flex flex-row gap-3  py-5">
-                        <div className="inline-block min-w-fit w-fit">
-                            <DummyCard />
-                        </div>
-                        <div className="inline-block min-w-fit w-fit">
-                            <DummyCard />
-                        </div>
-                        <div className="inline-block min-w-fit w-fit">
-                            <DummyCard />
-                        </div>
-                        <div className="inline-block min-w-fit w-fit">
-                            <DummyCard />
-                        </div>
-                        <div className="inline-block min-w-fit w-fit">
-                            <DummyCard />
-                        </div>
+                        {[...new Array(8)].map((_, index) => (
+                            <div
+                                key={index}
+                                className="inline-block min-w-fit w-fit"
+                            >
+                                <DummyCard />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

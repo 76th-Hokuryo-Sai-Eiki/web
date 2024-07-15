@@ -1,3 +1,4 @@
+import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
@@ -12,9 +13,8 @@ import {
 import { Tooltip } from "@nextui-org/tooltip";
 import { User } from "@nextui-org/user";
 import { ReactNode, useCallback } from "react";
-import { BrowserView, MobileView } from "react-device-detect";
 import { FaCarAlt, FaWalking } from "react-icons/fa";
-import { FaTrainSubway } from "react-icons/fa6";
+import { FaRoute, FaTrainSubway } from "react-icons/fa6";
 import { MdLocalParking, MdPedalBike } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
 
@@ -57,7 +57,7 @@ function builder(item: any, key: any, handler: any) {
                             {cellValue}
                         </Link>
                     }
-                    onClick={() => {
+                    onPress={() => {
                         handler(item.route);
                     }}
                 />
@@ -87,7 +87,23 @@ function builder(item: any, key: any, handler: any) {
             );
         case "actions":
             return (
-                <div className="relative hidden sm:flex items-center gap-2">
+                <div className="relative flex items-center gap-2">
+                    <Tooltip content="ルートを表示">
+                        <Button
+                            isIconOnly
+                            className="text-lg text-default-400 cursor-pointer active:opacity-50"
+                            startContent={
+                                <FaRoute className="mb-2" size={20} />
+                            }
+                            style={{
+                                background: "inherit",
+                            }}
+                            variant="flat"
+                            onPress={() => {
+                                handler(item.route);
+                            }}
+                        />
+                    </Tooltip>
                     <Tooltip content="Google Maps で開く">
                         <Link
                             isExternal
@@ -123,20 +139,6 @@ function TopContent({
                             {title}
                         </h4>
                     </div>
-                    <BrowserView className="pr-1 flex flex-col justify-end -mb-1">
-                        <FadeinSlide>
-                            <p className="text-tiny text-default-400">
-                                項目クリックでルートを表示
-                            </p>
-                        </FadeinSlide>
-                    </BrowserView>
-                    <MobileView className="pr-1 flex flex-col justify-end -mb-1">
-                        <FadeinSlide>
-                            <p className="text-tiny text-default-400">
-                                項目タップでルートを表示
-                            </p>
-                        </FadeinSlide>
-                    </MobileView>
                 </div>
             </div>
             <Divider />
@@ -172,13 +174,7 @@ function Public({ onRoute }: any) {
 
             <TableBody items={publicRoute}>
                 {(item) => (
-                    <TableRow
-                        key={item.id}
-                        className="hover:opacity-hover hover:cursor-pointer"
-                        onClick={() => {
-                            onRoute(item.route);
-                        }}
-                    >
+                    <TableRow key={item.id}>
                         {(key) => (
                             <TableCell>
                                 {renderCell(item, key, onRoute)}
@@ -230,13 +226,7 @@ function Car({ onRoute }: any) {
 
             <TableBody items={carRoute}>
                 {(item) => (
-                    <TableRow
-                        key={item.id}
-                        className="hover:opacity-hover hover:cursor-pointer"
-                        onClick={() => {
-                            onRoute(item.route);
-                        }}
-                    >
+                    <TableRow key={item.id}>
                         {(key) => (
                             <TableCell>
                                 {renderCell(
@@ -302,7 +292,7 @@ export function Routes({ onRoute }: any) {
                 <div className="inline-block items-start mx-1.5 min-w-[28rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
                     <Public onRoute={onRoute} />
                 </div>
-                <div className="inline-block items-start mx-1.5 min-w-[32rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
+                <div className="inline-block items-start mx-1.5 min-w-[34rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
                     <Car onRoute={onRoute} />
                 </div>
                 <div className="inline-block items-start mx-1.5 flex-auto 2xl:flex-none 2xl:flex-shrink lg:w-auto lg:mx-0 lg:min-w-fit">

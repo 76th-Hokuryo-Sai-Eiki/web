@@ -4,7 +4,6 @@ import {
     cloneElement,
     ReactElement,
     useCallback,
-    useContext,
     useEffect,
     useRef,
     useSyncExternalStore,
@@ -14,12 +13,10 @@ import { useCountdown } from "usehooks-ts";
 import { Catchphrase } from "./catchphrase";
 
 import { Fadein, FadeinSlide } from "@/components/animations";
-import { GoogleCalendarIcon } from "@/components/icons";
-import { SuspendImage } from "@/components/image";
+import { Banner, GoogleCalendarIcon } from "@/components/icons";
 import { subtitle, title } from "@/components/primitives";
 import { TimeDisplay } from "@/components/time-display";
 import { siteConfig } from "@/config/site";
-import { ThemeContext } from "@/context/theme";
 import { chooseRandom } from "@/functions/utility";
 
 function CountDown({ compact = false }: { compact?: boolean }) {
@@ -97,38 +94,11 @@ function CountDownContainer({ children }: { children: ReactElement }) {
     );
 }
 
-const BLURHASH = {
-    light: "UJRf:}oL}YWX$%a|R+j@raa|NIj@I@fQxFfQ",
-    dark: "U61rsRjFl:kqhzfkg$f6qKfkh0e.l.fQd=f6",
-};
-
-const PRELOAD_IMAGES = [
-    "banner.light.png",
-    "banner.dark.png",
-    "logo.light.png",
-    "logo.dark.png",
-];
-
-PRELOAD_IMAGES.forEach((path) => (new Image().src = path));
-
-export function Title() {
-    const { theme } = useContext(ThemeContext);
-
+export default function Title() {
     return (
-        <section className="grid grid-cols-5 min-w-52 min-h-[90vh]  items-center justify-center gap-4 py-8 px-0 xl:px-12">
+        <div className="grid grid-cols-5 min-w-52 min-h-[90vh]  items-center justify-center gap-4 py-8 px-0 xl:px-12">
             <div className="col-span-full 2xl:col-span-3 2xl:col-start-2 text-center justify-center">
-                <div className="flex justify-center">
-                    <div className="max-w-xl sm:max-w-lg sm:px-4">
-                        <SuspendImage
-                            blurhash={BLURHASH[theme as "light" | "dark"]}
-                            height={463}
-                            layout="constrained"
-                            priority={true}
-                            src={`banner.${theme}.png`}
-                            width={1250}
-                        />
-                    </div>
-                </div>
+                <Banner />
 
                 <Catchphrase />
             </div>
@@ -140,7 +110,7 @@ export function Title() {
                             <h1
                                 className={title({
                                     size: "xl",
-                                    class: "m-4 pt-1 sm:mr-6 text-[2.5rem] sm:text-5xl",
+                                    class: "m-4 pt-1 sm:mr-6 text-[2.5rem] sm:text-5xl text-default-800",
                                 })}
                                 style={{
                                     fontFamily: "Noto Serif JP",
@@ -207,6 +177,6 @@ export function Title() {
             </div>
 
             <div className="row-start-5 col-span-full 2xl:col-start-2 2xl:col-span-3" />
-        </section>
+        </div>
     );
 }

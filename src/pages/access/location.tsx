@@ -16,17 +16,19 @@ export function Location({ onRoute }: any) {
             radius="none"
         >
             <CardHeader className="flex gap-3">
-                <Button
-                    disableAnimation
-                    isIconOnly
-                    radius="none"
-                    startContent={<IoSchool size={47} />}
-                    style={{
-                        background: "inherit",
-                    }}
-                    variant="flat"
-                    onClick={onRoute}
-                />
+                <Tooltip content="ルートを表示">
+                    <Button
+                        disableAnimation
+                        isIconOnly
+                        radius="none"
+                        startContent={<IoSchool size={47} />}
+                        style={{
+                            background: "inherit",
+                        }}
+                        variant="flat"
+                        onPress={onRoute}
+                    />
+                </Tooltip>
                 <div className="flex flex-col">
                     <Tooltip content="クリップボードにコピー">
                         <Button
@@ -35,7 +37,7 @@ export function Location({ onRoute }: any) {
                             style={{
                                 background: "inherit",
                             }}
-                            onClick={() => {
+                            onPress={() => {
                                 navigator.clipboard.writeText(
                                     "宮城県仙台第二高等学校"
                                 );
@@ -71,7 +73,7 @@ export function Location({ onRoute }: any) {
                                         style={{
                                             background: "inherit",
                                         }}
-                                        onClick={() => {
+                                        onPress={() => {
                                             navigator.clipboard.writeText(
                                                 "980-8631"
                                             );
@@ -112,7 +114,7 @@ export function Location({ onRoute }: any) {
                                         style={{
                                             background: "inherit",
                                         }}
-                                        onClick={() => {
+                                        onPress={() => {
                                             navigator.clipboard.writeText(
                                                 "宮城県仙台市青葉区川内澱橋通1-1"
                                             );

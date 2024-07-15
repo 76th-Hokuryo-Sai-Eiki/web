@@ -1,8 +1,9 @@
 import { Spacer } from "@nextui-org/spacer";
 
-import { Access } from "./access";
-import { Content } from "./content";
-import { Title } from "./title";
+import AccessSection from "./access";
+import ContentsSection from "./content";
+import InfoSection from "./info";
+import Title from "./title";
 
 import { Fadein } from "@/components/animations";
 import DefaultLayout from "@/layouts/default";
@@ -12,10 +13,25 @@ export default function IndexPage() {
         <Fadein duration="0.3s" once={true}>
             <DefaultLayout>
                 <Fadein duration="0.5s" once={true}>
-                    <Title />
-                    <Access />
+                    <section id="title">
+                        <Title />
+                    </section>
+
+                    <section id="access">
+                        <AccessSection />
+                    </section>
+
                     <Spacer y={20} />
-                    <Content />
+
+                    <section id="info">
+                        <InfoSection />
+                    </section>
+
+                    <Spacer y={20} />
+
+                    <section id="content">
+                        <ContentsSection />
+                    </section>
                 </Fadein>
             </DefaultLayout>
         </Fadein>

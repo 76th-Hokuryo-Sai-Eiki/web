@@ -6,20 +6,23 @@ export function scrollIntoViewIfNeeded<T extends HTMLElement>(
         behavior = "auto",
         marginTop = 30,
         marginBottom = 50,
+        forceTop = false,
     }: {
         behavior?: ScrollBehavior;
         marginTop?: number;
         marginBottom?: number;
+        forceTop?: boolean;
     } = {}
 ) {
-    if (window.scrollY + siteConfig.navbarHeight > element.offsetTop) {
+    if (
+        forceTop ||
+        window.scrollY + siteConfig.navbarHeight > element.offsetTop
+    ) {
         window.scrollTo({
             behavior,
             top: element.offsetTop - siteConfig.navbarHeight - marginTop,
         });
-    }
-
-    if (
+    } else if (
         window.scrollY + window.innerHeight <
         element.offsetTop + element.offsetHeight
     ) {

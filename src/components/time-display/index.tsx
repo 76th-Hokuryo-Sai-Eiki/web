@@ -85,12 +85,13 @@ export function TimeDisplay({
 
     if (milliseconds !== undefined) {
         digits.push(
-            <SeparatorContainer>
+            <SeparatorContainer key="sep-3">
                 <Separator />
                 <Separator />
             </SeparatorContainer>,
 
             <Digit
+                key="milliseconds"
                 addSeparator
                 title={label ? "​" : ""}
                 value={Math.floor(milliseconds / 10)}

@@ -10,9 +10,11 @@ import {
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
-import { FaGithub, FaTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
-import { Logo } from "@/components/icons";
+import HashLink from "./hash-link";
+
+import { Logo, XTwitterIcon } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
@@ -46,27 +48,29 @@ export function Navbar() {
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
-                    <Link
+                    <HashLink
+                        smooth
                         className="flex justify-start items-center gap-1"
                         color="foreground"
-                        href="/"
+                        to="#top"
                     >
                         <Logo />
-                    </Link>
+                    </HashLink>
                 </NavbarBrand>
                 <div className="hidden md:flex gap-4 justify-start ml-2">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
-                            <Link
+                            <HashLink
+                                smooth
                                 className={clsx(
                                     linkStyles({ color: "foreground" }),
                                     "data-[active=true]:text-primary data-[active=true]:font-medium"
                                 )}
                                 color="foreground"
-                                href={item.href}
+                                to={item.href}
                             >
                                 {item.label}
-                            </Link>
+                            </HashLink>
                         </NavbarItem>
                     ))}
                 </div>
@@ -79,7 +83,7 @@ export function Navbar() {
                 <NavbarItem className="hidden md:flex gap-2">
                     <ThemeSwitch />
                     <Link isExternal href={siteConfig.links.twitter}>
-                        <FaTwitter className="text-default-500" size={22} />
+                        <XTwitterIcon className="text-default-500" size={22} />
                     </Link>
                     {/* <Link isExternal href={siteConfig.links.discord}>
                         <DiscordIcon className="text-default-500" />
@@ -110,7 +114,7 @@ export function Navbar() {
             <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
                 <ThemeSwitch />
                 <Link isExternal href={siteConfig.links.twitter}>
-                    <FaTwitter className="text-default-500" size={22} />
+                    <XTwitterIcon className="text-default-500" size={22} />
                 </Link>
                 <Link isExternal href={siteConfig.links.github}>
                     <FaGithub className="text-default-500" size={22} />
@@ -121,20 +125,9 @@ export function Navbar() {
             <NavbarMenu>
                 {/* {searchInput} */}
                 <div className="mx-4 mt-2 flex flex-col gap-2">
-                    {siteConfig.navMenuItems.map((item, index) => (
+                    {siteConfig.navItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link
-                                color={
-                                    index === 2
-                                        ? "primary"
-                                        : index ===
-                                            siteConfig.navMenuItems.length - 1
-                                          ? "danger"
-                                          : "foreground"
-                                }
-                                href="#"
-                                size="lg"
-                            >
+                            <Link color={"foreground"} href="#" size="lg">
                                 {item.label}
                             </Link>
                         </NavbarMenuItem>

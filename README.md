@@ -33,6 +33,15 @@ Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web?ta
 - [unpic](https://unpic.pics/)
 - [usehooks-ts](https://usehooks-ts.com/)
 
+#### Icons
+- [FontAwesome](https://fontawesome.com/)
+- [Bootsrap Icons](https://icons.getbootstrap.jp/)
+- [Ionicons](https://ionic.io/ionicons)
+- [Material Design Icons](https://pictogrammers.com/library/mdi/)
+- [Simple Icons](https://simpleicons.org/)
+- [Phosphor](https://phosphoricons.com/)
+	
+
 ### Tools
 - [ESlint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
