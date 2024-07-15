@@ -39,7 +39,11 @@ export function Navbar() {
     // );
 
     return (
-        <NextUINavbar maxWidth="2xl" position="sticky">
+        <NextUINavbar
+            height={`${siteConfig.navbarHeight}px`}
+            maxWidth="2xl"
+            position="sticky"
+        >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
                     <Link

@@ -2,9 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
     eventDate: new Date("2024/08/31"),
-    name: "Vite + NextUI",
-    description:
-        "Make beautiful websites regardless of your design experience.",
+    navbarHeight: 64,
     navItems: [
         {
             label: "Access",

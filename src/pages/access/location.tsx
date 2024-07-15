@@ -29,22 +29,20 @@ export function Location({ onRoute }: any) {
                 />
                 <FadeinBottom>
                     <div className="flex flex-col">
-                        <Tooltip content="Google Maps で開く">
-                            <Link
-                                disableAnimation
-                                isExternal
-                                className="justify-left h-fit p-0 m-0 text-md text-inherit"
-                                href={encodeURI(
-                                    "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu"
-                                )}
-                                size="sm"
-                                style={{
-                                    background: "inherit",
-                                }}
-                            >
+                        <Button
+                            disableAnimation
+                            className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                            radius="none"
+                            style={{
+                                background: "inherit",
+                            }}
+                            variant="flat"
+                            onClick={onRoute}
+                        >
+                            <FadeinBottom>
                                 <p>宮城県仙台第二高等学校</p>
-                            </Link>
-                        </Tooltip>
+                            </FadeinBottom>
+                        </Button>
                         <Link
                             isExternal
                             className="text-small text-default-500"
