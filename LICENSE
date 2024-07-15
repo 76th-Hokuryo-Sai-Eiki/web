@@ -47,5 +47,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 <Unquote>
 
-Also, the units in "src/components/time-display/" were extracted from Amr Labib's react-timer-hook, which is subject to the same license.
+Also, the units in "src/components/time-display/" were extracted from Amr Labib's react-timer-hook.
 See "src/components/time-display/LICENSE".
