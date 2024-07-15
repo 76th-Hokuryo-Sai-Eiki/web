@@ -1,8 +1,8 @@
-import { useContext } from "react";
 import { Image } from "@nextui-org/image";
+import { useContext } from "react";
 
-import { IconSvgProps } from "@/types";
 import { ThemeContext } from "@/context/theme";
+import { IconSvgProps } from "@/types";
 
 export function Logo({ size = 36, height }: IconSvgProps) {
     const { theme } = useContext(ThemeContext);

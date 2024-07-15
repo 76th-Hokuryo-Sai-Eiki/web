@@ -1,3 +1,6 @@
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Divider } from "@nextui-org/divider";
+import { Link } from "@nextui-org/link";
 import {
     Table,
     TableBody,
@@ -8,14 +11,11 @@ import {
 } from "@nextui-org/table";
 import { Tooltip } from "@nextui-org/tooltip";
 import { User } from "@nextui-org/user";
-import { FaCarAlt, FaRoute, FaWalking } from "react-icons/fa";
-import { MdLocalParking, MdPedalBike } from "react-icons/md";
-import { Divider } from "@nextui-org/divider";
 import { ReactNode, useCallback } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import { Link } from "@nextui-org/link";
+import { FaCarAlt, FaRoute, FaWalking } from "react-icons/fa";
 import { FaTrainSubway } from "react-icons/fa6";
+import { MdLocalParking, MdPedalBike } from "react-icons/md";
 
 import carRoute, { columns as carColumns } from "./info/car.tsx";
 import publicRoute, { columns as publicColumns } from "./info/public.tsx";

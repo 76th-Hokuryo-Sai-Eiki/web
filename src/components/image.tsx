@@ -1,5 +1,5 @@
-import { ImageProps, Image as UnpicImage } from "@unpic/react";
 import { blurhashToCssGradientString } from "@unpic/placeholder";
+import { ImageProps, Image as UnpicImage } from "@unpic/react";
 
 type Prop = ImageProps & { blurhash: string };
 

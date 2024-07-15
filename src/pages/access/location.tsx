@@ -1,11 +1,11 @@
+import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
-import { Button } from "@nextui-org/button";
+import { Tooltip } from "@nextui-org/tooltip";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationDot, FaSignsPost } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
-import { Tooltip } from "@nextui-org/tooltip";
 
 import { FadeinBottom } from "@/components/animations";
 

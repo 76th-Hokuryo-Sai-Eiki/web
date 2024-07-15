@@ -1,3 +1,5 @@
+import { Link } from "@nextui-org/link";
+import { button as buttonStyles } from "@nextui-org/theme";
 import {
     cloneElement,
     ReactElement,
@@ -8,16 +10,14 @@ import {
     useSyncExternalStore,
 } from "react";
 import { useCountdown } from "usehooks-ts";
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
 
 import { Catchphrase } from "./catchphrase";
 
 import { Fadein, FadeinBottom } from "@/components/animations";
 import { GoogleCalendarIcon } from "@/components/icons";
+import { SuspendImage } from "@/components/image";
 import { subtitle, title } from "@/components/primitives";
 import { TimeDisplay } from "@/components/time-display";
-import { SuspendImage as Img } from "@/components/image";
 import { siteConfig } from "@/config/site";
 import { ThemeContext } from "@/context/theme";
 import { chooseRandom } from "@/functions/utility";
@@ -119,7 +119,7 @@ export function Title() {
             <div className="col-span-full 2xl:col-span-3 2xl:col-start-2 text-center justify-center">
                 <div className="flex justify-center">
                     <div className="max-w-xl sm:max-w-lg sm:px-4">
-                        <Img
+                        <SuspendImage
                             blurhash={BLURHASH[theme as "light" | "dark"]}
                             height={463}
                             layout="constrained"

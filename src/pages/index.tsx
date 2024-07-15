@@ -1,5 +1,5 @@
-import { Title } from "./title";
 import { Access } from "./access";
+import { Title } from "./title";
 
 import { Fadein } from "@/components/animations";
 import DefaultLayout from "@/layouts/default";
