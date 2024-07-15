@@ -4,7 +4,7 @@
 - [Github Pages](https://76th-hokuryo-sai-eiki.github.io/web/)
 
 ## License
-Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web?tab=License-1-ov-file)
+Licensed under the [MIT License](https://github.com/76th-Hokuryo-Sai-Eiki/web/blob/main/LICENSE)
 
 ## Acknowledgement
 ### Sources
