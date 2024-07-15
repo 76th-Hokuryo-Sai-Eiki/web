@@ -3,7 +3,7 @@ import { subtitle } from "@/components/primitives";
 
 export function Catchphrase() {
     return (
-        <Fadein duration="0.3s">
+        <Fadein duration={0.3}>
             <div
                 className="inline-block w-fit px-4 sm:px-8 mt-5 sm:mt-7 2xl:mt-12"
                 style={{

@@ -9,12 +9,12 @@ import { useInView } from "react-intersection-observer";
 
 export function Fadein({
     children,
-    duration = "0.6s",
+    duration = 0.6,
     easing = "ease-in",
     once = false,
 }: {
     children: ReactNode;
-    duration?: string;
+    duration?: number;
     easing?: string;
     once?: boolean;
 }) {
@@ -27,7 +27,7 @@ export function Fadein({
             ref={ref}
             className={inView ? "fade-in" : "opacity-0"}
             style={{
-                ["--duration" as string]: duration,
+                ["--duration" as string]: `${duration}s`,
                 ["--easing" as string]: easing,
             }}
         >
@@ -38,12 +38,12 @@ export function Fadein({
 
 export function FadeinSlide({
     children,
-    duration = "0.7s",
+    duration = 0.7,
     distance = 20,
     once = false,
 }: {
     children: ReactNode;
-    duration?: string;
+    duration?: number;
     distance?: number;
     once?: boolean;
 }) {
@@ -58,12 +58,16 @@ export function FadeinSlide({
                 ref,
                 className: [
                     child.props.className,
-                    inView ? "fade-in-bottom" : "opacity-0",
+                    duration <= 0
+                        ? "opacity-1"
+                        : inView
+                          ? "fade-in-bottom"
+                          : "opacity-0",
                 ]
                     .filter((e) => e)
                     .join(" "),
                 style: {
-                    "--duration": duration,
+                    "--duration": `${duration}s`,
                     "--distance": `${distance}px`,
                     ...child.props.style,
                 },

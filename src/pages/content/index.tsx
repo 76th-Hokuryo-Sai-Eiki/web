@@ -59,7 +59,7 @@ export default function ContentsSection() {
         <div className="flex flex-col m-2">
             <div className="main-inner form-contents">
                 <div className="header mb-3">
-                    <FadeinSlide distance={20} duration="0.8s">
+                    <FadeinSlide distance={20} duration={0.8}>
                         <h1
                             className="text-default-700"
                             style={{

@@ -1,22 +1,24 @@
 import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Card, CardBody, CardHeader, CardProps } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
 import { Tooltip } from "@nextui-org/tooltip";
+import { ReactNode } from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationDot, FaSignsPost } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
 
 import { FadeinSlide } from "@/components/animations";
 
-export function Location({ onRoute }: any) {
+export function LocationCard({
+    onRoute = null,
+    divider = <Divider />,
+    ...props
+}: CardProps & { divider?: ReactNode; onRoute?: any }) {
     return (
-        <Card
-            className="rounded-b-xl pb-1 pt-1 sm:pt-0 -mt-1 sm:-ml-1 sm:pl-1 sm:max-w-[400px] sm:mt-5 sm:rounded-bl-none sm:rounded-r-xl bg-default-200"
-            radius="none"
-        >
+        <Card radius="none" {...props}>
             <CardHeader className="flex gap-3">
-                <Tooltip content="ルートを表示">
+                <Tooltip content="ルートを表示" isDisabled={!onRoute}>
                     <Button
                         disableAnimation
                         isIconOnly
@@ -24,9 +26,16 @@ export function Location({ onRoute }: any) {
                         startContent={<IoSchool size={47} />}
                         style={{
                             background: "inherit",
+                            ...(!onRoute
+                                ? {
+                                      cursor: "default",
+                                      opacity: 1,
+                                  }
+                                : {}),
                         }}
                         variant="flat"
                         onPress={onRoute}
+                        {...(!onRoute ? { "data-pressed": "false" } : {})}
                     />
                 </Tooltip>
                 <div className="flex flex-col">
@@ -43,7 +52,7 @@ export function Location({ onRoute }: any) {
                                 );
                             }}
                         >
-                            <FadeinSlide distance={10} duration="0.5s">
+                            <FadeinSlide distance={10} duration={0.5}>
                                 <p className="px-1">宮城県仙台第二高等学校</p>
                             </FadeinSlide>
                         </Button>
@@ -59,12 +68,12 @@ export function Location({ onRoute }: any) {
                     </FadeinSlide>
                 </div>
             </CardHeader>
-            <Divider />
+            {divider}
             <CardBody>
                 <ul className="overflow-hidden">
                     <li className="inline-flex items-start">
                         <FaSignsPost className="mr-3 mt-1.5" />
-                        <FadeinSlide distance={20} duration="0.5s">
+                        <FadeinSlide distance={20} duration={0.5}>
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -105,7 +114,7 @@ export function Location({ onRoute }: any) {
                                 <FaLocationDot className="mr-3 mt-[0.35rem]" />
                             </Link>
                         </Tooltip>
-                        <FadeinSlide distance={20} duration="0.5s">
+                        <FadeinSlide distance={20} duration={0.5}>
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -136,7 +145,7 @@ export function Location({ onRoute }: any) {
 
                     <li className="inline-flex items-start">
                         <BsFillTelephoneFill className="mr-3 mt-1.5" />
-                        <FadeinSlide distance={20} duration="0.5s">
+                        <FadeinSlide distance={20} duration={0.5}>
                             <Link
                                 isExternal
                                 className="text-primary"

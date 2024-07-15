@@ -18,7 +18,7 @@ export const siteConfig = {
         },
         {
             label: "Credit",
-            href: "#credits",
+            href: "#footer",
         },
     ],
     links: {

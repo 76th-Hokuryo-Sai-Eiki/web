@@ -2,6 +2,7 @@ import { Spacer } from "@nextui-org/spacer";
 
 import AccessSection from "./access";
 import ContentsSection from "./content";
+import Footer from "./footer";
 import InfoSection from "./info";
 import Title from "./title";
 
@@ -10,9 +11,9 @@ import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
     return (
-        <Fadein duration="0.3s" once={true}>
+        <Fadein duration={0.3} once={true}>
             <DefaultLayout>
-                <Fadein duration="0.5s" once={true}>
+                <Fadein duration={0.5} once={true}>
                     <section id="title">
                         <Title />
                     </section>
@@ -32,6 +33,12 @@ export default function IndexPage() {
                     <section id="content">
                         <ContentsSection />
                     </section>
+
+                    <Spacer y={20} />
+
+                    <footer id="footer">
+                        <Footer />
+                    </footer>
                 </Fadein>
             </DefaultLayout>
         </Fadein>

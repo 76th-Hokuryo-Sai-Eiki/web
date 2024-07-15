@@ -18,8 +18,8 @@ import { FaRoute, FaTrainSubway } from "react-icons/fa6";
 import { MdLocalParking, MdPedalBike } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
 
-import carRoute, { columns as carColumns } from "./info/car.tsx";
-import publicRoute, { columns as publicColumns } from "./info/public.tsx";
+import carRoute, { columns as carColumns } from "./contents/car.tsx";
+import publicRoute, { columns as publicColumns } from "./contents/public.tsx";
 
 import { FadeinSlide } from "@/components/animations.tsx";
 
@@ -57,7 +57,7 @@ function builder(item: any, key: any, handler: any) {
                             {cellValue}
                         </Link>
                     }
-                    onPress={() => {
+                    onClick={() => {
                         handler(item.route);
                     }}
                 />

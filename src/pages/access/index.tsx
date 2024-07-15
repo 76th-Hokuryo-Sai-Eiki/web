@@ -1,9 +1,10 @@
+import { Divider } from "@nextui-org/divider";
 import { useRef } from "react";
 
-import { Location } from "./location";
 import { Routes } from "./routes";
 
 import { Fadein, FadeinSlide } from "@/components/animations";
+import { LocationCard } from "@/components/location-card";
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 
 const PLANE_MAP =
@@ -26,7 +27,7 @@ export default function AccessSection() {
         <div className="flex flex-col m-2">
             <div className="main-inner form-contents">
                 <div className="header mb-3">
-                    <FadeinSlide distance={20} duration="0.8s">
+                    <FadeinSlide distance={20} duration={0.8}>
                         <h1
                             className="text-default-700"
                             style={{
@@ -42,7 +43,7 @@ export default function AccessSection() {
                 <div className="flex flex-col gap-2">
                     <div className="flex flex-col sm:flex-row gap-[2px]">
                         <div className="w-full z-10 border-2 border-default-200">
-                            <Fadein duration="0.8s">
+                            <Fadein duration={0.8}>
                                 <iframe
                                     ref={mapRef}
                                     allowFullScreen
@@ -58,7 +59,13 @@ export default function AccessSection() {
 
                         <div className="h-fit">
                             <Fadein>
-                                <Location
+                                <LocationCard
+                                    className="bg-default-200 rounded-b-xl pb-1 pt-1 sm:pt-0 -mt-1 sm:-ml-1 sm:pl-1 sm:max-w-[400px] sm:mt-5 sm:rounded-bl-none sm:rounded-r-xl"
+                                    divider={
+                                        <div className="-ml-1 pr-3">
+                                            <Divider className="mr-10" />
+                                        </div>
+                                    }
                                     onRoute={() => {
                                         showRoute(PLANE_MAP);
                                     }}

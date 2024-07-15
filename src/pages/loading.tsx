@@ -21,7 +21,7 @@ const LoadingScreenContainer = styled.div`
     width: 100%;
 `;
 
-export default function Loading() {
+export default function LoadingScreen() {
     const [count, { startCountdown }] = useCountdown({
         countStart: Math.floor(
             (siteConfig.eventDate.getTime() - Date.now()) / 10
@@ -39,11 +39,12 @@ export default function Loading() {
 
     return (
         <LoadingScreenContainer>
-            <Fadein duration="1s">
+            <Fadein duration={1}>
                 <TimeDisplay
                     compact={window.innerWidth < 600}
                     days={days}
                     hours={hours % 24}
+                    label={false}
                     milliseconds={milliseconds % 1000}
                     minutes={minutes % 60}
                     seconds={seconds % 60}

@@ -105,7 +105,7 @@ export default function Title() {
 
             <div className="col-span-full 2xl:col-start-2 2xl:col-span-3">
                 <div className="flex text-center justify-center flex-col">
-                    <Fadein duration="1.2s" easing="ease-in" once={true}>
+                    <Fadein duration={1.2} easing="ease-in" once={true}>
                         <div className="sm:flex mt-3 sm:items-center sm:justify-center">
                             <h1
                                 className={title({
@@ -143,7 +143,7 @@ export default function Title() {
             </div>
 
             <div className="col-span-full row-start-3 2xl:col-start-2 2xl:col-span-3 text-center justify-center">
-                <FadeinSlide duration="0.5s">
+                <FadeinSlide duration={0.5}>
                     <h4
                         className={subtitle({ class: "mt-6" })}
                         style={{ fontFamily: "Arsenal SC" }}

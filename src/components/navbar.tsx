@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
+import { useReducer } from "react";
 import { FaGithub } from "react-icons/fa6";
 
 import HashLink from "./hash-link";
@@ -19,6 +20,11 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
 export function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useReducer(
+        (current) => !current,
+        false
+    );
+
     // const searchInput = (
     //     <Input
     //         aria-label="Search"
@@ -43,8 +49,10 @@ export function Navbar() {
     return (
         <NextUINavbar
             height={`${siteConfig.navbarHeight}px`}
+            isMenuOpen={isMenuOpen}
             maxWidth="2xl"
             position="sticky"
+            onMenuOpenChange={setIsMenuOpen}
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
@@ -127,9 +135,14 @@ export function Navbar() {
                 <div className="mx-4 mt-2 flex flex-col gap-2">
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link color={"foreground"} href="#" size="lg">
+                            <HashLink
+                                color={"foreground"}
+                                // size="lg"
+                                to={item.href}
+                                onClick={() => setIsMenuOpen()}
+                            >
                                 {item.label}
-                            </Link>
+                            </HashLink>
                         </NavbarMenuItem>
                     ))}
                 </div>
