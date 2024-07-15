@@ -14,11 +14,16 @@ body {
     margin: 0 auto;
     overflow-x: scroll;
     border-radius: 5px;
-}
 
-.simple-scrollbar::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: gray;
+        width: 6px;
+        border-radius: 5px;
+    }
 }
 
 .blurred-border {
@@ -32,41 +37,36 @@ body {
         1;
 }
 
-.simple-scrollbar::-webkit-scrollbar-thumb {
-    background-color: gray;
-    width: 6px;
-    border-radius: 5px;
-}
-
 .header {
     position: relative;
     line-height: 1.4;
     padding: 0.25em 1em;
     display: inline-block;
     top: 0;
-}
 
-.header:before,
-.header:after {
-    position: absolute;
-    top: 0;
-    content: "";
-    width: 8px;
-    height: 100%;
-    display: inline-block;
-}
-.header:before {
-    border-left: solid 1px var(--color);
-    border-top: solid 1px var(--color);
-    border-bottom: solid 1px var(--color);
-    left: 0;
-}
-.header:after {
-    content: "";
-    border-top: solid 1px var(--color);
-    border-right: solid 1px var(--color);
-    border-bottom: solid 1px var(--color);
-    right: 0;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 8px;
+        height: 100%;
+        display: inline-block;
+    }
+
+    &:before {
+        border-left: solid 1px var(--color);
+        border-top: solid 1px var(--color);
+        border-bottom: solid 1px var(--color);
+        left: 0;
+    }
+    &:after {
+        content: "";
+        border-top: solid 1px var(--color);
+        border-right: solid 1px var(--color);
+        border-bottom: solid 1px var(--color);
+        right: 0;
+    }
 }
 
 .fade-in {

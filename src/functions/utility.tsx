@@ -2,6 +2,7 @@ import React from "react";
 
 export function chooseRandom(source: Array<any>) {
     const arrayIndex = Math.floor(Math.random() * source.length);
+
     return source[arrayIndex];
 }
 

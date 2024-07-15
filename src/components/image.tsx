@@ -5,5 +5,6 @@ type Prop = ImageProps & { blurhash: string };
 
 export function SuspendImage({ blurhash, ...props }: Prop) {
     const placeholder = blurhashToCssGradientString(blurhash);
+
     return <UnpicImage {...props} background={placeholder} />;
 }

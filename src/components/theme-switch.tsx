@@ -2,11 +2,10 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import clsx from "clsx";
 import { useContext, useEffect, useState } from "react";
-
 import { BsFillSunFill } from "react-icons/bs";
+import { FaMoon } from "react-icons/fa6";
 
 import { ThemeContext } from "@/context/theme";
-import { FaMoon } from "react-icons/fa6";
 
 export interface ThemeSwitchProps {
     className?: string;

@@ -1,7 +1,7 @@
+
 import styled from "styled-components";
 
-import Digit from "@/components/digit";
-import { addKey } from "@/functions/utility";
+import Digit from "./digit";
 
 const TimerContainer = styled.div`
     display: flex;
@@ -33,6 +33,7 @@ export function TimeDisplay({
     minutes,
     hours,
     days,
+    label = true,
     compact = false,
 }: {
     milliseconds?: number;
@@ -40,31 +41,47 @@ export function TimeDisplay({
     minutes: number;
     hours: number;
     days: number;
+    label?: boolean;
     compact?: boolean;
 }) {
     const digits = [
-        <Digit value={days} title="DAYS" addSeparator />,
+        <Digit
+            key="days"
+            addSeparator
+            title={label ? "DAYS" : ""}
+            value={days}
+        />,
 
-        <SeparatorContainer>
+        <SeparatorContainer key="sep-0">
             <Separator />
             <Separator />
         </SeparatorContainer>,
 
-        <Digit value={hours} title="HOURS" addSeparator />,
+        <Digit
+            key="hours"
+            addSeparator
+            title={label ? "HOURS" : ""}
+            value={hours}
+        />,
 
-        <SeparatorContainer>
+        <SeparatorContainer key="sep-1">
             <Separator />
             <Separator />
         </SeparatorContainer>,
 
-        <Digit value={minutes} title="MINUTES" addSeparator />,
+        <Digit
+            key="minutes"
+            addSeparator
+            title={label ? "MINUTES" : ""}
+            value={minutes}
+        />,
 
-        <SeparatorContainer>
+        <SeparatorContainer key="sep-2">
             <Separator />
             <Separator />
         </SeparatorContainer>,
 
-        <Digit value={seconds} title="SECONDS" />,
+        <Digit key="seconds" title={label ? "SECONDS" : ""} value={seconds} />,
     ];
 
     if (milliseconds !== undefined) {
@@ -75,9 +92,9 @@ export function TimeDisplay({
             </SeparatorContainer>,
 
             <Digit
-                value={Math.floor(milliseconds / 10)}
-                title="​"
                 addSeparator
+                title={label ? "​" : ""}
+                value={Math.floor(milliseconds / 10)}
             />
         );
     }
@@ -86,15 +103,11 @@ export function TimeDisplay({
         <div className="grid">
             {compact ? (
                 <>
-                    <TimerContainer>
-                        {digits.slice(0, 3).map(addKey)}
-                    </TimerContainer>
-                    <TimerContainer>
-                        {digits.slice(4).map(addKey)}
-                    </TimerContainer>
+                    <TimerContainer>{digits.slice(0, 3)}</TimerContainer>
+                    <TimerContainer>{digits.slice(4)}</TimerContainer>
                 </>
             ) : (
-                <TimerContainer>{digits.map(addKey)}</TimerContainer>
+                <TimerContainer>{digits}</TimerContainer>
             )}
         </div>
     );

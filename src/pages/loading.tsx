@@ -1,9 +1,11 @@
-import { TimeDisplay } from "../components/time-display";
-import { siteConfig } from "@/config/site";
 import styled from "styled-components";
-import { Fadein } from "@/components/animations";
 import { useEffect } from "react";
 import { useCountdown } from "usehooks-ts";
+
+import { TimeDisplay } from "../components/time-display";
+
+import { siteConfig } from "@/config/site";
+import { Fadein } from "@/components/animations";
 
 const LoadingScreenContainer = styled.div`
     background-color: black;
@@ -20,7 +22,7 @@ const LoadingScreenContainer = styled.div`
     width: 100%;
 `;
 
-export default function () {
+export default function Loading() {
     const [count, { startCountdown }] = useCountdown({
         countStart: Math.floor(
             (siteConfig.eventDate.getTime() - Date.now()) / 10
@@ -40,12 +42,12 @@ export default function () {
         <LoadingScreenContainer>
             <Fadein duration="1s">
                 <TimeDisplay
-                    milliseconds={milliseconds % 1000}
-                    seconds={seconds % 60}
-                    minutes={minutes % 60}
-                    hours={hours % 24}
-                    days={days}
                     compact={window.innerWidth < 600}
+                    days={days}
+                    hours={hours % 24}
+                    milliseconds={milliseconds % 1000}
+                    minutes={minutes % 60}
+                    seconds={seconds % 60}
                 />
             </Fadein>
         </LoadingScreenContainer>

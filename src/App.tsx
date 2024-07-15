@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
+import { ThemeContext } from "./context/theme";
+
 import { useTheme } from "@/hooks/use-theme";
 import IndexPage from "@/pages/index";
 import LoadingScreen from "@/pages/loading";
-import { ThemeContext } from "./context/theme";
 
 export default function App() {
     const [loading, setLoading] = useState(true);
@@ -49,10 +50,10 @@ export default function App() {
                         style={{ backgroundColor: isDark ? "black" : "white" }}
                     >
                         <div
+                            className={fadeout ? "fade-out" : ""}
                             style={{
                                 ["--duration" as any]: "3s",
                             }}
-                            className={fadeout ? "fade-out" : ""}
                         >
                             <LoadingScreen />
                         </div>

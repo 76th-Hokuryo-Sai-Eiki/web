@@ -7,24 +7,20 @@ import {
     useRef,
     useSyncExternalStore,
 } from "react";
-
 import { useCountdown } from "usehooks-ts";
+import { Link } from "@nextui-org/link";
+import { button as buttonStyles } from "@nextui-org/theme";
+
+import { Catchphrase } from "./catchphrase";
 
 import { Fadein, FadeinBottom } from "@/components/animations";
 import { GoogleCalendarIcon } from "@/components/icons";
 import { subtitle, title } from "@/components/primitives";
 import { TimeDisplay } from "@/components/time-display";
 import { SuspendImage as Img } from "@/components/image";
-
 import { siteConfig } from "@/config/site";
 import { ThemeContext } from "@/context/theme";
-
 import { chooseRandom } from "@/functions/utility";
-
-import { Link } from "@nextui-org/link";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { Catchphrase } from "./catchphrase";
 
 function CountDown({ compact = false }: { compact?: boolean }) {
     const [count, { startCountdown }] = useCountdown({
@@ -43,11 +39,11 @@ function CountDown({ compact = false }: { compact?: boolean }) {
 
     return (
         <TimeDisplay
-            seconds={seconds % 60}
-            minutes={minutes % 60}
-            hours={hours % 24}
-            days={days}
             compact={compact}
+            days={days}
+            hours={hours % 24}
+            minutes={minutes % 60}
+            seconds={seconds % 60}
         />
     );
 }
@@ -124,12 +120,12 @@ export function Title() {
                 <div className="flex justify-center">
                     <div className="max-w-xl sm:max-w-lg sm:px-4">
                         <Img
-                            src={`banner.${theme}.png`}
-                            layout="constrained"
-                            height={463}
-                            width={1250}
-                            priority={true}
                             blurhash={BLURHASH[theme as "light" | "dark"]}
+                            height={463}
+                            layout="constrained"
+                            priority={true}
+                            src={`banner.${theme}.png`}
+                            width={1250}
                         />
                     </div>
                 </div>
@@ -210,7 +206,7 @@ export function Title() {
                 </div>
             </div>
 
-            <div className="row-start-5 col-span-full 2xl:col-start-2 2xl:col-span-3"></div>
+            <div className="row-start-5 col-span-full 2xl:col-start-2 2xl:col-span-3" />
         </section>
     );
 }

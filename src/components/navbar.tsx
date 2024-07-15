@@ -10,11 +10,11 @@ import {
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
+import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 import { Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
-import { FaGithub, FaTwitter } from "react-icons/fa6";
 
 export function Navbar() {
     // const searchInput = (

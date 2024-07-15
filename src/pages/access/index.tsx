@@ -1,7 +1,9 @@
-import { Fadein, FadeinBottom } from "@/components/animations";
+import { useRef } from "react";
+
 import { Location } from "./location";
 import { Routes } from "./routes";
-import { useRef } from "react";
+
+import { Fadein, FadeinBottom } from "@/components/animations";
 
 const PLANE_MAP =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.6828428356785!2d140.85490131569682!3d38.263661191653135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2836682a9c3d%3A0x6f15d06231e808af!2z5a6u5Z-O55yM5LuZ5Y-w56ys5LqM6auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1492608506872";
@@ -17,7 +19,7 @@ export function Access() {
         <section className="flex flex-col m-2">
             <div className="main-inner form-contents">
                 <div>
-                    <FadeinBottom duration="0.8s" distance="20px">
+                    <FadeinBottom distance="20px" duration="0.8s">
                         <h1
                             className="header mb-3"
                             style={{
@@ -31,26 +33,29 @@ export function Access() {
 
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-[2px]">
-                            <div className="w-full z-10" id="google-map">
+                            <div className="w-full z-10">
                                 <Fadein duration="0.8s">
                                     <iframe
                                         ref={mapRef}
-                                        src={PLANE_MAP}
-                                        className="h-[50vh]"
-                                        width="100%"
-                                        loading="lazy"
                                         allowFullScreen
+                                        className="h-[50vh]"
+                                        loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
+                                        src={PLANE_MAP}
+                                        title="route-map"
+                                        width="100%"
                                     />
                                 </Fadein>
                             </div>
 
                             <div className="h-fit">
-                                <Location
-                                    onRoute={() => {
-                                        showRoute(PLANE_MAP);
-                                    }}
-                                />
+                                <Fadein>
+                                    <Location
+                                        onRoute={() => {
+                                            showRoute(PLANE_MAP);
+                                        }}
+                                    />
+                                </Fadein>
                             </div>
                         </div>
 

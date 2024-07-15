@@ -18,16 +18,14 @@ export function Fadein({
     easing?: string;
     once?: boolean;
 }) {
-    const { ref, inView } = once
-        ? { ref: null, inView: true }
-        : useInView({
-              triggerOnce: false,
-          });
+    const { ref, inView } = useInView({
+        triggerOnce: once,
+    });
 
     return (
         <span
-            className={once || inView ? "fade-in" : "opacity-0"}
             ref={ref}
+            className={inView ? "fade-in" : "opacity-0"}
             style={{
                 ["--duration" as string]: duration,
                 ["--easing" as string]: easing,
