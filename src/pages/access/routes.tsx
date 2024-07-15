@@ -13,9 +13,10 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { User } from "@nextui-org/user";
 import { ReactNode, useCallback } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
-import { FaCarAlt, FaRoute, FaWalking } from "react-icons/fa";
+import { FaCarAlt, FaWalking } from "react-icons/fa";
 import { FaTrainSubway } from "react-icons/fa6";
 import { MdLocalParking, MdPedalBike } from "react-icons/md";
+import { SiGooglemaps } from "react-icons/si";
 
 import carRoute, { columns as carColumns } from "./info/car.tsx";
 import publicRoute, { columns as publicColumns } from "./info/public.tsx";
@@ -90,11 +91,13 @@ function builder(item: any, key: any, handler: any) {
                     <Tooltip content="Google Maps で開く">
                         <Link
                             isExternal
+                            showAnchorIcon
+                            anchorIcon={
+                                <SiGooglemaps className="mb-2" size={24} />
+                            }
                             className="text-lg text-default-400 cursor-pointer active:opacity-50"
                             href={item.map_link}
-                        >
-                            <FaRoute />
-                        </Link>
+                        />
                     </Tooltip>
                 </div>
             );
@@ -120,17 +123,17 @@ function TopContent({
                             {title}
                         </h4>
                     </div>
-                    <BrowserView className="pr-2 flex flex-col justify-end">
+                    <BrowserView className="pr-1 flex flex-col justify-end -mb-1">
                         <FadeinBottom>
                             <p className="text-tiny text-default-400">
-                                行をクリックしてルート検索
+                                項目クリックでルートを表示
                             </p>
                         </FadeinBottom>
                     </BrowserView>
-                    <MobileView className="pr-2 flex flex-col justify-end">
+                    <MobileView className="pr-1 flex flex-col justify-end -mb-1">
                         <FadeinBottom>
                             <p className="text-tiny text-default-400">
-                                行をタップしてルート検索
+                                項目タップでルートを表示
                             </p>
                         </FadeinBottom>
                     </MobileView>
@@ -271,19 +274,21 @@ function Bike() {
             </div>
             <CardBody>
                 <div className="w-fit">
-                    <FadeinBottom distance="10px">
-                        <p className="text-[15px]">
+                    <p className="text-[15px] text-default-600">
+                        <FadeinBottom distance="10px">
                             <span className="inline-block">
                                 来場者の方専用の駐輪場がございます。
                             </span>
-                            <span className="inline lg:hidden 2xl:inline">
-                                <br />
-                            </span>
+                        </FadeinBottom>
+                        <span className="inline lg:hidden 2xl:inline">
+                            <br />
+                        </span>
+                        <FadeinBottom distance="10px">
                             <span className="inline-block">
                                 係の指示に従ってご利用ください。
                             </span>
-                        </p>
-                    </FadeinBottom>
+                        </FadeinBottom>
+                    </p>
                 </div>
             </CardBody>
         </Card>
@@ -294,7 +299,7 @@ export function Routes({ onRoute }: any) {
     return (
         <div className="lg:-mt-2 z-30 blurred-border border-x-1 lg:border-x-0">
             <div className="simple-scrollbar whitespace-nowrap py-5 lg:overflow-x-visible flex lg:flex-wrap lg:items-start lg:gap-3">
-                <div className="inline-block items-start mx-1.5 min-w-[27rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
+                <div className="inline-block items-start mx-1.5 min-w-[28rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
                     <Public onRoute={onRoute} />
                 </div>
                 <div className="inline-block items-start mx-1.5 min-w-[32rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">

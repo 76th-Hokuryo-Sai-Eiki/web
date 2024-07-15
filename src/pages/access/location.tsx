@@ -27,22 +27,27 @@ export function Location({ onRoute }: any) {
                     variant="flat"
                     onClick={onRoute}
                 />
-                <FadeinBottom>
-                    <div className="flex flex-col">
+                <div className="flex flex-col">
+                    <Tooltip content="クリップボードにコピー">
                         <Button
                             disableAnimation
                             className="justify-left h-fit p-0 m-0 text-md text-inherit"
-                            radius="none"
+                            size="sm"
                             style={{
                                 background: "inherit",
                             }}
-                            variant="flat"
-                            onClick={onRoute}
+                            onClick={() => {
+                                navigator.clipboard.writeText(
+                                    "宮城県仙台第二高等学校"
+                                );
+                            }}
                         >
-                            <FadeinBottom>
+                            <FadeinBottom distance="10px" duration="0.5s">
                                 <p>宮城県仙台第二高等学校</p>
                             </FadeinBottom>
                         </Button>
+                    </Tooltip>
+                    <FadeinBottom>
                         <Link
                             isExternal
                             className="text-small text-default-500"
@@ -50,8 +55,8 @@ export function Location({ onRoute }: any) {
                         >
                             sen2-h.myswan.ed.jp
                         </Link>
-                    </div>
-                </FadeinBottom>
+                    </FadeinBottom>
+                </div>
             </CardHeader>
             <Divider />
             <CardBody>
@@ -59,25 +64,59 @@ export function Location({ onRoute }: any) {
                     <li className="inline-flex items-start">
                         <FaSignsPost className="mr-3 mt-1.5" />
                         <FadeinBottom distance="20px" duration="0.5s">
-                            <span className="inline-block">980-8631</span>
+                            <div>
+                                <Tooltip content="クリップボードにコピー">
+                                    <Button
+                                        disableAnimation
+                                        className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                                        size="sm"
+                                        style={{
+                                            background: "inherit",
+                                        }}
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(
+                                                "980-8631"
+                                            );
+                                        }}
+                                    >
+                                        <p className="inline-block">980-8631</p>
+                                    </Button>
+                                </Tooltip>
+                            </div>
                         </FadeinBottom>
                     </li>
 
                     <li className="inline-flex items-start">
-                        <FaLocationDot className="mr-3 mt-1.5" />
+                        <Tooltip content="Google Maps で開く">
+                            <Link
+                                disableAnimation
+                                isExternal
+                                className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                                href={encodeURI(
+                                    "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu"
+                                )}
+                                size="sm"
+                                style={{
+                                    background: "inherit",
+                                }}
+                            >
+                                <FaLocationDot className="mr-3 mt-[0.35rem]" />
+                            </Link>
+                        </Tooltip>
                         <FadeinBottom distance="20px" duration="0.5s">
                             <div>
-                                <Tooltip content="Google Maps で開く">
-                                    <Link
+                                <Tooltip content="クリップボードにコピー">
+                                    <Button
                                         disableAnimation
-                                        isExternal
                                         className="justify-left h-fit p-0 m-0 text-md text-inherit"
-                                        href={encodeURI(
-                                            "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu"
-                                        )}
                                         size="sm"
                                         style={{
                                             background: "inherit",
+                                        }}
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(
+                                                "宮城県仙台市青葉区川内澱橋通1-1"
+                                            );
                                         }}
                                     >
                                         <p>
@@ -88,7 +127,7 @@ export function Location({ onRoute }: any) {
                                                 川内澱橋通1-1
                                             </span>
                                         </p>
-                                    </Link>
+                                    </Button>
                                 </Tooltip>
                             </div>
                         </FadeinBottom>
