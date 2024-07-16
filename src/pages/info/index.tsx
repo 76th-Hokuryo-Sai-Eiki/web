@@ -3,11 +3,12 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Spacer } from "@nextui-org/spacer";
 import { ReactNode } from "react";
+import { FaCircleInfo } from "react-icons/fa6";
 
 import { data } from "./content/faq";
 
 import { FadeinSlide } from "@/components/animations";
-import { LocationCard } from "@/components/location-card";
+import { FaRegCircleQuestion, LocationCard } from "@/components/location-card";
 
 function Faq() {
     return (
@@ -30,6 +31,7 @@ function Faq() {
                                 <AccordionItem
                                     key={index}
                                     aria-label={`Question No. ${index + 1}`}
+                                    indicator={({ isOpen }) => (isOpen ? <FaRegCircleQuestion /> : <FaCircleInfo />)}
                                     title={
                                         <p className="text-default-600 text-large">
                                             {title}
