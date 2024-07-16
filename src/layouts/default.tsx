@@ -15,8 +15,10 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
 
             <Spacer y={20} />
 
-            <footer id="footer" className="flex justify-center w-[94vw]">
-                <Footer />
+            <footer id="footer" className="flex justify-center">
+                <div className="w-[94vw]">
+                    <Footer />
+                </div>
             </footer>
         </div>
     );
