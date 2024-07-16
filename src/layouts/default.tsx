@@ -1,3 +1,4 @@
+import { Spacer } from "@nextui-org/spacer"
 import { ReactNode } from "react";
 
 import { Navbar } from "@/components/navbar";
@@ -12,7 +13,9 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
                 {children}
             </main>
 
-            <footer className="mt-6" id="footer">
+            <Spacer y={20} />
+
+            <footer id="footer">
                 <Footer />
             </footer>
         </div>
