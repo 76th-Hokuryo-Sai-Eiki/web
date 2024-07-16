@@ -33,12 +33,6 @@ export default function IndexPage() {
                     <section id="content">
                         <ContentsSection />
                     </section>
-
-                    <Spacer y={20} />
-
-                    <footer id="footer" className="w-screen">
-                        <Footer />
-                    </footer>
                 </Fadein>
             </DefaultLayout>
         </Fadein>
