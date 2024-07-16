@@ -15,7 +15,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
 
             <Spacer y={20} />
 
-            <footer id="footer">
+            <footer id="footer" className="w-[97vw]">
                 <Footer />
             </footer>
         </div>
