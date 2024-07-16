@@ -267,15 +267,15 @@ function Bike() {
                 <div className="w-fit">
                     <p className="text-[15px] text-default-600">
                         <FadeinSlide distance={10}>
-                            <Inline>
+                            <span>
                                 来場者の方専用の駐輪場がございます。
-                            </Inline>
+                            </span>
                         </FadeinSlide>
                         <span className="inline lg:hidden 2xl:inline">
                             <br />
                         </span>
                         <FadeinSlide distance={10}>
-                            <Inline>係の指示に従ってご利用ください。</Inline>
+                            <span>係の指示に従ってご利用ください。</span>
                         </FadeinSlide>
                     </p>
                 </div>
