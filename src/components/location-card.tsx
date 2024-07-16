@@ -60,7 +60,7 @@ export function LocationCard({
                     <FadeinSlide>
                         <Link
                             isExternal
-                            className="text-small text-default-500"
+                            className="px-1 text-small text-default-500"
                             href="https://sen2-h.myswan.ed.jp/"
                         >
                             sen2-h.myswan.ed.jp
