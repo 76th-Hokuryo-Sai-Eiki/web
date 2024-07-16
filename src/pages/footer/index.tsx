@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <Card className="rounded-b-none">
+        <Card className="rounded-b-none bg-default-200">
             <CardBody>
                 <Link
                     showAnchorIcon
