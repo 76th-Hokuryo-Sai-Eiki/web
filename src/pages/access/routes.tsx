@@ -22,7 +22,7 @@ import carRoute, { columns as carColumns } from "./contents/car.tsx";
 import publicRoute, { columns as publicColumns } from "./contents/public.tsx";
 
 import { FadeinSlide } from "@/components/animations.tsx";
-import { Inline } from "@/components/inline.tsx";
+// import { Inline } from "@/components/inline.tsx";
 
 function builder(item: any, key: any, handler: any) {
     const cellValue = item[key];
