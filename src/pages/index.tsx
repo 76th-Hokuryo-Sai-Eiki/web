@@ -36,7 +36,7 @@ export default function IndexPage() {
 
                     <Spacer y={20} />
 
-                    <footer id="footer">
+                    <footer id="footer" className="w-screen">
                         <Footer />
                     </footer>
                 </Fadein>
