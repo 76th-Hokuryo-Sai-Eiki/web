@@ -2,7 +2,6 @@ import { Spacer } from "@nextui-org/spacer";
 
 import AccessSection from "./access";
 import ContentsSection from "./content";
-import Footer from "./footer";
 import InfoSection from "./info";
 import Title from "./title";
 
