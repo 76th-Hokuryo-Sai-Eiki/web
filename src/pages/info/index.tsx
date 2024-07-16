@@ -8,7 +8,8 @@ import { FaCircleInfo, FaRegCircleQuestion } from "react-icons/fa6";
 import { data } from "./content/faq";
 
 import { FadeinSlide } from "@/components/animations";
-import { LocationCard } from "@/components/location-card";
+import { Inline } from "@/components/inline";
+import { LocationCard } from "@/pages/location-card";
 
 function Faq() {
     return (
@@ -62,8 +63,10 @@ function Faq() {
                 </div>
                 <CardFooter>
                     <p className="text-small text-default-600">
-                        その他の疑問点については最寄りの北陵祭実行委員
-                        (緑の法被) までお尋ねください。
+                        <Inline>
+                            その他の疑問点についても、北陵祭実行委員までお気軽にお尋ねください。
+                        </Inline>
+                        <Inline>緑の法被の法被が目印です。</Inline>
                     </p>
                 </CardFooter>
             </Card>

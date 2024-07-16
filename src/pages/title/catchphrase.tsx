@@ -1,4 +1,5 @@
 import { Fadein, FadeinSlide } from "@/components/animations";
+import { Inline } from "@/components/inline";
 import { subtitle } from "@/components/primitives";
 
 export function Catchphrase() {
@@ -24,7 +25,7 @@ export function Catchphrase() {
                             fontSize: "13pt",
                         }}
                     >
-                        <span className="inline-block ml-1">
+                        <Inline className="ml-1">
                             <span
                                 style={{
                                     color: "royalblue",
@@ -59,10 +60,10 @@ export function Catchphrase() {
                                 力
                             </span>
                             で
-                        </span>
+                        </Inline>
 
-                        <span className="inline-block mr-1">
-                            <span className="inline-block ml-1">
+                        <Inline className="mr-1">
+                            <Inline className="ml-1">
                                 <span
                                     style={{
                                         fontSize: "18pt",
@@ -101,8 +102,8 @@ export function Catchphrase() {
                                     心
                                 </span>
                                 を
-                            </span>
-                            <span className="inline-block">
+                            </Inline>
+                            <Inline>
                                 <span
                                     style={{
                                         color: "violet",
@@ -138,8 +139,8 @@ export function Catchphrase() {
                                 >
                                     !
                                 </span>
-                            </span>
-                        </span>
+                            </Inline>
+                        </Inline>
                     </p>
                 </FadeinSlide>
             </div>

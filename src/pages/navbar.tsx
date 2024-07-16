@@ -11,7 +11,7 @@ import {
 import { useReducer } from "react";
 import { FaGithub } from "react-icons/fa6";
 
-import HashLink from "./hash-link";
+import HashLink from "../components/hash-link";
 
 import { Logo, XTwitterIcon } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";

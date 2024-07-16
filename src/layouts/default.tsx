@@ -1,8 +1,8 @@
 import { Spacer } from "@nextui-org/spacer";
 import { ReactNode } from "react";
 
-import { Navbar } from "@/components/navbar";
 import Footer from "@/pages/footer";
+import { Navbar } from "@/pages/navbar";
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
     return (

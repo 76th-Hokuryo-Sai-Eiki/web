@@ -9,6 +9,7 @@ import { FaLocationDot, FaSignsPost } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
 
 import { FadeinSlide } from "@/components/animations";
+import { Inline } from "@/components/inline";
 
 export function LocationCard({
     onRoute = null,
@@ -134,12 +135,8 @@ export function LocationCard({
                                         }}
                                     >
                                         <p className="pl-1 pr-2 text-left text-wrap md:text-nowrap">
-                                            <span className="inline-block">
-                                                宮城県仙台市青葉区
-                                            </span>
-                                            <span className="inline-block">
-                                                川内澱橋通1-1
-                                            </span>
+                                            <Inline>宮城県仙台市青葉区</Inline>
+                                            <Inline>川内澱橋通1-1</Inline>
                                         </p>
                                     </Button>
                                 </Tooltip>
@@ -158,9 +155,7 @@ export function LocationCard({
                                     className="text-primary"
                                     href="tel:0222215626"
                                 >
-                                    <span className="inline-block">
-                                        022-221-5626
-                                    </span>
+                                    <Inline>022-221-5626</Inline>
                                 </Link>
                             </FadeinSlide>
                         </p>

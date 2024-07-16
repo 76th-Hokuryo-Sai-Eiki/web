@@ -2,14 +2,14 @@ import react from "@vitejs/plugin-react";
 import { defineConfig, loadEnv } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, ".");
 
-    return ({
+    return {
+        define: { __BUILT_AT__: `"${JSON.stringify(new Date().getTime())}"` },
         base: env.VITE_BASE,
         plugins: [react(), tsconfigPaths(), htmlPlugin(env)],
-    })
+    };
 });
 
 function htmlPlugin(env: ReturnType<typeof loadEnv>) {
