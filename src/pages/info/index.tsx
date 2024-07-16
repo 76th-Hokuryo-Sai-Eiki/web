@@ -3,7 +3,7 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Spacer } from "@nextui-org/spacer";
 import { ReactNode } from "react";
-import { FaRegCircleQuestion, FaCircleInfo } from "react-icons/fa6";
+import { FaCircleInfo, FaRegCircleQuestion } from "react-icons/fa6";
 
 import { data } from "./content/faq";
 
@@ -31,14 +31,23 @@ function Faq() {
                                 <AccordionItem
                                     key={index}
                                     aria-label={`Question No. ${index + 1}`}
-                                    indicator={({ isOpen }) => (isOpen ? <FaCircleInfo className="rotate-90" size={20} /> : <FaRegCircleQuestion size={20} />)}
+                                    indicator={({ isOpen }) =>
+                                        isOpen ? (
+                                            <FaCircleInfo
+                                                className="rotate-90"
+                                                size={20}
+                                            />
+                                        ) : (
+                                            <FaRegCircleQuestion size={20} />
+                                        )
+                                    }
                                     title={
                                         <p className="text-default-600 text-large">
                                             {title}
                                         </p>
                                     }
                                 >
-                                    <FadeinSlide>
+                                    <FadeinSlide distance={10} duration={0.3}>
                                         <div className="ml-2 mb-3 text-default-500 text-medium">
                                             {description}
                                         </div>
@@ -48,9 +57,14 @@ function Faq() {
                         )}
                     </Accordion>
                 </CardBody>
-                <Divider />
+                <div className="px-3">
+                    <Divider />
+                </div>
                 <CardFooter>
-                    <p className="text-small text-default-600">その他の疑問点については最寄りの北陵祭実行委員 (緑の法被) までお尋ねください。</p>
+                    <p className="text-small text-default-600">
+                        その他の疑問点については最寄りの北陵祭実行委員
+                        (緑の法被) までお尋ねください。
+                    </p>
                 </CardFooter>
             </Card>
         </div>

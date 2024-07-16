@@ -41,7 +41,7 @@ export default function AccessSection() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <div className="flex flex-col sm:flex-row gap-[2px]">
+                    <div className="flex flex-col md:flex-row gap-[2px]">
                         <div className="w-full z-10 border-2 border-default-200">
                             <Fadein duration={0.8}>
                                 <iframe
@@ -60,9 +60,9 @@ export default function AccessSection() {
                         <div className="h-fit">
                             <Fadein>
                                 <LocationCard
-                                    className="bg-default-200 rounded-b-xl pb-1 pt-1 sm:pt-0 -mt-1 sm:-ml-1 sm:pl-1 sm:max-w-[400px] sm:mt-5 sm:rounded-bl-none sm:rounded-r-xl"
+                                    className="bg-default-200 px-1 rounded-b-xl pb-1 pt-1 md:pt-0 -mt-1 md:-ml-1 md:pl-1 sm:max-w-[350px] md:mt-5 md:rounded-bl-none md:rounded-r-xl"
                                     divider={
-                                        <div className="-ml-1 pr-3">
+                                        <div className="px-3 md:pl-0 md:-ml-1 md:pr-3">
                                             <Divider className="mr-10" />
                                         </div>
                                     }

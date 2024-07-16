@@ -8,8 +8,6 @@ import {
     NavbarMenuToggle,
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
-import { link as linkStyles } from "@nextui-org/theme";
-import clsx from "clsx";
 import { useReducer } from "react";
 import { FaGithub } from "react-icons/fa6";
 
@@ -57,7 +55,6 @@ export function Navbar() {
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
                     <HashLink
-                        smooth
                         className="flex justify-start items-center gap-1"
                         color="foreground"
                         to="#top"
@@ -68,15 +65,7 @@ export function Navbar() {
                 <div className="hidden md:flex gap-4 justify-start ml-2">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
-                            <HashLink
-                                smooth
-                                className={clsx(
-                                    linkStyles({ color: "foreground" }),
-                                    "data-[active=true]:text-primary data-[active=true]:font-medium"
-                                )}
-                                color="foreground"
-                                to={item.href}
-                            >
+                            <HashLink color="foreground" to={item.href}>
                                 {item.label}
                             </HashLink>
                         </NavbarItem>
@@ -136,8 +125,7 @@ export function Navbar() {
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <HashLink
-                                color={"foreground"}
-                                // size="lg"
+                                color="foreground"
                                 to={item.href}
                                 onClick={() => setIsMenuOpen()}
                             >

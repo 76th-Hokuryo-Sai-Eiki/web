@@ -1,30 +1,25 @@
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
-import { cloneElement } from "react";
-import {
-    HashLinkProps,
-    HashLink as ReactRouterHashLink,
-} from "react-router-hash-link";
+import { cloneElement, HTMLAttributes } from "react";
 
-import { scrollIntoViewIfNeeded } from "@/functions/scroll";
-
-export default function HashLink({ to, ...props }: HashLinkProps) {
+export default function HashLink({
+    to,
+    className,
+    ...props
+}: HTMLAttributes<HTMLButtonElement> & { to: string }) {
     return cloneElement(
-        <ReactRouterHashLink
-            smooth
+        <button
             className={clsx(
+                className,
                 linkStyles({ color: "foreground" }),
                 "data-[active=true]:text-primary data-[active=true]:font-medium"
             )}
-            color="foreground"
-            scroll={(e) =>
-                scrollIntoViewIfNeeded(e, {
-                    behavior: "smooth",
-                    forceTop: true,
-                })
-            }
-            to={to}
-        />,
-        props
+            onClick={() => {
+                window.location.hash = to;
+
+                window.dispatchEvent(new HashChangeEvent("hashchange"));
+            }}
+            {...props}
+        />
     );
 }

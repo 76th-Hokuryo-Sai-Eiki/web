@@ -38,19 +38,19 @@ export function Logo({
     );
 }
 
+const BLURHASH = {
+    light: "UJRf:}oL}YWX$%a|R+j@raa|NIj@I@fQxFfQ",
+    dark: "U61rsRjFl:kqhzfkg$f6qKfkh0e.l.fQd=f6",
+};
+
+const PRELOAD_IMAGES = [
+    "banner.light.png",
+    "banner.dark.png",
+    "logo.light.png",
+    "logo.dark.png",
+];
+
 export function Banner() {
-    const BLURHASH = {
-        light: "UJRf:}oL}YWX$%a|R+j@raa|NIj@I@fQxFfQ",
-        dark: "U61rsRjFl:kqhzfkg$f6qKfkh0e.l.fQd=f6",
-    };
-
-    const PRELOAD_IMAGES = [
-        "banner.light.png",
-        "banner.dark.png",
-        "logo.light.png",
-        "logo.dark.png",
-    ];
-
     const { theme } = useContext(ThemeContext);
 
     useEffect(() => {

@@ -53,14 +53,16 @@ export function LocationCard({
                             }}
                         >
                             <FadeinSlide distance={10} duration={0.5}>
-                                <p className="px-1">宮城県仙台第二高等学校</p>
+                                <p className="pl-1 pr-2">
+                                    宮城県仙台第二高等学校
+                                </p>
                             </FadeinSlide>
                         </Button>
                     </Tooltip>
                     <FadeinSlide>
                         <Link
                             isExternal
-                            className="px-1 text-small text-default-500"
+                            className="pl-1 pr-2 text-small text-default-500"
                             href="https://sen2-h.myswan.ed.jp/"
                         >
                             sen2-h.myswan.ed.jp
@@ -70,10 +72,12 @@ export function LocationCard({
             </CardHeader>
             {divider}
             <CardBody>
-                <ul className="overflow-hidden">
+                <ul className="flex flex-col gap-1 overflow-y-hidden">
                     <li className="inline-flex items-start">
-                        <FaSignsPost className="mr-3 mt-1.5" />
-                        <FadeinSlide distance={20} duration={0.5}>
+                        <div>
+                            <FaSignsPost className="mr-3 mt-1.5" />
+                        </div>
+                        <FadeinSlide duration={0.5}>
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -88,8 +92,8 @@ export function LocationCard({
                                             );
                                         }}
                                     >
-                                        <p className="inline-block px-1">
-                                            980-8631
+                                        <p className="pl-1 pr-2 text-left text-wrap">
+                                            <span>980-8631</span>
                                         </p>
                                     </Button>
                                 </Tooltip>
@@ -114,7 +118,7 @@ export function LocationCard({
                                 <FaLocationDot className="mr-3 mt-[0.35rem]" />
                             </Link>
                         </Tooltip>
-                        <FadeinSlide distance={20} duration={0.5}>
+                        <FadeinSlide duration={0.5}>
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
@@ -129,7 +133,7 @@ export function LocationCard({
                                             );
                                         }}
                                     >
-                                        <p className="px-1">
+                                        <p className="pl-1 pr-2 text-left text-wrap md:text-nowrap">
                                             <span className="inline-block">
                                                 宮城県仙台市青葉区
                                             </span>
@@ -144,20 +148,22 @@ export function LocationCard({
                     </li>
 
                     <li className="inline-flex items-start">
-                        <BsFillTelephoneFill className="mr-3 mt-1.5" />
-                        <FadeinSlide distance={20} duration={0.5}>
-                            <Link
-                                isExternal
-                                className="text-primary"
-                                href="tel:0222215626"
-                            >
-                                <p className="px-1">
+                        <div>
+                            <BsFillTelephoneFill className="mr-3 mt-1.5" />
+                        </div>
+                        <p className="pl-1 pr-2">
+                            <FadeinSlide duration={0.5}>
+                                <Link
+                                    isExternal
+                                    className="text-primary"
+                                    href="tel:0222215626"
+                                >
                                     <span className="inline-block">
                                         022-221-5626
                                     </span>
-                                </p>
-                            </Link>
-                        </FadeinSlide>
+                                </Link>
+                            </FadeinSlide>
+                        </p>
                     </li>
                 </ul>
             </CardBody>

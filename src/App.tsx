@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
+import { scrollIntoViewIfNeeded } from "./functions/scroll";
 
 import { ThemeContext } from "@/context/theme";
 import { useTheme } from "@/hooks/theme";
@@ -11,6 +13,26 @@ export default function App() {
     const [fadeout, setFadeout] = useState(false);
     const { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme } =
         useTheme();
+
+    const onHashchange = useCallback(() => {
+        const anchor = document.getElementById(window.location.hash);
+
+        if (anchor)
+            scrollIntoViewIfNeeded(anchor, {
+                marginTop: 10,
+                behavior: "smooth",
+                forceTop: true,
+            });
+    }, []);
+
+    useEffect(() => {
+        onHashchange();
+        window.addEventListener("hashchange", onHashchange);
+
+        return () => {
+            window.removeEventListener("hashchange", onHashchange);
+        };
+    }, [onHashchange]);
 
     useEffect(() => {
         const fadeoutId = setTimeout(

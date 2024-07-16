@@ -1,4 +1,4 @@
-import { Spacer } from "@nextui-org/spacer"
+import { Spacer } from "@nextui-org/spacer";
 import { ReactNode } from "react";
 
 import { Navbar } from "@/components/navbar";
@@ -15,7 +15,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
 
             <Spacer y={20} />
 
-            <footer id="footer" className="flex justify-center">
+            <footer className="flex justify-center" id="#footer">
                 <div className="w-[94vw]">
                     <Footer />
                 </div>

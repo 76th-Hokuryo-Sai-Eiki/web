@@ -13,23 +13,23 @@ export default function IndexPage() {
         <Fadein duration={0.3} once={true}>
             <DefaultLayout>
                 <Fadein duration={0.5} once={true}>
-                    <section id="title">
+                    <section id="#title">
                         <Title />
                     </section>
 
-                    <section id="access">
+                    <section id="#access">
                         <AccessSection />
                     </section>
 
                     <Spacer y={20} />
 
-                    <section id="info">
+                    <section id="#info">
                         <InfoSection />
                     </section>
 
                     <Spacer y={20} />
 
-                    <section id="content">
+                    <section id="#content">
                         <ContentsSection />
                     </section>
                 </Fadein>
