@@ -1,5 +1,6 @@
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
-import { Card, CardBody } from "@nextui-org/card";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Divider } from "@nextui-org/divider";
 import { Spacer } from "@nextui-org/spacer";
 import { ReactNode } from "react";
 
