@@ -1,9 +1,7 @@
-import type { Selection } from "@nextui-org/table";
-
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Card, CardBody } from "@nextui-org/card";
 import { Spacer } from "@nextui-org/spacer";
-import { Key, ReactNode, useState } from "react";
+import { ReactNode } from "react";
 
 import { data } from "./content/faq";
 
@@ -11,18 +9,12 @@ import { FadeinSlide } from "@/components/animations";
 import { LocationCard } from "@/components/location-card";
 
 function Faq() {
-    const [selectedKeys, setSelectedKeys] = useState<Selection>(new Set());
-
     return (
         <div className="mt-5">
             <h1 className="text-default-600 text-3xl">よくあるご質問</h1>
             <Card className="mt-3">
                 <CardBody>
-                    <Accordion
-                        selectedKeys={selectedKeys}
-                        selectionMode="multiple"
-                        onSelectionChange={setSelectedKeys}
-                    >
+                    <Accordion>
                         {data.map(
                             (
                                 {
@@ -38,21 +30,9 @@ function Faq() {
                                     key={index}
                                     aria-label={`Question No. ${index + 1}`}
                                     title={
-                                        <FadeinSlide
-                                            distance={10}
-                                            duration={
-                                                selectedKeys === "all" ||
-                                                (selectedKeys as Set<Key>).has(
-                                                    String(index)
-                                                )
-                                                    ? 0
-                                                    : 0.6
-                                            }
-                                        >
-                                            <p className="text-default-600 text-large">
-                                                {title}
-                                            </p>
-                                        </FadeinSlide>
+                                        <p className="text-default-600 text-large">
+                                            {title}
+                                        </p>
                                     }
                                 >
                                     <FadeinSlide>
@@ -65,6 +45,10 @@ function Faq() {
                         )}
                     </Accordion>
                 </CardBody>
+                <Divider />
+                <CardFooter>
+                    <p className="text-small text-default-600">その他の疑問点については最寄りの北陵祭実行委員 (緑の法被) までお尋ねください。</p>
+                </CardFooter>
             </Card>
         </div>
     );
