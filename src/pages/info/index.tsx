@@ -31,7 +31,7 @@ function Faq() {
                                 <AccordionItem
                                     key={index}
                                     aria-label={`Question No. ${index + 1}`}
-                                    indicator={({ isOpen }) => (isOpen ? <FaRegCircleQuestion /> : <FaCircleInfo />)}
+                                    indicator={({ isOpen }) => (isOpen ? <FaCircleInfo className="rotate-90" size={20} /> : <FaRegCircleQuestion size={20} />)}
                                     title={
                                         <p className="text-default-600 text-large">
                                             {title}
