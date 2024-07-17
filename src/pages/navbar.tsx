@@ -67,7 +67,9 @@ export function Navbar() {
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
                             <HashLink color="foreground" to={item.href}>
-                                {item.label}
+                                <span style={{ fontFamily: "Kode Mono" }}>
+                                    {item.label}
+                                </span>
                             </HashLink>
                         </NavbarItem>
                     ))}
@@ -130,7 +132,9 @@ export function Navbar() {
                                 to={item.href}
                                 onClick={setIsMenuOpen}
                             >
-                                {item.label}
+                                <span style={{ fontFamily: "Kode Mono" }}>
+                                    {item.label}
+                                </span>
                             </HashLink>
                         </NavbarMenuItem>
                     ))}
