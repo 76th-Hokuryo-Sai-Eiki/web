@@ -275,7 +275,7 @@ function Bike() {
                             <br />
                         </span>
                         <FadeinSlide distance={10}>
-                            <span>係の指示に従ってご利用ください。</span>
+                            <Inline>係の指示に従ってご利用ください。</Inline>
                         </FadeinSlide>
                     </p>
                 </div>
