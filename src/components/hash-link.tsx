@@ -16,7 +16,7 @@ export default function HashLink({
                 "data-[active=true]:text-primary data-[active=true]:font-medium"
             )}
             onClick={() => {
-                onClick();
+                if(onClick) onClick();
 
                 window.location.hash = to;
 
