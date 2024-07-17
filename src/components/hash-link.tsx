@@ -15,7 +15,7 @@ export default function HashLink({
                 linkStyles({ color: "foreground" }),
                 "data-[active=true]:text-primary data-[active=true]:font-medium"
             )}
-            onClick={(e : MouseEvent<HTMLInputElement>) => {
+            onClick={(e : MouseEvent<HTMLButtonElement>) => {
                 if(onClick) onClick(e);
 
                 window.location.hash = to;
