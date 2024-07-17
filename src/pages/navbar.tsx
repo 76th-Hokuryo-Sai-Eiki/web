@@ -57,6 +57,7 @@ export function Navbar() {
                     <HashLink
                         className="flex justify-start items-center gap-1"
                         color="foreground"
+                        onClick={setIsMenuOpen}
                         to="#top"
                     >
                         <Logo />
@@ -127,7 +128,7 @@ export function Navbar() {
                             <HashLink
                                 color="foreground"
                                 to={item.href}
-                                onClick={() => setIsMenuOpen()}
+                                onClick={setIsMenuOpen}
                             >
                                 {item.label}
                             </HashLink>
