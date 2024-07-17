@@ -11,3 +11,11 @@ export const addKey = (e: any, i: number) => React.cloneElement(e, { key: i });
 export function getImageUrl(name: string) {
     return new URL(`/src/images/${name}`, import.meta.url).href;
 }
+
+export function removeHash() {
+    history.pushState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search,
+    );
+}

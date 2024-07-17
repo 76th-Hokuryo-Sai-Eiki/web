@@ -6,19 +6,19 @@ import { Navbar } from "@/pages/navbar";
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
     return (
-        <div className="relative flex flex-col h-fit">
+        <div className="relative flex h-fit flex-col">
             <Navbar />
 
             <header id="#head" />
 
-            <main className="container mx-auto px-6 flex-grow pt-16">
+            <main className="container mx-auto flex-grow px-6 pt-16">
                 {children}
             </main>
 
             <Spacer y={20} />
 
             <footer className="flex justify-center" id="#footer">
-                <div className="w-[94vw]">
+                <div className="w-screen">
                     <Footer />
                 </div>
             </footer>

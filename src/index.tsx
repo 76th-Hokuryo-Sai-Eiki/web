@@ -6,7 +6,8 @@ import App from "./App.tsx";
 import { Provider } from "./provider.tsx";
 
 import { makeGuard } from "@/components/guard.tsx";
-import "@/styles/globals.css";
+
+import "@/styles/globals.scss";
 
 const Guard = makeGuard();
 
@@ -19,5 +20,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 </Guard>
             </Provider>
         </BrowserRouter>
-    </StrictMode>
+    </StrictMode>,
 );

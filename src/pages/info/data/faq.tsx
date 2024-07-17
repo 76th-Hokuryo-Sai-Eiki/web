@@ -22,11 +22,11 @@ export const data = [
                 <Inline>
                     交通の詳細につきましては
                     <HashLink
-                        className="mx-1"
+                        className="hashlink mx-1"
                         style={{ fontFamily: "Kode Mono" }}
                         to="#access"
                     >
-                        [Access]
+                        Access
                     </HashLink>
                     もご参照ください。
                 </Inline>

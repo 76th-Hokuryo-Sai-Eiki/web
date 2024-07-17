@@ -121,7 +121,7 @@ export default function Title() {
 
                             <span className="sm:hidden">
                                 <br />
-                                <p className="inline-flex h-14 mt-5" />
+                                <span className="inline-flex h-14 mt-5" />
                             </span>
                             <h1
                                 className={title({

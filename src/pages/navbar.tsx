@@ -8,7 +8,7 @@ import {
     NavbarMenuToggle,
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
-import { useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 import { FaGithub } from "react-icons/fa6";
 
 import HashLink from "../components/hash-link";
@@ -58,21 +58,26 @@ export function Navbar() {
             onMenuOpenChange={toggleIsMenuOpen}
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-                <NavbarBrand className="gap-3 max-w-fit">
+                <NavbarBrand className="max-w-fit gap-3">
                     <HashLink
-                        className="flex justify-start items-center gap-1"
+                        className="flex items-center justify-start gap-1"
                         color="foreground"
-                        onClick={setMenuClosed}
                         to="#head"
+                        onClick={setMenuClosed}
                     >
                         <Logo />
                     </HashLink>
                 </NavbarBrand>
-                <div className="hidden md:flex gap-4 justify-start ml-2">
+                <div className="ml-2 hidden justify-start gap-4 md:flex">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
                             <HashLink color="foreground" to={item.href}>
-                                <span style={{ fontFamily: "Kode Mono" }}>
+                                <span
+                                    className="hashlink"
+                                    style={{
+                                        fontFamily: "Kode Mono",
+                                    }}
+                                >
                                     {item.label}
                                 </span>
                             </HashLink>
@@ -82,10 +87,10 @@ export function Navbar() {
             </NavbarContent>
 
             <NavbarContent
-                className="hidden md:flex basis-1/5 md:basis-full"
+                className="hidden basis-1/5 md:flex md:basis-full"
                 justify="end"
             >
-                <NavbarItem className="hidden md:flex gap-2">
+                <NavbarItem className="hidden gap-2 md:flex">
                     <ThemeSwitch />
                     <Link isExternal href={siteConfig.links.twitter}>
                         <XTwitterIcon className="text-default-500" size={22} />
@@ -116,7 +121,7 @@ export function Navbar() {
                 </NavbarItem> */}
             </NavbarContent>
 
-            <NavbarContent className="md:hidden basis-1 pl-4" justify="end">
+            <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
                 <ThemeSwitch />
                 <Link isExternal href={siteConfig.links.twitter}>
                     <XTwitterIcon className="text-default-500" size={22} />

@@ -1,11 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import { scrollIntoViewIfNeeded } from "./functions/scroll";
+import IndexPage from "./pages";
 
 import { ThemeContext } from "@/context/theme";
 import { useTheme } from "@/hooks/theme";
-import IndexPage from "@/pages/index";
 import LoadingScreen from "@/pages/loading";
 
 export default function App() {
@@ -14,39 +12,19 @@ export default function App() {
     const { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme } =
         useTheme();
 
-    const onHashchange = useCallback(() => {
-        const anchor = document.getElementById(window.location.hash);
-
-        if (anchor)
-            scrollIntoViewIfNeeded(anchor, {
-                marginTop: 10,
-                behavior: "smooth",
-                forceTop: true,
-            });
-    }, []);
-
-    useEffect(() => {
-        onHashchange();
-        window.addEventListener("hashchange", onHashchange);
-
-        return () => {
-            window.removeEventListener("hashchange", onHashchange);
-        };
-    }, [onHashchange]);
-
     useEffect(() => {
         const fadeoutId = setTimeout(
             () => {
                 setFadeout(true);
             },
-            import.meta.env.DEV ? 150 : 3000
+            import.meta.env.DEV ? 150 : 3000,
         );
 
         const loadingId = setTimeout(
             () => {
                 setLoading(false);
             },
-            import.meta.env.DEV ? 300 : 6000
+            import.meta.env.DEV ? 300 : 6000,
         );
 
         return () => {
@@ -80,13 +58,14 @@ export default function App() {
                         </div>
                     </div>
                 ) : (
-                    <Routes>
-                        <Route element={<IndexPage />} path="/" />
-                        {/* <Route element={<AccessPage />} path="/access" />
-                        <Route element={<PricingPage />} path="/pricing" />
-                        <Route element={<BlogPage />} path="/blog" />
-                        <Route element={<AboutPage />} path="/about" /> */}
-                    </Routes>
+                    <IndexPage />
+                    // <Routes>
+                    // {/* <Route element={<IndexPage />} path="/" /> */}
+                    // {/* <Route element={<AccessPage />} path="/access" />
+                    // <Route element={<PricingPage />} path="/pricing" />
+                    // <Route element={<BlogPage />} path="/blog" />
+                    // <Route element={<AboutPage />} path="/about" /> */}
+                    // </Routes>
                 )}
             </div>
         </ThemeContext.Provider>

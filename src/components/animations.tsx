@@ -1,10 +1,4 @@
-import {
-    Children,
-    cloneElement,
-    isValidElement,
-    ReactElement,
-    ReactNode,
-} from "react";
+import { Children, cloneElement, ReactElement, ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
 
 export function Fadein({
@@ -42,7 +36,7 @@ export function FadeinSlide({
     distance = 20,
     once = false,
 }: {
-    children: ReactNode;
+    children: ReactElement;
     duration?: number;
     distance?: number;
     once?: boolean;
@@ -52,28 +46,24 @@ export function FadeinSlide({
         triggerOnce: once,
     });
 
-    return Children.map(children, (child) => {
-        if (isValidElement(child)) {
-            return cloneElement(child as ReactElement, {
-                ref,
-                className: [
-                    child.props.className,
-                    duration <= 0
-                        ? "opacity-1"
-                        : inView
-                          ? "fade-in-bottom"
-                          : "opacity-0",
-                ]
-                    .filter((e) => e)
-                    .join(" "),
-                style: {
-                    "--duration": `${duration}s`,
-                    "--distance": `${distance}px`,
-                    ...child.props.style,
-                },
-            });
-        } else {
-            return child;
-        }
+    const element = Children.only(children);
+
+    return cloneElement(element, {
+        ref,
+        className: [
+            element.props.className,
+            duration <= 0
+                ? "opacity-1"
+                : inView
+                  ? "fade-in-bottom"
+                  : "opacity-0",
+        ]
+            .filter((e) => e)
+            .join(" "),
+        style: {
+            "--duration": `${duration}s`,
+            "--distance": `${distance}px`,
+            ...element.props.style,
+        },
     });
 }

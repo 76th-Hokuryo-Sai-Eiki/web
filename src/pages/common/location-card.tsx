@@ -94,7 +94,7 @@ export function LocationCard({
                                         }}
                                     >
                                         <p className="pl-1 pr-2 text-left text-wrap">
-                                            <span>980-8631</span>
+                                            980-8631
                                         </p>
                                     </Button>
                                 </Tooltip>

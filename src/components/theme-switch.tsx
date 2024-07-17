@@ -1,11 +1,12 @@
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import clsx from "clsx";
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa6";
 
 import { ThemeContext } from "@/context/theme";
+import { removeHash } from "@/functions/utility";
 
 export interface ThemeSwitchProps {
     className?: string;
@@ -17,7 +18,10 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
 
     const { theme, toggleTheme } = useContext(ThemeContext);
 
-    const onChange = toggleTheme;
+    const onChange = useCallback(() => {
+        toggleTheme();
+        removeHash();
+    }, [toggleTheme]);
 
     const {
         Component,
@@ -36,7 +40,7 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
     }, [isMounted]);
 
     // Prevent Hydration Mismatch
-    if (!isMounted) return <div className="w-6 h-6" />;
+    if (!isMounted) return <div className="h-6 w-6" />;
 
     return (
         <Component
@@ -44,7 +48,7 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
                 className: clsx(
                     "px-px transition-opacity hover:opacity-80 cursor-pointer",
                     className,
-                    classNames?.base
+                    classNames?.base,
                 ),
             })}
         >
@@ -56,7 +60,7 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
                 className={slots.wrapper({
                     class: clsx(
                         [
-                            "w-auto h-auto",
+                            "h-auto w-auto",
                             "bg-transparent",
                             "rounded-lg",
                             "flex items-center justify-center",
@@ -66,7 +70,7 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
                             "px-0",
                             "mx-0",
                         ],
-                        classNames?.wrapper
+                        classNames?.wrapper,
                     ),
                 })}
             >
