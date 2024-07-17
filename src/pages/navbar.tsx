@@ -18,10 +18,15 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
 export function Navbar() {
-    const [isMenuOpen, setMenuClosed] = useReducer(
-        () => false,
-        false
-    );
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleIsMenuOpen = useCallback(() => {
+        setIsMenuOpen(!isMenuOpen);
+    }, [isMenuOpen, setIsMenuOpen]);
+
+    const setMenuClosed = useCallback(() => {
+        setIsMenuOpen(!false);
+    }, [setIsMenuOpen]);
 
     // const searchInput = (
     //     <Input
@@ -50,7 +55,7 @@ export function Navbar() {
             isMenuOpen={isMenuOpen}
             maxWidth="2xl"
             position="sticky"
-            onMenuOpenChange={setMenuClosed}
+            onMenuOpenChange={toggleIsMenuOpen}
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
