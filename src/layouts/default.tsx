@@ -9,6 +9,8 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
         <div className="relative flex flex-col h-fit">
             <Navbar />
 
+            <header id="#head" />
+
             <main className="container mx-auto px-6 flex-grow pt-16">
                 {children}
             </main>
