@@ -57,7 +57,7 @@ export default function Footer() {
                     <div className="flex h-full flex-row items-end">
                         <span className="hidden text-right text-tiny text-default-500 sm:text-medium [@media(min-width:350px)]:inline">
                             build-id:
-                            <Tooltip content="コピーする">
+                            <Tooltip content="クリップボードにコピー">
                                 <Button
                                     className="m-0 ml-1 h-fit w-fit bg-inherit p-0 text-inherit"
                                     data-pressed="false"

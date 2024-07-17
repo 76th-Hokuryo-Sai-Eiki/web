@@ -31,7 +31,7 @@ function DummyCard() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        backgroundImage: "url(./logo.png)",
+                        backgroundImage: "url(./images/logo.png)",
                         backgroundSize: "288px",
                         borderRadius: "16px",
                     }}

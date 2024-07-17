@@ -68,7 +68,7 @@ export function Navbar() {
                         <Logo />
                     </HashLink>
                 </NavbarBrand>
-                <div className="ml-2 hidden justify-start gap-4 md:flex">
+                <div className="ml-2 hidden justify-start gap-6 md:flex">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
                             <HashLink color="foreground" to={item.href}>
@@ -142,7 +142,10 @@ export function Navbar() {
                                 to={item.href}
                                 onClick={setMenuClosed}
                             >
-                                <span style={{ fontFamily: "Kode Mono" }}>
+                                <span
+                                    className="hashlink"
+                                    style={{ fontFamily: "Kode Mono" }}
+                                >
                                     {item.label}
                                 </span>
                             </HashLink>
