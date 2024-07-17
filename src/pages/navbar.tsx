@@ -18,8 +18,8 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
 export function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useReducer(
-        (current) => !current,
+    const [isMenuOpen, setMenuClosed] = useReducer(
+        () => false,
         false
     );
 
@@ -50,15 +50,15 @@ export function Navbar() {
             isMenuOpen={isMenuOpen}
             maxWidth="2xl"
             position="sticky"
-            onMenuOpenChange={setIsMenuOpen}
+            onMenuOpenChange={setMenuClosed}
         >
             <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
                 <NavbarBrand className="gap-3 max-w-fit">
                     <HashLink
                         className="flex justify-start items-center gap-1"
                         color="foreground"
-                        onClick={setIsMenuOpen}
-                        to="#top"
+                        onClick={setMenuClosed}
+                        to="#head"
                     >
                         <Logo />
                     </HashLink>
@@ -130,7 +130,7 @@ export function Navbar() {
                             <HashLink
                                 color="foreground"
                                 to={item.href}
-                                onClick={setIsMenuOpen}
+                                onClick={setMenuClosed}
                             >
                                 <span style={{ fontFamily: "Kode Mono" }}>
                                     {item.label}
