@@ -1,6 +1,6 @@
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
-import { cloneElement, HTMLAttributes } from "react";
+import { cloneElement, HTMLAttributes, MouseEvent } from "react";
 
 export default function HashLink({
     to,
@@ -15,8 +15,8 @@ export default function HashLink({
                 linkStyles({ color: "foreground" }),
                 "data-[active=true]:text-primary data-[active=true]:font-medium"
             )}
-            onClick={() => {
-                if(onClick) onClick();
+            onClick={(e : MouseEvent<HTMLInputElement>) => {
+                if(onClick) onClick(e);
 
                 window.location.hash = to;
 
