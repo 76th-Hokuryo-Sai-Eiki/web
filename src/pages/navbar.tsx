@@ -8,7 +8,7 @@ import {
     NavbarMenuToggle,
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
-import { useReducer } from "react";
+import { useState, useCallback } from "react";
 import { FaGithub } from "react-icons/fa6";
 
 import HashLink from "../components/hash-link";
