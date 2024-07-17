@@ -4,6 +4,7 @@ import { cloneElement, HTMLAttributes } from "react";
 
 export default function HashLink({
     to,
+    onClick,
     className,
     ...props
 }: HTMLAttributes<HTMLButtonElement> & { to: string }) {
@@ -15,6 +16,8 @@ export default function HashLink({
                 "data-[active=true]:text-primary data-[active=true]:font-medium"
             )}
             onClick={() => {
+                onClick();
+
                 window.location.hash = to;
 
                 window.dispatchEvent(new HashChangeEvent("hashchange"));
