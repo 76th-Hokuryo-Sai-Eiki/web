@@ -25,7 +25,7 @@ export function Navbar() {
     }, [isMenuOpen, setIsMenuOpen]);
 
     const setMenuClosed = useCallback(() => {
-        setIsMenuOpen(!false);
+        setIsMenuOpen(false);
     }, [setIsMenuOpen]);
 
     // const searchInput = (
