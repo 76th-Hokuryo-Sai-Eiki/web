@@ -7,3 +7,7 @@ export function chooseRandom(source: Array<any>) {
 }
 
 export const addKey = (e: any, i: number) => React.cloneElement(e, { key: i });
+
+export function getImageUrl(name: string) {
+    return new URL(`/src/images/${name}`, import.meta.url).href;
+}

@@ -5,7 +5,6 @@ import {
     ReactElement,
     SVGProps,
     useContext,
-    useEffect,
     useState,
 } from "react";
 import { FaTwitter, FaXTwitter } from "react-icons/fa6";
@@ -13,6 +12,7 @@ import { FaTwitter, FaXTwitter } from "react-icons/fa6";
 import { SuspendImage } from "./image";
 
 import { ThemeContext } from "@/context/theme";
+import { getImageUrl } from "@/functions/utility";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
     size?: number;
@@ -32,7 +32,7 @@ export function Logo({
     return (
         <NextUIImage
             height={size || height}
-            src={`logo.${theme}.png`}
+            src={getImageUrl(`logo.${theme}.png`)}
             width={size || width}
         />
     );
@@ -43,29 +43,18 @@ const BLURHASH = {
     dark: "U61rsRjFl:kqhzfkg$f6qKfkh0e.l.fQd=f6",
 };
 
-const PRELOAD_IMAGES = [
-    "banner.light.png",
-    "banner.dark.png",
-    "logo.light.png",
-    "logo.dark.png",
-];
-
 export function Banner() {
     const { theme } = useContext(ThemeContext);
-
-    useEffect(() => {
-        PRELOAD_IMAGES.forEach((path) => (new Image().src = path));
-    });
 
     return (
         <div className="flex justify-center">
             <div className="max-w-xl sm:max-w-lg sm:px-4">
                 <SuspendImage
-                    blurhash={BLURHASH[theme as "light" | "dark"]}
+                    blurhash={BLURHASH[theme]}
                     height={463}
                     layout="constrained"
                     priority={true}
-                    src={`banner.${theme}.png`}
+                    src={getImageUrl(`banner.${theme}.png`)}
                     width={1250}
                 />
             </div>
