@@ -3,13 +3,15 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Link } from "@nextui-org/link";
 import { Switch } from "@nextui-org/switch";
 import { Tooltip } from "@nextui-org/tooltip";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 
 import { Inline } from "@/components/inline";
+import { LoadingScreenContext } from "@/context/loading-screen";
 
 export default function Footer() {
-    const [isSelected, setIsSelected] = useState(true);
+    const { show: showLoadingScreen, setShow: setShowLoadingScreen } =
+        useContext(LoadingScreenContext);
 
     return (
         <Card
@@ -34,14 +36,14 @@ export default function Footer() {
                     <div className="mt-3">
                         <Switch
                             color="primary"
-                            isSelected={isSelected}
+                            isSelected={showLoadingScreen}
                             size="sm"
-                            onValueChange={setIsSelected}
+                            onValueChange={setShowLoadingScreen}
                         >
                             Loading Screen
                         </Switch>{" "}
                         <p className="text-small text-default-500">
-                            {isSelected ? "Normal" : "Simple"}
+                            {showLoadingScreen ? "Normal" : "Simple"}
                         </p>
                     </div>
                 </div>
