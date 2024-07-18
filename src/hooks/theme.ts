@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { removeHash } from "@/functions/utility";
+
 const ThemeProps = {
     key: "theme",
     light: "light",
@@ -13,7 +15,7 @@ type Theme = typeof ThemeProps.light | typeof ThemeProps.dark;
 export function useTheme(defaultTheme?: Theme) {
     const [theme, setTheme] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem(
-            ThemeProps.key
+            ThemeProps.key,
         ) as Theme | null;
 
         return storedTheme || (defaultTheme ?? ThemeProps.light);
@@ -28,10 +30,11 @@ export function useTheme(defaultTheme?: Theme) {
     }, [theme]);
 
     const _setTheme = (theme: Theme) => {
+        removeHash();
         localStorage.setItem(ThemeProps.key, theme);
         document.documentElement.classList.remove(
             ThemeProps.light,
-            ThemeProps.dark
+            ThemeProps.dark,
         );
         document.documentElement.classList.add(theme);
         setTheme(theme);

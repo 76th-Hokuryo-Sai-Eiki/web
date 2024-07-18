@@ -38,14 +38,16 @@ function builder(item: any, key: any, handler: any) {
                     }}
                     description={
                         <FadeinSlide>
-                            <Link
-                                isExternal
-                                className="text-tiny text-default-400 opacity-100"
-                                href={item.sub_link}
-                                isDisabled={!item.sub_link}
-                            >
-                                {item.description}
-                            </Link>
+                            <div>
+                                <Link
+                                    isExternal
+                                    className="text-tiny text-default-400 opacity-100"
+                                    href={item.sub_link}
+                                    isDisabled={!item.sub_link}
+                                >
+                                    {item.description}
+                                </Link>
+                            </div>
                         </FadeinSlide>
                     }
                     name={
@@ -92,7 +94,7 @@ function builder(item: any, key: any, handler: any) {
                     <Tooltip content="ルートを表示">
                         <Button
                             isIconOnly
-                            className="text-lg text-default-400 cursor-pointer active:opacity-50"
+                            className="cursor-pointer text-lg text-default-400 active:opacity-50"
                             startContent={
                                 <FaRoute className="mb-2" size={20} />
                             }
@@ -112,7 +114,7 @@ function builder(item: any, key: any, handler: any) {
                             anchorIcon={
                                 <SiGooglemaps className="mb-2" size={24} />
                             }
-                            className="text-lg text-default-400 cursor-pointer active:opacity-50"
+                            className="cursor-pointer text-lg text-default-400 active:opacity-50"
                             href={item.map_link}
                         />
                     </Tooltip>
@@ -134,7 +136,7 @@ function TopContent({
         <>
             <div className="flex gap-5 pl-1.5">
                 {icon}
-                <div className="w-full flex justify-between">
+                <div className="flex w-full justify-between">
                     <div className="flex flex-col items-center justify-center">
                         <h4 className="text-medium font-semibold leading-none text-default-600">
                             {title}
@@ -236,7 +238,7 @@ function Car({ onRoute }: any) {
                                         ...item,
                                     },
                                     key,
-                                    onRoute
+                                    onRoute,
                                 )}
                             </TableCell>
                         )}
@@ -249,18 +251,18 @@ function Car({ onRoute }: any) {
 
 function Bike() {
     return (
-        <Card className="w-fit lg:w-auto h-fit">
+        <Card className="h-fit w-fit lg:w-auto">
             <CardHeader>
-                <div className="pl-1.5 flex gap-5">
+                <div className="flex gap-5 pl-1.5">
                     <MdPedalBike size={36} />
-                    <div className="flex flex-col gap-1 items-start justify-center">
+                    <div className="flex flex-col items-start justify-center gap-1">
                         <h4 className="text-medium font-semibold leading-none text-default-600">
                             自転車でお越しの方
                         </h4>
                     </div>
                 </div>
             </CardHeader>
-            <div className="px-3 mt-0.5">
+            <div className="mt-0.5 px-3">
                 <Divider />
             </div>
             <CardBody>
@@ -286,15 +288,15 @@ function Bike() {
 
 export function Routes({ onRoute }: any) {
     return (
-        <div className="lg:-mt-2 z-30 blurred-border border-x-1 lg:border-x-0">
-            <div className="simple-scrollbar whitespace-nowrap py-5 lg:overflow-x-visible flex lg:flex-wrap lg:items-start lg:gap-3">
-                <div className="inline-block items-start mx-1.5 min-w-[28rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
+        <div className="blurred-border z-30 border-x-1 lg:-mt-2 lg:border-x-0">
+            <div className="simple-scrollbar flex whitespace-nowrap py-5 lg:flex-wrap lg:items-start lg:gap-3 lg:overflow-x-visible">
+                <div className="mx-1.5 inline-block min-w-[28rem] flex-1 items-start lg:mx-0 lg:w-auto lg:min-w-fit">
                     <Public onRoute={onRoute} />
                 </div>
-                <div className="inline-block items-start mx-1.5 min-w-[34rem] lg:w-auto lg:mx-0 lg:min-w-fit flex-1">
+                <div className="mx-1.5 inline-block min-w-[34rem] flex-1 items-start lg:mx-0 lg:w-auto lg:min-w-fit">
                     <Car onRoute={onRoute} />
                 </div>
-                <div className="inline-block items-start mx-1.5 flex-auto 2xl:flex-none 2xl:flex-shrink lg:w-auto lg:mx-0 lg:min-w-fit">
+                <div className="mx-1.5 inline-block flex-auto items-start lg:mx-0 lg:w-auto lg:min-w-fit 2xl:flex-none 2xl:flex-shrink">
                     <Bike />
                 </div>
             </div>

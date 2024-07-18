@@ -12,9 +12,9 @@ import DefaultLayout from "@/layouts/default";
 export default function IndexPage() {
     return (
         <HashLink.Provider>
-            <Fadein duration={0.3} once={true}>
+            <Fadein once duration={0.3}>
                 <DefaultLayout>
-                    <Fadein duration={0.5} once={true}>
+                    <Fadein once duration={0.5}>
                         <section id="#title">
                             <Title />
                         </section>

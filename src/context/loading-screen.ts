@@ -1,8 +1,12 @@
-import { Dispatch, SetStateAction, createContext } from "react";
+import { createContext } from "react";
 
 export interface LoadingScreenContext {
-    show: boolean;
-    setShow: Dispatch<SetStateAction<boolean>>;
+    loadingKind: "simple" | "normal";
+    isSimple: boolean;
+    isNormal: boolean;
+    setSimpleLoading: () => void;
+    setNormalLoading: () => void;
+    toggleLoadingKind: () => void;
 }
 
 export const LoadingScreenContext = createContext({} as LoadingScreenContext);

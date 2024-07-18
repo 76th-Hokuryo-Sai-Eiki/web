@@ -6,7 +6,6 @@ import { BsFillSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa6";
 
 import { ThemeContext } from "@/context/theme";
-import { removeHash } from "@/functions/utility";
 
 export interface ThemeSwitchProps {
     className?: string;
@@ -20,7 +19,6 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
 
     const onChange = useCallback(() => {
         toggleTheme();
-        removeHash();
     }, [toggleTheme]);
 
     const {

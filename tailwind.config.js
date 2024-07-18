@@ -1,5 +1,4 @@
 import { nextui } from "@nextui-org/theme";
-import { color } from "framer-motion";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

@@ -13,7 +13,7 @@ import { FaGithub } from "react-icons/fa6";
 
 import HashLink from "../components/hash-link";
 
-import { Logo, XTwitterIcon } from "@/components/icons";
+import { Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
@@ -92,9 +92,6 @@ export function Navbar() {
             >
                 <NavbarItem className="hidden gap-2 md:flex">
                     <ThemeSwitch />
-                    <Link isExternal href={siteConfig.links.twitter}>
-                        <XTwitterIcon className="text-default-500" size={22} />
-                    </Link>
                     {/* <Link isExternal href={siteConfig.links.discord}>
                         <DiscordIcon className="text-default-500" />
                     </Link> */}
@@ -123,9 +120,6 @@ export function Navbar() {
 
             <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
                 <ThemeSwitch />
-                <Link isExternal href={siteConfig.links.twitter}>
-                    <XTwitterIcon className="text-default-500" size={22} />
-                </Link>
                 <Link isExternal href={siteConfig.links.github}>
                     <FaGithub className="text-default-500" size={22} />
                 </Link>
