@@ -36,7 +36,7 @@ function DummyCard() {
                         borderRadius: "16px",
                     }}
                 >
-                    <GrassCard className="flex h-44 w-44 items-center justify-center sm:h-52 sm:w-52 lg:h-64 lg:w-64 2xl:h-72 2xl:w-72">
+                    <GrassCard className="flex h-[min(30vw,30vh)] w-[min(30vw,30vh)] items-center justify-center">
                         <div>
                             <h1
                                 className="mt-4 text-center text-4xl text-gray-600 dark:text-gray-800 sm:text-5xl lg:text-6xl 2xl:text-7xl"
@@ -54,6 +54,12 @@ function DummyCard() {
     );
 }
 
+const dummyCards = [...new Array(8)].map((_, index) => (
+    <div key={index} className="inline-block w-fit min-w-fit">
+        <DummyCard />
+    </div>
+));
+
 export default function ContentsSection() {
     return (
         <div className="m-2 flex flex-col">
@@ -67,14 +73,7 @@ export default function ContentsSection() {
 
                 <div className="blurred-border border-x-1">
                     <div className="simple-scrollbar flex flex-row gap-3 py-5">
-                        {[...new Array(8)].map((_, index) => (
-                            <div
-                                key={index}
-                                className="inline-block w-fit min-w-fit"
-                            >
-                                <DummyCard />
-                            </div>
-                        ))}
+                        {dummyCards}
                     </div>
                 </div>
             </div>

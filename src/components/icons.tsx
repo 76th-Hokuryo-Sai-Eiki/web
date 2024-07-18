@@ -50,10 +50,10 @@ export function Banner() {
         <div className="flex justify-center">
             <div className="max-w-xl sm:max-w-lg sm:px-4">
                 <SuspendImage
+                    priority
                     blurhash={BLURHASH[theme]}
                     height={463}
                     layout="constrained"
-                    priority={true}
                     src={getImageUrl(`banner.${theme}.png`)}
                     width={1250}
                 />
@@ -63,7 +63,7 @@ export function Banner() {
 }
 
 export function XTwitterIcon(
-    props: HTMLAttributes<SVGElement> & { size: number }
+    props: HTMLAttributes<SVGElement> & { size: number },
 ) {
     const [icon, setIcon] = useState<ReactElement>(<FaXTwitter {...props} />);
 

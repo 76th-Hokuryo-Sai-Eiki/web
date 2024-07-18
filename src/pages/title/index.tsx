@@ -22,7 +22,7 @@ import { chooseRandom } from "@/functions/utility";
 function CountDown({ compact = false }: { compact?: boolean }) {
     const [count, { startCountdown }] = useCountdown({
         countStart: Math.floor(
-            (siteConfig.eventDate.getTime() - Date.now()) / 250
+            (siteConfig.eventDate.getTime() - Date.now()) / 250,
         ),
         intervalMs: 250,
     });
@@ -69,12 +69,12 @@ function CountDownContainer({ children }: { children: ReactElement }) {
     return (
         <div
             ref={containerRef}
-            className="w-52 xs:w-[400px] 2xl:w-32 flex justify-center"
+            className="flex w-52 justify-center xs:w-[400px] 2xl:w-32"
         >
             <div className="text-left">
                 <h1
                     className={title({
-                        class: "-ml-6 sm:ml-0 text-default-600",
+                        class: "-ml-6 text-default-600 sm:ml-0",
                     })}
                     style={{
                         fontFamily: "BIZ UDMincho",
@@ -84,7 +84,7 @@ function CountDownContainer({ children }: { children: ReactElement }) {
                 >
                     あと
                 </h1>
-                <div className="sm:ml-6 mt-4">
+                <div className="mt-4 sm:ml-6">
                     {cloneElement(children, {
                         compact: width < 400,
                     })}
@@ -96,21 +96,21 @@ function CountDownContainer({ children }: { children: ReactElement }) {
 
 export default function Title() {
     return (
-        <div className="grid grid-cols-5 min-w-52 min-h-[90vh]  items-center justify-center gap-4 py-8 px-0 xl:px-12">
-            <div className="col-span-full 2xl:col-span-3 2xl:col-start-2 text-center justify-center">
+        <div className="grid min-h-[90vh] min-w-52 grid-cols-5 items-center justify-center gap-4 px-0 py-8 xl:px-12">
+            <div className="col-span-full justify-center text-center 2xl:col-span-3 2xl:col-start-2">
                 <Banner />
 
                 <Catchphrase />
             </div>
 
-            <div className="col-span-full 2xl:col-start-2 2xl:col-span-3">
-                <div className="flex text-center justify-center flex-col">
-                    <Fadein duration={1.2} easing="ease-in" once={true}>
-                        <div className="sm:flex mt-3 sm:items-center sm:justify-center">
+            <div className="col-span-full 2xl:col-span-3 2xl:col-start-2">
+                <div className="flex flex-col justify-center text-center">
+                    <Fadein once duration={1.2} easing="ease-in">
+                        <div className="mt-3 sm:flex sm:items-center sm:justify-center">
                             <h1
                                 className={title({
                                     size: "xl",
-                                    class: "m-4 pt-1 sm:mr-6 text-[2.5rem] sm:text-5xl text-default-800",
+                                    class: "m-4 pt-1 text-[2.5rem] text-default-800 sm:mr-6 sm:text-5xl",
                                 })}
                                 style={{
                                     fontFamily: "Noto Serif JP",
@@ -121,14 +121,14 @@ export default function Title() {
 
                             <span className="sm:hidden">
                                 <br />
-                                <span className="inline-flex h-14 mt-5" />
+                                <span className="mt-5 inline-flex h-14" />
                             </span>
                             <h1
                                 className={title({
                                     size: "xl",
-                                    class: "-ml-2 sm:ml-0 2xl:ml-2 text-[4.25rem]  sm:text-7xl 2xl:text-[4.7rem]",
+                                    class: "-ml-2 text-[4.25rem] sm:ml-0 sm:text-7xl 2xl:ml-2 2xl:text-[4.7rem]",
                                     color: chooseRandom(
-                                        Object.keys(title.variants.color)
+                                        Object.keys(title.variants.color),
                                     ),
                                 })}
                                 style={{
@@ -142,7 +142,7 @@ export default function Title() {
                 </div>
             </div>
 
-            <div className="col-span-full row-start-3 2xl:col-start-2 2xl:col-span-3 text-center justify-center">
+            <div className="col-span-full row-start-3 justify-center text-center 2xl:col-span-3 2xl:col-start-2">
                 <FadeinSlide duration={0.5}>
                     <h4
                         className={subtitle({ class: "mt-6" })}
@@ -166,9 +166,9 @@ export default function Title() {
                 </Link>
             </div>
 
-            <div className="col-span-full 2xl:col-span-1 2xl:col-start-5 2xl:row-start-1 2xl:row-span-4 text-center justify-center">
+            <div className="col-span-full justify-center text-center 2xl:col-span-1 2xl:col-start-5 2xl:row-span-4 2xl:row-start-1">
                 <div className="inline-flex flex-row items-center">
-                    <div className="mt-8 2xl:mt-0 inline-block col-span-1">
+                    <div className="col-span-1 mt-8 inline-block 2xl:mt-0">
                         <CountDownContainer>
                             <CountDown />
                         </CountDownContainer>
@@ -176,7 +176,7 @@ export default function Title() {
                 </div>
             </div>
 
-            <div className="row-start-5 col-span-full 2xl:col-start-2 2xl:col-span-3" />
+            <div className="col-span-full row-start-5 2xl:col-span-3 2xl:col-start-2" />
         </div>
     );
 }

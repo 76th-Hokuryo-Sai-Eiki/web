@@ -1,11 +1,11 @@
 import { FadeinSlide } from "@/components/animations";
-import { Inline } from "@/components/inline";
+import { Inline, InlineDiv } from "@/components/inline";
 import { subtitle } from "@/components/primitives";
 
 export function Catchphrase() {
     return (
         <div
-            className="inline-block w-fit px-4 sm:px-8 mt-5 sm:mt-7 2xl:mt-12"
+            className="mt-5 inline-block w-fit px-4 sm:mt-7 sm:px-8 2xl:mt-12"
             style={{
                 borderTop: "solid 1px hsl(var(--nextui-default-400))",
                 borderBottom: "solid 1px hsl(var(--nextui-default-400))",
@@ -14,9 +14,9 @@ export function Catchphrase() {
             }}
         >
             <FadeinSlide>
-                <p
+                <div
                     className={subtitle({
-                        class: "max-w-lg my-0",
+                        class: "my-0 max-w-lg",
                     })}
                     style={{
                         marginInline: "auto",
@@ -25,15 +25,17 @@ export function Catchphrase() {
                     }}
                 >
                     <Inline className="ml-1">
-                        <span
-                            style={{
-                                color: "royalblue",
-                                fontSize: "22pt",
-                                paddingLeft: "5px",
-                            }}
-                        >
-                            湧
-                        </span>
+                        <FadeinSlide once distance={30} duration={1.4}>
+                            <InlineDiv
+                                style={{
+                                    color: "royalblue",
+                                    fontSize: "22pt",
+                                    paddingLeft: "5px",
+                                }}
+                            >
+                                湧
+                            </InlineDiv>
+                        </FadeinSlide>
                         き
                         <span
                             style={{
@@ -103,15 +105,17 @@ export function Catchphrase() {
                             を
                         </Inline>
                         <Inline>
-                            <span
-                                style={{
-                                    color: "violet",
-                                    fontSize: "22pt",
-                                    margin: "1px",
-                                }}
-                            >
-                                沸
-                            </span>
+                            <FadeinSlide once distance={30} duration={1}>
+                                <InlineDiv
+                                    style={{
+                                        color: "violet",
+                                        fontSize: "22pt",
+                                        margin: "1px",
+                                    }}
+                                >
+                                    沸
+                                </InlineDiv>
+                            </FadeinSlide>
                             き
                             <span
                                 style={{
@@ -140,7 +144,7 @@ export function Catchphrase() {
                             </span>
                         </Inline>
                     </Inline>
-                </p>
+                </div>
             </FadeinSlide>
         </div>
     );
