@@ -58,7 +58,12 @@ export default function ContentsSection() {
     return (
         <div className="m-2 flex flex-col">
             <div className="main-inner form-contents">
-                <SectionHeader hashlink="#contents">Contents</SectionHeader>
+                <SectionHeader hashlink="#contents">
+                    <>
+                        <p>Contents</p>
+                        <p className="mr-3 text-right text-large">近日公開</p>
+                    </>
+                </SectionHeader>
 
                 <div className="blurred-border border-x-1">
                     <div className="simple-scrollbar flex flex-row gap-3 py-5">

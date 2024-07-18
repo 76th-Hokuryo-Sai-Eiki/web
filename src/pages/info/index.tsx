@@ -23,21 +23,25 @@ function Abstract() {
             >
                 <li>
                     <span className="mr-2 px-3">-</span>
-                    <span>DAY 1</span>
-                    <span className="mx-12">
+                    <Inline>DAY 1</Inline>
+                    <Inline className="mx-12">
                         08.31 (
-                        <span style={{ fontFamily: "Noto Sans JP" }}>土</span>)
-                        <span className="mx-8">11:00 ― 15:00</span>
-                    </span>
+                        <Inline style={{ fontFamily: "Noto Sans JP" }}>
+                            土
+                        </Inline>
+                        )<Inline className="mx-8">11:00 ― 15:00</Inline>
+                    </Inline>
                 </li>
                 <li className="my-2">
                     <span className="mr-2 px-3">-</span>
-                    <span>DAY 2</span>
-                    <span className="mx-12">
+                    <Inline>DAY 2</Inline>
+                    <Inline className="mx-12">
                         09.01 (
-                        <span style={{ fontFamily: "Noto Sans JP" }}>日</span>)
-                        <span className="mx-8">09:00 ― 14:00</span>
-                    </span>
+                        <Inline style={{ fontFamily: "Noto Sans JP" }}>
+                            日
+                        </Inline>
+                        )<Inline className="mx-8">09:00 ― 14:00</Inline>
+                    </Inline>
                 </li>
             </ul>
         </div>
