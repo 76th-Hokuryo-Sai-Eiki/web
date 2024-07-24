@@ -1,4 +1,4 @@
-import HashLink from "@/components/hash-link";
+import Hashlink from "@/components/hashlink";
 import { Inline } from "@/components/inline";
 
 export const data = [
@@ -21,13 +21,13 @@ export const data = [
                 <br />
                 <Inline>
                     交通の詳細につきましては
-                    <HashLink
+                    <Hashlink
                         className="hashlink mx-1"
                         style={{ fontFamily: "Kode Mono" }}
                         to="#access"
                     >
                         Access
-                    </HashLink>
+                    </Hashlink>
                     もご参照ください。
                 </Inline>
             </p>
@@ -78,7 +78,7 @@ export const data = [
         title: "講堂企画や店舗の写真を撮ってもよいですか？",
         description: (
             <p>
-                <Inline>可能です。</Inline>
+                <Inline>はい。</Inline>
                 <br />
                 <Inline>
                     ただし、SNS

@@ -4,15 +4,16 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "license": "MIT",
     "scripts": {
         "dev": "vite --mode dev",
         "build": "tsc && vite build --mode",
         "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
         "blurhash": "node ./src/blurhash.js",
         "preview": "vite preview",
-        "test:chrome": "npm run dev & playwright test --headed --browser=chromium",
-        "test:firefox": "npm run dev & playwright test --headed --browser=firefox",
-        "test:safari": "npm run dev & playwright test --headed --browser=webkit"
+        "test:chrome": "playwright test --headed --browser=chromium",
+        "test:firefox": "playwright test --headed --browser=firefox",
+        "test:safari": "playwright test --headed --browser=webkit"
     },
     "dependencies": {
         "@nextui-org/accordion": "^2.0.35",
@@ -28,6 +29,7 @@
         "@nextui-org/navbar": "2.0.33",
         "@nextui-org/progress": "^2.0.31",
         "@nextui-org/scroll-shadow": "^2.1.17",
+        "@nextui-org/slider": "^2.2.15",
         "@nextui-org/snippet": "2.0.38",
         "@nextui-org/spacer": "^2.0.29",
         "@nextui-org/switch": "2.0.31",
@@ -42,6 +44,7 @@
         "@unpic/placeholder": "^0.1.2",
         "@unpic/react": "^0.1.14",
         "blurhash": "^2.0.5",
+        "chroma-js": "^2.4.2",
         "clsx": "2.1.1",
         "framer-motion": "~11.1.1",
         "js-sha256": "^0.11.0",
@@ -58,6 +61,7 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.45.2",
+        "@types/chroma-js": "^2.4.4",
         "@types/node": "^20.14.10",
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",
@@ -75,6 +79,7 @@
         "eslint-plugin-react": "^7.23.2",
         "eslint-plugin-react-hooks": "^4.6.2",
         "eslint-plugin-unused-imports": "^3.2.0",
+        "license-checker": "^25.0.1",
         "postcss": "^8.4.39",
         "prettier": "^3.3.3",
         "prettier-plugin-tailwindcss": "^0.6.5",

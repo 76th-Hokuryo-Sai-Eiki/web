@@ -95,9 +95,6 @@ function builder(item: any, key: any, handler: any) {
                         <Button
                             isIconOnly
                             className="cursor-pointer text-lg text-default-400 active:opacity-50"
-                            startContent={
-                                <FaRoute className="mb-2" size={20} />
-                            }
                             style={{
                                 background: "inherit",
                             }}
@@ -105,18 +102,18 @@ function builder(item: any, key: any, handler: any) {
                             onPress={() => {
                                 handler(item.route);
                             }}
-                        />
+                        >
+                            <FaRoute className="mb-2" size={20} />
+                        </Button>
                     </Tooltip>
                     <Tooltip content="Google Maps で開く">
                         <Link
                             isExternal
-                            showAnchorIcon
-                            anchorIcon={
-                                <SiGooglemaps className="mb-2" size={24} />
-                            }
                             className="cursor-pointer text-lg text-default-400 active:opacity-50"
                             href={item.map_link}
-                        />
+                        >
+                            <SiGooglemaps className="mb-2" size={24} />
+                        </Link>
                     </Tooltip>
                 </div>
             );
@@ -153,40 +150,45 @@ function Public({ onRoute }: any) {
     const renderCell = useCallback(builder, []);
 
     return (
-        <Table
-            hideHeader
-            aria-label="付近の駅・バス停から仙台二高までの徒歩による所要時間を示した表"
-            layout="auto"
-            shadow="md"
-            topContent={
-                <TopContent icon={<FaTrainSubway size={30} />}>
-                    公共交通機関でお越しの方
-                </TopContent>
-            }
-        >
-            <TableHeader columns={publicColumns}>
-                {(column) => (
-                    <TableColumn
-                        key={column.uid}
-                        // className={column.uid == "actions" ? "hidden" : "none"}
-                    >
-                        {column.name}
-                    </TableColumn>
-                )}
-            </TableHeader>
-
-            <TableBody items={publicRoute}>
-                {(item) => (
-                    <TableRow key={item.id}>
-                        {(key) => (
-                            <TableCell>
-                                {renderCell(item, key, onRoute)}
-                            </TableCell>
+        <Card className="card-base">
+            <CardBody className="p-4">
+                <Table
+                    hideHeader
+                    removeWrapper
+                    aria-label="付近の駅・バス停から仙台二高までの徒歩による所要時間を示した表"
+                    layout="auto"
+                    shadow="md"
+                    topContent={
+                        <TopContent icon={<FaTrainSubway size={30} />}>
+                            公共交通機関でお越しの方
+                        </TopContent>
+                    }
+                >
+                    <TableHeader columns={publicColumns}>
+                        {(column) => (
+                            <TableColumn
+                                key={column.uid}
+                                // className={column.uid == "actions" ? "hidden" : "none"}
+                            >
+                                {column.name}
+                            </TableColumn>
                         )}
-                    </TableRow>
-                )}
-            </TableBody>
-        </Table>
+                    </TableHeader>
+
+                    <TableBody items={publicRoute}>
+                        {(item) => (
+                            <TableRow key={item.id}>
+                                {(key) => (
+                                    <TableCell>
+                                        {renderCell(item, key, onRoute)}
+                                    </TableCell>
+                                )}
+                            </TableRow>
+                        )}
+                    </TableBody>
+                </Table>
+            </CardBody>
+        </Card>
     );
 }
 
@@ -194,64 +196,73 @@ function Car({ onRoute }: any) {
     const renderCell = useCallback(builder, []);
 
     return (
-        <Table
-            hideHeader
-            aria-label="付近の駐車場から仙台二高までの徒歩による所要時間を示した表"
-            bottomContent={
-                <>
-                    <Divider />
-                    <div className="flex text-sm text-default-600">
-                        <FadeinSlide distance={10}>
-                            <p>
-                                本校敷地内に駐車場はございません。近隣の有料駐車場をご利用ください。
-                                <br />
-                                <strong>
-                                    本校敷地及び宮城県美術館様駐車場への駐車はご遠慮ください。
-                                </strong>
-                            </p>
-                        </FadeinSlide>
-                    </div>
-                </>
-            }
-            layout="auto"
-            shadow="md"
-            topContent={
-                <TopContent icon={<FaCarAlt size={30} />}>
-                    車でお越しの方
-                </TopContent>
-            }
-        >
-            <TableHeader columns={carColumns}>
-                {(column) => (
-                    <TableColumn key={column.uid}>{column.name}</TableColumn>
-                )}
-            </TableHeader>
-
-            <TableBody items={carRoute}>
-                {(item) => (
-                    <TableRow key={item.id}>
-                        {(key) => (
-                            <TableCell>
-                                {renderCell(
-                                    {
-                                        icon: <MdLocalParking size={24} />,
-                                        ...item,
-                                    },
-                                    key,
-                                    onRoute,
-                                )}
-                            </TableCell>
+        <Card className="card-base">
+            <CardBody className="p-4">
+                <Table
+                    hideHeader
+                    removeWrapper
+                    aria-label="付近の駐車場から仙台二高までの徒歩による所要時間を示した表"
+                    bottomContent={
+                        <>
+                            <Divider />
+                            <div className="flex px-3 text-sm text-default-600">
+                                <FadeinSlide distance={10}>
+                                    <p>
+                                        本校敷地内に駐車場はございません。近隣の有料駐車場をご利用ください。
+                                        <br />
+                                        <strong>
+                                            本校敷地及び宮城県美術館様駐車場への駐車はご遠慮ください。
+                                        </strong>
+                                    </p>
+                                </FadeinSlide>
+                            </div>
+                        </>
+                    }
+                    layout="auto"
+                    shadow="md"
+                    topContent={
+                        <TopContent icon={<FaCarAlt size={30} />}>
+                            車でお越しの方
+                        </TopContent>
+                    }
+                >
+                    <TableHeader columns={carColumns}>
+                        {(column) => (
+                            <TableColumn key={column.uid}>
+                                {column.name}
+                            </TableColumn>
                         )}
-                    </TableRow>
-                )}
-            </TableBody>
-        </Table>
+                    </TableHeader>
+
+                    <TableBody items={carRoute}>
+                        {(item) => (
+                            <TableRow key={item.id}>
+                                {(key) => (
+                                    <TableCell>
+                                        {renderCell(
+                                            {
+                                                icon: (
+                                                    <MdLocalParking size={24} />
+                                                ),
+                                                ...item,
+                                            },
+                                            key,
+                                            onRoute,
+                                        )}
+                                    </TableCell>
+                                )}
+                            </TableRow>
+                        )}
+                    </TableBody>
+                </Table>
+            </CardBody>
+        </Card>
     );
 }
 
 function Bike() {
     return (
-        <Card className="h-fit w-fit lg:w-auto">
+        <Card className="card-base h-fit w-fit xl:w-auto">
             <CardHeader>
                 <div className="flex gap-5 pl-1.5">
                     <MdPedalBike size={36} />
@@ -273,7 +284,7 @@ function Bike() {
                                 来場者の方専用の駐輪場がございます。
                             </Inline>
                         </FadeinSlide>
-                        <span className="inline lg:hidden 2xl:inline">
+                        <span className="inline xl:hidden 2xl:inline">
                             <br />
                         </span>
                         <FadeinSlide distance={10}>
@@ -288,18 +299,18 @@ function Bike() {
 
 export function Routes({ onRoute }: any) {
     return (
-        <div className="blurred-border z-30 border-x-1 lg:-mt-2 lg:border-x-0">
-            <div className="simple-scrollbar flex whitespace-nowrap py-5 lg:flex-wrap lg:items-start lg:gap-3 lg:overflow-x-visible">
-                <div className="mx-1.5 inline-block min-w-[28rem] flex-1 items-start lg:mx-0 lg:w-auto lg:min-w-fit">
+        <div className="blurred-border z-30 border-x-1 xl:-mt-2 xl:border-x-0">
+            <ul className="simple-scrollbar flex overflow-x-scroll whitespace-nowrap py-5 xl:flex-wrap xl:items-start xl:gap-3 xl:overflow-x-visible">
+                <li className="mx-1.5 inline-block min-w-[28rem] flex-1 items-start xl:mx-0 xl:w-auto xl:min-w-fit">
                     <Public onRoute={onRoute} />
-                </div>
-                <div className="mx-1.5 inline-block min-w-[34rem] flex-1 items-start lg:mx-0 lg:w-auto lg:min-w-fit">
+                </li>
+                <li className="mx-1.5 inline-block min-w-[34rem] flex-1 items-start xl:mx-0 xl:w-auto xl:min-w-fit">
                     <Car onRoute={onRoute} />
-                </div>
-                <div className="mx-1.5 inline-block flex-auto items-start lg:mx-0 lg:w-auto lg:min-w-fit 2xl:flex-none 2xl:flex-shrink">
+                </li>
+                <li className="mx-1.5 inline-block flex-auto items-start xl:mx-0 xl:w-auto xl:min-w-fit 2xl:flex-none 2xl:flex-shrink">
                     <Bike />
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     );
 }

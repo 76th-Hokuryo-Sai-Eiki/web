@@ -1,7 +1,9 @@
 import { createContext } from "react";
 
+export type Theme = "light" | "dark";
+
 export interface ThemeContext {
-    theme: "light" | "dark";
+    theme: Theme;
     isDark: boolean;
     isLight: boolean;
     setLightTheme: () => void;

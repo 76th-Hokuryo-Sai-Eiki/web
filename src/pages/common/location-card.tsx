@@ -14,17 +14,17 @@ import { Inline } from "@/components/inline";
 export function LocationCard({
     onRoute = null,
     divider = <Divider />,
+    className,
     ...props
 }: CardProps & { divider?: ReactNode; onRoute?: any }) {
     return (
-        <Card radius="none" {...props}>
+        <Card className={`card-base ${className}`} radius="none" {...props}>
             <CardHeader className="flex gap-3">
                 <Tooltip content="ルートを表示" isDisabled={!onRoute}>
                     <Button
                         disableAnimation
                         isIconOnly
                         radius="none"
-                        startContent={<IoSchool size={47} />}
                         style={{
                             background: "inherit",
                             ...(!onRoute
@@ -37,19 +37,21 @@ export function LocationCard({
                         variant="flat"
                         onPress={onRoute}
                         {...(!onRoute ? { "data-pressed": "false" } : {})}
-                    />
+                    >
+                        <IoSchool size={47} />
+                    </Button>
                 </Tooltip>
                 <div className="flex flex-col">
                     <Tooltip content="クリップボードにコピー">
                         <Button
-                            className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                            className="justify-left text-md m-0 h-fit p-0 text-inherit"
                             size="sm"
                             style={{
                                 background: "inherit",
                             }}
                             onPress={() => {
                                 navigator.clipboard.writeText(
-                                    "宮城県仙台第二高等学校"
+                                    "宮城県仙台第二高等学校",
                                 );
                             }}
                         >
@@ -82,18 +84,18 @@ export function LocationCard({
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
-                                        className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                                        className="justify-left text-md m-0 h-fit p-0 text-inherit"
                                         size="sm"
                                         style={{
                                             background: "inherit",
                                         }}
                                         onPress={() => {
                                             navigator.clipboard.writeText(
-                                                "980-8631"
+                                                "980-8631",
                                             );
                                         }}
                                     >
-                                        <p className="pl-1 pr-2 text-left text-wrap">
+                                        <p className="text-wrap pl-1 pr-2 text-left">
                                             980-8631
                                         </p>
                                     </Button>
@@ -107,9 +109,9 @@ export function LocationCard({
                             <Link
                                 disableAnimation
                                 isExternal
-                                className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                                className="justify-left text-md m-0 h-fit p-0 text-inherit"
                                 href={encodeURI(
-                                    "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu"
+                                    "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu",
                                 )}
                                 size="sm"
                                 style={{
@@ -123,18 +125,18 @@ export function LocationCard({
                             <div>
                                 <Tooltip content="クリップボードにコピー">
                                     <Button
-                                        className="justify-left h-fit p-0 m-0 text-md text-inherit"
+                                        className="justify-left text-md m-0 h-fit p-0 text-inherit"
                                         size="sm"
                                         style={{
                                             background: "inherit",
                                         }}
                                         onPress={() => {
                                             navigator.clipboard.writeText(
-                                                "宮城県仙台市青葉区川内澱橋通1-1"
+                                                "宮城県仙台市青葉区川内澱橋通1-1",
                                             );
                                         }}
                                     >
-                                        <p className="pl-1 pr-2 text-left text-wrap md:text-nowrap">
+                                        <p className="text-wrap pl-1 pr-2 text-left md:text-nowrap">
                                             <Inline>宮城県仙台市青葉区</Inline>
                                             <Inline>川内澱橋通1-1</Inline>
                                         </p>

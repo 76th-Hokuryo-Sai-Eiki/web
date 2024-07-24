@@ -16,6 +16,10 @@ export const siteConfig = {
             label: "Contents",
             href: "#contents",
         },
+        {
+            label: "Credits",
+            href: "#footer",
+        },
     ],
     links: {
         calendar: encodeURI(

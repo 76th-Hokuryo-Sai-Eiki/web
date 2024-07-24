@@ -1,42 +1,45 @@
 import { Spacer } from "@nextui-org/spacer";
+import { memo, useRef } from "react";
 
 import AccessSection from "./access";
+import { Theme } from "./common/theme";
 import ContentsSection from "./content";
 import InfoSection from "./info";
 import Title from "./title";
 
 import { Fadein } from "@/components/animations";
-import HashLink from "@/components/hash-link";
 import DefaultLayout from "@/layouts/default";
 
-export default function IndexPage() {
+export default memo(function IndexPage() {
+    const infoRef = useRef<HTMLElement>(null);
+
     return (
-        <HashLink.Provider>
-            <Fadein once duration={0.3}>
-                <DefaultLayout>
-                    <Fadein once duration={0.5}>
-                        <section id="#title">
-                            <Title />
-                        </section>
+        <Fadein once duration={0.3}>
+            <DefaultLayout>
+                <Fadein once duration={0.5}>
+                    <section id="#title">
+                        <Title />
+                    </section>
 
-                        <section id="#access">
-                            <AccessSection />
-                        </section>
+                    <section id="#access">
+                        <AccessSection />
+                    </section>
 
-                        <Spacer y={20} />
+                    <Spacer y={20} />
 
-                        <section id="#info">
-                            <InfoSection />
-                        </section>
+                    <Theme infoRef={infoRef} />
 
-                        <Spacer y={20} />
+                    <section ref={infoRef} id="#info">
+                        <InfoSection />
+                    </section>
 
-                        <section id="#contents">
-                            <ContentsSection />
-                        </section>
-                    </Fadein>
-                </DefaultLayout>
-            </Fadein>
-        </HashLink.Provider>
+                    <Spacer y={20} />
+
+                    <section id="#contents">
+                        <ContentsSection />
+                    </section>
+                </Fadein>
+            </DefaultLayout>
+        </Fadein>
     );
-}
+});

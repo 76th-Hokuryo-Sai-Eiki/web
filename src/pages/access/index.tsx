@@ -25,46 +25,44 @@ export default function AccessSection() {
     }
 
     return (
-        <div className="m-2 flex flex-col">
-            <div className="main-inner form-contents">
-                <SectionHeader hashlink="#access">Access</SectionHeader>
+        <div className="m-2">
+            <SectionHeader hashlink="#access">Access</SectionHeader>
 
-                <div className="flex flex-col gap-2">
-                    <div className="flex flex-col gap-[2px] md:flex-row">
-                        <div className="z-10 w-full border-2 border-default-200">
-                            <Fadein duration={0.8}>
-                                <iframe
-                                    ref={mapRef}
-                                    allowFullScreen
-                                    className="h-[50vh]"
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    src={PLANE_MAP}
-                                    title="route-map"
-                                    width="100%"
-                                />
-                            </Fadein>
-                        </div>
-
-                        <div className="h-fit">
-                            <Fadein>
-                                <LocationCard
-                                    className="-mt-1 rounded-b-xl bg-default-200 px-1 pb-1 pt-1 sm:max-w-[350px] md:-ml-1 md:mt-5 md:rounded-r-xl md:rounded-bl-none md:pl-1 md:pt-0"
-                                    divider={
-                                        <div className="px-3 md:-ml-1 md:pl-0 md:pr-3">
-                                            <Divider className="mr-10" />
-                                        </div>
-                                    }
-                                    onRoute={() => {
-                                        showRoute(PLANE_MAP);
-                                    }}
-                                />
-                            </Fadein>
-                        </div>
+            <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-[2px] md:flex-row">
+                    <div className="z-10 w-full border-2 border-default-200">
+                        <Fadein duration={0.8}>
+                            <iframe
+                                ref={mapRef}
+                                allowFullScreen
+                                className="h-[50vh] opacity-95 dark:opacity-80"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                src={PLANE_MAP}
+                                title="route-map"
+                                width="100%"
+                            />
+                        </Fadein>
                     </div>
 
-                    <Routes onRoute={showRoute} />
+                    <div className="h-fit">
+                        <Fadein>
+                            <LocationCard
+                                className="-mt-1 rounded-b-xl bg-default-200 px-1 pb-1 pt-1 sm:max-w-[350px] md:-ml-1 md:mt-5 md:rounded-r-xl md:rounded-bl-none md:pl-1 md:pt-0"
+                                divider={
+                                    <div className="px-3 md:-ml-1 md:pl-0 md:pr-3">
+                                        <Divider className="mr-10" />
+                                    </div>
+                                }
+                                onRoute={() => {
+                                    showRoute(PLANE_MAP);
+                                }}
+                            />
+                        </Fadein>
+                    </div>
                 </div>
+
+                <Routes onRoute={showRoute} />
             </div>
         </div>
     );

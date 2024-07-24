@@ -17,7 +17,7 @@ export function Fadein({
     });
 
     return (
-        <span
+        <div
             ref={ref}
             className={inView ? "fade-in" : "opacity-0"}
             style={{
@@ -26,7 +26,7 @@ export function Fadein({
             }}
         >
             {children}
-        </span>
+        </div>
     );
 }
 
@@ -42,7 +42,7 @@ export function FadeinSlide({
     once?: boolean;
 }) {
     const { ref, inView } = useInView({
-        // rootMargin: `${-distance}px`,
+        rootMargin: `${-distance}px`,
         triggerOnce: once,
     });
 

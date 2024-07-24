@@ -1,0 +1,2052 @@
+├─ 76th_hokuryo-sai_web@0.0.0
+│  ├─ licenses: UNLICENSED
+│  ├─ private: true
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/LICENSE
+├─ @alloc/quick-lru@5.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/quick-lru
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@alloc/quick-lru
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@alloc/quick-lru/license
+├─ @babel/runtime@7.24.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel
+│  ├─ publisher: The Babel Team
+│  ├─ url: https://babel.dev/team
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@babel/runtime
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@babel/runtime/LICENSE
+├─ @emotion/is-prop-valid@1.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/emotion-js/emotion/tree/main/packages/is-prop-valid
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/is-prop-valid
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/is-prop-valid/LICENSE
+├─ @emotion/memoize@0.8.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/emotion-js/emotion/tree/main/packages/memoize
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/memoize
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/memoize/LICENSE
+├─ @emotion/unitless@0.8.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/emotion-js/emotion/tree/main/packages/unitless
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/unitless
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@emotion/unitless/LICENSE
+├─ @formatjs/ecma402-abstract@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ publisher: Long Ho
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/ecma402-abstract
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/ecma402-abstract/LICENSE.md
+├─ @formatjs/fast-memoize@2.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ publisher: Long Ho
+│  ├─ email: holevietlong@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/fast-memoize
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/fast-memoize/LICENSE.md
+├─ @formatjs/icu-messageformat-parser@2.7.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/icu-messageformat-parser
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/icu-messageformat-parser/LICENSE.md
+├─ @formatjs/icu-skeleton-parser@1.8.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/icu-skeleton-parser
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/icu-skeleton-parser/LICENSE.md
+├─ @formatjs/intl-localematcher@0.5.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ publisher: Long Ho
+│  ├─ email: holevietlong@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/intl-localematcher
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@formatjs/intl-localematcher/LICENSE.md
+├─ @internationalized/date@3.5.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum/tree/main/packages/@internationalized/date
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/date
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/date/LICENSE
+├─ @internationalized/message@3.1.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/message
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/message/LICENSE
+├─ @internationalized/number@3.5.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/number
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/number/LICENSE
+├─ @internationalized/string@3.2.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/string
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@internationalized/string/LICENSE
+├─ @isaacs/cliui@8.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/yargs/cliui
+│  ├─ publisher: Ben Coe
+│  ├─ email: ben@npmjs.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@isaacs/cliui
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@isaacs/cliui/LICENSE.txt
+├─ @jridgewell/gen-mapping@0.3.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jridgewell/gen-mapping
+│  ├─ publisher: Justin Ridgewell
+│  ├─ email: justin@ridgewell.name
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/gen-mapping
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/gen-mapping/LICENSE
+├─ @jridgewell/resolve-uri@3.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jridgewell/resolve-uri
+│  ├─ publisher: Justin Ridgewell
+│  ├─ email: justin@ridgewell.name
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/resolve-uri
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/resolve-uri/LICENSE
+├─ @jridgewell/set-array@1.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jridgewell/set-array
+│  ├─ publisher: Justin Ridgewell
+│  ├─ email: justin@ridgewell.name
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/set-array
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/set-array/LICENSE
+├─ @jridgewell/sourcemap-codec@1.4.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jridgewell/sourcemap-codec
+│  ├─ publisher: Rich Harris
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/sourcemap-codec
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/sourcemap-codec/LICENSE
+├─ @jridgewell/trace-mapping@0.3.25
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jridgewell/trace-mapping
+│  ├─ publisher: Justin Ridgewell
+│  ├─ email: justin@ridgewell.name
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/trace-mapping
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@jridgewell/trace-mapping/LICENSE
+├─ @nextui-org/accordion@2.0.35
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/accordion
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/accordion/LICENSE
+├─ @nextui-org/aria-utils@2.0.21
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils/LICENSE
+├─ @nextui-org/aria-utils@2.0.24
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/aria-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/aria-utils/LICENSE
+├─ @nextui-org/avatar@2.0.30
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/avatar
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/avatar/LICENSE
+├─ @nextui-org/button@2.0.34
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/button
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/button/LICENSE
+├─ @nextui-org/card@2.0.31
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/card
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/card/LICENSE
+├─ @nextui-org/checkbox@2.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/checkbox
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/checkbox/LICENSE
+├─ @nextui-org/chip@2.0.30
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/chip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/chip/LICENSE
+├─ @nextui-org/code@2.0.29
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/code
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/code/LICENSE
+├─ @nextui-org/divider@2.0.28
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/divider
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/divider/LICENSE
+├─ @nextui-org/framer-utils@2.0.21
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/framer-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/framer-utils/LICENSE
+├─ @nextui-org/framer-utils@2.0.24
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/framer-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/framer-utils/LICENSE
+├─ @nextui-org/image@2.0.29
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/image
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/image/LICENSE
+├─ @nextui-org/input@2.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/input
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/input/LICENSE
+├─ @nextui-org/kbd@2.0.30
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/kbd
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/kbd/LICENSE
+├─ @nextui-org/link@2.0.32
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/link
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/link/LICENSE
+├─ @nextui-org/navbar@2.0.33
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/navbar
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/navbar/LICENSE
+├─ @nextui-org/progress@2.0.31
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/progress
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/progress/LICENSE
+├─ @nextui-org/react-rsc-utils@2.0.12
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/react-rsc-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/react-rsc-utils/LICENSE
+├─ @nextui-org/react-rsc-utils@2.0.13
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/react-rsc-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/react-rsc-utils/LICENSE
+├─ @nextui-org/react-utils@2.0.13
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@nextui-org/react-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@nextui-org/react-utils/LICENSE
+├─ @nextui-org/react-utils@2.0.14
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/react-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/react-utils/LICENSE
+├─ @nextui-org/react-utils@2.0.16
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/react-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/react-utils/LICENSE
+├─ @nextui-org/ripple@2.0.30
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/ripple
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/ripple/LICENSE
+├─ @nextui-org/scroll-shadow@2.1.17
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/scroll-shadow
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/scroll-shadow/LICENSE
+├─ @nextui-org/shared-icons@2.0.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/shared-icons
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/shared-icons/LICENSE
+├─ @nextui-org/shared-utils@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/shared-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/shared-utils/LICENSE
+├─ @nextui-org/shared-utils@2.0.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/shared-utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/shared-utils/LICENSE
+├─ @nextui-org/slider@2.2.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/LICENSE
+├─ @nextui-org/snippet@2.0.38
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/snippet
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/snippet/LICENSE
+├─ @nextui-org/spacer@2.0.29
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/spacer
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/spacer/LICENSE
+├─ @nextui-org/spinner@2.0.30
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/spinner
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/spinner/LICENSE
+├─ @nextui-org/switch@2.0.31
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/switch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/switch/LICENSE
+├─ @nextui-org/system-rsc@2.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system-rsc
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system-rsc/LICENSE
+├─ @nextui-org/system-rsc@2.1.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/system-rsc
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/system-rsc/LICENSE
+├─ @nextui-org/system@2.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/LICENSE
+├─ @nextui-org/system@2.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils/node_modules/@nextui-org/system
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils/node_modules/@nextui-org/system/LICENSE
+├─ @nextui-org/system@2.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/aria-utils/node_modules/@nextui-org/system
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/aria-utils/node_modules/@nextui-org/system/LICENSE
+├─ @nextui-org/table@2.0.36
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/table
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/table/LICENSE
+├─ @nextui-org/tabs@2.0.32
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/tabs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/tabs/LICENSE
+├─ @nextui-org/theme@2.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/theme
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/theme/LICENSE
+├─ @nextui-org/tooltip@2.0.36
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/tooltip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/tooltip/LICENSE
+├─ @nextui-org/tooltip@2.0.39
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/tooltip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/tooltip/LICENSE
+├─ @nextui-org/use-aria-accordion@2.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-accordion
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-accordion/LICENSE
+├─ @nextui-org/use-aria-button@2.0.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-button
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-button/LICENSE
+├─ @nextui-org/use-aria-link@2.0.18
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-link
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-link/LICENSE
+├─ @nextui-org/use-aria-toggle-button@2.0.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-toggle-button
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-aria-toggle-button/LICENSE
+├─ @nextui-org/use-callback-ref@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-callback-ref
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-callback-ref/LICENSE
+├─ @nextui-org/use-clipboard@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-clipboard
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-clipboard/LICENSE
+├─ @nextui-org/use-data-scroll-overflow@2.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-data-scroll-overflow
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-data-scroll-overflow/LICENSE
+├─ @nextui-org/use-image@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-image
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-image/LICENSE
+├─ @nextui-org/use-is-mounted@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-is-mounted
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-is-mounted/LICENSE
+├─ @nextui-org/use-measure@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-measure
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-measure/LICENSE
+├─ @nextui-org/use-measure@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/use-measure
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/use-measure/LICENSE
+├─ @nextui-org/use-safe-layout-effect@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-safe-layout-effect
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-safe-layout-effect/LICENSE
+├─ @nextui-org/use-safe-layout-effect@2.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/use-safe-layout-effect
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/slider/node_modules/@nextui-org/use-safe-layout-effect/LICENSE
+├─ @nextui-org/use-scroll-position@2.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-scroll-position
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-scroll-position/LICENSE
+├─ @nextui-org/use-update-effect@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-update-effect
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-update-effect/LICENSE
+├─ @nextui-org/user@2.0.31
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/nextui
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/user
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/user/LICENSE
+├─ @nodelib/fs.scandir@2.1.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.scandir
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.scandir
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.scandir/LICENSE
+├─ @nodelib/fs.stat@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.stat
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.stat
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.stat/LICENSE
+├─ @nodelib/fs.walk@1.2.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodelib/nodelib/tree/master/packages/fs/fs.walk
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.walk
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nodelib/fs.walk/LICENSE
+├─ @pkgjs/parseargs@0.11.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pkgjs/parseargs
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@pkgjs/parseargs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@pkgjs/parseargs/LICENSE
+├─ @react-aria/button@3.9.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/button
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/button/LICENSE
+├─ @react-aria/checkbox@3.14.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/checkbox
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/checkbox/LICENSE
+├─ @react-aria/focus@3.17.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/focus
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/focus/LICENSE
+├─ @react-aria/form@3.0.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/form
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/form/LICENSE
+├─ @react-aria/grid@3.9.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/grid
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/grid/LICENSE
+├─ @react-aria/i18n@3.10.2
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/i18n
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/i18n/LICENSE
+├─ @react-aria/i18n@3.11.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils/node_modules/@react-aria/i18n
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/aria-utils/node_modules/@react-aria/i18n/LICENSE
+├─ @react-aria/i18n@3.12.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/i18n
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/i18n/LICENSE
+├─ @react-aria/interactions@3.21.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/interactions
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/interactions/LICENSE
+├─ @react-aria/label@3.7.8
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/label
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/label/LICENSE
+├─ @react-aria/link@3.7.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/link
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/link/LICENSE
+├─ @react-aria/live-announcer@3.3.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/live-announcer
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/live-announcer/LICENSE
+├─ @react-aria/overlays@3.21.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@react-aria/overlays
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@react-aria/overlays/LICENSE
+├─ @react-aria/overlays@3.22.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/overlays
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/overlays/LICENSE
+├─ @react-aria/progress@3.4.13
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/progress
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/progress/LICENSE
+├─ @react-aria/selection@3.18.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/selection
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/selection/LICENSE
+├─ @react-aria/slider@3.7.8
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/LICENSE
+├─ @react-aria/ssr@3.9.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/ssr
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/ssr/LICENSE
+├─ @react-aria/switch@3.6.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/switch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/switch/LICENSE
+├─ @react-aria/table@3.14.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/table
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/table/LICENSE
+├─ @react-aria/tabs@3.9.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/tabs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/tabs/LICENSE
+├─ @react-aria/textfield@3.14.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/textfield
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/textfield/LICENSE
+├─ @react-aria/toggle@3.10.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/toggle
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/toggle/LICENSE
+├─ @react-aria/tooltip@3.7.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/tooltip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/tooltip/LICENSE
+├─ @react-aria/utils@3.24.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/utils/LICENSE
+├─ @react-aria/utils@3.25.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/utils/LICENSE
+├─ @react-aria/visually-hidden@3.8.12
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/visually-hidden
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/visually-hidden/LICENSE
+├─ @react-stately/checkbox@3.6.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/checkbox
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/checkbox/LICENSE
+├─ @react-stately/collections@3.10.7
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/collections
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/collections/LICENSE
+├─ @react-stately/flags@3.0.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/flags
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/flags/LICENSE
+├─ @react-stately/form@3.0.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/form
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/form/LICENSE
+├─ @react-stately/grid@3.8.7
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/grid
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/grid/LICENSE
+├─ @react-stately/list@3.10.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/list
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/list/LICENSE
+├─ @react-stately/overlays@3.6.7
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/overlays
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/overlays/LICENSE
+├─ @react-stately/selection@3.15.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/selection
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/selection/LICENSE
+├─ @react-stately/slider@3.5.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/slider
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/slider/LICENSE
+├─ @react-stately/table@3.11.8
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/table
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/table/LICENSE
+├─ @react-stately/tabs@3.6.6
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tabs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tabs/LICENSE
+├─ @react-stately/toggle@3.7.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/toggle
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/toggle/LICENSE
+├─ @react-stately/tooltip@3.4.9
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tooltip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tooltip/LICENSE
+├─ @react-stately/tree@3.8.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tree
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tree/LICENSE
+├─ @react-stately/utils@3.10.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/utils/LICENSE
+├─ @react-stately/utils@3.10.2
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-stately/utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-stately/utils/LICENSE
+├─ @react-stately/utils@3.9.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@react-stately/utils
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system/node_modules/@react-stately/utils/LICENSE
+├─ @react-stately/virtualizer@3.7.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/virtualizer
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/virtualizer/LICENSE
+├─ @react-types/accordion@3.0.0-alpha.21
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/accordion
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/accordion/LICENSE
+├─ @react-types/button@3.9.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/button
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/button/LICENSE
+├─ @react-types/checkbox@3.8.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/checkbox
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/checkbox/LICENSE
+├─ @react-types/grid@3.2.6
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/grid
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/grid/LICENSE
+├─ @react-types/link@3.5.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/link
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/link/LICENSE
+├─ @react-types/overlays@3.8.7
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/overlays
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/overlays/LICENSE
+├─ @react-types/progress@3.5.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/progress
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/progress/LICENSE
+├─ @react-types/shared@3.22.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/divider/node_modules/@react-types/shared
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/divider/node_modules/@react-types/shared/LICENSE
+├─ @react-types/shared@3.23.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/shared
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/shared/LICENSE
+├─ @react-types/shared@3.24.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-types/shared
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-types/shared/LICENSE
+├─ @react-types/slider@3.7.4
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/slider
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/slider/LICENSE
+├─ @react-types/switch@3.5.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/switch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/switch/LICENSE
+├─ @react-types/table@3.9.5
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/table
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/table/LICENSE
+├─ @react-types/tabs@3.3.7
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/tabs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/tabs/LICENSE
+├─ @react-types/textfield@3.9.3
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/textfield
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/textfield/LICENSE
+├─ @react-types/tooltip@3.4.9
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/adobe/react-spectrum
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/tooltip
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/tooltip/LICENSE
+├─ @remix-run/router@1.16.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/remix-run/react-router
+│  ├─ publisher: Remix Software
+│  ├─ email: hello@remix.run
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@remix-run/router
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@remix-run/router/LICENSE.md
+├─ @swc/helpers@0.5.11
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/swc-project/swc
+│  ├─ publisher: 강동윤
+│  ├─ email: kdy1997.dev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@swc/helpers
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@swc/helpers/LICENSE
+├─ @types/prop-types@15.7.12
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/prop-types
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/prop-types/LICENSE
+├─ @types/react@18.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/react
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/react/LICENSE
+├─ @types/stylis@4.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/stylis
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/stylis/LICENSE
+├─ @unpic/core@0.0.49
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ascorbic/unpic-img
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/core
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/core/README.md
+├─ @unpic/pixels@1.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ascorbic/get-pixels
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/pixels
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/pixels/README.md
+├─ @unpic/placeholder@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ascorbic/unpic-placeholder
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/placeholder
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/placeholder/LICENCE
+├─ @unpic/react@0.1.14
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ascorbic/unpic-img
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/react
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/react/LICENSE
+├─ ansi-regex@5.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ansi-regex
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ansi-regex/license
+├─ ansi-regex@6.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width/node_modules/ansi-regex
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width/node_modules/ansi-regex/license
+├─ ansi-styles@4.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-styles
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi-cjs/node_modules/ansi-styles
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi-cjs/node_modules/ansi-styles/license
+├─ ansi-styles@6.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-styles
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi/node_modules/ansi-styles
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi/node_modules/ansi-styles/license
+├─ any-promise@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kevinbeaty/any-promise
+│  ├─ publisher: Kevin Beaty
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/any-promise
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/any-promise/LICENSE
+├─ anymatch@3.1.3
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/micromatch/anymatch
+│  ├─ publisher: Elan Shanker
+│  ├─ url: https://github.com/es128
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/anymatch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/anymatch/LICENSE
+├─ arg@5.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/vercel/arg
+│  ├─ publisher: Josh Junon
+│  ├─ email: junon@wavetilt.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/arg
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/arg/LICENSE.md
+├─ balanced-match@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/balanced-match
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/balanced-match
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/balanced-match/LICENSE.md
+├─ binary-extensions@2.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/binary-extensions
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/binary-extensions
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/binary-extensions/license
+├─ blurhash@2.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/woltapp/blurhash/tree/master/TypeScript
+│  ├─ publisher: omahlama
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/blurhash
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/blurhash/README.md
+├─ brace-expansion@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/brace-expansion
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/brace-expansion
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/brace-expansion/LICENSE
+├─ braces@3.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/braces
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/braces
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/braces/LICENSE
+├─ camelcase-css@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/stevenvachon/camelcase-css
+│  ├─ publisher: Steven Vachon
+│  ├─ email: contact@svachon.com
+│  ├─ url: https://www.svachon.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/camelcase-css
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/camelcase-css/license
+├─ camelize@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ljharb/camelize
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/camelize
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/camelize/LICENSE
+├─ chokidar@3.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/chokidar
+│  ├─ publisher: Paul Miller
+│  ├─ url: https://paulmillr.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chokidar
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chokidar/LICENSE
+├─ chroma-js@2.4.2
+│  ├─ licenses: (BSD-3-Clause AND Apache-2.0)
+│  ├─ repository: https://github.com/gka/chroma.js
+│  ├─ publisher: Gregor Aisch
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chroma-js
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chroma-js/LICENSE
+├─ clsx@1.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lukeed/clsx
+│  ├─ publisher: Luke Edwards
+│  ├─ email: luke.edwards05@gmail.com
+│  ├─ url: https://lukeed.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system-rsc/node_modules/clsx
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/system-rsc/node_modules/clsx/license
+├─ clsx@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lukeed/clsx
+│  ├─ publisher: Luke Edwards
+│  ├─ email: luke.edwards05@gmail.com
+│  ├─ url: https://lukeed.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/clsx
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/clsx/license
+├─ color-convert@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Qix-/color-convert
+│  ├─ publisher: Heather Arthur
+│  ├─ email: fayearthur@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color/node_modules/color-convert
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color/node_modules/color-convert/LICENSE
+├─ color-name@1.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dfcreative/color-name
+│  ├─ publisher: DY
+│  ├─ email: dfcreative@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color-name
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color-name/LICENSE
+├─ color-name@1.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/colorjs/color-name
+│  ├─ publisher: DY
+│  ├─ email: dfcreative@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color/node_modules/color-name
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color/node_modules/color-name/LICENSE
+├─ color-string@1.9.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Qix-/color-string
+│  ├─ publisher: Heather Arthur
+│  ├─ email: fayearthur@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color-string
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color-string/LICENSE
+├─ color2k@2.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ricokahler/color2k
+│  ├─ publisher: Rico Kahler
+│  ├─ email: ricokahler@me.com
+│  ├─ url: https://github.com/ricokahler
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color2k
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color2k/LICENSE
+├─ color@4.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Qix-/color
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/color/LICENSE
+├─ commander@4.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tj/commander.js
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/commander
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/commander/LICENSE
+├─ compute-scroll-into-view@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/scroll-into-view/compute-scroll-into-view
+│  ├─ publisher: Cody Olsen
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/compute-scroll-into-view
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/compute-scroll-into-view/LICENSE
+├─ cross-spawn@7.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/moxystudio/node-cross-spawn
+│  ├─ publisher: André Cruz
+│  ├─ email: andre@moxy.studio
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/cross-spawn
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/cross-spawn/LICENSE
+├─ css-color-keywords@1.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/sonicdoe/css-color-keywords
+│  ├─ publisher: Jakob Krigovsky
+│  ├─ email: jakob@krigovsky.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-color-keywords
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-color-keywords/LICENSE
+├─ css-to-react-native@3.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/styled-components/css-to-react-native
+│  ├─ publisher: Jacob Parker
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-to-react-native
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-to-react-native/LICENSE.md
+├─ cssesc@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mathiasbynens/cssesc
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/cssesc
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/cssesc/LICENSE-MIT.txt
+├─ csstype@3.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/frenic/csstype
+│  ├─ publisher: Fredrik Nicol
+│  ├─ email: fredrik.nicol@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/csstype
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/csstype/LICENSE
+├─ deepmerge@4.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/TehShrike/deepmerge
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/deepmerge
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/deepmerge/license.txt
+├─ destr@2.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unjs/destr
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/destr
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/destr/LICENSE
+├─ detect-node-es@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/thekashey/detect-node
+│  ├─ publisher: Ilya Kantor
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/detect-node-es
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/detect-node-es/LICENSE
+├─ didyoumean@1.2.2
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/dcporter/didyoumean.js
+│  ├─ publisher: Dave Porter
+│  ├─ email: dcporter@gmail.com
+│  ├─ url: http://dcporter.net/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/didyoumean
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/didyoumean/LICENSE
+├─ dlv@1.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/developit/dlv
+│  ├─ publisher: Jason Miller
+│  ├─ email: jason@developit.ca
+│  ├─ url: http://jasonformat.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/dlv
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/dlv/README.md
+├─ eastasianwidth@0.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/komagata/eastasianwidth
+│  ├─ publisher: Masaki Komagata
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/eastasianwidth
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/eastasianwidth/README.md
+├─ emoji-regex@8.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mathiasbynens/emoji-regex
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width-cjs/node_modules/emoji-regex
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width-cjs/node_modules/emoji-regex/LICENSE-MIT.txt
+├─ emoji-regex@9.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mathiasbynens/emoji-regex
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/emoji-regex
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/emoji-regex/LICENSE-MIT.txt
+├─ fast-glob@3.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mrmlnc/fast-glob
+│  ├─ publisher: Denis Malinochkin
+│  ├─ url: https://mrmlnc.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fast-glob
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fast-glob/LICENSE
+├─ fastq@1.17.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/mcollina/fastq
+│  ├─ publisher: Matteo Collina
+│  ├─ email: hello@matteocollina.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fastq
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fastq/LICENSE
+├─ fill-range@7.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/fill-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fill-range
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fill-range/LICENSE
+├─ flat@5.0.2
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/hughsk/flat
+│  ├─ publisher: Hugh Kennedy
+│  ├─ email: hughskennedy@gmail.com
+│  ├─ url: http://hughskennedy.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/flat
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/flat/LICENSE
+├─ foreground-child@3.2.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/tapjs/foreground-child
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/foreground-child
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/foreground-child/LICENSE
+├─ framer-motion@11.1.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/framer/motion
+│  ├─ publisher: Framer
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/framer-motion
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/framer-motion/LICENSE.md
+├─ function-bind@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Raynos/function-bind
+│  ├─ publisher: Raynos
+│  ├─ email: raynos2@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/function-bind
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/function-bind/LICENSE
+├─ get-nonce@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/theKashey/get-nonce
+│  ├─ publisher: Anton Korzunov
+│  ├─ email: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/get-nonce
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/get-nonce/LICENSE
+├─ glob-parent@5.1.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/gulpjs/glob-parent
+│  ├─ publisher: Gulp Team
+│  ├─ email: team@gulpjs.com
+│  ├─ url: https://gulpjs.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chokidar/node_modules/glob-parent
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/chokidar/node_modules/glob-parent/LICENSE
+├─ glob-parent@6.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/gulpjs/glob-parent
+│  ├─ publisher: Gulp Team
+│  ├─ email: team@gulpjs.com
+│  ├─ url: https://gulpjs.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/glob-parent
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/glob-parent/LICENSE
+├─ glob@10.4.3
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-glob
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: https://blog.izs.me/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/sucrase/node_modules/glob
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/sucrase/node_modules/glob/LICENSE
+├─ hasown@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/inspect-js/hasOwn
+│  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/hasown
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/hasown/LICENSE
+├─ intl-messageformat@10.5.14
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/formatjs/formatjs
+│  ├─ publisher: Eric Ferraiuolo
+│  ├─ email: eferraiuolo@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/intl-messageformat
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/intl-messageformat/LICENSE.md
+├─ invariant@2.2.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zertosh/invariant
+│  ├─ publisher: Andres Suarez
+│  ├─ email: zertosh@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/invariant
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/invariant/LICENSE
+├─ is-arrayish@0.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/qix-/node-is-arrayish
+│  ├─ publisher: Qix
+│  ├─ url: http://github.com/qix-
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-arrayish
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-arrayish/LICENSE
+├─ is-binary-path@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-binary-path
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-binary-path
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-binary-path/license
+├─ is-core-module@2.14.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/inspect-js/is-core-module
+│  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-core-module
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-core-module/LICENSE
+├─ is-extglob@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-extglob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-extglob
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-extglob/LICENSE
+├─ is-fullwidth-code-point@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-fullwidth-code-point
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-fullwidth-code-point
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-fullwidth-code-point/license
+├─ is-glob@4.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/is-glob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-glob
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-glob/LICENSE
+├─ is-number@7.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-number
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-number
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/is-number/LICENSE
+├─ isexe@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/isexe
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/isexe
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/isexe/LICENSE
+├─ jackspeak@3.4.1
+│  ├─ licenses: BlueOak-1.0.0
+│  ├─ repository: https://github.com/isaacs/jackspeak
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jackspeak
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jackspeak/LICENSE.md
+├─ jiti@1.21.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unjs/jiti
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jiti
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jiti/LICENSE
+├─ jpeg-js@0.4.4
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/eugeneware/jpeg-js
+│  ├─ publisher: Eugene Ware
+│  ├─ email: eugene@noblesamurai.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jpeg-js
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jpeg-js/LICENSE
+├─ js-sha256@0.11.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/emn178/js-sha256
+│  ├─ publisher: Chen, Yi-Cyuan
+│  ├─ email: emn178@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/js-sha256
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/js-sha256/LICENSE.txt
+├─ js-tokens@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/js-tokens
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/js-tokens
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/js-tokens/LICENSE
+├─ lilconfig@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/antonk52/lilconfig
+│  ├─ publisher: antonk52
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lilconfig
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lilconfig/LICENSE
+├─ lilconfig@3.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/antonk52/lilconfig
+│  ├─ publisher: antonk52
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-load-config/node_modules/lilconfig
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-load-config/node_modules/lilconfig/LICENSE
+├─ lines-and-columns@1.2.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/eventualbuddha/lines-and-columns
+│  ├─ publisher: Brian Donovan
+│  ├─ email: brian@donovans.cc
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lines-and-columns
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lines-and-columns/LICENSE
+├─ lodash.debounce@4.0.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.debounce
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.debounce/LICENSE
+├─ lodash.foreach@4.5.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.foreach
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.foreach/LICENSE
+├─ lodash.get@4.4.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.get
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.get/LICENSE
+├─ lodash.kebabcase@4.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.kebabcase
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.kebabcase/LICENSE
+├─ lodash.mapkeys@4.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.mapkeys
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.mapkeys/LICENSE
+├─ lodash.omit@4.5.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.omit
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash.omit/LICENSE
+├─ loose-envify@1.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zertosh/loose-envify
+│  ├─ publisher: Andres Suarez
+│  ├─ email: zertosh@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/loose-envify
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/loose-envify/LICENSE
+├─ lru-cache@10.3.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-lru-cache
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-scurry/node_modules/lru-cache
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-scurry/node_modules/lru-cache/LICENSE
+├─ merge2@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/teambition/merge2
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/merge2
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/merge2/LICENSE
+├─ micromatch@4.0.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/micromatch
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/micromatch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/micromatch/LICENSE
+├─ minimatch@9.0.5
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/minimatch
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/minimatch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/minimatch/LICENSE
+├─ minipass@7.1.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/minipass
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/minipass
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/minipass/LICENSE
+├─ mz@2.7.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/normalize/mz
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/mz
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/mz/LICENSE
+├─ nanoid@3.3.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ai/nanoid
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nanoid
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nanoid/LICENSE
+├─ node-fetch-native@1.6.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unjs/node-fetch-native
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/node-fetch-native
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/node-fetch-native/LICENSE
+├─ normalize-path@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/normalize-path
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/normalize-path
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/normalize-path/LICENSE
+├─ object-assign@4.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/object-assign
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/object-assign
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/object-assign/license
+├─ object-hash@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/puleos/object-hash
+│  ├─ publisher: Scott Puleo
+│  ├─ email: puleos@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/object-hash
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/object-hash/LICENSE
+├─ ofetch@1.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unjs/ofetch
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ofetch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ofetch/LICENSE
+├─ package-json-from-dist@1.0.0
+│  ├─ licenses: BlueOak-1.0.0
+│  ├─ repository: https://github.com/isaacs/package-json-from-dist
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: https://izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/package-json-from-dist
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/package-json-from-dist/LICENSE.md
+├─ path-key@3.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/path-key
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-key
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-key/license
+├─ path-parse@1.0.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jbgutierrez/path-parse
+│  ├─ publisher: Javier Blanco
+│  ├─ email: http://jbgutierrez.info
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-parse
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-parse/LICENSE
+├─ path-scurry@1.11.1
+│  ├─ licenses: BlueOak-1.0.0
+│  ├─ repository: https://github.com/isaacs/path-scurry
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: https://blog.izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-scurry
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-scurry/LICENSE.md
+├─ picocolors@1.0.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/alexeyraspopov/picocolors
+│  ├─ publisher: Alexey Raspopov
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/picocolors
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/picocolors/LICENSE
+├─ picomatch@2.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/picomatch
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/picomatch
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/picomatch/LICENSE
+├─ pify@2.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/pify
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pify
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pify/license
+├─ pirates@4.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/danez/pirates
+│  ├─ publisher: Ari Porad
+│  ├─ email: ari@ariporad.com
+│  ├─ url: http://ariporad.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pirates
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pirates/LICENSE
+├─ pngjs@7.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pngjs/pngjs
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pngjs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/pngjs/LICENSE
+├─ postcss-import@15.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss-import
+│  ├─ publisher: Maxime Thirouin
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-import
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-import/LICENSE
+├─ postcss-js@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss-js
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-js
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-js/LICENSE
+├─ postcss-load-config@4.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss-load-config
+│  ├─ publisher: Michael Ciniawky
+│  ├─ email: michael.ciniawsky@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-load-config
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-load-config/LICENSE
+├─ postcss-nested@6.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss-nested
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-nested
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-nested/LICENSE
+├─ postcss-selector-parser@6.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss-selector-parser
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-selector-parser
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-selector-parser/LICENSE-MIT
+├─ postcss-value-parser@4.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/TrySound/postcss-value-parser
+│  ├─ publisher: Bogdan Chadkin
+│  ├─ email: trysound@yandex.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-value-parser
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss-value-parser/LICENSE
+├─ postcss@8.4.38
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components/node_modules/postcss
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components/node_modules/postcss/LICENSE
+├─ postcss@8.4.39
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/postcss/postcss
+│  ├─ publisher: Andrey Sitnik
+│  ├─ email: andrey@sitnik.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/postcss/LICENSE
+├─ queue-microtask@1.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/queue-microtask
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: https://feross.org
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/queue-microtask
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/queue-microtask/LICENSE
+├─ react-device-detect@2.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/duskload/react-device-detect
+│  ├─ publisher: Michael Laktionov
+│  ├─ email: duskload@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-device-detect
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-device-detect/LICENSE
+├─ react-dom@18.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/react
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-dom
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-dom/LICENSE
+├─ react-icons@5.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/react-icons/react-icons
+│  ├─ publisher: Goran Gajic
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-icons
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-icons/LICENSE
+├─ react-intersection-observer@9.13.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/thebuilder/react-intersection-observer
+│  ├─ publisher: Daniel Schmidt
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-intersection-observer
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-intersection-observer/LICENSE
+├─ react-remove-scroll-bar@2.3.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/theKashey/react-remove-scroll-bar
+│  ├─ publisher: Anton Korzunov
+│  ├─ email: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-remove-scroll-bar
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-remove-scroll-bar/README.md
+├─ react-remove-scroll@2.5.10
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/theKashey/react-remove-scroll
+│  ├─ publisher: Anton Korzunov
+│  ├─ email: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-remove-scroll
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-remove-scroll/LICENSE
+├─ react-router-dom@6.23.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/remix-run/react-router
+│  ├─ publisher: Remix Software
+│  ├─ email: hello@remix.run
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-router-dom
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-router-dom/LICENSE.md
+├─ react-router@6.23.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/remix-run/react-router
+│  ├─ publisher: Remix Software
+│  ├─ email: hello@remix.run
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-router
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-router/LICENSE.md
+├─ react-style-singleton@2.2.1
+│  ├─ licenses: MIT
+│  ├─ publisher: Anton Korzunov
+│  ├─ url: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-style-singleton
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-style-singleton/README.md
+├─ react-textarea-autosize@8.5.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Andarist/react-textarea-autosize
+│  ├─ publisher: Andrey Popp
+│  ├─ email: 8mayday@gmail.com
+│  ├─ url: httsps://andreypopp.com/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-textarea-autosize
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-textarea-autosize/LICENSE
+├─ react-timer-hook@3.0.7
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/amrlabib/react-timer-hook
+│  ├─ publisher: amrlabib
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-timer-hook
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-timer-hook/LICENSE
+├─ react@18.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/react
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react/LICENSE
+├─ read-cache@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/TrySound/read-cache
+│  ├─ publisher: Bogdan Chadkin
+│  ├─ email: trysound@yandex.ru
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/read-cache
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/read-cache/LICENSE
+├─ readdirp@3.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/readdirp
+│  ├─ publisher: Thorsten Lorenz
+│  ├─ email: thlorenz@gmx.de
+│  ├─ url: thlorenz.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/readdirp
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/readdirp/LICENSE
+├─ regenerator-runtime@0.14.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/regenerator/tree/main/packages/runtime
+│  ├─ publisher: Ben Newman
+│  ├─ email: bn@cs.stanford.edu
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/regenerator-runtime
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/regenerator-runtime/LICENSE
+├─ resolve@1.22.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/browserify/resolve
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/resolve
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/resolve/LICENSE
+├─ reusify@1.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mcollina/reusify
+│  ├─ publisher: Matteo Collina
+│  ├─ email: hello@matteocollina.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/reusify
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/reusify/LICENSE
+├─ run-parallel@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/run-parallel
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: https://feross.org
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/run-parallel
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/run-parallel/LICENSE
+├─ scheduler@0.23.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/react
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scheduler
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scheduler/LICENSE
+├─ scroll-into-view-if-needed@3.0.10
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/scroll-into-view/scroll-into-view-if-needed
+│  ├─ publisher: Cody Olsen
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scroll-into-view-if-needed
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scroll-into-view-if-needed/LICENSE
+├─ shallowequal@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dashed/shallowequal
+│  ├─ publisher: Alberto Leal
+│  ├─ email: mailforalberto@gmail.com
+│  ├─ url: github.com/dashed
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shallowequal
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shallowequal/LICENSE
+├─ shebang-command@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kevva/shebang-command
+│  ├─ publisher: Kevin Mårtensson
+│  ├─ email: kevinmartensson@gmail.com
+│  ├─ url: github.com/kevva
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shebang-command
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shebang-command/license
+├─ shebang-regex@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/shebang-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shebang-regex
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/shebang-regex/license
+├─ signal-exit@4.1.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/tapjs/signal-exit
+│  ├─ publisher: Ben Coe
+│  ├─ email: ben@npmjs.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/signal-exit
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/signal-exit/LICENSE.txt
+├─ simple-swizzle@0.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/qix-/node-simple-swizzle
+│  ├─ publisher: Qix
+│  ├─ url: http://github.com/qix-
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/simple-swizzle
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/simple-swizzle/LICENSE
+├─ source-map-js@1.2.0
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/7rulnik/source-map-js
+│  ├─ publisher: Valentin 7rulnik Semirulnik
+│  ├─ email: v7rulnik@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/source-map-js
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/source-map-js/LICENSE
+├─ string-width@4.2.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/string-width
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width-cjs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width-cjs/license
+├─ string-width@5.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/string-width
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width/license
+├─ strip-ansi@6.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/strip-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/strip-ansi
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/strip-ansi/license
+├─ strip-ansi@7.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/strip-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width/node_modules/strip-ansi
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/string-width/node_modules/strip-ansi/license
+├─ styled-components@6.1.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/styled-components/styled-components
+│  ├─ publisher: Glen Maddern
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components/LICENSE
+├─ stylis@4.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/thysultan/stylis.js
+│  ├─ publisher: Sultan Tarimo
+│  ├─ email: sultantarimo@me.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stylis
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stylis/LICENSE
+├─ sucrase@3.35.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/alangpierce/sucrase
+│  ├─ publisher: Alan Pierce
+│  ├─ email: alangpierce@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/sucrase
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/sucrase/LICENSE
+├─ supports-preserve-symlinks-flag@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/inspect-js/node-supports-preserve-symlinks-flag
+│  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/supports-preserve-symlinks-flag
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/supports-preserve-symlinks-flag/LICENSE
+├─ tailwind-merge@1.14.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dcastil/tailwind-merge
+│  ├─ publisher: Dany Castillo
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwind-merge
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwind-merge/LICENSE.md
+├─ tailwind-variants@0.1.20
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nextui-org/tailwind-variants
+│  ├─ publisher: Junior Garcia
+│  ├─ email: jrgarciadev@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwind-variants
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwind-variants/LICENSE
+├─ tailwindcss@3.4.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tailwindlabs/tailwindcss
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwindcss
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tailwindcss/LICENSE
+├─ thenify-all@1.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/thenables/thenify-all
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/thenify-all
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/thenify-all/LICENSE
+├─ thenify@3.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/thenables/thenify
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/thenify
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/thenify/LICENSE
+├─ to-regex-range@5.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/to-regex-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/to-regex-range
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/to-regex-range/LICENSE
+├─ ts-interface-checker@0.1.13
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/gristlabs/ts-interface-checker
+│  ├─ publisher: Dmitry S, Grist Labs
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ts-interface-checker
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ts-interface-checker/LICENSE
+├─ tslib@2.6.2
+│  ├─ licenses: 0BSD
+│  ├─ repository: https://github.com/Microsoft/tslib
+│  ├─ publisher: Microsoft Corp.
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components/node_modules/tslib
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/styled-components/node_modules/tslib/LICENSE.txt
+├─ tslib@2.6.3
+│  ├─ licenses: 0BSD
+│  ├─ repository: https://github.com/Microsoft/tslib
+│  ├─ publisher: Microsoft Corp.
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tslib
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tslib/LICENSE.txt
+├─ ua-parser-js@1.0.38
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/faisalman/ua-parser-js
+│  ├─ publisher: Faisal Salman
+│  ├─ email: f@faisalman.com
+│  ├─ url: http://faisalman.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ua-parser-js
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ua-parser-js/license.md
+├─ ufo@1.5.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unjs/ufo
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ufo
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ufo/LICENSE
+├─ unpic@3.18.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ascorbic/unpic
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/unpic
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/unpic/README.md
+├─ use-callback-ref@1.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/theKashey/use-callback-ref
+│  ├─ publisher: theKashey
+│  ├─ email: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-callback-ref
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-callback-ref/LICENSE
+├─ use-composed-ref@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Andarist/use-composed-ref
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-composed-ref
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-composed-ref/README.md
+├─ use-isomorphic-layout-effect@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Andarist/use-isomorphic-layout-effect
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-isomorphic-layout-effect
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-isomorphic-layout-effect/LICENSE
+├─ use-latest@1.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Andarist/use-latest
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-latest
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-latest/README.md
+├─ use-sidecar@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/theKashey/use-sidecar
+│  ├─ publisher: theKashey
+│  ├─ email: thekashey@gmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-sidecar
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/use-sidecar/LICENSE
+├─ usehooks-ts@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliencrn/usehooks-ts
+│  ├─ publisher: Julien CARON
+│  ├─ email: juliencaron@protonmail.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/usehooks-ts
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/usehooks-ts/LICENSE
+├─ util-deprecate@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/TooTallNate/util-deprecate
+│  ├─ publisher: Nathan Rajlich
+│  ├─ email: nathan@tootallnate.net
+│  ├─ url: http://n8.io/
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/util-deprecate
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/util-deprecate/LICENSE
+├─ which@2.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-which
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/which
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/which/LICENSE
+├─ wrap-ansi@7.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/wrap-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi-cjs
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi-cjs/license
+├─ wrap-ansi@8.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/wrap-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi
+│  └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/wrap-ansi/license
+└─ yaml@2.4.5
+   ├─ licenses: ISC
+   ├─ repository: https://github.com/eemeli/yaml
+   ├─ publisher: Eemeli Aro
+   ├─ email: eemeli@gmail.com
+   ├─ path: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/yaml
+   └─ licenseFile: /home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/yaml/LICENSE
+

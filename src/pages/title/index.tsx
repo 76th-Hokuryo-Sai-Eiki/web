@@ -8,26 +8,34 @@ import {
     useRef,
     useSyncExternalStore,
 } from "react";
+import { useInView } from "react-intersection-observer";
 import { useCountdown } from "usehooks-ts";
 
 import { Catchphrase } from "./catchphrase";
 
 import { Fadein, FadeinSlide } from "@/components/animations";
 import { Banner, GoogleCalendarIcon } from "@/components/icons";
+import { ParallaxY } from "@/components/parallax";
 import { subtitle, title } from "@/components/primitives";
 import { TimeDisplay } from "@/components/time-display";
 import { siteConfig } from "@/config/site";
 import { chooseRandom } from "@/functions/utility";
 
 function CountDown({ compact = false }: { compact?: boolean }) {
-    const [count, { startCountdown }] = useCountdown({
+    const [count, { startCountdown, stopCountdown }] = useCountdown({
         countStart: Math.floor(
             (siteConfig.eventDate.getTime() - Date.now()) / 250,
         ),
         intervalMs: 250,
     });
 
-    useEffect(startCountdown);
+    useEffect(() => {
+        startCountdown();
+
+        return () => {
+            stopCountdown();
+        };
+    }, [startCountdown, stopCountdown]);
 
     const seconds = Math.floor(count / 4);
     const minutes = Math.floor(seconds / 60);
@@ -69,13 +77,14 @@ function CountDownContainer({ children }: { children: ReactElement }) {
     return (
         <div
             ref={containerRef}
-            className="flex w-52 justify-center xs:w-[400px] 2xl:w-32"
+            className={`parallax flex w-52 justify-center opacity-80 xs:w-[400px] 2xl:w-32 2xl:[--scroll-y-from:750px] 2xl:[--scroll-y-to:-500px]`}
         >
             <div className="text-left">
-                <h1
+                <p
                     className={title({
                         class: "-ml-6 text-default-600 sm:ml-0",
                     })}
+                    id="#test"
                     style={{
                         fontFamily: "BIZ UDMincho",
                         fontSize: "24pt",
@@ -83,7 +92,7 @@ function CountDownContainer({ children }: { children: ReactElement }) {
                     }}
                 >
                     あと
-                </h1>
+                </p>
                 <div className="mt-4 sm:ml-6">
                     {cloneElement(children, {
                         compact: width < 400,
@@ -95,10 +104,13 @@ function CountDownContainer({ children }: { children: ReactElement }) {
 }
 
 export default function Title() {
+    const { ref: titleRef } = useInView({ triggerOnce: false });
+    const titleColor = chooseRandom(Object.keys(title.variants.color));
+
     return (
         <div className="grid min-h-[90vh] min-w-52 grid-cols-5 items-center justify-center gap-4 px-0 py-8 xl:px-12">
             <div className="col-span-full justify-center text-center 2xl:col-span-3 2xl:col-start-2">
-                <Banner />
+                <Banner className="backdrop-blur-sm" />
 
                 <Catchphrase />
             </div>
@@ -107,7 +119,7 @@ export default function Title() {
                 <div className="flex flex-col justify-center text-center">
                     <Fadein once duration={1.2} easing="ease-in">
                         <div className="mt-3 sm:flex sm:items-center sm:justify-center">
-                            <h1
+                            <h2
                                 className={title({
                                     size: "xl",
                                     class: "m-4 pt-1 text-[2.5rem] text-default-800 sm:mr-6 sm:text-5xl",
@@ -117,26 +129,28 @@ export default function Title() {
                                 }}
                             >
                                 第 76 回
-                            </h1>
+                            </h2>
 
                             <span className="sm:hidden">
                                 <br />
                                 <span className="mt-5 inline-flex h-14" />
                             </span>
-                            <h1
-                                className={title({
-                                    size: "xl",
-                                    class: "-ml-2 text-[4.25rem] sm:ml-0 sm:text-7xl 2xl:ml-2 2xl:text-[4.7rem]",
-                                    color: chooseRandom(
-                                        Object.keys(title.variants.color),
-                                    ),
-                                })}
-                                style={{
-                                    fontFamily: "Noto Serif JP",
-                                }}
-                            >
-                                北稜祭
-                            </h1>
+
+                            <ParallaxY className="md:[--scroll-y-from:40px] md:[--scroll-y-to:-40px]">
+                                <h1
+                                    ref={titleRef}
+                                    className={title({
+                                        size: "xl",
+                                        class: "-ml-2 text-[4.25rem] sm:ml-0 sm:text-7xl 2xl:ml-2 2xl:text-[4.7rem]",
+                                        color: titleColor,
+                                    })}
+                                    style={{
+                                        fontFamily: "Noto Serif JP",
+                                    }}
+                                >
+                                    北稜祭
+                                </h1>
+                            </ParallaxY>
                         </div>
                     </Fadein>
                 </div>

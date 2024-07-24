@@ -1,7 +1,8 @@
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Divider } from "@nextui-org/divider";
 import { Spacer } from "@nextui-org/spacer";
-import { ReactNode } from "react";
+import { Selection } from "@nextui-org/table";
+import { ReactNode, useRef } from "react";
 import { FaCircleInfo, FaRegCircleQuestion } from "react-icons/fa6";
 
 import { data } from "./data/faq";
@@ -9,14 +10,15 @@ import { data } from "./data/faq";
 import { FadeinSlide } from "@/components/animations";
 import { Inline } from "@/components/inline";
 import SectionHeader from "@/components/section-header";
+import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 import { LocationCard } from "@/pages/common/location-card";
 
 function Abstract() {
     return (
-        <div className="mt-5">
-            <h1 className="text-3xl text-default-600">
+        <article className="mt-5">
+            <h2 className="text-3xl text-default-600">
                 一般公開<span className="text-2xl">（出店・展示・企画)</span>
-            </h1>
+            </h2>
             <ul
                 className="ml-4 mt-3 text-[1.4rem] text-default-600 sm:text-[1.7rem]"
                 style={{ fontFamily: "Kode Mono" }}
@@ -58,15 +60,58 @@ function Abstract() {
                     </li>
                 </FadeinSlide>
             </ul>
-        </div>
+        </article>
     );
 }
 
 function Faq() {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const allSelected =
+        new URLSearchParams(window.location.search).get("faq") === "all";
+
+    const onSelectionChange = (_selection: Selection) => {
+        const selection = _selection as unknown as Set<number>;
+
+        if (selection.size == 0) return;
+
+        const index = [...selection.values()][0];
+        const item = document.getElementById(`faq-item-${index}`);
+
+        if (!item) return;
+
+        // console.log(
+        //     containerRef.current.scrollTop,
+        //     containerRef.current.offsetHeight / 2,
+        // );
+        if (!containerRef.current) return;
+
+        setTimeout(() => {
+            if (!containerRef.current) return;
+
+            scrollIntoViewIfNeeded(containerRef.current, {
+                behavior: "smooth",
+            });
+
+            scrollIntoViewIfNeeded(item, {
+                root: containerRef.current,
+                offsetTop: 0,
+                behavior: "smooth",
+            });
+        }, 100);
+    };
+
     return (
-        <div className="mt-5">
-            <h1 className="text-3xl text-default-600">よくあるご質問</h1>
-            <Accordion>
+        <article
+            ref={containerRef}
+            className="simple-scrollbar mt-5 h-[530px] w-full overflow-y-scroll md:overflow-y-visible"
+            style={allSelected ? { height: "max-content" } : {}}
+        >
+            <h2 className="text-3xl text-default-600">よくあるご質問</h2>
+            <Accordion
+                selectedKeys={allSelected ? "all" : undefined}
+                onSelectionChange={onSelectionChange}
+            >
                 {data.map(
                     (
                         {
@@ -80,7 +125,9 @@ function Faq() {
                     ) => (
                         <AccordionItem
                             key={index}
+                            HeadingComponent={"h3"}
                             aria-label={`Question No. ${index + 1}`}
+                            id={`faq-item-${index}`}
                             indicator={({ isOpen }) =>
                                 isOpen ? (
                                     <FaCircleInfo
@@ -92,7 +139,7 @@ function Faq() {
                                 )
                             }
                             title={
-                                <div className="宮城県仙台第二高等学校text-large ml-1 text-default-600">
+                                <div className="ml-1 text-large text-default-600">
                                     {title}
                                 </div>
                             }
@@ -110,26 +157,29 @@ function Faq() {
                 <Divider />
             </div>
             <div className="flex">
-                <p className="ml-auto w-fit px-3 text-left text-[10.5pt] text-default-600">
+                <p className="ml-auto w-fit px-3 text-left text-[10.5pt] text-default-500">
                     <Inline>
                         その他の疑問点についても、お近くの北陵祭実行委員までお気軽にお尋ねください。
                     </Inline>
                     <Inline>緑の法被が目印です。</Inline>
                 </p>
             </div>
-        </div>
+        </article>
     );
 }
 
 function Contact() {
     return (
         <div className="mt-5">
-            <h1 className="text-3xl text-default-600">お問い合わせ先</h1>
+            <h2 className="text-3xl text-default-600">お問い合わせ先</h2>
             <div className="mt-3">
                 <LocationCard
                     className="px-5 py-2 sm:max-w-[400px]"
                     radius="md"
                     shadow="sm"
+                    style={{
+                        opacity: "90%",
+                    }}
                 />
             </div>
         </div>
@@ -138,20 +188,18 @@ function Contact() {
 
 export default function InfoSection() {
     return (
-        <div className="m-2 flex flex-col">
-            <div className="main-inner form-contents">
-                <SectionHeader hashlink="#info">Info</SectionHeader>
+        <div className="m-2">
+            <SectionHeader hashlink="#info">Info</SectionHeader>
 
-                <Abstract />
+            <Abstract />
 
-                <Spacer y={8} />
+            <Spacer y={8} />
 
-                <Faq />
+            <Faq />
 
-                <Spacer y={8} />
+            <Spacer y={8} />
 
-                <Contact />
-            </div>
+            <Contact />
         </div>
     );
 }

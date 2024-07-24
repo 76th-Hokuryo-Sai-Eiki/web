@@ -3,36 +3,53 @@ import { siteConfig } from "@/config/site";
 export function scrollIntoViewIfNeeded<T extends HTMLElement>(
     element: T,
     {
+        root = document.documentElement,
+        offsetTop = siteConfig.navbarHeight,
         behavior = "auto",
         marginTop = 30,
         marginBottom = 50,
         forceTop = false,
     }: {
+        root?: any;
+        offsetTop?: number;
         behavior?: ScrollBehavior;
         marginTop?: number;
         marginBottom?: number;
         forceTop?: boolean;
-    } = {}
+    } = {},
 ) {
-    if (
-        forceTop ||
-        window.scrollY + siteConfig.navbarHeight > element.offsetTop
-    ) {
-        window.scrollTo({
+    const elementTop = element.offsetTop - root.offsetTop;
+
+    if (forceTop || root.scrollTop + offsetTop > elementTop) {
+        root.scrollTo({
             behavior,
-            top: element.offsetTop - siteConfig.navbarHeight - marginTop,
+            top: elementTop - offsetTop - marginTop,
         });
     } else if (
-        window.scrollY + window.innerHeight <
-        element.offsetTop + element.offsetHeight
+        root.scrollTop + root.clientHeight <
+        elementTop + element.clientHeight
     ) {
-        window.scrollTo({
+        root.scrollTo({
             behavior,
             top:
-                element.offsetTop +
-                element.offsetHeight -
-                window.innerHeight +
+                elementTop +
+                element.clientHeight -
+                root.clientHeight +
                 marginBottom,
         });
     }
+}
+
+export function calcScrollOffset({
+    viewFrom,
+    viewTo,
+    containerHeight,
+}: {
+    viewFrom: number;
+    viewTo: number;
+    containerHeight: number;
+}) {
+    const delta = (viewTo - viewFrom) / (containerHeight - viewFrom);
+
+    return viewFrom - delta * Math.max(0, viewFrom - window.innerHeight);
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-import { removeHash } from "@/functions/utility";
+import { Theme } from "@/context/theme";
 
 const ThemeProps = {
     key: "theme",
@@ -10,10 +10,8 @@ const ThemeProps = {
     dark: "dark",
 } as const;
 
-type Theme = typeof ThemeProps.light | typeof ThemeProps.dark;
-
 export function useTheme(defaultTheme?: Theme) {
-    const [theme, setTheme] = useState<Theme>(() => {
+    const [theme, _setTheme] = useState<Theme>(() => {
         const storedTheme = localStorage.getItem(
             ThemeProps.key,
         ) as Theme | null;
@@ -29,26 +27,25 @@ export function useTheme(defaultTheme?: Theme) {
         return theme === ThemeProps.light;
     }, [theme]);
 
-    const _setTheme = (theme: Theme) => {
-        removeHash();
+    const setTheme = (theme: Theme) => {
         localStorage.setItem(ThemeProps.key, theme);
         document.documentElement.classList.remove(
             ThemeProps.light,
             ThemeProps.dark,
         );
         document.documentElement.classList.add(theme);
-        setTheme(theme);
+        _setTheme(theme);
     };
 
-    const setLightTheme = () => _setTheme(ThemeProps.light);
+    const setLightTheme = () => setTheme(ThemeProps.light);
 
-    const setDarkTheme = () => _setTheme(ThemeProps.dark);
+    const setDarkTheme = () => setTheme(ThemeProps.dark);
 
     const toggleTheme = () =>
         theme === ThemeProps.dark ? setLightTheme() : setDarkTheme();
 
     useEffect(() => {
-        _setTheme(theme);
+        setTheme(theme);
     });
 
     return { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme };
