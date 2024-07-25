@@ -26,7 +26,7 @@ export default function NewsSection() {
                                 2024.07
                             </h3>
                             <p className="text-2xl text-default-600">
-                                第76回 北稜祭公式ウェブサイト開設
+                                公式ウェブサイト開設
                             </p>
                         </div>
                     }

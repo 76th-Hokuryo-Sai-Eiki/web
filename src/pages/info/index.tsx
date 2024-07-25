@@ -154,17 +154,17 @@ function Faq() {
                         ),
                     )}
                 </Accordion>
-            </div>
-            <div className="px-3">
-                <Divider />
-            </div>
-            <div className="flex">
-                <p className="ml-auto w-fit px-3 text-left text-[10.5pt] text-default-500">
-                    <Inline>
-                        その他の疑問点についても、お近くの北陵祭実行委員までお気軽にお尋ねください。
-                    </Inline>
-                    <Inline>緑の法被が目印です。</Inline>
-                </p>
+                <div className="px-3">
+                    <Divider />
+                </div>
+                <div className="flex">
+                    <p className="ml-auto w-fit px-3 text-left text-[10.5pt] text-default-500">
+                        <Inline>
+                            その他の疑問点についても、お近くの北陵祭実行委員までお気軽にお尋ねください。
+                        </Inline>
+                        <Inline>緑の法被が目印です。</Inline>
+                    </p>
+                </div>
             </div>
         </article>
     );
