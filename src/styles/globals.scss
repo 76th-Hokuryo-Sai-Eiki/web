@@ -8,6 +8,13 @@
 
 :root {
     --color: hsl(var(--nextui-default-400));
+    @apply simple-scrollbar;
+    &::-webkit-scrollbar {
+        background-color: hsl(var(--nextui-default-200));
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+    }
 }
 
 body {
@@ -39,7 +46,6 @@ body {
 }
 
 .simple-scrollbar {
-    margin: 0 auto;
     border-radius: 5px;
 
     &::-webkit-scrollbar {
