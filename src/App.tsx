@@ -1,15 +1,16 @@
 import { Progress } from "@nextui-org/progress";
-import { useEffect, useReducer, useState } from "react";
+import { lazy, Suspense, useEffect, useReducer, useState } from "react";
 
 import Hashlink from "./components/hashlink";
 import { TailwindIndicator } from "./components/tailwind-indicator";
 import { LoadingScreenContext } from "./context/loading-screen";
 import { useLoadingConfig } from "./hooks/loading-screen";
-import IndexPage from "./pages";
 
 import { ThemeContext } from "@/context/theme";
 import { useTheme } from "@/hooks/theme";
 import LoadingScreen from "@/pages/loading";
+
+const IndexPage = lazy(() => import("@/pages"));
 
 export default function App() {
     const [refresh, setRefresh] = useReducer(() => false, true);
@@ -116,7 +117,9 @@ export default function App() {
                     {
                         <Hashlink.Provider>
                             <div className={loading ? "hidden" : "block"}>
-                                <IndexPage />
+                                <Suspense>
+                                    <IndexPage />
+                                </Suspense>
                             </div>
                         </Hashlink.Provider>
                     }

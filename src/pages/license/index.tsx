@@ -11,15 +11,17 @@ import {
 import { Selection } from "@nextui-org/table";
 import { memo, useEffect, useState } from "react";
 
-import licenses, { LicenseInfo } from "./data/list";
+import { LicenseInfo } from "./data/list";
 
 type Entry = [string, LicenseInfo];
 
-const entries = Object.entries(licenses) as Entry[];
+const cache = new Map<string, string>();
 
 const List = memo(function _List({
+    entries,
     onSelectionChange,
 }: {
+    entries: Entry[];
     onSelectionChange?: (keys: Selection) => void;
 }) {
     const renderItem = ([name, { repository, licenses }]: Entry) => {
@@ -40,9 +42,9 @@ const List = memo(function _List({
     return (
         <Listbox
             hideSelectedIcon
-            className="w-max"
+            className="w-max min-w-full"
             defaultSelectedKeys={[]}
-            items={entries}
+            items={entries ?? []}
             label="Assigned to"
             selectionMode="single"
             variant="flat"
@@ -60,16 +62,36 @@ const Container = function Container({
     isOpen: boolean;
     onClose: () => void;
 }) {
-    const [selected, setSelected] = useState<[string, string] | null>();
+    const [selected, setSelected] = useState<string | null>(null);
+    const [content, setContent] = useState<string | null>("");
+
+    const [licenses, setLicenses] = useState<Record<
+        string,
+        LicenseInfo
+    > | null>(null);
 
     useEffect(() => {
-        setSelected(["", ""]);
-    }, [setSelected]);
+        if (licenses) return;
+
+        import("./data/list").then(({ default: licenses }) => {
+            setLicenses(licenses);
+        });
+    }, [licenses, setLicenses]);
+
+    useEffect(() => {
+        setSelected("");
+        setContent("");
+    }, []);
 
     const onSelectionChange = (keys: Set<string>) => {
         if (keys.size === 0) return;
 
         const name = [...keys][0] as string;
+
+        if (!name) return;
+
+        setSelected(name);
+
         const hash = (licenses as any)[name]?.hash ?? "";
 
         if (hash.length !== 64) {
@@ -78,10 +100,19 @@ const Container = function Container({
             return;
         }
 
-        fetch(`./licenses/${hash}.txt`, { method: "GET" })
+        if (cache.has(name)) {
+            setContent(cache.get(name) as string);
+
+            return;
+        }
+
+        setContent(null);
+
+        fetch(`./licenses/${hash}.txt`)
             .then((res) => res.text())
             .then((data) => {
-                setSelected([name, data]);
+                setContent(data);
+                cache.set(name, data);
             })
             .catch(() => setSelected(null));
     };
@@ -94,7 +125,8 @@ const Container = function Container({
             scrollBehavior="inside"
             size="full"
             onClose={() => {
-                setSelected(["", ""]);
+                setSelected("");
+                setContent("");
                 onClose();
             }}
         >
@@ -106,30 +138,37 @@ const Container = function Container({
                         </ModalHeader>
 
                         <ModalBody className="grid grid-rows-2 text-default-600 lg:grid-rows-1 lg:[grid-template-columns:max-content_auto]">
-                            <div className="simple-scrollbar w-full overflow-y-auto pr-2 lg:w-max">
-                                <List
-                                    onSelectionChange={(keys: Selection) =>
-                                        onSelectionChange(keys as Set<string>)
-                                    }
-                                />
+                            <div className="simple-scrollbar h-full w-full overflow-auto lg:w-max">
+                                {licenses && (
+                                    <List
+                                        entries={Object.entries(licenses)}
+                                        onSelectionChange={(keys: Selection) =>
+                                            onSelectionChange(
+                                                keys as Set<string>,
+                                            )
+                                        }
+                                    />
+                                )}
                             </div>
                             <div className="simple-scrollbar flex flex-col overflow-y-auto px-3">
-                                {!selected ? (
+                                {selected === null || !licenses ? (
                                     <h3 className="text-xl">FETCH ERROR</h3>
                                 ) : (
                                     <>
                                         <div className="mb-4">
                                             <h3 className="text-xl">
-                                                {selected[0]}
+                                                {selected}
                                             </h3>
                                             <h4 className="text-medium">
-                                                {licenses[selected[0]]
-                                                    ?.licenses ?? ""}
+                                                {licenses[selected]?.licenses ??
+                                                    ""}
                                             </h4>
                                         </div>
                                         <div className="h-min whitespace-pre-wrap px-4">
                                             <pre className="text-tiny">
-                                                {selected[1]}
+                                                {content === null
+                                                    ? "Loading..."
+                                                    : content}
                                             </pre>
                                         </div>
                                     </>

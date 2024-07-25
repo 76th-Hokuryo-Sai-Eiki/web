@@ -1,15 +1,13 @@
-import License from "@/pages/license";
 
-// export function Credits() {
-//     return (
-//         <div className="mr-10 flex flex-col items-end justify-end">
+import { Link } from "@nextui-org/link";
 
-//         </div>
-//     );
-// }
 
-/*
- <div className="col-span-2 col-start-1 row-start-1 ml-4 flex flex-col justify-start xs:row-start-2 xs:ml-0 sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:items-end">
+import { Inline } from "@/components/inline";
+
+export function Credits() {
+    return (
+        <div className="mr-10 flex flex-col items-end justify-end">
+            <div className="col-span-2 col-start-1 row-start-1 ml-4 flex flex-col justify-start xs:row-start-2 xs:ml-0 sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:items-end">
                 <ul className="my-4 whitespace-pre-wrap text-default-600 [line-height:1.2rem] sm:my-0">
                     <li className="mb-2">
                         <p className="block w-fit">
@@ -69,4 +67,10 @@ import License from "@/pages/license";
                         </p>
                     </li>
                 </ul>
-            </div> */
+            </div>
+        </div>
+    );
+}
+
+/*
+ */

@@ -48,14 +48,33 @@ body {
 .simple-scrollbar {
     border-radius: 5px;
 
-    &::-webkit-scrollbar {
-        height: 8px;
-        width: 8px;
+    @supports not selector(::-webkit-scrollbar) {
+        & {
+            scrollbar-base-color: hsl(var(--nextui-default-400));
+            scrollbar-width: thin;
+        }
     }
-    &::-webkit-scrollbar-thumb {
-        background-color: hsl(var(--nextui-default-400));
-        width: 6px;
-        border-radius: 5px;
+
+    @supports selector(::-webkit-scrollbar) {
+        &::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: hsl(var(--nextui-default-400));
+            width: 6px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: hsl(var(--nextui-default-500));
+            }
+        }
+
+        &::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
     }
 }
 

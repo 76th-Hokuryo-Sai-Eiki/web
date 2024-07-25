@@ -13,7 +13,7 @@ const Guard = makeGuard();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <BrowserRouter basename={import.meta.env.VITE_ROOT}>
             <Provider>
                 <Guard>
                     <App />

@@ -35,9 +35,10 @@ function DummyCard() {
                     }}
                 >
                     <Image
-                        className="absolute rounded-3xl p-4"
+                        aspectRatio={1}
+                        className="absolute rounded-3xl object-cover p-4"
                         layout="fullWidth"
-                        src="./images/logo.png"
+                        src={`./images/test.jpg`}
                     />
 
                     <GrassCard className="flex h-[max(12rem,18vw)] w-[max(12rem,18vw)] items-center justify-center">

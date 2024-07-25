@@ -1,14 +1,19 @@
 import { Spacer } from "@nextui-org/spacer";
-import { memo, useRef } from "react";
+import { memo, Suspense, useRef } from "react";
 
 import AccessSection from "./access";
-import { Theme } from "./common/theme";
+import Theme from "./common/theme";
 import ContentsSection from "./content";
 import InfoSection from "./info";
 import Title from "./title";
 
 import { Fadein } from "@/components/animations";
 import DefaultLayout from "@/layouts/default";
+
+// const AccessSection = lazy(() => import("./access"));
+// const InfoSection = lazy(() => import("./info"));
+// const ContentsSection = lazy(() => import("./content"));
+// const Theme = lazy(() => import("./common/theme"));
 
 export default memo(function IndexPage() {
     const infoRef = useRef<HTMLElement>(null);
@@ -22,21 +27,29 @@ export default memo(function IndexPage() {
                     </section>
 
                     <section id="#access">
-                        <AccessSection />
+                        <Suspense fallback="Loading...">
+                            <AccessSection />
+                        </Suspense>
                     </section>
 
                     <Spacer y={20} />
 
-                    <Theme infoRef={infoRef} />
+                    <Suspense>
+                        <Theme infoRef={infoRef} />
+                    </Suspense>
 
                     <section ref={infoRef} id="#info">
-                        <InfoSection />
+                        <Suspense fallback="Loading...">
+                            <InfoSection />
+                        </Suspense>
                     </section>
 
                     <Spacer y={20} />
 
                     <section id="#contents">
-                        <ContentsSection />
+                        <Suspense fallback="Loading...">
+                            <ContentsSection />
+                        </Suspense>
                     </section>
                 </Fadein>
             </DefaultLayout>

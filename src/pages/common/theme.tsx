@@ -37,7 +37,11 @@ function Content() {
     );
 }
 
-export function Theme({ infoRef }: { infoRef: RefObject<HTMLElement> }) {
+export default function Theme({
+    infoRef,
+}: {
+    infoRef: RefObject<HTMLElement>;
+}) {
     const {
         opacity: { bgProp: bgPropOpacity },
     } = useContext(PagePreferenceContext);

@@ -10,7 +10,7 @@ export function Copyright() {
         <div
             className="flex min-w-max flex-col justify-center"
             style={{
-                fontFamily: "'Yu Gothic', 'Zen Kaku Gothic Antique'",
+                fontFamily: "'Zen Kaku Gothic Antique'",
                 zoom: 1.04,
             }}
         >
