@@ -98,61 +98,63 @@ function Faq() {
                 offsetTop: 0,
                 behavior: "smooth",
             });
-        }, 100);
+        }, 200);
     };
 
     return (
-        <article
-            ref={containerRef}
-            className="simple-scrollbar mt-5 h-[530px] w-full overflow-y-scroll md:overflow-y-visible"
-            style={allSelected ? { height: "max-content" } : {}}
-        >
+        <article className="mt-5 w-full">
             <h2 className="text-3xl text-default-600">よくあるご質問</h2>
-            <Accordion
-                selectedKeys={allSelected ? "all" : undefined}
-                onSelectionChange={onSelectionChange}
+            <div
+                ref={containerRef}
+                className="simple-scrollbar mt-3 h-[540px] overflow-y-scroll sm:overflow-y-visible"
+                style={allSelected ? { height: "max-content" } : {}}
             >
-                {data.map(
-                    (
-                        {
-                            title,
-                            description,
-                        }: {
-                            title: ReactNode;
-                            description: ReactNode;
-                        },
-                        index,
-                    ) => (
-                        <AccordionItem
-                            key={index}
-                            HeadingComponent={"h3"}
-                            aria-label={`Question No. ${index + 1}`}
-                            id={`faq-item-${index}`}
-                            indicator={({ isOpen }) =>
-                                isOpen ? (
-                                    <FaCircleInfo
-                                        className="rotate-90"
-                                        size={20}
-                                    />
-                                ) : (
-                                    <FaRegCircleQuestion size={20} />
-                                )
-                            }
-                            title={
-                                <div className="ml-1 text-large text-default-600">
-                                    {title}
-                                </div>
-                            }
-                        >
-                            <FadeinSlide distance={10} duration={0.3}>
-                                <div className="mb-3 ml-2 text-medium text-default-500">
-                                    {description}
-                                </div>
-                            </FadeinSlide>
-                        </AccordionItem>
-                    ),
-                )}
-            </Accordion>
+                <Accordion
+                    selectedKeys={allSelected ? "all" : undefined}
+                    onSelectionChange={onSelectionChange}
+                >
+                    {data.map(
+                        (
+                            {
+                                title,
+                                description,
+                            }: {
+                                title: ReactNode;
+                                description: ReactNode;
+                            },
+                            index,
+                        ) => (
+                            <AccordionItem
+                                key={index}
+                                HeadingComponent={"h3"}
+                                aria-label={`Question No. ${index + 1}`}
+                                id={`faq-item-${index}`}
+                                indicator={({ isOpen }) =>
+                                    isOpen ? (
+                                        <FaCircleInfo
+                                            className="rotate-90"
+                                            size={20}
+                                        />
+                                    ) : (
+                                        <FaRegCircleQuestion size={20} />
+                                    )
+                                }
+                                title={
+                                    <div className="ml-1 text-large text-default-600">
+                                        {title}
+                                    </div>
+                                }
+                            >
+                                <FadeinSlide distance={10} duration={0.3}>
+                                    <div className="mb-3 ml-2 text-medium text-default-500">
+                                        {description}
+                                    </div>
+                                </FadeinSlide>
+                            </AccordionItem>
+                        ),
+                    )}
+                </Accordion>
+            </div>
             <div className="px-3">
                 <Divider />
             </div>

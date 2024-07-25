@@ -45,6 +45,19 @@ body {
     }
 }
 
+.bullet-point {
+    list-style: none;
+
+    > li {
+        text-indent: -1em;
+        padding-left: 1em;
+
+        &::before {
+            content: "- ";
+        }
+    }
+}
+
 .simple-scrollbar {
     border-radius: 5px;
 

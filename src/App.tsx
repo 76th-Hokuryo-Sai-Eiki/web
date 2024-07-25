@@ -100,6 +100,9 @@ export default function App() {
                             )
                         ) : (
                             (() => {
+                                if (loadingKind === "unknown")
+                                    setSimpleLoading();
+
                                 if (!refresh) return;
 
                                 setTimeout(() => {

@@ -2,19 +2,20 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { LoadingKind } from "@/context/loading-screen";
+
 const Props = {
     key: "loading",
     simple: "simple",
     normal: "normal",
+    unknown: "unknown",
 } as const;
-
-type LoadingKind = typeof Props.simple | typeof Props.normal;
 
 export function useLoadingConfig(defaultTheme?: LoadingKind) {
     const [loadingKind, _setLoadingKind] = useState<LoadingKind>(() => {
         const stored = localStorage.getItem(Props.key) as LoadingKind | null;
 
-        return stored || (defaultTheme ?? Props.simple);
+        return stored || (defaultTheme ?? Props.unknown);
     });
 
     const isSimple = useMemo(() => {

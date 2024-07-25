@@ -13,7 +13,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
         return {
             light: {
                 bgImage: 0.3,
-                bgProp: Math.min(0.7, window.innerWidth * 0.0007),
+                bgProp: Math.min(0.6, window.innerWidth * 0.0007),
             },
             dark: {
                 bgImage: 0.15,

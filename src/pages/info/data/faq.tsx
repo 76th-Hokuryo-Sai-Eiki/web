@@ -51,10 +51,14 @@ export const data = [
             <p>
                 <Inline>
                     <Inline>はい。</Inline>
-                    <Inline>お手数ですが持参をお願いします。</Inline>
+                    <Inline>
+                        お手数ですが、スリッパ等の上履きを持参ください。
+                    </Inline>
                 </Inline>
                 <br />
-                <Inline>土足は厳禁ですのでご留意ください。</Inline>
+                <Inline>
+                    土足の類はくれぐれもなさいませんようお願い申し上げます。
+                </Inline>
             </p>
         ),
     },
@@ -66,7 +70,7 @@ export const data = [
         title: "店舗や休憩室以外での飲食は出来ますか？",
         description: (
             <p>
-                <Inline>水分補給に限って許可されます。</Inline>
+                <Inline>水分補給に限って許可いたします。</Inline>
                 <br />
                 <Inline>
                     ただし人混みを避け、開けた場所でお摂りください。

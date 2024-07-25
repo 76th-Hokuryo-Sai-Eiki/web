@@ -5,15 +5,11 @@ import AccessSection from "./access";
 import Theme from "./common/theme";
 import ContentsSection from "./content";
 import InfoSection from "./info";
+import NewsSection from "./news";
 import Title from "./title";
 
 import { Fadein } from "@/components/animations";
 import DefaultLayout from "@/layouts/default";
-
-// const AccessSection = lazy(() => import("./access"));
-// const InfoSection = lazy(() => import("./info"));
-// const ContentsSection = lazy(() => import("./content"));
-// const Theme = lazy(() => import("./common/theme"));
 
 export default memo(function IndexPage() {
     const infoRef = useRef<HTMLElement>(null);
@@ -27,9 +23,13 @@ export default memo(function IndexPage() {
                     </section>
 
                     <section id="#access">
-                        <Suspense fallback="Loading...">
-                            <AccessSection />
-                        </Suspense>
+                        <AccessSection />
+                    </section>
+
+                    <Spacer y={20} />
+
+                    <section id="#news">
+                        <NewsSection />
                     </section>
 
                     <Spacer y={20} />
@@ -39,17 +39,13 @@ export default memo(function IndexPage() {
                     </Suspense>
 
                     <section ref={infoRef} id="#info">
-                        <Suspense fallback="Loading...">
-                            <InfoSection />
-                        </Suspense>
+                        <InfoSection />
                     </section>
 
                     <Spacer y={20} />
 
                     <section id="#contents">
-                        <Suspense fallback="Loading...">
-                            <ContentsSection />
-                        </Suspense>
+                        <ContentsSection />
                     </section>
                 </Fadein>
             </DefaultLayout>

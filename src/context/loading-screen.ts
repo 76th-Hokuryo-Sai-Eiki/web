@@ -1,7 +1,9 @@
 import { createContext } from "react";
 
+export type LoadingKind = "simple" | "normal" | "unknown";
+
 export interface LoadingScreenContext {
-    loadingKind: "simple" | "normal";
+    loadingKind: LoadingKind;
     isSimple: boolean;
     isNormal: boolean;
     setSimpleLoading: () => void;

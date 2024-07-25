@@ -1,4 +1,6 @@
+import { Collection } from "@discordjs/collection";
 import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/link";
 import { Listbox, ListboxItem } from "@nextui-org/listbox";
 import {
     Modal,
@@ -6,16 +8,19 @@ import {
     ModalContent,
     ModalFooter,
     ModalHeader,
-    useDisclosure,
 } from "@nextui-org/modal";
 import { Selection } from "@nextui-org/table";
 import { memo, useEffect, useState } from "react";
+import { FaEye } from "react-icons/fa";
 
+import { Credits } from "./credits";
 import { LicenseInfo } from "./data/list";
+
+import { Fadein } from "@/components/animations";
 
 type Entry = [string, LicenseInfo];
 
-const cache = new Map<string, string>();
+const cache = new Collection<string, string>();
 
 const List = memo(function _List({
     entries,
@@ -26,7 +31,19 @@ const List = memo(function _List({
 }) {
     const renderItem = ([name, { repository, licenses }]: Entry) => {
         return (
-            <ListboxItem key={name} textValue={name}>
+            <ListboxItem
+                key={name}
+                selectedIcon={({ isSelected }) =>
+                    isSelected ? (
+                        <Fadein duration={0.15}>
+                            <FaEye className="text-default-600" />
+                        </Fadein>
+                    ) : (
+                        <></>
+                    )
+                }
+                textValue={name}
+            >
                 <div className="flex items-center gap-2">
                     <div className="flex flex-col">
                         <span className="text-small">{`${name} (${licenses})`}</span>
@@ -41,7 +58,6 @@ const List = memo(function _List({
 
     return (
         <Listbox
-            hideSelectedIcon
             className="w-max min-w-full"
             defaultSelectedKeys={[]}
             items={entries ?? []}
@@ -55,7 +71,7 @@ const List = memo(function _List({
     );
 });
 
-const Container = function Container({
+export function LicenseList({
     isOpen,
     onClose,
 }: {
@@ -84,13 +100,17 @@ const Container = function Container({
     }, []);
 
     const onSelectionChange = (keys: Set<string>) => {
-        if (keys.size === 0) return;
+        if (keys.size === 0) {
+            setSelected("");
+
+            return;
+        }
 
         const name = [...keys][0] as string;
 
-        if (!name) return;
-
         setSelected(name);
+
+        if (!name) return;
 
         const hash = (licenses as any)[name]?.hash ?? "";
 
@@ -112,10 +132,13 @@ const Container = function Container({
             .then((res) => res.text())
             .then((data) => {
                 setContent(data);
+
                 cache.set(name, data);
             })
             .catch(() => setSelected(null));
     };
+
+    if (cache.size >= 16) cache.delete(cache.firstKey() ?? "");
 
     return (
         <Modal
@@ -153,11 +176,19 @@ const Container = function Container({
                             <div className="simple-scrollbar flex flex-col overflow-y-auto px-3">
                                 {selected === null || !licenses ? (
                                     <h3 className="text-xl">FETCH ERROR</h3>
+                                ) : selected === "" ? (
+                                    <Credits />
                                 ) : (
                                     <>
                                         <div className="mb-4">
-                                            <h3 className="text-xl">
-                                                {selected}
+                                            <h3>
+                                                <Link
+                                                    isExternal
+                                                    className="text-xl text-inherit"
+                                                    href={`https://www.npmjs.com/package/${selected.split("@").slice(0, -1).join("@")}`}
+                                                >
+                                                    {selected}
+                                                </Link>
                                             </h3>
                                             <h4 className="text-medium">
                                                 {licenses[selected]?.licenses ??
@@ -189,20 +220,5 @@ const Container = function Container({
                 )}
             </ModalContent>
         </Modal>
-    );
-};
-
-export default function License() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-
-    return (
-        <>
-            <div className="z-10 flex flex-wrap gap-3">
-                <Button radius="none" onPress={onOpen}>
-                    <span className="text-default-700">LICENSES</span>
-                </Button>
-            </div>
-            <Container isOpen={isOpen} onClose={onClose} />
-        </>
     );
 }

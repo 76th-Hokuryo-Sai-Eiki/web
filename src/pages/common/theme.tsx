@@ -1,4 +1,5 @@
 import { RefObject, useContext } from "react";
+import { useResizeObserver } from "usehooks-ts";
 
 import { PagePreferenceContext } from "@/context/page-preference";
 
@@ -46,11 +47,19 @@ export default function Theme({
         opacity: { bgProp: bgPropOpacity },
     } = useContext(PagePreferenceContext);
 
+    useResizeObserver({
+        ref: infoRef,
+    });
+
+    if (!infoRef.current || infoRef.current.offsetHeight < 10) {
+        throw new Promise((resolve) => setTimeout(resolve, 100));
+    }
+
     return (
         <div
             className="absolute right-0 -z-10 mt-24 flex w-[100vw] overflow-x-clip overflow-y-visible"
             style={{
-                height: infoRef.current?.offsetHeight ?? 0,
+                height: infoRef.current.offsetHeight ?? 0,
             }}
         >
             <div className="ml-auto mr-auto mt-auto">

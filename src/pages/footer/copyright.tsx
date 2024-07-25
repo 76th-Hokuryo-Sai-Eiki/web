@@ -12,6 +12,8 @@ export function Copyright() {
             style={{
                 fontFamily: "'Zen Kaku Gothic Antique'",
                 zoom: 1.04,
+                WebkitFontSmoothing: "antialiased",
+                MozOsxFontSmoothing: "grayscale",
             }}
         >
             <div className="mb-0.5 flex flex-col items-center text-center text-small text-default-600 xs:text-medium sm:text-large">

@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,13 +11,13 @@ import "@/styles/globals.scss";
 const Guard = makeGuard();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-        <BrowserRouter basename={import.meta.env.VITE_ROOT}>
-            <Provider>
-                <Guard>
-                    <App />
-                </Guard>
-            </Provider>
-        </BrowserRouter>
-    </StrictMode>,
+    // <StrictMode>
+    <BrowserRouter basename={import.meta.env.VITE_ROOT}>
+        <Provider>
+            <Guard>
+                <App />
+            </Guard>
+        </Provider>
+    </BrowserRouter>,
+    // </StrictMode>,
 );

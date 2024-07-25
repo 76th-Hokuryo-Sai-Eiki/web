@@ -5,7 +5,9 @@ import {
     ReactElement,
     useCallback,
     useEffect,
+    useReducer,
     useRef,
+    useState,
     useSyncExternalStore,
 } from "react";
 import { useInView } from "react-intersection-observer";
@@ -104,13 +106,24 @@ function CountDownContainer({ children }: { children: ReactElement }) {
 }
 
 export default function Title() {
-    const { ref: titleRef } = useInView({ triggerOnce: false });
-    const titleColor = chooseRandom(Object.keys(title.variants.color));
+    const { ref: titleRef, inView } = useInView({ triggerOnce: false });
+
+    const [titleColor, setTitleColor] = useState<string>("pink");
+    const [first, setFirst] = useReducer(() => false, true);
+
+    useEffect(() => {
+        if (!inView) {
+            setTitleColor(chooseRandom(Object.keys(title.variants.color)));
+        } else if (first) {
+            setFirst();
+            setTitleColor("pink");
+        }
+    }, [inView, first, setTitleColor]);
 
     return (
         <div className="grid min-h-[90vh] min-w-52 grid-cols-5 items-center justify-center gap-4 px-0 py-8 xl:px-12">
             <div className="col-span-full justify-center text-center 2xl:col-span-3 2xl:col-start-2">
-                <Banner className="backdrop-blur-sm" />
+                <Banner />
 
                 <Catchphrase />
             </div>
@@ -142,7 +155,7 @@ export default function Title() {
                                     className={title({
                                         size: "xl",
                                         class: "-ml-2 text-[4.25rem] sm:ml-0 sm:text-7xl 2xl:ml-2 2xl:text-[4.7rem]",
-                                        color: titleColor,
+                                        color: titleColor as any,
                                     })}
                                     style={{
                                         fontFamily: "Noto Serif JP",
@@ -165,19 +178,22 @@ export default function Title() {
                         2024/08/31 ー 2024/09/01
                     </h4>
                 </FadeinSlide>
-                <Link
-                    isExternal
-                    className={buttonStyles({
-                        class: "mt-3",
-                        color: "primary",
-                        radius: "full",
-                        variant: "shadow",
-                    })}
-                    href={siteConfig.links.calendar}
-                >
-                    <GoogleCalendarIcon size={20} />
-                    Google Calendar に追加
-                </Link>
+
+                <ParallaxY className="md:[--scroll-y-from:40px] md:[--scroll-y-to:-60px]">
+                    <Link
+                        isExternal
+                        className={buttonStyles({
+                            class: "mt-3",
+                            color: "primary",
+                            radius: "full",
+                            variant: "shadow",
+                        })}
+                        href={siteConfig.links.calendar}
+                    >
+                        <GoogleCalendarIcon size={20} />
+                        Google Calendar に追加
+                    </Link>
+                </ParallaxY>
             </div>
 
             <div className="col-span-full justify-center text-center 2xl:col-span-1 2xl:col-start-5 2xl:row-span-4 2xl:row-start-1">

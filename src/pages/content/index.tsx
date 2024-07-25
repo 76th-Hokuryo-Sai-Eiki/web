@@ -36,12 +36,12 @@ function DummyCard() {
                 >
                     <Image
                         aspectRatio={1}
-                        className="absolute rounded-3xl object-cover p-4"
+                        className="absolute rounded-3xl object-cover p-4 dark:brightness-75"
                         layout="fullWidth"
-                        src={`./images/test.jpg`}
+                        src="./images/test.jpg"
                     />
 
-                    <GrassCard className="flex h-[max(12rem,18vw)] w-[max(12rem,18vw)] items-center justify-center">
+                    <GrassCard className="flex h-[clamp(12rem,18vw,19rem)] w-[clamp(12rem,18vw,19rem)] items-center justify-center">
                         <div>
                             <h2
                                 className="mt-4 text-center text-5xl text-gray-600 dark:text-gray-800 md:text-5xl xl:text-6xl 2xl:text-7xl"

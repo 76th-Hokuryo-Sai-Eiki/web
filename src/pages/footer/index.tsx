@@ -1,11 +1,12 @@
 import { Button } from "@nextui-org/button";
 import { Card, CardBody } from "@nextui-org/card";
+import { useDisclosure } from "@nextui-org/modal";
 import { Switch } from "@nextui-org/switch";
 import { Tooltip } from "@nextui-org/tooltip";
 import { useContext } from "react";
 import { BiSolidToTop } from "react-icons/bi";
 
-import License from "../license";
+import { LicenseList } from "../license";
 
 import { Copyright } from "./copyright";
 import { Logos } from "./logos";
@@ -13,6 +14,21 @@ import { Logos } from "./logos";
 import Hashlink from "@/components/hashlink";
 import { Inline } from "@/components/inline";
 import { LoadingScreenContext } from "@/context/loading-screen";
+
+function License() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    return (
+        <>
+            <div className="z-10 flex flex-wrap gap-3">
+                <Button radius="none" onPress={onOpen}>
+                    <span className="text-default-700">LICENSES</span>
+                </Button>
+            </div>
+            <LicenseList isOpen={isOpen} onClose={onClose} />
+        </>
+    );
+}
 
 function BuildId() {
     return (

@@ -1,9 +1,11 @@
 import { Divider } from "@nextui-org/divider";
+import { Spacer } from "@nextui-org/spacer";
 import { useRef } from "react";
 
 import { Routes } from "./routes";
 
-import { Fadein } from "@/components/animations";
+import { Fadein, FadeinSlide } from "@/components/animations";
+import { Inline } from "@/components/inline";
 import SectionHeader from "@/components/section-header";
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 import { LocationCard } from "@/pages/common/location-card";
@@ -26,7 +28,29 @@ export default function AccessSection() {
 
     return (
         <div className="m-2">
-            <SectionHeader hashlink="#access">Access</SectionHeader>
+            <div className="flex flex-col items-start xs:flex-row">
+                <SectionHeader hashlink="#access">Access</SectionHeader>
+                <p
+                    className="mb-4 w-full text-center text-3xl text-purple-500 xs:text-4xl md:text-5xl"
+                    style={{
+                        fontFamily: "Noto Serif JP",
+                    }}
+                >
+                    <strong>
+                        <FadeinSlide>
+                            <Inline>ご来場の際は</Inline>
+                        </FadeinSlide>
+
+                        <FadeinSlide>
+                            <Inline>スリッパ等を</Inline>
+                        </FadeinSlide>
+
+                        <FadeinSlide>
+                            <Inline>ご持参ください</Inline>
+                        </FadeinSlide>
+                    </strong>
+                </p>
+            </div>
 
             <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-[2px] md:flex-row">
@@ -64,6 +88,8 @@ export default function AccessSection() {
 
                 <Routes onRoute={showRoute} />
             </div>
+
+            <Spacer y={8} />
         </div>
     );
 }

@@ -1,22 +1,42 @@
-import { Image } from "@unpic/react";
-import { useContext } from "react";
+import { Image } from "@nextui-org/image";
+import { useContext, useReducer, useState } from "react";
+
+import { ParallaxY } from "../parallax";
 
 import { ThemeContext } from "@/context/theme";
-import { getImageUrl } from "@/functions/utility";
+import { getImageUrl, randomRange } from "@/functions/utility";
 
 export default function Banner({ className }: { className?: string }) {
     const { theme } = useContext(ThemeContext);
 
+    const [timerId, setTimerId] = useState<number | undefined>(undefined);
+
+    const [rotate, setRotate] = useReducer(
+        (current: number, value: number) => current + randomRange(0, value),
+        80,
+    );
+
     return (
         <div className="flex justify-center">
-            <div className="max-w-xl sm:max-w-lg sm:px-4">
-                <Image
-                    className={className}
-                    height={463}
-                    layout="constrained"
-                    src={getImageUrl(`banner.${theme}.png`)}
-                    width={1250}
-                />
+            <div className="max-w-md sm:px-4">
+                <ParallaxY from={200} to={-70}>
+                    <Image
+                        disableSkeleton
+                        isBlurred
+                        isZoomed
+                        className={`dark:hue-rotate-0 ${className}`}
+                        classNames={{ zoomedWrapper: "overflow-visible" }}
+                        src={getImageUrl(`banner.${theme}.png`)}
+                        style={{
+                            filter: `hue-rotate(${rotate}deg)`,
+                        }}
+                        onClick={() => setRotate(50)}
+                        onMouseEnter={() =>
+                            setTimerId(window.setInterval(setRotate, 100, 1))
+                        }
+                        onMouseLeave={() => window.clearInterval(timerId)}
+                    />
+                </ParallaxY>
             </div>
         </div>
     );

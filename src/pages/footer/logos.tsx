@@ -42,7 +42,7 @@ export function Logos() {
                                 isExternal
                                 className="text-xl"
                                 color="foreground"
-                                href="https://ja.vitejs.dev/"
+                                href="https://vitejs.dev/"
                                 style={{
                                     fontFamily: "Kode Mono",
                                 }}
