@@ -149,7 +149,7 @@ export default function Title() {
                                 <span className="mt-5 inline-flex h-14" />
                             </span>
 
-                            <ParallaxY className="md:[--scroll-y-from:40px] md:[--scroll-y-to:-40px]">
+                            <ParallaxY className="md:[--scroll-y-from:20px] md:[--scroll-y-to:-40px]">
                                 <h1
                                     ref={titleRef}
                                     className={title({

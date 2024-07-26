@@ -6,11 +6,11 @@
     "type": "module",
     "license": "MIT",
     "scripts": {
-        "dev": "vite --mode dev",
+        "test": "vite --mode",
         "build": "tsc && vite build --mode",
         "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
         "blurhash": "node ./src/blurhash.js",
-        "preview": "vite preview",
+        "preview": "vite preview --mode",
         "test:chrome": "playwright test --headed --browser=chromium",
         "test:firefox": "playwright test --headed --browser=firefox",
         "test:safari": "playwright test --headed --browser=webkit",
