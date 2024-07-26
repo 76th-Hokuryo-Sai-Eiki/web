@@ -1,7 +1,7 @@
 import Hashlink from "@/components/hashlink";
 import { Inline } from "@/components/inline";
 
-export const data = [
+export default [
     {
         title: "駐車場はありますか？",
         description: (

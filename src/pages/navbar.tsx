@@ -1,5 +1,3 @@
-import { Button } from "@nextui-org/button";
-import { useDisclosure } from "@nextui-org/modal";
 import {
     NavbarBrand,
     NavbarContent,
@@ -10,37 +8,14 @@ import {
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
 import { useCallback, useState } from "react";
-import { TbLicense } from "react-icons/tb";
+
+import ChangeLog from "./change-log";
 
 import Hashlink from "@/components/hashlink";
 import { Logo } from "@/components/icons";
 import { OpacitySlider } from "@/components/opacity-slider";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
-import { LicenseList } from "@/pages/license";
-
-function License() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-
-    return (
-        <>
-            <div className="z-10 flex flex-wrap gap-3">
-                <Button
-                    isIconOnly
-                    className="flex bg-inherit"
-                    radius="none"
-                    onPress={onOpen}
-                >
-                    <TbLicense
-                        className="mb-0.5 mt-auto text-default-500"
-                        size={24}
-                    />
-                </Button>
-            </div>
-            <LicenseList isOpen={isOpen} onClose={onClose} />
-        </>
-    );
-}
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,8 +57,8 @@ export function Navbar() {
             position="sticky"
             onMenuOpenChange={toggleIsMenuOpen}
         >
-            <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-                <NavbarBrand className="max-w-fit gap-3">
+            <NavbarContent className="basis-1/6 sm:basis-full" justify="start">
+                <NavbarBrand className="min-w-max max-w-fit gap-3">
                     <Hashlink
                         className="flex items-center justify-start gap-1"
                         color="foreground"
@@ -116,7 +91,7 @@ export function Navbar() {
                 justify="end"
             >
                 <NavbarItem className="hidden gap-2 md:flex">
-                    <License />
+                    <ChangeLog />
                     <ThemeSwitch />
                     <OpacitySlider />
                     {/* <Link isExternal href={siteConfig.links.discord}>
@@ -145,10 +120,13 @@ export function Navbar() {
                 </NavbarItem> */}
             </NavbarContent>
 
-            <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
+            <NavbarContent
+                className="basis-1 gap-2 pl-4 md:hidden"
+                justify="end"
+            >
+                <ChangeLog />
                 <ThemeSwitch />
                 <OpacitySlider className="hidden xs:block" />
-                <License />
                 {/* <Link isExternal href={siteConfig.links.github}>
                     <FaGithub className="text-default-500" size={22} />
                 </Link> */}

@@ -1,4 +1,5 @@
 .now/*
+*.html
 *.css
 .changeset
 dist

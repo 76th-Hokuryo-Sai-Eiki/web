@@ -5,7 +5,7 @@ import { Selection } from "@nextui-org/table";
 import { ReactNode, useRef } from "react";
 import { FaCircleInfo, FaRegCircleQuestion } from "react-icons/fa6";
 
-import { data } from "./data/faq";
+import data from "./data/faq";
 
 import { FadeinSlide } from "@/components/animations";
 import { Inline } from "@/components/inline";
@@ -106,7 +106,7 @@ function Faq() {
             <h2 className="text-3xl text-default-600">よくあるご質問</h2>
             <div
                 ref={containerRef}
-                className="simple-scrollbar mt-3 h-[540px] overflow-y-scroll sm:overflow-y-visible"
+                className="simple-scrollbar mt-3 h-[540px] overflow-y-scroll sm:overflow-y-visible md:h-[500px]"
                 style={allSelected ? { height: "max-content" } : {}}
             >
                 <Accordion
@@ -127,7 +127,7 @@ function Faq() {
                             <AccordionItem
                                 key={index}
                                 HeadingComponent={"h3"}
-                                aria-label={`Question No. ${index + 1}`}
+                                aria-label={`Question No.${index + 1}`}
                                 id={`faq-item-${index}`}
                                 indicator={({ isOpen }) =>
                                     isOpen ? (
@@ -195,7 +195,7 @@ export default function InfoSection() {
 
             <Abstract />
 
-            <Spacer y={8} />
+            <Spacer y={20} />
 
             <Faq />
 

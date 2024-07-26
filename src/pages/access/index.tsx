@@ -34,21 +34,20 @@ export default function AccessSection() {
                     className="mb-4 w-full text-center text-3xl text-purple-500 xs:text-4xl md:text-5xl"
                     style={{
                         fontFamily: "Noto Serif JP",
+                        fontWeight: 400,
                     }}
                 >
-                    <strong>
-                        <FadeinSlide>
-                            <Inline>ご来場の際は</Inline>
-                        </FadeinSlide>
+                    <FadeinSlide>
+                        <Inline>ご来場の際は</Inline>
+                    </FadeinSlide>
 
-                        <FadeinSlide>
-                            <Inline>スリッパ等を</Inline>
-                        </FadeinSlide>
+                    <FadeinSlide>
+                        <Inline>スリッパ等を</Inline>
+                    </FadeinSlide>
 
-                        <FadeinSlide>
-                            <Inline>ご持参ください</Inline>
-                        </FadeinSlide>
-                    </strong>
+                    <FadeinSlide>
+                        <Inline>ご持参ください</Inline>
+                    </FadeinSlide>
                 </p>
             </div>
 

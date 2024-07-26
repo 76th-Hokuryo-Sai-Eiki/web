@@ -35,16 +35,18 @@ const List = memo(function _List({
                 key={name}
                 selectedIcon={({ isSelected }) =>
                     isSelected ? (
-                        <Fadein duration={0.15}>
-                            <FaEye className="text-default-600" />
-                        </Fadein>
+                        <div className="absolute left-0 ml-3">
+                            <Fadein duration={0.15}>
+                                <FaEye className="text-default-600" />
+                            </Fadein>
+                        </div>
                     ) : (
                         <></>
                     )
                 }
                 textValue={name}
             >
-                <div className="flex items-center gap-2">
+                <div className="ml-8 flex items-center gap-6">
                     <div className="flex flex-col">
                         <span className="text-small">{`${name} (${licenses})`}</span>
                         <span className="text-tiny text-default-400">

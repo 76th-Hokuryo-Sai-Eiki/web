@@ -51,6 +51,8 @@ export function Credits() {
                     .
                 </li>
             </ul>
+
+            <p>See also: react-icons@5.2.1</p>
         </div>
     );
 }

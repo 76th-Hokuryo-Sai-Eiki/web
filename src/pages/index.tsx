@@ -22,6 +22,8 @@ export default memo(function IndexPage() {
                         <Title />
                     </section>
 
+                    <Spacer y={20} />
+
                     <section id="#access">
                         <AccessSection />
                     </section>
@@ -42,11 +44,13 @@ export default memo(function IndexPage() {
                         <InfoSection />
                     </section>
 
-                    <Spacer y={20} />
+                    <Spacer y={40} />
 
                     <section id="#contents">
                         <ContentsSection />
                     </section>
+
+                    <Spacer y={20} />
                 </Fadein>
             </DefaultLayout>
         </Fadein>

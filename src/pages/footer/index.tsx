@@ -66,7 +66,7 @@ export default function Footer() {
 
     return (
         <Card
-            className="rounded-b-none bg-default-100 px-[1rem] pt-2 md:px-[max(2rem,10%-100px)]"
+            className="rounded-b-none bg-default-100 px-[1rem] pt-4 md:px-[max(2rem,10%-100px)]"
             radius="none"
             shadow="none"
         >

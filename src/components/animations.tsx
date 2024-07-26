@@ -42,7 +42,6 @@ export function FadeinSlide({
     once?: boolean;
 }) {
     const { ref, inView } = useInView({
-        rootMargin: `${-distance}px`,
         triggerOnce: once,
     });
 
