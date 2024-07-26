@@ -1,50 +1,45 @@
 // originally written by @imoaazahmed
 
-import { removeHash } from "@/functions/utility";
 import { useEffect, useMemo, useState } from "react";
 
-const ThemeProps = {
+import { LoadingKind } from "@/context/loading-screen";
+
+const Props = {
     key: "loading",
     simple: "simple",
     normal: "normal",
+    unknown: "unknown",
 } as const;
 
-type LoadingKind = typeof ThemeProps.simple | typeof ThemeProps.normal;
-
 export function useLoadingConfig(defaultTheme?: LoadingKind) {
-    const [loadingKind, setLoadingKind] = useState<LoadingKind>(() => {
-        const storedTheme = localStorage.getItem(
-            ThemeProps.key,
-        ) as LoadingKind | null;
+    const [loadingKind, _setLoadingKind] = useState<LoadingKind>(() => {
+        const stored = localStorage.getItem(Props.key) as LoadingKind | null;
 
-        return storedTheme || (defaultTheme ?? ThemeProps.simple);
+        return stored || (defaultTheme ?? Props.unknown);
     });
 
     const isSimple = useMemo(() => {
-        return loadingKind === ThemeProps.simple;
+        return loadingKind === Props.simple;
     }, [loadingKind]);
 
     const isNormal = useMemo(() => {
-        return loadingKind === ThemeProps.normal;
+        return loadingKind === Props.normal;
     }, [loadingKind]);
 
-    const _setLoading = (theme: LoadingKind) => {
-        removeHash();
-        localStorage.setItem(ThemeProps.key, theme);
-        setLoadingKind(theme);
+    const setLoadingKind = (theme: LoadingKind) => {
+        localStorage.setItem(Props.key, theme);
+        _setLoadingKind(theme);
     };
 
-    const setSimpleLoading = () => _setLoading(ThemeProps.simple);
+    const setSimpleLoading = () => setLoadingKind(Props.simple);
 
-    const setNormalLoading = () => _setLoading(ThemeProps.normal);
+    const setNormalLoading = () => setLoadingKind(Props.normal);
 
     const toggleLoadingKind = () =>
-        loadingKind === ThemeProps.normal
-            ? setSimpleLoading()
-            : setNormalLoading();
+        loadingKind === Props.normal ? setSimpleLoading() : setNormalLoading();
 
     useEffect(() => {
-        _setLoading(loadingKind);
+        setLoadingKind(loadingKind);
     });
 
     return {

@@ -1,20 +1,24 @@
 import { Progress } from "@nextui-org/progress";
-import { useEffect, useMemo, useState } from "react";
+import { lazy, Suspense, useEffect, useReducer, useState } from "react";
 
+import Hashlink from "./components/hashlink";
+import { TailwindIndicator } from "./components/tailwind-indicator";
 import { LoadingScreenContext } from "./context/loading-screen";
 import { useLoadingConfig } from "./hooks/loading-screen";
-import IndexPage from "./pages";
 
 import { ThemeContext } from "@/context/theme";
 import { useTheme } from "@/hooks/theme";
 import LoadingScreen from "@/pages/loading";
 
+const IndexPage = lazy(() => import("@/pages"));
+
 export default function App() {
+    const [refresh, setRefresh] = useReducer(() => false, true);
+
     const [loading, setLoading] = useState(true);
     const [fadeout, setFadeout] = useState(false);
 
-    const { theme, isDark, isLight, setLightTheme, setDarkTheme, toggleTheme } =
-        useTheme();
+    const themeConfig = useTheme();
 
     const {
         loadingKind,
@@ -25,12 +29,12 @@ export default function App() {
         toggleLoadingKind,
     } = useLoadingConfig();
 
-    const duration = useMemo(() => {
-        if (import.meta.env.DEV) return 150;
-        if (isSimple) return 1000;
+    const duration = (() => {
+        // if (import.meta.env.DEV) return 150;
+        if (isSimple) return 500;
 
         return 3000;
-    }, [isSimple]);
+    })();
 
     useEffect(() => {
         const fadeoutId = setTimeout(() => {
@@ -47,70 +51,83 @@ export default function App() {
     }, [duration]);
 
     return (
-        <ThemeContext.Provider
-            value={{
-                theme,
-                isDark,
-                isLight,
-                setLightTheme,
-                setDarkTheme,
-                toggleTheme,
-            }}
-        >
-            <LoadingScreenContext.Provider
-                value={{
-                    loadingKind,
-                    isSimple,
-                    isNormal,
-                    setSimpleLoading,
-                    setNormalLoading,
-                    toggleLoadingKind,
-                }}
-            >
-                <div>
-                    {loading ? (
-                        isSimple ? (
-                            <div className="flex h-screen w-screen justify-center">
-                                <div
-                                    className="w-full"
-                                    style={{ height: "0.3rem" }}
-                                >
-                                    <Progress
-                                        isIndeterminate
-                                        aria-label="Loading..."
-                                        className="h-full"
-                                        radius="none"
-                                    />
+        <>
+            <TailwindIndicator />
+            <ThemeContext.Provider value={themeConfig}>
+                <LoadingScreenContext.Provider
+                    value={{
+                        loadingKind,
+                        isSimple,
+                        isNormal,
+                        setSimpleLoading,
+                        setNormalLoading,
+                        toggleLoadingKind,
+                    }}
+                >
+                    <div className="fixed left-0 top-0 h-screen w-screen">
+                        {loading ? (
+                            isSimple ? (
+                                <div className="flex h-screen w-screen justify-center bg-fixed">
+                                    <div
+                                        className="w-full"
+                                        style={{ height: "0.3rem" }}
+                                    >
+                                        <Progress
+                                            aria-label="Loading..."
+                                            className="h-full"
+                                            radius="none"
+                                            value={100}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        ) : (
-                            <div
-                                style={{
-                                    backgroundColor: isDark ? "black" : "white",
-                                }}
-                            >
+                            ) : (
                                 <div
-                                    className={fadeout ? "fade-out" : ""}
                                     style={{
-                                        ["--duration" as any]: `${duration}ms`,
+                                        backgroundColor: themeConfig.isDark
+                                            ? "black"
+                                            : "white",
                                     }}
                                 >
-                                    <LoadingScreen />
+                                    <div
+                                        className={fadeout ? "fade-out" : ""}
+                                        style={{
+                                            ["--duration" as string]: `${duration}ms`,
+                                        }}
+                                    >
+                                        <LoadingScreen />
+                                    </div>
                                 </div>
+                            )
+                        ) : (
+                            (() => {
+                                if (loadingKind === "unknown")
+                                    setSimpleLoading();
+
+                                if (!refresh) return;
+
+                                setTimeout(() => {
+                                    window.dispatchEvent(
+                                        new HashChangeEvent("hashchange"),
+                                    );
+                                }, 300);
+
+                                setRefresh();
+
+                                return null;
+                            })()
+                        )}
+                    </div>
+                    {
+                        <Hashlink.Provider>
+                            <div className={loading ? "hidden" : "block"}>
+                                <Suspense>
+                                    <IndexPage />
+                                </Suspense>
                             </div>
-                        )
-                    ) : (
-                        <IndexPage />
-                        // <Routes>
-                        // {/* <Route element={<IndexPage />} path="/" /> */}
-                        // {/* <Route element={<AccessPage />} path="/access" />
-                        // <Route element={<PricingPage />} path="/pricing" />
-                        // <Route element={<BlogPage />} path="/blog" />
-                        // <Route element={<AboutPage />} path="/about" /> */}
-                        // </Routes>
-                    )}
-                </div>
-            </LoadingScreenContext.Provider>
-        </ThemeContext.Provider>
+                        </Hashlink.Provider>
+                    }
+                </LoadingScreenContext.Provider>
+            </ThemeContext.Provider>
+        </>
     );
 }

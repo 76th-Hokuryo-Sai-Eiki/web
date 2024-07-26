@@ -11,7 +11,8 @@
         "types": ["vite/client"],
 
         /* Bundler mode */
-        "moduleResolution": "bundler",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
         "allowImportingTsExtensions": true,
         "resolveJsonModule": true,
         "isolatedModules": true,
@@ -25,5 +26,5 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src", "tailwind.config.js"],
-    "references": [{ "path": "./tsconfig.node.json" }],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,134 +1,200 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color: hsl(var(--nextui-default-400));
+    --color: hsl(var(--nextui-default-400));
+    @apply simple-scrollbar;
+    &::-webkit-scrollbar {
+        background-color: hsl(var(--nextui-default-200));
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+    }
 }
 
 body {
-  height: 100%;
+    height: 100%;
+}
+
+.card-base {
+    @apply opacity-80;
+}
+
+.parallax {
+    animation: parallax linear;
+    animation-timeline: view();
+}
+
+.scroll-driven {
+    animation-timeline: scroll();
+}
+
+@keyframes parallax {
+    from {
+        transform: translateX(var(--scroll-x-from, 0))
+            translateY(var(--scroll-y-from, 0)) rotate(var(--rotate-from, 0));
+    }
+    to {
+        transform: translateX(var(--scroll-x-to, 0))
+            translateY(var(--scroll-y-to, 0)) rotate(var(--rotate-to, 0));
+    }
+}
+
+.bullet-point {
+    list-style: none;
+
+    > li {
+        text-indent: -1em;
+        padding-left: 1em;
+
+        &::before {
+            content: "- ";
+        }
+    }
 }
 
 .simple-scrollbar {
-  margin: 0 auto;
-  overflow-x: scroll;
-  border-radius: 5px;
-
-  &::-webkit-scrollbar {
-    height: 8px;
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--nextui-default-400));
-    width: 6px;
     border-radius: 5px;
-  }
+
+    @supports not selector(::-webkit-scrollbar) {
+        & {
+            scrollbar-base-color: hsl(var(--nextui-default-400));
+            scrollbar-width: thin;
+        }
+    }
+
+    @supports selector(::-webkit-scrollbar) {
+        &::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: hsl(var(--nextui-default-400));
+            width: 6px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: hsl(var(--nextui-default-500));
+            }
+        }
+
+        &::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+    }
 }
 
 .blurred-border {
-  border-image: linear-gradient(
-      to top,
-      hsl(var(--nextui-default-50)) 0%,
-      hsl(var(--nextui-default-300)) 20%,
-      hsl(var(--nextui-default-300)) 80%,
-      hsl(var(--nextui-default-50)) 100%
-    )
-    1;
+    border-image: linear-gradient(
+            to top,
+            hsl(var(--nextui-default-50)) 0%,
+            hsl(var(--nextui-default-300)) 20%,
+            hsl(var(--nextui-default-300)) 80%,
+            hsl(var(--nextui-default-50)) 100%
+        )
+        1;
 }
 
 .header {
-  --hook: 8px;
-  position: relative;
-  line-height: 1.4;
-  padding: 0.25em 1em;
-  display: inline-block;
-  top: 0;
-  z-index: 10;
-
-  &:before,
-  &:after {
-    position: absolute;
-    top: 0;
-    content: "";
-    width: var(--hook);
-    height: 100%;
+    --hook: 8px;
+    position: relative;
+    line-height: 1.4;
+    padding: 0.25em 1em;
     display: inline-block;
-  }
+    top: 0;
+    z-index: 10;
 
-  &:before {
-    border-left: solid 1px var(--color);
-    border-top: solid 1px var(--color);
-    /* border-bottom: solid 1px var(--color); */
-    left: 0;
-  }
-  &:after {
-    border-right: solid 1px var(--color);
-    border-bottom: solid 1px var(--color);
-    right: 0;
-  }
-  &:hover {
-    &::before,
-    &::after {
-      animation: line 0.15s ease-out both;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: var(--hook);
+        height: 100%;
+        display: inline-block;
+        transition: width 0.06s ease-out;
     }
-  }
+
+    &:before {
+        border-left: solid 1px var(--color);
+        border-top: solid 1px var(--color);
+        /* border-bottom: solid 1px var(--color); */
+        left: 0;
+    }
+    &:after {
+        border-right: solid 1px var(--color);
+        border-bottom: solid 1px var(--color);
+        right: 0;
+    }
+    &:hover {
+        &::before,
+        &::after {
+            width: 100%;
+            transition: width 0.15s ease-out;
+        }
+    }
 }
 
 @keyframes line {
-  from {
-    width: var(--hook);
-  }
-  to {
-    width: 100%;
-  }
+    from {
+        width: var(--hook);
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .hashlink {
-  @extend .header;
-  line-height: 1.1;
-  padding: 2px 5px;
-  --hook: 6px;
+    @extend .header;
+    line-height: 1.1;
+    padding: 2px 5px;
+    --hook: 6px;
 }
 
 .fade-in {
-  animation: fade-in var(--duration) var(--easing) both;
+    animation: fade-in var(--duration) var(--easing) backwards;
 }
 
 .fade-out {
-  opacity: 1;
-  animation: fade-out var(--duration) linear both;
+    animation: fade-out var(--duration) linear forwards;
 }
 
 .fade-in-bottom {
-  animation:
-    slide-in-bottom var(--duration) ease-out both,
-    fade-in var(--duration) ease-in both;
+    animation:
+        slide-in-bottom var(--duration) ease-out both,
+        fade-in var(--duration) ease-in backwards;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes slide-in-bottom {
-  from {
-    transform: translateY(var(--distance));
-  }
-  to {
-    transform: translateY(0);
-  }
+    from {
+        transform: translateY(var(--distance));
+    }
+    to {
+        transform: translateY(0);
+    }
 }

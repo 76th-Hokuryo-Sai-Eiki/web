@@ -9,12 +9,20 @@ export const siteConfig = {
             href: "#access",
         },
         {
+            label: "News",
+            href: "#news",
+        },
+        {
             label: "Info",
             href: "#info",
         },
         {
             label: "Contents",
             href: "#contents",
+        },
+        {
+            label: "Credits",
+            href: "#footer",
         },
     ],
     links: {

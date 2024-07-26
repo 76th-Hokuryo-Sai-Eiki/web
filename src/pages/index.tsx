@@ -1,42 +1,58 @@
 import { Spacer } from "@nextui-org/spacer";
+import { memo, Suspense, useRef } from "react";
 
 import AccessSection from "./access";
+import Theme from "./common/theme";
 import ContentsSection from "./content";
 import InfoSection from "./info";
+import NewsSection from "./news";
 import Title from "./title";
 
 import { Fadein } from "@/components/animations";
-import HashLink from "@/components/hash-link";
 import DefaultLayout from "@/layouts/default";
 
-export default function IndexPage() {
+export default memo(function IndexPage() {
+    const infoRef = useRef<HTMLElement>(null);
+
     return (
-        <HashLink.Provider>
-            <Fadein once duration={0.3}>
-                <DefaultLayout>
-                    <Fadein once duration={0.5}>
-                        <section id="#title">
-                            <Title />
-                        </section>
+        <Fadein once duration={0.3}>
+            <DefaultLayout>
+                <Fadein once duration={0.5}>
+                    <section id="#title">
+                        <Title />
+                    </section>
 
-                        <section id="#access">
-                            <AccessSection />
-                        </section>
+                    <Spacer y={20} />
 
-                        <Spacer y={20} />
+                    <section id="#access">
+                        <AccessSection />
+                    </section>
 
-                        <section id="#info">
-                            <InfoSection />
-                        </section>
+                    <Spacer y={20} />
 
-                        <Spacer y={20} />
+                    <section id="#news">
+                        <NewsSection />
+                    </section>
 
-                        <section id="#contents">
-                            <ContentsSection />
-                        </section>
-                    </Fadein>
-                </DefaultLayout>
-            </Fadein>
-        </HashLink.Provider>
+                    <Spacer y={20} />
+
+                    <Suspense>
+                        <Theme infoRef={infoRef} />
+                    </Suspense>
+
+                    <section ref={infoRef} id="#info">
+                        <InfoSection />
+                    </section>
+
+                    <Spacer y={40} />
+
+                    <section id="#contents">
+                        <ContentsSection />
+                    </section>
+
+                    <Spacer y={20} />
+                </Fadein>
+            </DefaultLayout>
+        </Fadein>
     );
-}
+});

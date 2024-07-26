@@ -1,123 +1,125 @@
 import { Button } from "@nextui-org/button";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
-import { Link } from "@nextui-org/link";
+import { Card, CardBody } from "@nextui-org/card";
+import { useDisclosure } from "@nextui-org/modal";
 import { Switch } from "@nextui-org/switch";
 import { Tooltip } from "@nextui-org/tooltip";
 import { useContext } from "react";
-import { AiOutlineCopyright } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa";
+import { BiSolidToTop } from "react-icons/bi";
 
-import HashLink from "@/components/hash-link";
-import { Logo } from "@/components/icons";
+import { LicenseList } from "../license";
+
+import { Copyright } from "./copyright";
+import { Logos } from "./logos";
+
+import Hashlink from "@/components/hashlink";
 import { Inline } from "@/components/inline";
 import { LoadingScreenContext } from "@/context/loading-screen";
+
+function License() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    return (
+        <>
+            <div className="z-10 flex flex-wrap gap-3">
+                <Button radius="none" onPress={onOpen}>
+                    <span className="text-default-700">LICENSES</span>
+                </Button>
+            </div>
+            <LicenseList isOpen={isOpen} onClose={onClose} />
+        </>
+    );
+}
+
+function BuildId() {
+    return (
+        <div className="flex h-full flex-row items-end">
+            <p
+                className="max-w-32 pb-2 text-right text-tiny text-default-500 md:max-w-max md:text-medium"
+                style={{
+                    fontFamily: "Arsenal SC",
+                    zoom: 1.02,
+                }}
+            >
+                build-id:
+                <Tooltip content="クリップボードにコピー">
+                    <Button
+                        className="m-0 ml-1 h-fit w-fit bg-inherit p-0 text-inherit"
+                        data-pressed="false"
+                        radius="none"
+                        variant="flat"
+                        onPress={() => {
+                            navigator.clipboard.writeText(__BUILT_AT__);
+                        }}
+                    >
+                        <Inline className="px-[1px]">
+                            {__BUILT_AT__.match(/.{3}/g)?.join(".")}
+                        </Inline>
+                    </Button>
+                </Tooltip>
+            </p>
+        </div>
+    );
+}
 
 export default function Footer() {
     const { isNormal, toggleLoadingKind } = useContext(LoadingScreenContext);
 
     return (
         <Card
-            className="rounded-b-none bg-default-100 px-0 pt-2 sm:px-[5%]"
+            className="rounded-b-none bg-default-100 px-[1rem] pt-4 md:px-[max(2rem,10%-100px)]"
             radius="none"
             shadow="none"
         >
-            <CardBody>
-                <div className="grid grid-cols-2">
-                    <div className="col-start-1 flex flex-col">
-                        <div>
-                            <Link
-                                showAnchorIcon
-                                anchorIcon={
-                                    <FaGithub className="mx-2" size={40} />
-                                }
-                                className="xm:text-xl text-lg sm:text-2xl"
-                                color="foreground"
-                                href="https://github.com/76th-Hokuryo-Sai-Eiki/web"
-                                style={{ fontFamily: "Kode Mono" }}
-                            >
-                                GitHub
-                            </Link>
-                        </div>
+            <CardBody className="grid items-center gap-4 p-0 px-2 [grid-template-columns:auto_auto] [grid-template-rows:auto_auto] sm:[grid-template-columns:auto_auto_auto]">
+                <div className="row-start-1 hidden xs:block">
+                    <Logos />
+                </div>
 
-                        <div className="mt-3">
-                            <Switch
-                                color="primary"
-                                isSelected={isNormal}
-                                size="sm"
-                                onValueChange={toggleLoadingKind}
-                            >
-                                Loading Screen
-                            </Switch>{" "}
-                            <p className="text-small text-default-500">
-                                {isNormal ? "Normal" : "Simple"}
+                <div className="col-start-2 row-start-1 flex flex-col items-end justify-end xs:col-start-3 xs:row-start-2 sm:row-start-1 sm:-mb-2 md:-mb-4 md:mr-10 md:mt-4">
+                    <Hashlink
+                        className="flex flex-col justify-center text-center"
+                        to="#head"
+                    >
+                        <p className="w-full gap-2 text-center indent-[4pt] text-small tracking-[4pt] md:text-medium">
+                            TOP
+                        </p>
+                        <BiSolidToTop
+                            className="-mt-2 text-default-700"
+                            size={40 + window.innerWidth * 0.02}
+                        />
+                    </Hashlink>
+                </div>
+
+                <div className="col-span-2 col-start-1 row-start-1 flex flex-row gap-x-4 xs:col-span-2 xs:col-start-2 sm:col-span-1 md:gap-x-8 lg:col-start-1 lg:row-start-2">
+                    <License />
+
+                    <div>
+                        <Switch
+                            color="primary"
+                            isSelected={isNormal}
+                            size="sm"
+                            onValueChange={toggleLoadingKind}
+                        >
+                            <p className="w-max text-default-600">
+                                Loading <br className="lg:hidden" />
+                                Screen
                             </p>
-                        </div>
+                        </Switch>
+
+                        <p className="text-small text-default-500">
+                            {isNormal ? "Normal" : "Simple"}
+                        </p>
                     </div>
-                    <div className="col-start-2 flex flex-col items-end">
-                        <div>
-                            <p className="inline-flex items-center text-default-600">
-                                <span className="text-medium">
-                                    &quot;
-                                    <Link
-                                        className="text-small text-default-600"
-                                        href="https://fontawesome.com/"
-                                    >
-                                        Font Awesome
-                                    </Link>
-                                    &quot; icons by Fonticons, Inc. is licensed
-                                    under
-                                    <Link
-                                        className="ml-1 text-small text-default-600"
-                                        href="https://creativecommons.org/licenses/by/4.0/"
-                                    >
-                                        CC BY 4.0
-                                    </Link>
-                                    .
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                </div>
+
+                <div className="col-span-2 col-start-1 row-start-2 xs:col-end-3 xs:mx-0 sm:col-end-4 sm:row-start-2 lg:col-start-1 lg:col-end-4">
+                    <Copyright />
+                </div>
+
+                <div className="col-span-2 col-start-2 row-start-2 hidden h-full flex-col items-end sm:flex">
+                    <BuildId />
                 </div>
             </CardBody>
-            <CardFooter className="grid w-full grid-cols-3 items-center justify-between p-0 pt-3">
-                <div className="col-span-3 col-start-1 row-start-1 flex min-w-max flex-col justify-center">
-                    <div className="text-center text-small text-default-600 xs:text-medium sm:text-large">
-                        <p>第76回北稜祭実行委員会</p>
-                        <p>映像記録部 WEB班</p>
-                        <div>
-                            <p className="inline-flex items-center text-left">
-                                <HashLink className="mr-1" to="#head">
-                                    <Logo size={24} />
-                                </HashLink>
-                                <small className="inline-flex items-center">
-                                    Copyright
-                                    <AiOutlineCopyright className="mx-1 -mb-0.5" />{" "}
-                                    2024 76th Hokuryo-sai Eiki
-                                </small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-start-3 row-start-1 flex h-full flex-col items-end">
-                    <div className="flex h-full flex-row items-end">
-                        <span className="hidden max-w-32 pb-2 text-right text-tiny text-default-500 md:max-w-max md:text-medium [@media(min-width:480px)]:inline">
-                            build-id:
-                            <Tooltip content="クリップボードにコピー">
-                                <Button
-                                    className="m-0 ml-1 h-fit w-fit bg-inherit p-0 text-inherit"
-                                    data-pressed="false"
-                                    radius="none"
-                                    variant="flat"
-                                >
-                                    <Inline className="px-[1px]">
-                                        {__BUILT_AT__.match(/.{3}/g)?.join(".")}
-                                    </Inline>
-                                </Button>
-                            </Tooltip>
-                        </span>
-                    </div>
-                </div>
-            </CardFooter>
         </Card>
     );
 }

@@ -3,11 +3,20 @@ import { defineConfig, loadEnv } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(({ mode }) => {
+    const define = {
+        __BUILT_AT__: `"${JSON.stringify(new Date().getTime())}"`,
+    };
+
     const env = loadEnv(mode, ".");
 
+    Object.assign(env, define);
+
     return {
-        define: { __BUILT_AT__: `"${JSON.stringify(new Date().getTime())}"` },
+        define,
         base: env.VITE_BASE,
+        build: {
+            outDir: env.VITE_OUT_DIR,
+        },
         plugins: [react(), tsconfigPaths(), htmlPlugin(env)],
     };
 });

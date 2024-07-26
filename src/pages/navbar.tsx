@@ -1,4 +1,3 @@
-import { Link } from "@nextui-org/link";
 import {
     NavbarBrand,
     NavbarContent,
@@ -9,11 +8,12 @@ import {
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
 import { useCallback, useState } from "react";
-import { FaGithub } from "react-icons/fa6";
 
-import HashLink from "../components/hash-link";
+import ChangeLog from "./change-log";
 
+import Hashlink from "@/components/hashlink";
 import { Logo } from "@/components/icons";
+import { OpacitySlider } from "@/components/opacity-slider";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
@@ -57,21 +57,21 @@ export function Navbar() {
             position="sticky"
             onMenuOpenChange={toggleIsMenuOpen}
         >
-            <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-                <NavbarBrand className="max-w-fit gap-3">
-                    <HashLink
+            <NavbarContent className="basis-1/6 sm:basis-full" justify="start">
+                <NavbarBrand className="min-w-max max-w-fit gap-3">
+                    <Hashlink
                         className="flex items-center justify-start gap-1"
                         color="foreground"
                         to="#head"
                         onClick={setMenuClosed}
                     >
                         <Logo />
-                    </HashLink>
+                    </Hashlink>
                 </NavbarBrand>
                 <div className="ml-2 hidden justify-start gap-6 md:flex">
                     {siteConfig.navItems.map((item) => (
                         <NavbarItem key={item.href}>
-                            <HashLink color="foreground" to={item.href}>
+                            <Hashlink color="foreground" to={item.href}>
                                 <span
                                     className="hashlink"
                                     style={{
@@ -80,7 +80,7 @@ export function Navbar() {
                                 >
                                     {item.label}
                                 </span>
-                            </HashLink>
+                            </Hashlink>
                         </NavbarItem>
                     ))}
                 </div>
@@ -91,13 +91,15 @@ export function Navbar() {
                 justify="end"
             >
                 <NavbarItem className="hidden gap-2 md:flex">
+                    <ChangeLog />
                     <ThemeSwitch />
+                    <OpacitySlider />
                     {/* <Link isExternal href={siteConfig.links.discord}>
                         <DiscordIcon className="text-default-500" />
                     </Link> */}
-                    <Link isExternal href={siteConfig.links.github}>
+                    {/* <Link isExternal href={siteConfig.links.github}>
                         <FaGithub className="text-default-500" size={22} />
-                    </Link>
+                    </Link> */}
                 </NavbarItem>
                 {/* <NavbarItem className="hidden lg:flex">
                     {searchInput}
@@ -118,20 +120,26 @@ export function Navbar() {
                 </NavbarItem> */}
             </NavbarContent>
 
-            <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
+            <NavbarContent
+                className="basis-1 gap-2 pl-4 md:hidden"
+                justify="end"
+            >
+                <ChangeLog />
                 <ThemeSwitch />
-                <Link isExternal href={siteConfig.links.github}>
+                <OpacitySlider className="hidden xs:block" />
+                {/* <Link isExternal href={siteConfig.links.github}>
                     <FaGithub className="text-default-500" size={22} />
-                </Link>
+                </Link> */}
                 <NavbarMenuToggle />
             </NavbarContent>
 
             <NavbarMenu>
+                <OpacitySlider className="block xs:hidden" />
                 {/* {searchInput} */}
                 <div className="mx-4 mt-2 flex flex-col gap-2">
                     {siteConfig.navItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <HashLink
+                            <Hashlink
                                 color="foreground"
                                 to={item.href}
                                 onClick={setMenuClosed}
@@ -142,7 +150,7 @@ export function Navbar() {
                                 >
                                     {item.label}
                                 </span>
-                            </HashLink>
+                            </Hashlink>
                         </NavbarMenuItem>
                     ))}
                 </div>
