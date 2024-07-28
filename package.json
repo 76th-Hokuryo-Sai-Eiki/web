@@ -14,10 +14,10 @@
         "test:chrome": "playwright test --headed --browser=chromium",
         "test:firefox": "playwright test --headed --browser=firefox",
         "test:safari": "playwright test --headed --browser=webkit",
-        "licenses": "node license-list.js"
+        "licenses": "node license-list.js",
+        "release": "run-p 'build relative' 'build path-root' 'build domain-root'"
     },
     "dependencies": {
-        "@discordjs/collection": "^2.1.0",
         "@nextui-org/accordion": "^2.0.35",
         "@nextui-org/avatar": "^2.0.32",
         "@nextui-org/button": "2.0.34",
@@ -86,6 +86,7 @@
         "eslint-plugin-react-hooks": "^4.6.2",
         "eslint-plugin-unused-imports": "^3.2.0",
         "license-checker": "^25.0.1",
+        "npm-run-all": "^4.1.5",
         "postcss": "^8.4.39",
         "prettier": "^3.3.3",
         "prettier-plugin-tailwindcss": "^0.6.5",

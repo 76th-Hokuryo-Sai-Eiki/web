@@ -17,6 +17,7 @@ export default function Logo({
 
     return (
         <Image
+            alt="logo"
             height={height ?? size}
             layout="constrained"
             src={getImageUrl(`logo.${theme}.png`)}

@@ -20,7 +20,7 @@ export function makeGuard() {
         return hash === HASH ? (
             children
         ) : (
-            <h1 style={{ fontSize: "30pt" }}>Forbidden</h1>
+            <h1 style={{ fontSize: "2.5rem" }}>Forbidden</h1>
         );
     }
 

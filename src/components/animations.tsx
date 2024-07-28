@@ -1,6 +1,8 @@
 import { Children, cloneElement, ReactElement, ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
 
+import isCrawler from "@/functions/is-crawler";
+
 export function Fadein({
     children,
     duration = 0.6,
@@ -15,6 +17,8 @@ export function Fadein({
     const { ref, inView } = useInView({
         triggerOnce: once,
     });
+
+    if (isCrawler) return children;
 
     return (
         <div
@@ -44,6 +48,8 @@ export function FadeinSlide({
     const { ref, inView } = useInView({
         triggerOnce: once,
     });
+
+    if (isCrawler) return children;
 
     const element = Children.only(children);
 

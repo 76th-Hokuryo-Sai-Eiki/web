@@ -24,7 +24,8 @@ export default function Banner({ className }: { className?: string }) {
                         disableSkeleton
                         isBlurred
                         isZoomed
-                        className={`dark:hue-rotate-0 ${className}`}
+                        alt="banner"
+                        className={`dark:hue-rotate-0 xs:h-[257.03px] xs:w-[432px] ${className}`}
                         classNames={{ zoomedWrapper: "overflow-visible" }}
                         src={getImageUrl(`banner.${theme}.png`)}
                         style={{

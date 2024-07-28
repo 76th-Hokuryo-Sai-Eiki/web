@@ -18,7 +18,7 @@ export default function SectionHeader({
                     <InlineDiv
                         className="text-default-700"
                         style={{
-                            fontSize: "28pt",
+                            fontSize: "2.5rem",
                             fontFamily: "Kode Mono",
                         }}
                     >

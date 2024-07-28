@@ -2,7 +2,7 @@ import { FadeinSlide } from "@/components/animations";
 import { Inline, InlineDiv } from "@/components/inline";
 import { subtitle } from "@/components/primitives";
 
-export function Catchphrase() {
+export default function Catchphrase() {
     return (
         <div
             className="mt-5 inline-block w-fit px-4 sm:mt-7 sm:px-8 2xl:mt-12"
@@ -21,7 +21,7 @@ export function Catchphrase() {
                     style={{
                         marginInline: "auto",
                         fontFamily: "Noto Serif JP",
-                        fontSize: "13pt",
+                        fontSize: "1.0625em",
                     }}
                 >
                     <Inline className="ml-1">
@@ -29,7 +29,7 @@ export function Catchphrase() {
                             <InlineDiv
                                 style={{
                                     color: "royalblue",
-                                    fontSize: "22pt",
+                                    fontSize: "1.8125rem",
                                     paddingLeft: "5px",
                                 }}
                             >
@@ -39,7 +39,7 @@ export function Catchphrase() {
                         き
                         <span
                             style={{
-                                fontSize: "15pt",
+                                fontSize: "1.25em",
                             }}
                         >
                             出
@@ -47,7 +47,7 @@ export function Catchphrase() {
                         る
                         <span
                             style={{
-                                fontSize: "17pt",
+                                fontSize: "1.4375rem",
                             }}
                         >
                             想
@@ -55,7 +55,7 @@ export function Catchphrase() {
                         像
                         <span
                             style={{
-                                fontSize: "15pt",
+                                fontSize: "1.25em",
                             }}
                         >
                             力
@@ -67,7 +67,7 @@ export function Catchphrase() {
                         <Inline className="ml-1">
                             <span
                                 style={{
-                                    fontSize: "18pt",
+                                    fontSize: "1.5rem",
                                     margin: "1px",
                                 }}
                             >
@@ -83,21 +83,21 @@ export function Catchphrase() {
                             る
                             <span
                                 style={{
-                                    fontSize: "17pt",
+                                    fontSize: "1.4375rem",
                                 }}
                             >
                                 好
                             </span>
                             <span
                                 style={{
-                                    fontSize: "14pt",
+                                    fontSize: "1.1875rem",
                                 }}
                             >
                                 奇
                             </span>
                             <span
                                 style={{
-                                    fontSize: "16pt",
+                                    fontSize: "1.3125rem",
                                 }}
                             >
                                 心
@@ -109,7 +109,7 @@ export function Catchphrase() {
                                 <InlineDiv
                                     style={{
                                         color: "violet",
-                                        fontSize: "22pt",
+                                        fontSize: "1.8125rem",
                                         margin: "1px",
                                     }}
                                 >
@@ -119,7 +119,7 @@ export function Catchphrase() {
                             き
                             <span
                                 style={{
-                                    fontSize: "16pt",
+                                    fontSize: "1.3125rem",
                                     verticalAlign: "1px",
                                 }}
                             >
@@ -128,14 +128,14 @@ export function Catchphrase() {
                             こ
                             <span
                                 style={{
-                                    fontSize: "18pt",
+                                    fontSize: "1.5rem",
                                 }}
                             >
                                 せ
                             </span>
                             <span
                                 style={{
-                                    fontSize: "20pt",
+                                    fontSize: "1.6875rem",
                                     paddingRight: "5px",
                                     margin: "3px",
                                 }}

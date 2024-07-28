@@ -46,15 +46,10 @@ body {
 }
 
 .bullet-point {
-    list-style: none;
-
+    list-style-type: "- ";
+    margin-left: 1em;
     > li {
-        text-indent: -1em;
-        padding-left: 1em;
-
-        &::before {
-            content: "- ";
-        }
+        margin-top: 0.5rem;
     }
 }
 

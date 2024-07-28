@@ -2,9 +2,8 @@ import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import clsx from "clsx";
 import { useCallback, useContext } from "react";
-import { BsFillSunFill } from "react-icons/bs";
-import { FaMoon } from "react-icons/fa6";
 
+import { BsFillSunFill, FaMoon } from "@/components/icons";
 import { PagePreferenceContext } from "@/context/page-preference";
 import { ThemeContext } from "@/context/theme";
 import { getOppositeTheme } from "@/functions/theme";
@@ -41,6 +40,7 @@ export const ThemeSwitch = ({ className, classNames }: ThemeSwitchProps) => {
 
     return (
         <Component
+            aria-label="Switch theme"
             {...getBaseProps({
                 className: clsx(
                     "px-px transition-opacity hover:opacity-80 cursor-pointer",

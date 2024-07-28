@@ -27,10 +27,10 @@ export const siteConfig = {
     ],
     links: {
         calendar: encodeURI(
-            "https://calendar.google.com/calendar/u/0/r/eventedit?text=第76回 北稜祭&dates=20240831/20240902&location=〒980-0855 宮城県仙台第二高等学校",
+            "https://calendar.google.com/calendar/u/0/r/eventedit?text=第76回 北陵祭&dates=20240831/20240902&location=〒980-0855 宮城県仙台第二高等学校",
         ),
         github: "https://github.com/76th-Hokuryo-Sai-Eiki/web",
-        twitter: "http://twitter.com/share?hashtags=76th北稜祭",
+        twitter: "http://twitter.com/share?hashtags=76th北陵祭",
         docs: "https://nextui-docs-v2.vercel.app",
     },
 };

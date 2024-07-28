@@ -1,12 +1,15 @@
+import {
+    BsFillTelephoneFill,
+    FaLocationDot,
+    FaSignsPost,
+    IoSchool,
+} from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader, CardProps } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
 import { Tooltip } from "@nextui-org/tooltip";
 import { ReactNode } from "react";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { FaLocationDot, FaSignsPost } from "react-icons/fa6";
-import { IoSchool } from "react-icons/io5";
 
 import { FadeinSlide } from "@/components/animations";
 import { Inline } from "@/components/inline";
@@ -20,10 +23,11 @@ export function LocationCard({
     return (
         <Card className={`card-base ${className}`} radius="none" {...props}>
             <CardHeader className="flex gap-3">
-                <Tooltip content="ルートを表示" isDisabled={!onRoute}>
+                <Tooltip content="場所を表示" isDisabled={!onRoute}>
                     <Button
                         disableAnimation
                         isIconOnly
+                        aria-label="reset map"
                         radius="none"
                         style={{
                             background: "inherit",
@@ -109,6 +113,7 @@ export function LocationCard({
                             <Link
                                 disableAnimation
                                 isExternal
+                                aria-label="Open Google Maps"
                                 className="justify-left text-md m-0 h-fit p-0 text-inherit"
                                 href={encodeURI(
                                     "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu",
