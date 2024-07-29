@@ -3,7 +3,7 @@ import { Card, CardBody } from "@nextui-org/card";
 import { useDisclosure } from "@nextui-org/modal";
 import { Switch } from "@nextui-org/switch";
 import { Tooltip } from "@nextui-org/tooltip";
-import { useContext } from "react";
+import { memo, useContext, useDeferredValue } from "react";
 
 import { LicenseList } from "../license";
 
@@ -15,7 +15,7 @@ import { BiSolidToTop } from "@/components/icons";
 import { Inline } from "@/components/inline";
 import { LoadingScreenContext } from "@/context/loading-screen";
 
-function License() {
+const License = memo(function _License() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -29,10 +29,10 @@ function License() {
                     <span className="text-default-700">LICENSES</span>
                 </Button>
             </div>
-            <LicenseList isOpen={isOpen} onClose={onClose} />
+            <LicenseList isOpen={useDeferredValue(isOpen)} onClose={onClose} />
         </>
     );
-}
+});
 
 function BuildId() {
     return (

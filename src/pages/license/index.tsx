@@ -8,15 +8,25 @@ import {
     ModalFooter,
     ModalHeader,
 } from "@nextui-org/modal";
+import { CircularProgress } from "@nextui-org/progress";
 import { Selection } from "@nextui-org/table";
-import { memo, useEffect, useRef, useState } from "react";
+import {
+    memo,
+    Suspense,
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from "react";
 
+import _cache from "./cache";
 import { Credits } from "./credits";
+// import _licenses from "./fetch-list";
 import _licenses from "./fetch-list";
 import { licenseRef } from "./ref";
 
 import { Fadein } from "@/components/animations";
-import { defer } from "@/components/defer";
 import { FaEye } from "@/components/icons";
 
 export interface LicenseInfo {
@@ -27,94 +37,96 @@ export interface LicenseInfo {
 
 type Entry = [string, LicenseInfo];
 
-const List = memo(function _List({
-    entries,
-    onSelectionChange,
-}: {
-    entries: Entry[];
-    onSelectionChange?: (keys: Selection) => void;
-}) {
-    const renderItem = ([name, { repository, licenses }]: Entry) => {
-        return (
-            <ListboxItem
-                key={name}
-                selectedIcon={({ isSelected }) =>
-                    isSelected ? (
-                        <div className="absolute left-0 ml-3">
-                            <Fadein duration={0.15}>
-                                <FaEye className="text-default-600" />
-                            </Fadein>
-                        </div>
-                    ) : (
-                        <></>
-                    )
-                }
-                textValue={name}
-            >
-                <div className="ml-8 flex items-center gap-6">
-                    <div className="flex flex-col">
-                        <span className="text-small">{`${name} (${licenses})`}</span>
-                        <span className="text-tiny text-default-400">
-                            {repository}
-                        </span>
-                    </div>
-                </div>
-            </ListboxItem>
+let licenses: Record<string, LicenseInfo>;
+let entries: [string, LicenseInfo][];
+
+(async () => {
+    licenses = await _licenses;
+    entries = Object.entries(licenses);
+})();
+
+let loaded = false;
+
+const List = memo(
+    function _List({
+        onSelectionChange,
+    }: {
+        onSelectionChange?: (keys: Selection) => void;
+    }) {
+        if (!loaded || !licenses || !entries) {
+            throw new Promise((resolve) =>
+                setTimeout(() => {
+                    loaded = true;
+                    resolve(undefined);
+                }, 200),
+            );
+        }
+
+        const items = useMemo(
+            () =>
+                entries.map(([name, { repository, licenses }]: Entry) => {
+                    return (
+                        <ListboxItem
+                            key={name}
+                            selectedIcon={({ isSelected }) =>
+                                isSelected ? (
+                                    <div className="absolute left-0 ml-3">
+                                        <Fadein duration={0.15}>
+                                            <FaEye className="text-default-600" />
+                                        </Fadein>
+                                    </div>
+                                ) : (
+                                    <></>
+                                )
+                            }
+                            textValue={name}
+                        >
+                            <div className="ml-8 flex items-center gap-6">
+                                <div className="flex flex-col">
+                                    <span className="text-small">{`${name} (${licenses})`}</span>
+                                    <span className="text-tiny text-default-400">
+                                        {repository}
+                                    </span>
+                                </div>
+                            </div>
+                        </ListboxItem>
+                    );
+                }),
+            [],
         );
-    };
 
-    return (
-        <Listbox
-            className="w-max min-w-full"
-            defaultSelectedKeys={[]}
-            items={entries ?? []}
-            label="Assigned to"
-            selectionMode="single"
-            variant="flat"
-            onSelectionChange={onSelectionChange}
-        >
-            {renderItem}
-        </Listbox>
-    );
-});
+        return (
+            <Listbox
+                className="w-max min-w-full"
+                defaultSelectedKeys={[]}
+                label="Assigned to"
+                selectionMode="single"
+                variant="flat"
+                onSelectionChange={onSelectionChange}
+            >
+                {items}
+            </Listbox>
+        );
+    },
+    () => {
+        return true;
+    },
+);
 
-function _LicenseList({
+export function LicenseList({
     isOpen,
     onClose,
 }: {
     isOpen: boolean;
     onClose: () => void;
 }) {
-    const fetcher = useRef<Worker>();
-    const licenses = useRef<Record<string, LicenseInfo>>();
+    const cache = useRef<Cache | null>(null);
 
     useEffect(() => {
         (async () => {
-            if (!licenses.current) {
-                licenses.current = await _licenses;
-            }
+            if (cache.current) return;
+            cache.current = await _cache;
         })();
-    }, []);
-
-    useEffect(() => {
-        if (window.Worker && !fetcher.current) {
-            fetcher.current = new Worker(
-                new URL("./fetcher", import.meta.url),
-                {
-                    type: "module",
-                },
-            );
-
-            fetcher.current.addEventListener("message", handleMessage);
-        }
-
-        return () => {
-            if (window.Worker && fetcher.current) {
-                fetcher.current.removeEventListener("message", handleMessage);
-                fetcher.current.terminate();
-                fetcher.current = undefined;
-            }
-        };
     }, []);
 
     const [selected, setSelected] = useState<string | null>(null);
@@ -125,22 +137,55 @@ function _LicenseList({
         setContent("");
     }, []);
 
-    const handleMessage = (
-        e: MessageEvent<{ type: string; value: string }>,
-    ) => {
-        if (e.data.type === "selection") {
-            setSelected(e.data.value);
-        } else if (e.data.type === "content") {
-            setContent(e.data.value);
-        }
-    };
-
-    const onSelectionChange = (keys: Set<string>) => {
-        if (!fetcher.current) return;
+    const onSelectionChange = useCallback(async (_keys: Selection) => {
+        const keys = _keys as Set<string>;
 
         setContent(null);
-        fetcher.current.postMessage(keys);
-    };
+
+        if (keys.size === 0) {
+            setSelected("");
+
+            return;
+        }
+
+        const name = [...keys][0] as string;
+
+        setSelected(name);
+
+        if (!name) return;
+
+        const hash = licenses[name]?.hash ?? "";
+
+        if (hash.length !== 64) {
+            setSelected(null);
+
+            return;
+        }
+
+        const url = `./licenses/${hash}.txt`;
+        const cached = await cache.current?.match(url);
+
+        if (cached) {
+            setContent(await cached.text());
+
+            return;
+        }
+
+        fetch(url)
+            .then((res) => {
+                if (cache.current) {
+                    cache.current.put(url, res.clone()).catch(() => {});
+                }
+
+                return res.text();
+            })
+            .then((data) => {
+                setContent(data);
+            })
+            .catch(() => {
+                setSelected(null);
+            });
+    }, []);
 
     return (
         <Modal
@@ -150,6 +195,7 @@ function _LicenseList({
             scrollBehavior="inside"
             size="full"
             onClose={() => {
+                loaded = false;
                 setSelected("");
                 setContent("");
                 onClose();
@@ -162,23 +208,24 @@ function _LicenseList({
                             Licenses of dependencies
                         </ModalHeader>
 
-                        <ModalBody className="grid grid-rows-2 text-default-600 lg:grid-rows-1 lg:[grid-template-columns:max-content_auto]">
-                            <div className="simple-scrollbar h-full w-full overflow-scroll lg:w-max">
-                                {licenses.current && (
+                        <ModalBody className="grid grid-rows-2 text-default-600 lg:grid-cols-2 lg:grid-rows-1">
+                            <div className="simple-scrollbar h-full w-full overflow-scroll lg:w-full">
+                                <Suspense
+                                    fallback={
+                                        <CircularProgress
+                                            aria-label="Loading..."
+                                            className="ml-8 mt-4"
+                                        />
+                                    }
+                                >
                                     <List
-                                        entries={Object.entries(
-                                            licenses.current,
-                                        )}
-                                        onSelectionChange={(keys: Selection) =>
-                                            onSelectionChange(
-                                                keys as Set<string>,
-                                            )
-                                        }
+                                        onSelectionChange={onSelectionChange}
                                     />
-                                )}
+                                </Suspense>
                             </div>
+
                             <div className="simple-scrollbar flex flex-col overflow-y-auto px-3">
-                                {selected === null || !licenses.current ? (
+                                {selected === null || !licenses ? (
                                     <h3 className="text-xl">FETCH ERROR</h3>
                                 ) : selected === "" ? (
                                     <Credits />
@@ -198,25 +245,22 @@ function _LicenseList({
                                                 <Link
                                                     isExternal
                                                     aria-disabled={
-                                                        !licenses.current[
-                                                            selected
-                                                        ]?.licenses
+                                                        !licenses[selected]
+                                                            ?.licenses
                                                     }
                                                     className="text-medium text-secondary"
                                                     href={
                                                         (licenseRef as any)[
-                                                            licenses.current[
-                                                                selected
-                                                            ]?.licenses ?? ""
+                                                            licenses[selected]
+                                                                ?.licenses ?? ""
                                                         ]
                                                     }
                                                     isDisabled={
-                                                        !licenses.current[
-                                                            selected
-                                                        ]?.licenses
+                                                        !licenses[selected]
+                                                            ?.licenses
                                                     }
                                                 >
-                                                    {licenses.current[selected]
+                                                    {licenses[selected]
                                                         ?.licenses ?? ""}
                                                 </Link>
                                             </h4>
@@ -248,5 +292,3 @@ function _LicenseList({
         </Modal>
     );
 }
-
-export const LicenseList = defer(_LicenseList);

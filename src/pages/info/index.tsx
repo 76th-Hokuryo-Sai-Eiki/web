@@ -79,10 +79,6 @@ function Faq() {
 
         if (!item) return;
 
-        // console.log(
-        //     containerRef.current.scrollTop,
-        //     containerRef.current.offsetHeight / 2,
-        // );
         if (!containerRef.current) return;
 
         setTimeout(() => {

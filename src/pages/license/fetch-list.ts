@@ -2,7 +2,7 @@ import _cache from "./cache";
 
 import { LicenseInfo } from ".";
 
-const url = "/licenses/list.json";
+const url = "./licenses/list.json";
 
 export default (async () => {
     const cache = await _cache;
@@ -15,7 +15,7 @@ export default (async () => {
     if (cached) return cached;
 
     return fetch(url).then((e) => {
-        if (cache) cache.put(url, e.clone());
+        if (cache) cache.put(url, e.clone()).catch(() => {});
 
         return e.json();
     });
