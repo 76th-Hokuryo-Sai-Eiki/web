@@ -24,8 +24,6 @@ const onHashchange = () => {
         forceTop: true,
     });
 
-    console.log(hash);
-
     if (hash === "#head") removeHash();
 };
 
