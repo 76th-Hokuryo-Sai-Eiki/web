@@ -19,7 +19,7 @@ export default memo(function IndexPage() {
                 <Title />
             </section>
 
-            <Spacer y={20} />
+            <Spacer y={5} />
 
             <section id="#access">
                 <AccessSection />

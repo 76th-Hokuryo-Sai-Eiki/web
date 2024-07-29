@@ -10,6 +10,7 @@ import { FadeinSlide } from "@/components/animations";
 import { FaCircleInfo, FaRegCircleQuestion } from "@/components/icons";
 import { Inline } from "@/components/inline";
 import SectionHeader from "@/components/section-header";
+import Sp from "@/components/sp";
 import { siteConfig } from "@/config/site";
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 import { LocationCard } from "@/pages/common/location-card";
@@ -24,46 +25,39 @@ function Abstract() {
                 className="ml-4 mt-3 text-[1.4rem] text-default-600 sm:text-[1.7rem]"
                 style={{ fontFamily: "Kode Mono" }}
             >
-                <FadeinSlide>
-                    <li className="flex items-center">
-                        <span className="mr-2 px-3 text-tiny">■</span>
-                        <Inline className="text-center">
-                            <h4>DAY 1</h4>
-                        </Inline>
-                        <Inline className="ml-5 text-center xs:ml-12 xs:text-left">
-                            08.31 (
-                            <Inline style={{ fontFamily: "Noto Sans JP" }}>
-                                土
-                            </Inline>
-                            )
-                            <Inline className="xs:ml-8">
-                                11:00
-                                <Inline className="mx-[3px]">&ndash;</Inline>
-                                15:00
-                            </Inline>
-                        </Inline>
-                    </li>
-                </FadeinSlide>
-                <FadeinSlide>
-                    <li className="my-2 flex items-center">
-                        <span className="mr-2 px-3 text-tiny">■</span>
-                        <Inline className="text-center">
-                            <h4>DAY 2</h4>
-                        </Inline>
-                        <Inline className="ml-5 text-center xs:ml-12 xs:text-left">
-                            09.01 (
-                            <Inline style={{ fontFamily: "Noto Sans JP" }}>
-                                日
-                            </Inline>
-                            )
-                            <Inline className="xs:ml-8">
-                                09:00
-                                <Inline className="mx-[3px]">&ndash;</Inline>
-                                14:00
-                            </Inline>
-                        </Inline>
-                    </li>
-                </FadeinSlide>
+                {Object.entries(siteConfig.event.schedule).map(
+                    ([_, { date, day, start, end }], index) => (
+                        <FadeinSlide key={index}>
+                            <li className="flex items-center">
+                                <span className="mr-2 px-3 text-tiny">■</span>
+                                <Inline className="text-center">
+                                    <h4>
+                                        DAY
+                                        <Sp />
+                                        {index + 1}
+                                    </h4>
+                                </Inline>
+                                <Inline className="ml-5 text-center xs:ml-12 xs:text-left">
+                                    {date.replaceAll("/", ".")}
+                                    <Sp />(
+                                    <Inline
+                                        style={{ fontFamily: "Noto Sans JP" }}
+                                    >
+                                        {day}
+                                    </Inline>
+                                    )
+                                    <Inline className="xs:ml-8">
+                                        {start}
+                                        <Inline className="mx-[3px]">
+                                            &ndash;
+                                        </Inline>
+                                        {end}
+                                    </Inline>
+                                </Inline>
+                            </li>
+                        </FadeinSlide>
+                    ),
+                )}
             </ul>
         </article>
     );

@@ -6,7 +6,7 @@ export default [
         title: "今年度のメインテーマが決定しました",
         description: (
             <div>
-                <h4 className="text-xl">【沸湧】 (わくわく・ふつよう)</h4>
+                <h4 className="text-xl">【沸湧】 (わくわく･フツヨウ)</h4>
                 <Spacer y={2} />
                 <div className="indent-3">
                     <p className="text-medium">

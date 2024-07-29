@@ -43,7 +43,7 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
                         />
                     </Suspense>
 
-                    <main className="container z-[5] mx-auto flex-grow px-6 pt-16">
+                    <main className="container z-[5] mx-auto flex-grow px-6">
                         <Fadein once duration={0.5}>
                             {children}
                         </Fadein>

@@ -6,7 +6,7 @@ import icons from "./data/icons";
 import { licenseRef } from "./ref";
 
 import { Inline } from "@/components/inline";
-import Sbsp from "@/components/sbsp";
+import Sp from "@/components/sp";
 
 function Fonts() {
     return (
@@ -41,7 +41,7 @@ function Fonts() {
             </div>
             <p className="ml-3 text-tiny text-default-500">
                 All of these fonts are licensed under the
-                <Sbsp />
+                <Sp />
                 <Inline>
                     <Link
                         isExternal
@@ -81,11 +81,11 @@ export function Icons() {
                                     </Link>
                                     &quot;
                                 </Inline>
-                                <Sbsp />
+                                <Sp />
                                 {author && (
                                     <>
                                         by
-                                        <Sbsp />
+                                        <Sp />
                                         <Link
                                             isExternal
                                             className="inline text-tiny text-primary"
@@ -94,11 +94,11 @@ export function Icons() {
                                         >
                                             {author}
                                         </Link>
-                                        <Sbsp />
+                                        <Sp />
                                     </>
                                 )}
                                 /
-                                <Sbsp />
+                                <Sp />
                                 <Inline>
                                     <Link
                                         isExternal
@@ -128,7 +128,7 @@ function Others() {
                     <li>
                         Part of the components in this project are extracted
                         from
-                        <Sbsp />
+                        <Sp />
                         <Inline>
                             <Link
                                 isExternal
@@ -139,7 +139,7 @@ function Others() {
                             </Link>
                             &apos;s
                         </Inline>
-                        <Sbsp />
+                        <Sp />
                         <Inline>
                             &quot;
                             <Link
@@ -151,9 +151,9 @@ function Others() {
                             </Link>
                             &quot;,
                         </Inline>
-                        <Sbsp />
+                        <Sp />
                         which is subject to the
-                        <Sbsp />
+                        <Sp />
                         <Inline>
                             <Link
                                 isExternal
@@ -169,7 +169,7 @@ function Others() {
                     <li>
                         Part of the components in this project are extracted
                         from
-                        <Sbsp />
+                        <Sp />
                         <Inline>
                             <Link
                                 isExternal
@@ -180,7 +180,7 @@ function Others() {
                             </Link>
                             &apos;s
                         </Inline>
-                        <Sbsp />
+                        <Sp />
                         &quot;
                         <Inline>
                             <Link
@@ -192,9 +192,9 @@ function Others() {
                             </Link>
                             &quot;,
                         </Inline>
-                        <Sbsp />
+                        <Sp />
                         which is subject to the
-                        <Sbsp />
+                        <Sp />
                         <Inline>
                             <Link
                                 isExternal

@@ -9,16 +9,24 @@ import {
 } from "react";
 
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
+import { removeHash } from "@/functions/utility";
 
 const onHashchange = () => {
-    const anchor = document.getElementById(window.location.hash);
+    const hash = window.location.hash;
 
-    if (anchor)
-        scrollIntoViewIfNeeded(anchor, {
-            marginTop: 10,
-            behavior: "smooth",
-            forceTop: true,
-        });
+    const anchor = document.getElementById(hash);
+
+    if (!anchor) return;
+
+    scrollIntoViewIfNeeded(anchor, {
+        marginTop: 10,
+        behavior: "smooth",
+        forceTop: true,
+    });
+
+    console.log(hash);
+
+    if (hash === "#head") removeHash();
 };
 
 export default function Hashlink({
@@ -43,9 +51,11 @@ export default function Hashlink({
             onClick={(e: MouseEvent<HTMLButtonElement>) => {
                 if (onClick) onClick(e);
 
-                window.location.hash = to;
-
-                window.dispatchEvent(new HashChangeEvent("hashchange"));
+                if (window.location.hash === to) {
+                    window.dispatchEvent(new HashChangeEvent("hashchange"));
+                } else {
+                    window.location.hash = to;
+                }
             }}
             {...props}
         />,

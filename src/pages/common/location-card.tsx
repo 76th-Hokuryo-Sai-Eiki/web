@@ -1,9 +1,3 @@
-import {
-    BsFillTelephoneFill,
-    FaLocationDot,
-    FaSignsPost,
-    IoSchool,
-} from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader, CardProps } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
@@ -12,7 +6,14 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { ReactNode } from "react";
 
 import { FadeinSlide } from "@/components/animations";
+import {
+    BsFillTelephoneFill,
+    FaLocationDot,
+    FaSignsPost,
+    IoSchool,
+} from "@/components/icons";
 import { Inline } from "@/components/inline";
+import { siteConfig } from "@/config/site";
 
 export function LocationCard({
     onRoute = null,
@@ -55,13 +56,13 @@ export function LocationCard({
                             }}
                             onPress={() => {
                                 navigator.clipboard.writeText(
-                                    "宮城県仙台第二高等学校",
+                                    siteConfig.event.location.name,
                                 );
                             }}
                         >
                             <FadeinSlide distance={10} duration={0.5}>
                                 <p className="pl-1 pr-2">
-                                    宮城県仙台第二高等学校
+                                    {siteConfig.event.location.name}
                                 </p>
                             </FadeinSlide>
                         </Button>
@@ -95,12 +96,12 @@ export function LocationCard({
                                         }}
                                         onPress={() => {
                                             navigator.clipboard.writeText(
-                                                "980-8631",
+                                                siteConfig.event.location.code,
                                             );
                                         }}
                                     >
                                         <p className="text-wrap pl-1 pr-2 text-left">
-                                            980-8631
+                                            {siteConfig.event.location.code}
                                         </p>
                                     </Button>
                                 </Tooltip>
@@ -116,7 +117,7 @@ export function LocationCard({
                                 aria-label="Open Google Maps"
                                 className="justify-left text-md m-0 h-fit p-0 text-inherit"
                                 href={encodeURI(
-                                    "https://www.google.com/maps/place/宮城県仙台第二高等学校/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu",
+                                    `https://www.google.com/maps/place/${siteConfig.event.location.name}/@38.2639163,140.8558536,17.23z/data=!3m1!5s0x5f8a283672a5ec03:0xa0c833d28ceb9651!4m6!3m5!1s0x5f8a2836682a9c3d:0x6f15d06231e808af!8m2!3d38.2636516!4d140.8570603!16s%2Fg%2F1220l780?entry=ttu`,
                                 )}
                                 size="sm"
                                 style={{
@@ -137,13 +138,20 @@ export function LocationCard({
                                         }}
                                         onPress={() => {
                                             navigator.clipboard.writeText(
-                                                "宮城県仙台市青葉区川内澱橋通1-1",
+                                                siteConfig.event.location.address.join(
+                                                    "",
+                                                ),
                                             );
                                         }}
                                     >
                                         <p className="text-wrap pl-1 pr-2 text-left md:text-nowrap">
-                                            <Inline>宮城県仙台市青葉区</Inline>
-                                            <Inline>川内澱橋通1-1</Inline>
+                                            {siteConfig.event.location.address.map(
+                                                (address, index) => (
+                                                    <Inline key={index}>
+                                                        {address}
+                                                    </Inline>
+                                                ),
+                                            )}
                                         </p>
                                     </Button>
                                 </Tooltip>
@@ -160,9 +168,11 @@ export function LocationCard({
                                 <Link
                                     isExternal
                                     className="text-primary"
-                                    href="tel:0222215626"
+                                    href={`tel:${siteConfig.event.location.tel.replaceAll("-", "")}`}
                                 >
-                                    <Inline>022-221-5626</Inline>
+                                    <Inline>
+                                        {siteConfig.event.location.tel}
+                                    </Inline>
                                 </Link>
                             </FadeinSlide>
                         </p>

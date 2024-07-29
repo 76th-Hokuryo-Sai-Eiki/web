@@ -24,3 +24,10 @@ export function removeHash() {
         window.location.pathname + window.location.search,
     );
 }
+
+export function getDevicePixelRatio() {
+    return (
+        window.devicePixelRatio ??
+        window.screen.availWidth / document.documentElement.clientWidth
+    );
+}

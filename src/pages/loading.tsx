@@ -24,7 +24,8 @@ const LoadingScreenContainer = styled.div`
 export default function LoadingScreen() {
     const [count, { startCountdown }] = useCountdown({
         countStart: Math.floor(
-            (siteConfig.eventDate.getTime() - Date.now()) / 10
+            (siteConfig.event.startsAt.getTime() - Date.now()) /
+                10,
         ),
         intervalMs: 10,
     });
