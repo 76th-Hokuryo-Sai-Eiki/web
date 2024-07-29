@@ -47,5 +47,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 <Unquote>
 
+Part of the components in this project are extracted from Next UI's Vite & NextUI Template, which is subject to the same license.
+Here is the original copyright notice for Next UI:
+
 Also, the units in "src/components/time-display/" were extracted from Amr Labib's react-timer-hook.
 See "src/components/time-display/LICENSE".

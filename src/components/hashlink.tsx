@@ -30,6 +30,7 @@ export default function Hashlink({
 }: HTMLAttributes<HTMLButtonElement> & { to: string; plane?: boolean }) {
     return cloneElement(
         <button
+            aria-label={`Scroll to ${to}`}
             className={
                 plane
                     ? className

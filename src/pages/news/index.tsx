@@ -14,11 +14,11 @@ export default function NewsSection() {
     return (
         <div className="m-2">
             <SectionHeader hashlink="#news">
-                <p>News</p>
+                <h2>News</h2>
             </SectionHeader>
 
             <div
-                className="simple-scrollbar mt-3 h-[240px] overflow-y-scroll sm:h-[200px] sm:overflow-y-visible"
+                className="simple-scrollbar mt-3 h-[300px] overflow-y-scroll sm:h-[240px] sm:overflow-y-visible"
                 style={allSelected ? { height: "max-content" } : {}}
             >
                 <Accordion
@@ -41,25 +41,26 @@ export default function NewsSection() {
                         ) => (
                             <AccordionItem
                                 key={`news-item-${index}`}
+                                HeadingComponent={"h3"}
                                 aria-label={`News No.${index + 1}`}
                                 className="overflow-y-clip opacity-100"
                                 hideIndicator={!description}
                                 isDisabled={!description}
                                 title={
                                     <FadeinSlide distance={40} duration={0.8}>
-                                        <div className="mb-2 flex flex-col sm:mb-0 sm:flex-row sm:items-end sm:gap-8">
-                                            <h3
+                                        <span className="mb-2 flex flex-col sm:mb-0 sm:flex-row sm:items-end sm:gap-8">
+                                            <span
                                                 className="text-3xl text-default-600"
                                                 style={{
                                                     fontFamily: "Arsenal SC",
                                                 }}
                                             >
                                                 {date}
-                                            </h3>
-                                            <p className="text-xl text-default-600 sm:absolute sm:left-40 sm:top-0 sm:text-2xl">
+                                            </span>
+                                            <span className="text-xl text-default-600 sm:absolute sm:left-40 sm:top-0 sm:text-2xl">
                                                 {title}
-                                            </p>
-                                        </div>
+                                            </span>
+                                        </span>
                                     </FadeinSlide>
                                 }
                             >

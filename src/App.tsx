@@ -1,12 +1,12 @@
 import { Progress } from "@nextui-org/progress";
 import { lazy, Suspense, useEffect, useReducer, useState } from "react";
 
-import Hashlink from "./components/hashlink";
-import { TailwindIndicator } from "./components/tailwind-indicator";
-import { LoadingScreenContext } from "./context/loading-screen";
-import { useLoadingConfig } from "./hooks/loading-screen";
-
+import Hashlink from "@/components/hashlink";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { LoadingScreenContext } from "@/context/loading-screen";
 import { ThemeContext } from "@/context/theme";
+import isCrawler from "@/functions/is-crawler";
+import { useLoadingConfig } from "@/hooks/loading-screen";
 import { useTheme } from "@/hooks/theme";
 import LoadingScreen from "@/pages/loading";
 
@@ -30,8 +30,8 @@ export default function App() {
     } = useLoadingConfig();
 
     const duration = (() => {
-        // if (import.meta.env.DEV) return 150;
-        if (isSimple) return 500;
+        if (isCrawler) return 0;
+        if (isSimple) return 300;
 
         return 3000;
     })();
@@ -49,6 +49,27 @@ export default function App() {
             clearTimeout(loadingId), clearTimeout(fadeoutId);
         };
     }, [duration]);
+
+    if (isCrawler) {
+        return (
+            <ThemeContext.Provider value={themeConfig}>
+                <LoadingScreenContext.Provider
+                    value={{
+                        loadingKind,
+                        isSimple,
+                        isNormal,
+                        setSimpleLoading,
+                        setNormalLoading,
+                        toggleLoadingKind,
+                    }}
+                >
+                    <Suspense>
+                        <IndexPage />
+                    </Suspense>
+                </LoadingScreenContext.Provider>
+            </ThemeContext.Provider>
+        );
+    }
 
     return (
         <>

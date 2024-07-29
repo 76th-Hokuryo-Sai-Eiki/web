@@ -13,15 +13,20 @@ import {
 import { Tooltip } from "@nextui-org/tooltip";
 import { User } from "@nextui-org/user";
 import { ReactNode, useCallback } from "react";
-import { FaCarAlt, FaWalking } from "react-icons/fa";
-import { FaRoute, FaTrainSubway } from "react-icons/fa6";
-import { MdLocalParking, MdPedalBike } from "react-icons/md";
-import { SiGooglemaps } from "react-icons/si";
 
 import carRoute, { columns as carColumns } from "./data/car.tsx";
 import publicRoute, { columns as publicColumns } from "./data/public.tsx";
 
 import { FadeinSlide } from "@/components/animations.tsx";
+import {
+    FaCarAlt,
+    FaRoute,
+    FaTrainSubway,
+    FaWalking,
+    MdLocalParking,
+    MdPedalBike,
+    SiGooglemaps,
+} from "@/components/icons";
 import { Inline } from "@/components/inline.tsx";
 
 function builder(item: any, key: any, handler: any) {
@@ -57,7 +62,7 @@ function builder(item: any, key: any, handler: any) {
                             href={item.link}
                             isDisabled={!item.link}
                         >
-                            {cellValue}
+                            <h4>{cellValue}</h4>
                         </Link>
                     }
                     onClick={() => {
@@ -68,16 +73,18 @@ function builder(item: any, key: any, handler: any) {
         case "time":
             return (
                 <div className="flex flex-col">
-                    <p className="text-bold text-sm">
+                    <span className="text-bold text-sm">
                         <span className="inline-flex items-center">
                             <FaWalking className="mr-1" />
                             <span>{cellValue} min</span>
                         </span>
-                    </p>
-                    <p className="text-bold text-tiny text-default-400">
+                    </span>
+                    <span className="text-bold text-tiny text-default-400">
                         <FadeinSlide>
                             <Link
                                 isExternal
+                                aria-disabled={!item.extra_link}
+                                aria-label="details"
                                 className="text-small text-default-400 opacity-100"
                                 href={item.extra_link}
                                 isDisabled={!item.extra_link}
@@ -85,7 +92,7 @@ function builder(item: any, key: any, handler: any) {
                                 {item.epexegesis}
                             </Link>
                         </FadeinSlide>
-                    </p>
+                    </span>
                 </div>
             );
         case "actions":
@@ -94,6 +101,7 @@ function builder(item: any, key: any, handler: any) {
                     <Tooltip content="ルートを表示">
                         <Button
                             isIconOnly
+                            aria-label="Draw root"
                             className="cursor-pointer text-lg text-default-400 active:opacity-50"
                             style={{
                                 background: "inherit",
@@ -109,6 +117,7 @@ function builder(item: any, key: any, handler: any) {
                     <Tooltip content="Google Maps で開く">
                         <Link
                             isExternal
+                            aria-label="Open Google Maps"
                             className="cursor-pointer text-lg text-default-400 active:opacity-50"
                             href={item.map_link}
                         >
@@ -135,9 +144,9 @@ function TopContent({
                 {icon}
                 <div className="flex w-full justify-between">
                     <div className="flex flex-col items-center justify-center">
-                        <h4 className="text-medium font-semibold leading-none text-default-600">
+                        <h3 className="text-medium font-semibold leading-none text-default-600">
                             {title}
-                        </h4>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -166,10 +175,7 @@ function Public({ onRoute }: any) {
                 >
                     <TableHeader columns={publicColumns}>
                         {(column) => (
-                            <TableColumn
-                                key={column.uid}
-                                // className={column.uid == "actions" ? "hidden" : "none"}
-                            >
+                            <TableColumn key={column.uid}>
                                 {column.name}
                             </TableColumn>
                         )}
@@ -267,9 +273,9 @@ function Bike() {
                 <div className="flex gap-5 pl-1.5">
                     <MdPedalBike size={36} />
                     <div className="flex flex-col items-start justify-center gap-1">
-                        <h4 className="text-medium font-semibold leading-none text-default-600">
+                        <h3 className="text-medium font-semibold leading-none text-default-600">
                             自転車でお越しの方
-                        </h4>
+                        </h3>
                     </div>
                 </div>
             </CardHeader>

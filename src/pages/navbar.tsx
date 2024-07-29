@@ -57,33 +57,35 @@ export function Navbar() {
             position="sticky"
             onMenuOpenChange={toggleIsMenuOpen}
         >
-            <NavbarContent className="basis-1/6 sm:basis-full" justify="start">
-                <NavbarBrand className="min-w-max max-w-fit gap-3">
-                    <Hashlink
-                        className="flex items-center justify-start gap-1"
-                        color="foreground"
-                        to="#head"
-                        onClick={setMenuClosed}
-                    >
-                        <Logo />
-                    </Hashlink>
-                </NavbarBrand>
-                <div className="ml-2 hidden justify-start gap-6 md:flex">
-                    {siteConfig.navItems.map((item) => (
-                        <NavbarItem key={item.href}>
-                            <Hashlink color="foreground" to={item.href}>
-                                <span
-                                    className="hashlink"
-                                    style={{
-                                        fontFamily: "Kode Mono",
-                                    }}
-                                >
-                                    {item.label}
-                                </span>
-                            </Hashlink>
-                        </NavbarItem>
-                    ))}
-                </div>
+            <NavbarBrand className="min-w-max max-w-fit gap-3">
+                <Hashlink
+                    className="flex items-center justify-start gap-1"
+                    color="foreground"
+                    to="#head"
+                    onClick={setMenuClosed}
+                >
+                    <Logo />
+                </Hashlink>
+            </NavbarBrand>
+
+            <NavbarContent
+                className="ml-2 hidden basis-1/6 justify-start gap-6 sm:basis-full md:flex"
+                justify="start"
+            >
+                {siteConfig.navItems.map((item) => (
+                    <NavbarItem key={item.href}>
+                        <Hashlink color="foreground" to={item.href}>
+                            <span
+                                className="hashlink"
+                                style={{
+                                    fontFamily: "Kode Mono",
+                                }}
+                            >
+                                {item.label}
+                            </span>
+                        </Hashlink>
+                    </NavbarItem>
+                ))}
             </NavbarContent>
 
             <NavbarContent
@@ -124,36 +126,47 @@ export function Navbar() {
                 className="basis-1 gap-2 pl-4 md:hidden"
                 justify="end"
             >
-                <ChangeLog />
-                <ThemeSwitch />
-                <OpacitySlider className="hidden xs:block" />
-                {/* <Link isExternal href={siteConfig.links.github}>
-                    <FaGithub className="text-default-500" size={22} />
-                </Link> */}
-                <NavbarMenuToggle />
+                <NavbarItem>
+                    <ChangeLog />
+                </NavbarItem>
+
+                <NavbarItem>
+                    <ThemeSwitch />
+                </NavbarItem>
+
+                <NavbarItem>
+                    <OpacitySlider className="hidden xs:block" />
+                </NavbarItem>
+
+                <NavbarItem>
+                    <NavbarMenuToggle />
+                </NavbarItem>
             </NavbarContent>
 
             <NavbarMenu>
-                <OpacitySlider className="block xs:hidden" />
+                <NavbarMenuItem key="opacity-slider" className="mb-1 ml-2 mt-2">
+                    <OpacitySlider className="block xs:hidden" />
+                </NavbarMenuItem>
                 {/* {searchInput} */}
-                <div className="mx-4 mt-2 flex flex-col gap-2">
-                    {siteConfig.navItems.map((item, index) => (
-                        <NavbarMenuItem key={`${item}-${index}`}>
-                            <Hashlink
-                                color="foreground"
-                                to={item.href}
-                                onClick={setMenuClosed}
+                {siteConfig.navItems.map((item, index) => (
+                    <NavbarMenuItem
+                        key={`${item}-${index}`}
+                        className="ml-4 mt-1"
+                    >
+                        <Hashlink
+                            color="foreground"
+                            to={item.href}
+                            onClick={setMenuClosed}
+                        >
+                            <span
+                                className="hashlink"
+                                style={{ fontFamily: "Kode Mono" }}
                             >
-                                <span
-                                    className="hashlink"
-                                    style={{ fontFamily: "Kode Mono" }}
-                                >
-                                    {item.label}
-                                </span>
-                            </Hashlink>
-                        </NavbarMenuItem>
-                    ))}
-                </div>
+                                {item.label}
+                            </span>
+                        </Hashlink>
+                    </NavbarMenuItem>
+                ))}
             </NavbarMenu>
         </NextUINavbar>
     );

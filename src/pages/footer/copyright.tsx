@@ -1,8 +1,9 @@
 import { Link } from "@nextui-org/link";
-import { AiOutlineCopyright } from "react-icons/ai";
+
+import { licenseRef } from "../license/ref";
 
 import Hashlink from "@/components/hashlink";
-import { Logo } from "@/components/icons";
+import { AiOutlineCopyright, Logo } from "@/components/icons";
 import { Inline } from "@/components/inline";
 
 export function Copyright() {
@@ -25,7 +26,7 @@ export function Copyright() {
                         <Inline className="ml-2 mr-1.5 text-[1.4rem]">
                             第76回
                         </Inline>
-                        <Inline>北稜祭実行委員会</Inline>
+                        <Inline>北陵祭実行委員会</Inline>
                     </Inline>
                 </p>
                 <p className="flex flex-row justify-center gap-1 text-tiny">
@@ -38,17 +39,20 @@ export function Copyright() {
                     <Hashlink className="mr-1" to="#head">
                         <Logo size={24} />
                     </Hashlink>
-                    <small className="inline-flex flex-row items-center gap-x-1">
+
+                    <small className="inline-flex flex-row items-center gap-x-1 text-small">
                         <AiOutlineCopyright className="-mb-0.5" />
                         <Inline>2024</Inline>
                         <Inline>
                             76th <Inline>Hokuryo-sai Eiki</Inline>
                         </Inline>
-                        <Inline>&ndash;</Inline>
+
+                        <Inline className="-mx-0.5 text-small">│</Inline>
+
                         <Link
                             isExternal
                             className="text-small tracking-tight text-default-600"
-                            href="https://opensource.org/license/mit"
+                            href={licenseRef["MIT License"]}
                         >
                             <Inline>MIT License</Inline>
                         </Link>

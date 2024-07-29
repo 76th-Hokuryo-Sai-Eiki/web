@@ -29,7 +29,10 @@ export default function AccessSection() {
     return (
         <div className="m-2">
             <div className="flex flex-col items-start xs:flex-row">
-                <SectionHeader hashlink="#access">Access</SectionHeader>
+                <SectionHeader hashlink="#access">
+                    <h2>Access</h2>
+                </SectionHeader>
+
                 <p
                     className="mb-4 w-full text-center text-3xl text-purple-500 xs:text-4xl md:text-5xl"
                     style={{
@@ -58,7 +61,7 @@ export default function AccessSection() {
                             <iframe
                                 ref={mapRef}
                                 allowFullScreen
-                                className="h-[50vh] opacity-95 dark:opacity-80"
+                                className="h-[50vh] max-h-[40rem] opacity-95 dark:opacity-80"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 src={PLANE_MAP}
@@ -71,7 +74,7 @@ export default function AccessSection() {
                     <div className="h-fit">
                         <Fadein>
                             <LocationCard
-                                className="-mt-1 rounded-b-xl bg-default-200 px-1 pb-1 pt-1 sm:max-w-[350px] md:-ml-1 md:mt-5 md:rounded-r-xl md:rounded-bl-none md:pl-1 md:pt-0"
+                                className="-mt-1 rounded-b-xl bg-default-200 px-1 pb-1 pt-1 sm:max-w-[23rem] md:-ml-1 md:mt-5 md:rounded-r-xl md:rounded-bl-none md:pl-1 md:pt-0"
                                 divider={
                                     <div className="px-3 md:-ml-1 md:pl-0 md:pr-3">
                                         <Divider className="mr-10" />

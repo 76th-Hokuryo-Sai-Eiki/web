@@ -12,6 +12,7 @@ export default defineConfig(({ mode }) => {
     Object.assign(env, define);
 
     return {
+        assetsInclude: ["robots.txt"],
         define,
         base: env.VITE_BASE,
         build: {

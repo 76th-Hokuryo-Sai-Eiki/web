@@ -8,51 +8,46 @@ import InfoSection from "./info";
 import NewsSection from "./news";
 import Title from "./title";
 
-import { Fadein } from "@/components/animations";
 import DefaultLayout from "@/layouts/default";
 
 export default memo(function IndexPage() {
     const infoRef = useRef<HTMLElement>(null);
 
     return (
-        <Fadein once duration={0.3}>
-            <DefaultLayout>
-                <Fadein once duration={0.5}>
-                    <section id="#title">
-                        <Title />
-                    </section>
+        <DefaultLayout>
+            <section id="#title">
+                <Title />
+            </section>
 
-                    <Spacer y={20} />
+            <Spacer y={20} />
 
-                    <section id="#access">
-                        <AccessSection />
-                    </section>
+            <section id="#access">
+                <AccessSection />
+            </section>
 
-                    <Spacer y={20} />
+            <Spacer y={20} />
 
-                    <section id="#news">
-                        <NewsSection />
-                    </section>
+            <section id="#news">
+                <NewsSection />
+            </section>
 
-                    <Spacer y={20} />
+            <Spacer y={20} />
 
-                    <Suspense>
-                        <Theme infoRef={infoRef} />
-                    </Suspense>
+            <Suspense>
+                <Theme infoRef={infoRef} />
+            </Suspense>
 
-                    <section ref={infoRef} id="#info">
-                        <InfoSection />
-                    </section>
+            <section ref={infoRef} id="#info">
+                <InfoSection />
+            </section>
 
-                    <Spacer y={40} />
+            <Spacer y={40} />
 
-                    <section id="#contents">
-                        <ContentsSection />
-                    </section>
+            <section id="#contents">
+                <ContentsSection />
+            </section>
 
-                    <Spacer y={20} />
-                </Fadein>
-            </DefaultLayout>
-        </Fadein>
+            <Spacer y={20} />
+        </DefaultLayout>
     );
 });

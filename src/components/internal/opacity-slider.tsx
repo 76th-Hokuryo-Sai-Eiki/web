@@ -1,7 +1,8 @@
 import { Button } from "@nextui-org/button";
 import { Slider, SliderValue } from "@nextui-org/slider";
 import chroma from "chroma-js";
-import { VscDiffRemoved } from "react-icons/vsc";
+
+import { VscDiffRemoved } from "@/components/icons";
 
 export interface OpacitySliderProps {
     className?: string;
@@ -24,7 +25,6 @@ export default function InternalSlider({
             classNames={{
                 base: "max-w-md gap-3",
                 track: "border-x-0 mx-[0.625rem] bg-gradient-to-r from-cyan-100 to-cyan-500 ",
-                // label: "text-medium",
                 filler: "mx-0.5 bg-default-200",
             }}
             fillOffset={maxValue}
@@ -49,6 +49,7 @@ export default function InternalSlider({
                     disableAnimation
                     disableRipple
                     isIconOnly
+                    aria-label="reset opacity config"
                     className="my-0 -mr-2 h-4 bg-inherit py-0 pt-0.5"
                     radius="none"
                     size="sm"

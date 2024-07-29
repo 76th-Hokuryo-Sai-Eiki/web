@@ -1,13 +1,14 @@
+import { TbLicense } from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import {
     Modal,
     ModalBody,
     ModalContent,
+    ModalFooter,
     ModalHeader,
     useDisclosure,
 } from "@nextui-org/modal";
 import { ReactNode } from "react";
-import { TbLicense } from "react-icons/tb";
 
 import data from "./data/log";
 
@@ -20,6 +21,7 @@ export default function ChangeLog() {
                 <Button
                     disableRipple
                     isIconOnly
+                    aria-label="Show changelog"
                     className="mt-0.5 inline-flex items-center bg-inherit"
                     radius="none"
                     onPress={onOpen}
@@ -27,7 +29,13 @@ export default function ChangeLog() {
                     <TbLicense className="text-default-500" size={22} />
                 </Button>
 
-                <Modal isOpen={isOpen} radius="sm" size="lg" onClose={onClose}>
+                <Modal
+                    className="bg-default-50 dark:opacity-90"
+                    isOpen={isOpen}
+                    radius="sm"
+                    size="lg"
+                    onClose={onClose}
+                >
                     <ModalContent style={{ fontFamily: "Kode Mono" }}>
                         <ModalHeader className="py-0 pt-4">
                             Changelog
@@ -60,6 +68,17 @@ export default function ChangeLog() {
                                 )}
                             </ul>
                         </ModalBody>
+
+                        <ModalFooter>
+                            <Button
+                                aria-label="Close"
+                                color="danger"
+                                variant="light"
+                                onPress={onClose}
+                            >
+                                Close
+                            </Button>
+                        </ModalFooter>
                     </ModalContent>
                 </Modal>
             </div>

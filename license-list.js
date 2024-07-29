@@ -8,7 +8,7 @@ import { sha256 } from "js-sha256";
 
 const console = new Console(stdout);
 
-const filePath = "./licenses-list.json";
+const filePath = "./public/licenses/list.json";
 
 const ret = execSync(
     `license-checker --production --json --excludePrivatePackages > ${filePath}`,
@@ -34,6 +34,16 @@ licenseKeys.forEach((key) => {
     const tmp = key.match(/(.+)@(.+)$/);
     const name = tmp[1];
     const version = tmp[2];
+
+    license.licenses =
+        {
+            "0BSD": "BSD Zero Clause License",
+            "Apache-2.0": "Apache License, Version 2.0",
+            "BlueOak-1.0.0": "Blue Oak Model License 1.0.0",
+            "BSD-3-Clause": "3-Clause BSD License",
+            ISC: "ISC License",
+            MIT: "MIT License",
+        }[license.licenses] ?? license.licenses;
 
     license.hash = sha256(name);
 

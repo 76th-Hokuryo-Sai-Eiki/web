@@ -8,6 +8,7 @@ import {
 } from "react";
 import { useResizeObserver } from "usehooks-ts";
 
+import isCrawler from "@/functions/is-crawler";
 import { calcScrollOffset } from "@/functions/scroll";
 
 export default function Background({
@@ -57,40 +58,52 @@ export default function Background({
         )
             return;
 
-        const infoSectionTop = document.getElementById("#info")?.offsetTop ?? 0;
+        if (opacityConfig.opacity.bgImage > 0) {
+            const newScrollMax = containerHeight - bgImageHeight;
 
-        const newScrollMax = containerHeight - bgImageHeight;
-
-        setBgImageScrollTo(newScrollMax);
-
-        {
-            const scrollTo = containerHeight - bgThemeHeightA - 400;
-            const viewTo = scrollTo - 0.7 * window.innerHeight;
-
-            setBgThemeScrollRangeA({
-                from: calcScrollOffset({
-                    viewFrom: Math.max(350, 2400 - window.innerWidth * 3.2),
-                    viewTo,
-                    containerHeight,
-                }),
-                to: viewTo,
-            });
+            setBgImageScrollTo(newScrollMax);
         }
 
-        {
-            const scrollTo = containerHeight - bgThemeHeightB;
-            const viewTo = scrollTo - 0.7 * window.innerHeight;
+        if (opacityConfig.opacity.bgProp > 0) {
+            {
+                const scrollTo = containerHeight - bgThemeHeightA - 400;
+                const viewTo = scrollTo - 0.7 * window.innerHeight;
 
-            setBgThemeScrollRangeB({
-                from: calcScrollOffset({
-                    viewFrom: infoSectionTop - 900,
-                    viewTo,
-                    containerHeight,
-                }),
-                to: viewTo,
-            });
+                setBgThemeScrollRangeA({
+                    from: calcScrollOffset({
+                        viewFrom: Math.max(350, 2400 - window.innerWidth * 3.2),
+                        viewTo,
+                        containerHeight,
+                    }),
+                    to: viewTo,
+                });
+            }
+
+            {
+                const infoSectionTop =
+                    document.getElementById("#info")?.offsetTop ?? 0;
+
+                const scrollTo = containerHeight - bgThemeHeightB;
+                const viewTo = scrollTo - 0.7 * window.innerHeight;
+
+                setBgThemeScrollRangeB({
+                    from: calcScrollOffset({
+                        viewFrom: infoSectionTop - 900,
+                        viewTo,
+                        containerHeight,
+                    }),
+                    to: viewTo,
+                });
+            }
         }
-    }, [containerHeight, bgImageHeight, bgThemeHeightA, bgThemeHeightB]);
+    }, [
+        containerHeight,
+        bgImageHeight,
+        bgThemeHeightA,
+        bgThemeHeightB,
+        opacityConfig.opacity.bgImage,
+        opacityConfig.opacity.bgProp,
+    ]);
 
     useEffect(() => {
         adjust();
@@ -109,12 +122,21 @@ export default function Background({
         };
     }, [adjust]);
 
+    if (isCrawler) return null;
+
     return (
-        <>
+        <div
+            className="absolute h-max w-full overflow-clip"
+            style={{ height: containerHeight }}
+        >
             <img
                 ref={bgImageRef}
                 alt="background"
-                className={`parallax scroll-driven absolute h-[200vh] object-cover sm:h-fit sm:w-full`}
+                className={
+                    opacityConfig.opacity.bgImage > 0
+                        ? "parallax scroll-driven absolute min-h-[200vh] object-cover sm:h-fit sm:w-full"
+                        : ""
+                }
                 src={`images/background${window.innerWidth < 1280 ? "-long" : ""}.png`}
                 style={{
                     ["--scroll-y-to" as string]: `${bgImageScrollTo}px`,
@@ -124,7 +146,11 @@ export default function Background({
             <img
                 ref={bgThemeRefA}
                 alt="background"
-                className={`parallax scroll-driven absolute left-[4vw] max-h-[65vh] w-auto max-w-[70vw] dark:opacity-30 dark:brightness-[60%] sm:left-[8vw] lg:left-[12vw]`}
+                className={
+                    opacityConfig.opacity.bgProp > 0
+                        ? "parallax scroll-driven absolute left-[4vw] max-h-[65vh] w-auto max-w-[70vw] dark:opacity-30 dark:brightness-[60%] sm:left-[8vw] lg:left-[12vw]"
+                        : ""
+                }
                 src="images/themeA.png"
                 style={{
                     ["--scroll-y-from" as string]: `${bgThemeScrollRangeA.from}px`,
@@ -135,7 +161,11 @@ export default function Background({
             <img
                 ref={bgThemeRefB}
                 alt="background"
-                className={`parallax scroll-driven absolute right-[4vw] max-h-[65vh] w-auto max-w-[70vw] dark:opacity-30 dark:brightness-[60%] sm:right-[8vw] lg:right-[12vw]`}
+                className={
+                    opacityConfig.opacity.bgProp > 0
+                        ? "parallax scroll-driven absolute right-[4vw] max-h-[65vh] w-auto max-w-[70vw] dark:opacity-30 dark:brightness-[60%] sm:right-[8vw] lg:right-[12vw]"
+                        : ""
+                }
                 src="images/themeB.png"
                 style={{
                     ["--scroll-y-from" as string]: `${bgThemeScrollRangeB.from}px`,
@@ -143,6 +173,6 @@ export default function Background({
                     opacity: opacityConfig.opacity.bgProp,
                 }}
             />
-        </>
+        </div>
     );
 }

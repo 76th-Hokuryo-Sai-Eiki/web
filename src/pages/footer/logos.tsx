@@ -15,6 +15,7 @@ export function Logos() {
                 <li>
                     <Link
                         isExternal
+                        aria-label="NextUI"
                         color="foreground"
                         href="https://nextui.org/"
                     >
