@@ -15,7 +15,7 @@
         "test:firefox": "playwright test --headed --browser=firefox",
         "test:safari": "playwright test --headed --browser=webkit",
         "licenses": "node license-list.js",
-        "release": "run-p 'build relative' 'build path-root' 'build domain-root'"
+        "release": "rm -rf dist && run-p 'build relative' 'build path-root' 'build domain-root'"
     },
     "dependencies": {
         "@nextui-org/accordion": "^2.0.35",

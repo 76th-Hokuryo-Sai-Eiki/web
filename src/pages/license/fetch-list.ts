@@ -12,7 +12,6 @@ export default (async () => {
         .then((e) => e?.json())
         .catch(() => undefined);
 
-    console.log(cached);
     if (cached) return cached;
 
     return fetch(url).then((e) => {
