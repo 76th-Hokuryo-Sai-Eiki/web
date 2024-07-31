@@ -32,7 +32,7 @@ export function Copyright() {
                 <p className="flex flex-row justify-center gap-1 text-tiny">
                     <Inline>広報局</Inline>
                     <Inline>映像記録部</Inline>
-                    <Inline>WEB班</Inline>/<Inline>協力: 美術部</Inline>
+                    <Inline>WEB班</Inline>/<Inline>協力: 美術部･書道部</Inline>
                 </p>
 
                 <p className="mt-0.5 inline-flex">
