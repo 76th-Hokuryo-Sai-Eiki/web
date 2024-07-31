@@ -2,9 +2,9 @@ export {};
 
 const cacheName = `licenses-${__BUILT_AT__}`;
 
-export default self.caches.open(cacheName);
+export default globalThis.caches.open(cacheName);
 
-self.caches.keys().then((keys) =>
+globalThis.caches.keys().then((keys) =>
     keys.forEach((key) => {
         if (!key.startsWith("licenses-") || key === cacheName) return;
 
