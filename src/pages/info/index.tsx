@@ -41,6 +41,7 @@ function Abstract() {
                                     {date.replaceAll("/", ".")}
                                     <Sp />(
                                     <Inline
+                                        className="[vertical-align:-0.1rem]"
                                         style={{ fontFamily: "Noto Sans JP" }}
                                     >
                                         {day}
