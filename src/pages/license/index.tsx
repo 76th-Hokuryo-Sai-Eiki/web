@@ -16,16 +16,15 @@ import {
     useCallback,
     useEffect,
     useMemo,
-    useRef,
     useState,
 } from "react";
 
-import _cache from "./cache";
 import { Credits } from "./credits";
 // import _licenses from "./fetch-list";
 import _licenses from "./fetch-list";
 import { licenseRef } from "./ref";
 
+import cache from "@/classes/cache";
 import { Fadein } from "@/components/animations";
 import { FaEye } from "@/components/icons";
 
@@ -120,15 +119,6 @@ export function LicenseList({
     isOpen: boolean;
     onClose: () => void;
 }) {
-    const cache = useRef<Cache | null>(null);
-
-    useEffect(() => {
-        (async () => {
-            if (cache.current) return;
-            cache.current = await _cache;
-        })();
-    }, []);
-
     const [selected, setSelected] = useState<string | null>(null);
     const [content, setContent] = useState<string | null>("");
 
@@ -163,21 +153,21 @@ export function LicenseList({
         }
 
         const url = `./licenses/${hash}.txt`;
-        const cached = await cache.current?.match(url);
+        const cached = cache.get(url);
 
         if (cached) {
-            setContent(await cached.text());
+            setContent(cached as string);
 
             return;
         }
 
-        fetch(url)
-            .then((res) => {
-                if (cache.current) {
-                    cache.current.put(url, res.clone()).catch(() => {});
-                }
+        await fetch(url)
+            .then(async (res) => {
+                const data = await res.text();
 
-                return res.text();
+                cache.set(url, data);
+
+                return data;
             })
             .then((data) => {
                 setContent(data);

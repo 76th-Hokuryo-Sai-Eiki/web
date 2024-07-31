@@ -1,22 +1,19 @@
-import _cache from "./cache";
-
 import { LicenseInfo } from ".";
+
+import cache from "@/classes/cache";
 
 const url = "./licenses/list.json";
 
-export default (async () => {
-    const cache = await _cache;
-
-    const cached = await cache
-        .match(url)
-        .then((e) => e?.json())
-        .catch(() => undefined);
+export default (() => {
+    const cached = cache.get(url);
 
     if (cached) return cached;
 
     return fetch(url).then((e) => {
-        if (cache) cache.put(url, e.clone()).catch(() => {});
+        const data = e.json();
 
-        return e.json();
+        cache.set(url, data);
+
+        return data;
     });
 })() as Promise<Record<string, LicenseInfo>>;

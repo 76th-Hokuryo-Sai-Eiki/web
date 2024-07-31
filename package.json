@@ -18,6 +18,7 @@
         "release": "rm -rf dist && run-p 'build relative' 'build path-root' 'build domain-root'"
     },
     "dependencies": {
+        "@discordjs/collection": "^2.1.0",
         "@nextui-org/accordion": "^2.0.35",
         "@nextui-org/avatar": "^2.0.32",
         "@nextui-org/button": "2.0.34",
