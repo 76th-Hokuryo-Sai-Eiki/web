@@ -8,6 +8,7 @@ const Container = styled.div`
     &: first-child {
         margin-left: 0;
     }
+    font-family: Kode Mono;
 `;
 
 const Title = styled.span`
