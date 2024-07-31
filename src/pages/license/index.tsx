@@ -161,7 +161,7 @@ export function LicenseList({
             return;
         }
 
-        fetch(url)
+        fetch(url, { cache: "force-cache" })
             .then(async (res) => {
                 const data = await res.text();
 
