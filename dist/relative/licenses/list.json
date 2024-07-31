@@ -16,6 +16,12 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@babel/runtime/LICENSE",
         "hash": "89ac7a1c4f712dd851c5185781eae3b7f566109bd6087db70f77e9bb9b74ab14"
     },
+    "@discordjs/collection@2.1.0": {
+        "licenses": "Apache License, Version 2.0",
+        "repository": "https://github.com/discordjs/discord.js",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@discordjs/collection/LICENSE",
+        "hash": "23370e11c5c881621160bf907e225df5e3f00d032733e22c9c4c1137a0a50b27"
+    },
     "@emotion/is-prop-valid@1.2.2": {
         "licenses": "MIT License",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/is-prop-valid",
@@ -1427,7 +1433,7 @@
         "publisher": "Isaac Z. Schlueter",
         "email": "i@izs.me",
         "url": "http://blog.izs.me/",
-        "licenseFile": "/home/uni_akurenbo/Web/76th_hokuryo-sai/node_modules/isexe/LICENSE",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/isexe/LICENSE",
         "hash": "73344e283934107b3a2e1e0637b643d6b32aab3e2283dcfc5302bc9bb8980840"
     },
     "jackspeak@3.4.1": {
@@ -2082,7 +2088,7 @@
         "hash": "3943dfadaaf67f95696b43c86c72df777de82b15f81a9a95471d4450e12a5487"
     },
     "tslib@2.6.3": {
-        "licenses": "0BSD",
+        "licenses": "BSD Zero Clause License",
         "repository": "https://github.com/Microsoft/tslib",
         "publisher": "Microsoft Corp.",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tslib/LICENSE.txt",
