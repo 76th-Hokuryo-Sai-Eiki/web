@@ -8,6 +8,6 @@ globalThis.caches.keys().then((keys) =>
     keys.forEach((key) => {
         if (!key.startsWith("licenses-") || key === cacheName) return;
 
-        self.caches.delete(key);
+        globalThis.caches.delete(key);
     }),
 );
