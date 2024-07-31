@@ -1,4 +1,4 @@
-import{k as l}from"./index-D69CqlOp.js";function a({size:c=24,width:s,height:h,...n}){return l.jsx("svg",{height:h??c,viewBox:"0 0 200 200",width:s??c,...n,children:l.jsx("g",{children:l.jsxs("g",{transform:"translate(3.75 3.75)",children:[l.jsx("path",{d:`M148.882,43.618l-47.368-5.263l-57.895,5.263L38.355,96.25l5.263,52.632l52.632,6.579l52.632-6.579
+import{k as l}from"./index-Dd1pTGA7.js";function a({size:c=24,width:s,height:h,...n}){return l.jsx("svg",{height:h??c,viewBox:"0 0 200 200",width:s??c,...n,children:l.jsx("g",{children:l.jsxs("g",{transform:"translate(3.75 3.75)",children:[l.jsx("path",{d:`M148.882,43.618l-47.368-5.263l-57.895,5.263L38.355,96.25l5.263,52.632l52.632,6.579l52.632-6.579
             l5.263-53.947L148.882,43.618z`,fill:"#FFFFFF"}),l.jsx("path",{d:`M65.211,125.276c-3.934-2.658-6.658-6.539-8.145-11.671l9.132-3.763c0.829,3.158,2.276,5.605,4.342,7.342
             c2.053,1.737,4.553,2.592,7.474,2.592c2.987,0,5.553-0.908,7.697-2.724s3.224-4.132,3.224-6.934c0-2.868-1.132-5.211-3.395-7.026
             s-5.105-2.724-8.5-2.724h-5.276v-9.039H76.5c2.921,0,5.382-0.789,7.382-2.368c2-1.579,3-3.737,3-6.487
