@@ -161,7 +161,7 @@ export function LicenseList({
             return;
         }
 
-        await fetch(url)
+        fetch(url)
             .then(async (res) => {
                 const data = await res.text();
 
