@@ -18,7 +18,7 @@ const eventInfo = {
     ],
     get startsAt() {
         return new Date(
-            `${this.year} ${this.schedule[0].date} ${this.schedule[0].start}`,
+            `${this.year}/${this.schedule[0].date} ${this.schedule[0].start}`,
         );
     },
     location: {
