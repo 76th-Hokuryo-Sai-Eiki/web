@@ -21,7 +21,7 @@ export default function Catchphrase() {
                     style={{
                         marginInline: "auto",
                         fontFamily: "Noto Serif JP",
-                        fontSize: "1.0625em",
+                        fontSize: "1.0625rem",
                     }}
                 >
                     <Inline className="ml-1">
@@ -39,7 +39,7 @@ export default function Catchphrase() {
                         き
                         <span
                             style={{
-                                fontSize: "1.25em",
+                                fontSize: "1.25rem",
                             }}
                         >
                             出
@@ -55,7 +55,7 @@ export default function Catchphrase() {
                         像
                         <span
                             style={{
-                                fontSize: "1.25em",
+                                fontSize: "1.25rem",
                             }}
                         >
                             力
