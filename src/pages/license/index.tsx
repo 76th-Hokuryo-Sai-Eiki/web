@@ -214,14 +214,14 @@ export function LicenseList({
                                 </Suspense>
                             </div>
 
-                            <div className="simple-scrollbar flex flex-col overflow-y-auto px-3">
+                            <div className="flex flex-col px-3">
                                 {selected === null || !licenses ? (
                                     <h3 className="text-xl">FETCH ERROR</h3>
                                 ) : selected === "" ? (
                                     <Credits />
                                 ) : (
                                     <>
-                                        <div className="mb-4">
+                                        <div className="">
                                             <h3>
                                                 <Link
                                                     isExternal
@@ -255,7 +255,7 @@ export function LicenseList({
                                                 </Link>
                                             </h4>
                                         </div>
-                                        <div className="h-min whitespace-pre-wrap px-4">
+                                        <div className="simple-scrollbar mt-1 h-min overflow-y-auto whitespace-pre-wrap px-4 pt-3">
                                             <pre className="text-tiny">
                                                 {content === null
                                                     ? "Loading..."
