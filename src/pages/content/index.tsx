@@ -38,7 +38,7 @@ function DummyCard() {
                         aspectRatio={1}
                         className="absolute rounded-3xl object-cover p-4 dark:brightness-75"
                         layout="fullWidth"
-                        src="./images/test.jpg"
+                        src="./images/content-bg.jpg"
                     />
 
                     <GrassCard className="flex h-[clamp(12rem,18vw,19rem)] w-[clamp(12rem,18vw,19rem)] items-center justify-center">

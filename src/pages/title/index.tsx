@@ -91,7 +91,6 @@ function CountDownContainer({ children }: { children: ReactElement }) {
                     className={title({
                         class: "-ml-6 text-default-600 sm:ml-0",
                     })}
-                    id="#test"
                     style={{
                         fontFamily: "BIZ UDMincho",
                         fontSize: "2rem",

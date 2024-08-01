@@ -19,7 +19,8 @@ function Abstract() {
     return (
         <article className="mt-5">
             <h3 className="text-3xl text-default-600">
-                一般公開<span className="text-2xl">（出店・展示・企画)</span>
+                一般公開
+                <Inline className="text-2xl">（出店・展示・企画)</Inline>
             </h3>
             <ul
                 className="ml-4 mt-3 text-[1.4rem] text-default-600 sm:text-[1.7rem]"
