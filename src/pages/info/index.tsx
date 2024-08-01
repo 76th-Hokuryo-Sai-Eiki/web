@@ -126,7 +126,8 @@ function Faq() {
                                 HeadingComponent={"h4"}
                                 aria-label={`Question No.${index + 1}`}
                                 classNames={{
-                                    title: "ml-1 text-large text-default-600",
+                                    title: "ml-1 text-large text-default-600 title",
+                                    content: "pt-0",
                                 }}
                                 id={`faq-item-${index}`}
                                 indicator={({ isOpen }) =>
@@ -141,8 +142,8 @@ function Faq() {
                                 }
                                 title={title}
                             >
-                                <FadeinSlide distance={10} duration={0.3}>
-                                    <span className="mb-3 ml-2 text-medium text-default-500">
+                                <FadeinSlide distance={10} duration={0.5}>
+                                    <span className="mb-3 ml-2 flex text-medium text-default-500">
                                         {description}
                                     </span>
                                 </FadeinSlide>
