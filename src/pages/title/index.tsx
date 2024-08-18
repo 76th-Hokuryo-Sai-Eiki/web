@@ -18,6 +18,9 @@ import { useCountdown } from "usehooks-ts";
 
 const Catchphrase = lazy(() => import("./catchphrase"));
 
+import { Spacer } from "@nextui-org/spacer";
+import { FaDownload } from "react-icons/fa";
+
 import { Fadein, FadeinSlide } from "@/components/animations";
 import { Banner, GoogleCalendarIcon } from "@/components/icons";
 import { ParallaxY } from "@/components/parallax";
@@ -26,7 +29,7 @@ import Sp from "@/components/sp";
 import { TimeDisplay } from "@/components/time-display";
 import { siteConfig } from "@/config/site";
 import { ThemeContext } from "@/context/theme";
-import { chooseRandom, getDevicePixelRatio } from "@/functions/utility";
+import { chooseRandom } from "@/functions/utility";
 
 function CountDown({ compact = false }: { compact?: boolean }) {
     const [count, { startCountdown, stopCountdown }] = useCountdown({
@@ -135,13 +138,10 @@ export default function Title() {
     const [minHeight, setMinHeight] = useState<number>(window.innerHeight);
 
     const onResize = useCallback(() => {
-        setMinHeight(window.innerHeight * getDevicePixelRatio());
+        setMinHeight(window.innerHeight);
     }, [setMinHeight]);
 
-    useEffect(
-        () => setMinHeight(window.innerHeight * getDevicePixelRatio()),
-        [],
-    );
+    useEffect(() => setMinHeight(window.innerHeight), []);
 
     useEffect(() => {
         window.addEventListener("resize", onResize);
@@ -188,7 +188,7 @@ export default function Title() {
                                     <span className="mt-5 inline-flex h-14" />
                                 </span>
 
-                                <ParallaxY className="md:[--scroll-y-from:20px] md:[--scroll-y-to:-40px]">
+                                <ParallaxY className="md:[--scroll-y-from:25px] md:[--scroll-y-to:-25px]">
                                     <span
                                         ref={titleRef}
                                         className={title({
@@ -204,6 +204,34 @@ export default function Title() {
                                     </span>
                                 </ParallaxY>
                             </h1>
+
+                            <Spacer y={6} />
+
+                            <Link
+                                isExternal
+                                className={buttonStyles({
+                                    class: "border-default-300 backdrop-blur-sm hover:!bg-default-200 hover:!opacity-100 active:!text-opacity-disabled active:!opacity-100",
+                                    variant: "ghost",
+                                    size: "lg",
+                                    radius: "full",
+                                })}
+                                href="https://drive.usercontent.google.com/u/0/uc?id=1TYquIE9k9sdCokx-fhvVgZW9No3Le4An&export=download"
+                            >
+                                <FaDownload size={20} />
+                                <p className="text-large">
+                                    パンフレットをダウンロード
+                                    <Sp />
+                                    <small className="ml-1 align-bottom">
+                                        [50 MiB]
+                                    </small>
+                                </p>
+                            </Link>
+                            {/* <br />
+                            <small>
+                                『宮城県教育委員会』に属する Google
+                                アカウントでアクセスください。
+                                <br />
+                            </small> */}
                         </Fadein>
                     </div>
                 </div>
@@ -211,7 +239,7 @@ export default function Title() {
                 <div className="col-span-full row-start-3 mb-10 justify-center text-center 2xl:col-span-3 2xl:col-start-2">
                     <FadeinSlide duration={0.5}>
                         <p
-                            className={subtitle({ class: "mt-6" })}
+                            className={subtitle({ class: "mt-12" })}
                             style={{ fontFamily: "Arsenal SC" }}
                         >
                             {siteConfig.event.year}/
@@ -221,12 +249,11 @@ export default function Title() {
                             {siteConfig.event.schedule[1].date}
                         </p>
                     </FadeinSlide>
-
                     <ParallaxY className="md:[--scroll-y-from:20px] md:[--scroll-y-to:-50px]">
                         <Link
                             isExternal
                             className={buttonStyles({
-                                class: "mt-3",
+                                class: "mt-3 active:!text-opacity-disabled active:!opacity-100",
                                 color: "primary",
                                 radius: "full",
                                 variant: "shadow",

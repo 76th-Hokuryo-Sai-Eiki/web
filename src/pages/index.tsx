@@ -5,6 +5,7 @@ import AccessSection from "./access";
 import Theme from "./common/theme";
 import ContentsSection from "./content";
 import InfoSection from "./info";
+import MessagesSection from "./message";
 import NewsSection from "./news";
 import Title from "./title";
 
@@ -42,6 +43,12 @@ export default memo(function IndexPage() {
             </section>
 
             <Spacer y={40} />
+
+            <section id="#messages">
+                <MessagesSection />
+            </section>
+
+            <Spacer y={20} />
 
             <section id="#contents">
                 <ContentsSection />

@@ -23,6 +23,7 @@ body {
 
 .card-base {
     @apply opacity-80;
+    @apply rounded-md;
 }
 
 .parallax {

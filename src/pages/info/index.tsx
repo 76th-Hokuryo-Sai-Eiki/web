@@ -160,7 +160,7 @@ function Faq() {
                         <Inline>
                             その他の疑問点についても、お近くの北陵祭実行委員までお気軽にお尋ねください。
                         </Inline>
-                        <Inline>緑の法被が目印です。</Inline>
+                        <Inline>法被が目印です。</Inline>
                     </p>
                 </div>
             </div>

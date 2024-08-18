@@ -18,7 +18,7 @@ export default function NewsSection() {
             </SectionHeader>
 
             <div
-                className="simple-scrollbar mt-3 h-[300px] overflow-y-scroll sm:h-[240px] sm:overflow-y-visible"
+                className="simple-scrollbar mt-3 h-[360px] overflow-y-scroll sm:h-[280px] sm:overflow-y-visible"
                 style={allSelected ? { height: "max-content" } : {}}
             >
                 <Accordion
@@ -47,26 +47,26 @@ export default function NewsSection() {
                                 hideIndicator={!description}
                                 isDisabled={!description}
                                 title={
-                                    <FadeinSlide distance={40} duration={0.8}>
-                                        <span className="mb-2 flex flex-col sm:mb-0 sm:flex-row sm:items-end sm:gap-8">
-                                            <span
-                                                className="text-3xl text-default-600"
-                                                style={{
-                                                    fontFamily: "Arsenal SC",
-                                                }}
-                                            >
-                                                {date}
-                                            </span>
-                                            <span className="text-xl text-default-600 sm:absolute sm:left-40 sm:top-0 sm:text-2xl">
-                                                {title}
-                                            </span>
+                                    <span className="relative mb-2 flex flex-col sm:mb-0 sm:flex-row sm:items-end sm:gap-8">
+                                        <span
+                                            className="text-3xl text-default-600"
+                                            style={{
+                                                fontFamily: "Arsenal SC",
+                                            }}
+                                        >
+                                            {date}
                                         </span>
-                                    </FadeinSlide>
+                                        <span className="text-xl text-default-600 sm:absolute sm:left-40 sm:text-2xl">
+                                            {title}
+                                        </span>
+                                    </span>
                                 }
                             >
-                                <div className="px-6 text-default-500">
-                                    {description}
-                                </div>
+                                <FadeinSlide distance={10} duration={0.5}>
+                                    <div className="px-6 text-default-500">
+                                        {description}
+                                    </div>
+                                </FadeinSlide>
                             </AccordionItem>
                         ),
                     )}

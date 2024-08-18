@@ -1,5 +1,7 @@
 import { Spacer } from "@nextui-org/spacer";
 
+import Hashlink from "@/components/hashlink";
+
 export default [
     {
         date: "2024.05.15",
@@ -25,8 +27,25 @@ export default [
         ),
     },
     {
-        date: "2024.07",
+        date: "2024.07.31",
         title: "公式ウェブサイトを開設しました",
         description: null,
+    },
+    {
+        date: "2024.08",
+        title: "出店・展示・企画 についての情報を掲載しました",
+        description: (
+            <p className="text-large">
+                詳しくは
+                <Hashlink
+                    className="hashlink mx-1"
+                    style={{ fontFamily: "Kode Mono" }}
+                    to="#contents"
+                >
+                    Contents
+                </Hashlink>
+                をご覧ください。
+            </p>
+        ),
     },
 ];

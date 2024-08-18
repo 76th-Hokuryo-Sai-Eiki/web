@@ -14,7 +14,6 @@ export const addKey = (e: any, i: number) => React.cloneElement(e, { key: i });
 
 export function getImageUrl(name: string) {
     return `images/${name}`;
-    // return new URL(`/src/images/${name}`, import.meta.url).href;
 }
 
 export function removeHash() {
@@ -22,12 +21,5 @@ export function removeHash() {
         "",
         document.title,
         window.location.pathname + window.location.search,
-    );
-}
-
-export function getDevicePixelRatio() {
-    return (
-        window.devicePixelRatio ??
-        window.screen.availWidth / document.documentElement.clientWidth
     );
 }
