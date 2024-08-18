@@ -78,7 +78,7 @@ export default [
     },
     {
         id: 22,
-        name: "BigInsidecafe",
+        name: "Big Inside café",
         organization: "1-7",
         location: ["階3-7教室"],
         description: (
@@ -518,7 +518,7 @@ export default [
     },
     {
         id: 7,
-        name: "CaGaCuBOXeS ーかがくのはこづめー",
+        name: "CaGaCuBOXeS -かがくのはこづめ-",
         organization: "化学部",
         location: ["1階1-7教室"],
         description: (
