@@ -1,4 +1,5 @@
 import { Link } from "@nextui-org/link";
+import { Spacer } from "@nextui-org/spacer";
 import { button as buttonStyles } from "@nextui-org/theme";
 import {
     cloneElement,
@@ -13,13 +14,9 @@ import {
     useState,
     useSyncExternalStore,
 } from "react";
+import { FaDownload } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { useCountdown } from "usehooks-ts";
-
-const Catchphrase = lazy(() => import("./catchphrase"));
-
-import { Spacer } from "@nextui-org/spacer";
-import { FaDownload } from "react-icons/fa";
 
 import { Fadein, FadeinSlide } from "@/components/animations";
 import { Banner, GoogleCalendarIcon } from "@/components/icons";
@@ -30,6 +27,8 @@ import { TimeDisplay } from "@/components/time-display";
 import { siteConfig } from "@/config/site";
 import { ThemeContext } from "@/context/theme";
 import { chooseRandom } from "@/functions/utility";
+
+const Catchphrase = lazy(() => import("./catchphrase"));
 
 function CountDown({ compact = false }: { compact?: boolean }) {
     const [count, { startCountdown, stopCountdown }] = useCountdown({
