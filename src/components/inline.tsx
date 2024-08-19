@@ -1,6 +1,6 @@
 import { ForwardedRef, forwardRef, HTMLAttributes } from "react";
 
-function Inline_(
+function Phrase_(
     { className = "", ...props }: HTMLAttributes<HTMLSpanElement> = {},
     ref: ForwardedRef<HTMLSpanElement>,
 ) {
@@ -9,13 +9,13 @@ function Inline_(
     );
 }
 
-export const Inline = forwardRef(Inline_);
+export const Phrase = forwardRef(Phrase_);
 
-function InlineDiv_(
+function PhraseDiv_(
     { className = "", ...props }: HTMLAttributes<HTMLDivElement> = {},
     ref: ForwardedRef<HTMLDivElement>,
 ) {
     return <div className={`inline-block ${className}`} {...props} ref={ref} />;
 }
 
-export const InlineDiv = forwardRef(InlineDiv_);
+export const PhraseDiv = forwardRef(PhraseDiv_);

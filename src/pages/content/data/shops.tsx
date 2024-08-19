@@ -1,9 +1,12 @@
+import { Phrase } from "@/components/inline";
+import Sp from "@/components/sp";
+
 export default [
     {
         id: 23,
         name: "射華",
         organization: "1-1",
-        location: ["3階3-8教室"],
+        locations: ["3階3-8教室"],
         description: (
             <p>
                 こんにちは。 1年1組です。
@@ -17,7 +20,7 @@ export default [
         id: 19,
         name: "HIROKI",
         organization: "1-2",
-        location: ["3階3-3教室"],
+        locations: ["3階3-3教室"],
         description: (
             <p>
                 ドーナツ, パンケーキ, プリン...
@@ -30,12 +33,11 @@ export default [
         id: 20,
         name: "びっくりゾンビー！",
         organization: "1-3",
-        location: ["3階3-4教室"],
+        locations: ["3階3-4教室"],
         description: (
             <p>
                 いつも通りの⽇常に飽き飽きしている刺激が欲しいそこのあなた！
-                ゾンビ達が集めてきた美味しい⾷べ物が置いてある「びっくりゾンビー！
-                」で⾮⽇常を味わってみませんか？
+                ゾンビ達が集めてきた美味しい⾷べ物が置いてある「びっくりゾンビー！」で⾮⽇常を味わってみませんか？
             </p>
         ),
     },
@@ -43,7 +45,7 @@ export default [
         id: 31,
         name: "コートジボワーラナイ",
         organization: "1-4",
-        location: ["3階コモンホール"],
+        locations: ["3階コモンホール"],
         description: (
             <p>
                 ⼆⾼に来た記念写真を是⾮コートジボワーラナイで!!
@@ -56,7 +58,7 @@ export default [
         id: 2,
         name: "武井屋",
         organization: "1-5",
-        location: ["1階1-2教室"],
+        locations: ["1階1-2教室"],
         description: (
             <p>
                 1年2組教室にて、つり、くじ、ゲームなどで楽しめる縁⽇を開催しています！
@@ -68,7 +70,7 @@ export default [
         id: 3,
         name: "ハセガワオオシ",
         organization: "1-6",
-        location: ["1階1-2教室"],
+        locations: ["1階1-2教室"],
         description: (
             <p>
                 1-6のクラスでは、⽇々頑張っている皆さんの困り事や症状に合わせた医薬品…ではなく、駄菓⼦を処⽅しています！
@@ -80,7 +82,7 @@ export default [
         id: 22,
         name: "Big Inside café",
         organization: "1-7",
-        location: ["階3-7教室"],
+        locations: ["3階3-7教室"],
         description: (
             <p>
                 派⼿でお洒落なアメリカの雰囲気を楽しめるカフェです！
@@ -93,7 +95,7 @@ export default [
         id: 9,
         name: "茶処壹岐休め (息休)",
         organization: "1-8",
-        location: ["3階3-8教室"],
+        locations: ["3階3-8教室"],
         description: (
             <p>
                 団⼦、どら焼き、⾦平糖…だけじゃない！ ？
@@ -105,13 +107,14 @@ export default [
         id: 6,
         name: "IQ80",
         organization: "2-1",
-        location: ["1階1-6教室"],
+        locations: ["1階1-6教室"],
         description: (
             <p>
                 1980年、S市。
                 惨殺された国語教師の謎と噂、歪んだ愛が交錯する_開かずの教室1-6にて。
                 私ﾀﾞけの､￤繧ﾘ繧⼀繝oc?逕
-                ※ホラー‧グロが苦⼿な⽅やお⼦様はご遠慮下さい
+                <br />
+                <small>※ホラー‧グロが苦⼿な⽅やお⼦様はご遠慮下さい</small>
             </p>
         ),
     },
@@ -119,7 +122,7 @@ export default [
         id: 11,
         name: "Starry Night 22",
         organization: "2-2",
-        location: ["2階2-2教室"],
+        locations: ["2階2-2教室"],
         description: (
             <p>
                 当店はエナジードリンクとソフトドリンクのプレミアムなセレクションを誇る専⾨店。
@@ -131,7 +134,7 @@ export default [
         id: 28,
         name: "Golden Forest",
         organization: "2-3",
-        location: ["2階社会科教室"],
+        locations: ["2階社会科教室"],
         description: (
             <p>
                 スナックや飲み物をはじめとして、カラオケ、占い、ダーツなど様々なオプションを⽤意しています！
@@ -151,7 +154,7 @@ export default [
             </>
         ),
         organization: "2-4",
-        location: ["3階3-6教室"],
+        locations: ["3階3-6教室"],
         description: (
             <p>
                 古きよき時代に作られたカフェ「クエスチョン」、そこには⼤量の宝箱がある。
@@ -164,7 +167,7 @@ export default [
         id: 16,
         name: "ホーンテッドアパート",
         organization: "2-5",
-        location: ["2階2-8教室"],
+        locations: ["2階2-8教室"],
         description: (
             <p>
                 怪事件が相次いで⽌まないあるアパートの375号室。
@@ -178,7 +181,7 @@ export default [
         id: 4,
         name: "こりん星のユウコリン",
         organization: "2-6",
-        location: ["1階1-3教室"],
+        locations: ["1階1-3教室"],
         description: (
             <p>
                 おかえりなさいませ、ご主⼈様、お嬢様♡コリン星から来たメイドたちがみなさまに愛をこめてお給仕します♡⼀緒にちぇきも撮っちゃお♡せーの！
@@ -190,7 +193,7 @@ export default [
         id: 15,
         name: "UNIVERSAL STUDIOSNIKO",
         organization: "2-7",
-        location: ["2階2-7教室"],
+        locations: ["2階2-7教室"],
         description: (
             <p>
                 NO LIMIT！ 〜ぶっとべ！
@@ -203,7 +206,7 @@ export default [
         id: 14,
         name: "ゴスロリ喫茶ミスティックムーン",
         organization: "2-8",
-        location: ["2階2-6教室"],
+        locations: ["2階2-6教室"],
         description: (
             <p>
                 真夜中のティーパーティーにみなさんをご招待！
@@ -216,7 +219,7 @@ export default [
         id: 36,
         name: "ゆゆしきたこやき",
         organization: "3-1",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 3-1といふ所あり。
@@ -231,7 +234,7 @@ export default [
         id: 32,
         name: "いきなりクレープ",
         organization: "3-2",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 2024年8⽉31⽇、9⽉1⽇、仙台⼆⾼に1号店をオープン。
@@ -244,7 +247,7 @@ export default [
         id: 39,
         name: "たぐちこおり",
         organization: "3-3",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 アイスを愛す⽥⼝佳織先⽣。 そんな先⽣にちなんだ店名。
@@ -257,7 +260,7 @@ export default [
         id: 38,
         name: "⻄清UFOUR",
         organization: "3-4",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 お祭りで⾷べる焼きそば、とても美味しいですよね。
@@ -270,7 +273,7 @@ export default [
         id: 34,
         name: "焼き⿃かさい",
         organization: "3-5",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 ねぇねぇ、今年も⼆⾼の⽂化祭⾏くよな？ 楽しみだよな!! え？
@@ -283,7 +286,7 @@ export default [
         id: 33,
         name: "唐揚げの原",
         organization: "3-6",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 唐揚げの原へようこそ！
@@ -296,7 +299,7 @@ export default [
         id: 35,
         name: "転⽣したらケバブだった件",
         organization: "3-7",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 3-7ではトルコ名物のケバブ(⾵)サンドをご提供します。
@@ -309,7 +312,7 @@ export default [
         id: 37,
         name: "のんちゃんの⽔素結合かき氷",
         organization: "3-8",
-        location: ["外テント内"],
+        locations: ["外テント内"],
         description: (
             <p>
                 最近暑いですねぇ。 ところでみなさん、”氷”⾜りてますか？
@@ -322,7 +325,7 @@ export default [
         id: 29,
         name: "NIKO and ...",
         organization: "⽣徒会総務",
-        location: ["2階コモンホール"],
+        locations: ["2階コモンホール"],
         description: (
             <p>
                 ⼆⾼の受験頑張りたいな。 ⼆⾼⽣ってもっとアピールしたいな。
@@ -335,7 +338,7 @@ export default [
         id: 13,
         name: "BOOK & Cafe S2Q",
         organization: "クイズ研究愛好会",
-        location: ["2階2-4教室"],
+        locations: ["2階2-4教室"],
         description: (
             <p>
                 問題。
@@ -347,7 +350,7 @@ export default [
         id: 40,
         name: "合気道演武会",
         organization: "合気道部",
-        location: ["1階柔道場"],
+        locations: ["1階柔道場"],
         description: (
             <p>
                 仙台⼆⾼合気道部へようこそ。
@@ -360,7 +363,7 @@ export default [
         id: 5,
         name: "應援團幹部",
         organization: "應援團",
-        location: ["1階1-4教室"],
+        locations: ["1階1-4教室"],
         description: (
             <p>
                 オリジナルグッズの販売、学ラン試着体験、應援歌披露などを⾏います。
@@ -371,7 +374,7 @@ export default [
         id: 8,
         name: "Donation Station",
         organization: "ボランティア愛好会",
-        location: ["1階1-8教室"],
+        locations: ["1階1-8教室"],
         description: (
             <p>
                 ペットボトルキャップを利⽤したミニゲーム、豪華な景品を⽤意しています。
@@ -384,7 +387,7 @@ export default [
         id: 0,
         name: "仙台⼆⾼同窓会",
         organization: "同窓会",
-        location: ["1階1-1教室"],
+        locations: ["1階1-1教室"],
         description: (
             <p>
                 仙台⼆⾼同窓⽣の作品(絵画、写真など)の展⽰を⾏います。
@@ -396,7 +399,7 @@ export default [
         id: 12,
         name: "休憩所",
         organization: "将棋部",
-        location: ["2階2-3教室"],
+        locations: ["2階2-3教室"],
         description: (
             <p>
                 休憩できます。
@@ -409,7 +412,7 @@ export default [
         id: 30,
         name: "⾳楽喫茶HATTARI",
         organization: "吹奏楽部",
-        location: ["3階⾳楽室", "⾃習室"],
+        locations: ["3階⾳楽室", "3階自習室"],
         description: (
             <p>
                 吹奏楽部による⼼地のよいアンサンブルに包まれながら、軽⾷＆ドリンクを楽しみませんか？
@@ -421,7 +424,7 @@ export default [
         id: 10,
         name: "ヨドミバシカメラ",
         organization: "写真部",
-        location: ["2階2-1教室"],
+        locations: ["2階2-1教室"],
         description: (
             <p>
                 広いな⼤きいな楽しいな〜♪フォトスポットの提供、写真の販売をします！
@@ -433,7 +436,7 @@ export default [
         id: 24,
         name: "雑貨屋秋桜",
         organization: "美術部",
-        location: ["1階美術室"],
+        locations: ["1階美術室"],
         description: (
             <p>
                 美術部は、部員が作った雑貨の販売や絵画の展⽰などを⾏います。
@@ -445,7 +448,7 @@ export default [
         id: 1,
         name: "声量飲料⽔",
         organization: "放送部",
-        location: ["1階1-1教室"],
+        locations: ["1階1-1教室"],
         description: (
             <p>
                 豊富な種類の飲料を全て100円で売っています！
@@ -457,7 +460,7 @@ export default [
         id: 26,
         name: "ブツリブスイッチ",
         organization: "物理部",
-        location: ["1階コモンホール"],
+        locations: ["1階コモンホール"],
         description: (
             <p>
                 某教育番組をオマージュした装置を展⽰‧実演します。
@@ -469,7 +472,7 @@ export default [
         id: 18,
         name: "⽇本棋院仙台⼆⾼⽀部",
         organization: "囲碁部",
-        location: ["3階3-2教室"],
+        locations: ["3階3-2教室"],
         description: (
             <p>
                 囲碁部では、囲碁体験型イベントを⾏います。
@@ -482,7 +485,7 @@ export default [
         id: 41,
         name: "Rockin’ HOKURYO",
         organization: "軽⾳楽部",
-        location: ["北陵館"],
+        locations: ["北陵館"],
         description: (
             <p>
                 20以上の個性的なバンドが常にライブしています！
@@ -495,7 +498,7 @@ export default [
         id: 27,
         name: "なまものぶ",
         organization: "⽣物部",
-        location: ["理科棟⽣物実験室"],
+        locations: ["理科棟⽣物実験室"],
         description: (
             <p>
                 楽しいテラリウム製作体験や、部員が趣味で飼育している外国の珍しい⽣物の展⽰など、⾯⽩い企画をたくさんやってます！
@@ -507,7 +510,7 @@ export default [
         id: 17,
         name: "⼆⾼星座館",
         organization: "地学部",
-        location: ["ドーム、3階3-1教室"],
+        locations: ["ドーム", "3階3-1教室"],
         description: (
             <p>
                 毎年恒例のプラネタリウムの出店です。
@@ -518,9 +521,15 @@ export default [
     },
     {
         id: 7,
-        name: "CaGaCuBOXeS -かがくのはこづめ-",
+        name: (
+            <p>
+                <Phrase>CaGaCuBOXeS</Phrase>
+                <Sp />
+                <Phrase>-かがくのはこづめ-</Phrase>
+            </p>
+        ),
         organization: "化学部",
-        location: ["1階1-7教室"],
+        locations: ["1階1-7教室"],
         description: (
             <p>
                 今年は「そうか、そうか、つまり化学部はそんな良い部なんだな」と思えるような、誰でもおっけーな派⼿でおもしろい実験(きっと安全)をします。
@@ -532,7 +541,7 @@ export default [
         id: 25,
         name: "⼗代⽬たい焼き幸房",
         organization: "書道部",
-        location: ["1階書道室"],
+        locations: ["1階書道室"],
         description: (
             <p>
                 1階書道教室で冷やしたい焼きと扇⼦を販売します。

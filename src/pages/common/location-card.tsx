@@ -12,7 +12,7 @@ import {
     FaSignsPost,
     IoSchool,
 } from "@/components/icons";
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import { siteConfig } from "@/config/site";
 
 export function LocationCard({
@@ -147,9 +147,9 @@ export function LocationCard({
                                         <p className="text-wrap pl-1 pr-2 text-left md:text-nowrap">
                                             {siteConfig.event.location.address.map(
                                                 (address, index) => (
-                                                    <Inline key={index}>
+                                                    <Phrase key={index}>
                                                         {address}
-                                                    </Inline>
+                                                    </Phrase>
                                                 ),
                                             )}
                                         </p>
@@ -170,9 +170,9 @@ export function LocationCard({
                                     className="text-primary"
                                     href={`tel:${siteConfig.event.location.tel.replaceAll("-", "")}`}
                                 >
-                                    <Inline>
+                                    <Phrase>
                                         {siteConfig.event.location.tel}
-                                    </Inline>
+                                    </Phrase>
                                 </Link>
                             </FadeinSlide>
                         </p>

@@ -1,7 +1,7 @@
 import { RefObject, useContext } from "react";
 import { useResizeObserver } from "usehooks-ts";
 
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import { PagePreferenceContext } from "@/context/page-preference";
 
 function Content() {
@@ -12,22 +12,22 @@ function Content() {
         >
             <div>
                 <span className="grid [grid-template-columns:auto_auto] [grid-template-rows:auto_auto_auto]">
-                    <Inline className="row-span-2 text-4xl">
+                    <Phrase className="row-span-2 text-4xl">
                         わく
-                        <Inline className="-mb-1 align-text-top">&#45;</Inline>
+                        <Phrase className="-mb-1 align-text-top">&#45;</Phrase>
                         わく
-                    </Inline>
-                    <Inline className="-mt-2 text-medium">
+                    </Phrase>
+                    <Phrase className="-mt-2 text-medium">
                         【沸湧】
-                        <Inline className="align-sub text-[60%] [line-height:100%]">
+                        <Phrase className="align-sub text-[60%] [line-height:100%]">
                             フツ
                             <br />
                             ヨウ
-                        </Inline>
-                    </Inline>
-                    <Inline className="-ml-1 -mr-2 -mt-1.5 text-medium">
+                        </Phrase>
+                    </Phrase>
+                    <Phrase className="-ml-1 -mr-2 -mt-1.5 text-medium">
                         《名・副<small className="align-middle">ト</small>》
-                    </Inline>
+                    </Phrase>
                 </span>
                 <p className="pt-3">
                     二高生から湧き出す無限の力で、北陵祭に参加する全員の秘めたる好奇心が大いに沸くこと。また、そのさま。

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import { FadeinSlide } from "./animations";
 import Hashlink from "./hashlink";
-import { InlineDiv } from "./inline";
+import { PhraseDiv } from "./inline";
 
 export default function SectionHeader({
     children,
@@ -15,7 +15,7 @@ export default function SectionHeader({
         <div className="mb-3">
             <Hashlink plane className="header" to={hashlink}>
                 <FadeinSlide distance={20} duration={0.8}>
-                    <InlineDiv
+                    <PhraseDiv
                         className="text-default-700"
                         style={{
                             fontSize: "2.5rem",
@@ -23,7 +23,7 @@ export default function SectionHeader({
                         }}
                     >
                         {children}
-                    </InlineDiv>
+                    </PhraseDiv>
                 </FadeinSlide>
             </Hashlink>
         </div>

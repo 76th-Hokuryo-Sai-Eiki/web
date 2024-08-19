@@ -8,7 +8,7 @@ import data from "./data/faq";
 
 import { FadeinSlide } from "@/components/animations";
 import { FaCircleInfo, FaRegCircleQuestion } from "@/components/icons";
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import SectionHeader from "@/components/section-header";
 import Sp from "@/components/sp";
 import { siteConfig } from "@/config/site";
@@ -20,7 +20,7 @@ function Abstract() {
         <article className="mt-5">
             <h3 className="text-3xl text-default-600">
                 一般公開
-                <Inline className="text-2xl">（出店・展示・企画)</Inline>
+                <Phrase className="text-2xl">（出店・展示・企画)</Phrase>
             </h3>
             <ul
                 className="ml-4 mt-3 text-[1.4rem] text-default-600 sm:text-[1.7rem]"
@@ -31,31 +31,31 @@ function Abstract() {
                         <FadeinSlide key={index}>
                             <li className="flex items-center">
                                 <span className="mr-2 px-3 text-tiny">■</span>
-                                <Inline className="text-center">
+                                <Phrase className="text-center">
                                     <h4>
                                         DAY
                                         <Sp />
                                         {index + 1}
                                     </h4>
-                                </Inline>
-                                <Inline className="ml-5 text-center xs:ml-12 xs:text-left">
+                                </Phrase>
+                                <Phrase className="ml-5 text-center xs:ml-12 xs:text-left">
                                     {date.replaceAll("/", ".")}
                                     <Sp />(
-                                    <Inline
+                                    <Phrase
                                         className="[vertical-align:-0.1rem]"
                                         style={{ fontFamily: "Noto Sans JP" }}
                                     >
                                         {day}
-                                    </Inline>
+                                    </Phrase>
                                     )
-                                    <Inline className="xs:ml-8">
+                                    <Phrase className="xs:ml-8">
                                         {start}
-                                        <Inline className="mx-[3px]">
+                                        <Phrase className="mx-[3px]">
                                             &ndash;
-                                        </Inline>
+                                        </Phrase>
                                         {end}
-                                    </Inline>
-                                </Inline>
+                                    </Phrase>
+                                </Phrase>
                             </li>
                         </FadeinSlide>
                     ),
@@ -157,10 +157,10 @@ function Faq() {
                 </div>
                 <div className="flex">
                     <p className="ml-auto w-fit px-3 text-left text-[0.8rem] text-default-500">
-                        <Inline>
+                        <Phrase>
                             その他の疑問点についても、お近くの北陵祭実行委員までお気軽にお尋ねください。
-                        </Inline>
-                        <Inline>法被が目印です。</Inline>
+                        </Phrase>
+                        <Phrase>法被が目印です。</Phrase>
                     </p>
                 </div>
             </div>

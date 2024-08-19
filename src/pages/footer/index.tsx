@@ -12,7 +12,7 @@ import { Logos } from "./logos";
 
 import Hashlink from "@/components/hashlink";
 import { BiSolidToTop } from "@/components/icons";
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import { LoadingScreenContext } from "@/context/loading-screen";
 
 const License = memo(function _License() {
@@ -55,9 +55,9 @@ function BuildId() {
                             navigator.clipboard.writeText(__BUILT_AT__);
                         }}
                     >
-                        <Inline className="px-[1px]">
+                        <Phrase className="px-[1px]">
                             {__BUILT_AT__.match(/.{3}/g)?.join(".")}
-                        </Inline>
+                        </Phrase>
                     </Button>
                 </Tooltip>
             </p>

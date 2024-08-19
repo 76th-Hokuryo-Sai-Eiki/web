@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-import { InlineDiv } from "./inline";
+import { PhraseDiv } from "./inline";
 
 export function ParallaxY({
     className = "",
@@ -16,7 +16,7 @@ export function ParallaxY({
     responsive?: string;
 }) {
     return (
-        <InlineDiv
+        <PhraseDiv
             className={`parallax ${className}`}
             style={{
                 ...((from ?? -depth)

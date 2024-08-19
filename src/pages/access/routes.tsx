@@ -27,7 +27,7 @@ import {
     MdPedalBike,
     SiGooglemaps,
 } from "@/components/icons";
-import { Inline } from "@/components/inline.tsx";
+import { Phrase } from "@/components/inline.tsx";
 
 function builder(item: any, key: any, handler: any) {
     const cellValue = item[key];
@@ -286,15 +286,15 @@ function Bike() {
                 <div className="w-fit">
                     <p className="text-[15px] text-default-600">
                         <FadeinSlide distance={10}>
-                            <Inline>
+                            <Phrase>
                                 来場者の方専用の駐輪場がございます。
-                            </Inline>
+                            </Phrase>
                         </FadeinSlide>
                         <span className="inline xl:hidden 2xl:inline">
                             <br />
                         </span>
                         <FadeinSlide distance={10}>
-                            <Inline>係の指示に従ってご利用ください。</Inline>
+                            <Phrase>係の指示に従ってご利用ください。</Phrase>
                         </FadeinSlide>
                     </p>
                 </div>

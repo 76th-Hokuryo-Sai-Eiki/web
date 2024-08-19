@@ -5,7 +5,7 @@ import fonts from "./data/fonts";
 import icons from "./data/icons";
 import { licenseRef } from "./ref";
 
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import Sp from "@/components/sp";
 
 function Fonts() {
@@ -42,7 +42,7 @@ function Fonts() {
             <p className="ml-3 text-tiny text-default-500">
                 All of these fonts are licensed under the
                 <Sp />
-                <Inline>
+                <Phrase>
                     <Link
                         isExternal
                         className="text-tiny text-success"
@@ -51,7 +51,7 @@ function Fonts() {
                         Open Font License
                     </Link>
                     .
-                </Inline>
+                </Phrase>
             </p>
         </div>
     );
@@ -70,7 +70,7 @@ export function Icons() {
                             index,
                         ) => (
                             <li key={index}>
-                                <Inline>
+                                <Phrase>
                                     &quot;
                                     <Link
                                         isExternal
@@ -80,7 +80,7 @@ export function Icons() {
                                         {name}
                                     </Link>
                                     &quot;
-                                </Inline>
+                                </Phrase>
                                 <Sp />
                                 {author && (
                                     <>
@@ -99,7 +99,7 @@ export function Icons() {
                                 )}
                                 /
                                 <Sp />
-                                <Inline>
+                                <Phrase>
                                     <Link
                                         isExternal
                                         className="inline text-tiny text-success"
@@ -108,7 +108,7 @@ export function Icons() {
                                         {license}
                                     </Link>
                                     .
-                                </Inline>
+                                </Phrase>
                             </li>
                         ),
                     )}
@@ -129,7 +129,7 @@ function Others() {
                         Part of the components in this project are extracted
                         from
                         <Sp />
-                        <Inline>
+                        <Phrase>
                             <Link
                                 isExternal
                                 className="text-tiny text-primary"
@@ -138,9 +138,9 @@ function Others() {
                                 nextui-org
                             </Link>
                             &apos;s
-                        </Inline>
+                        </Phrase>
                         <Sp />
-                        <Inline>
+                        <Phrase>
                             &quot;
                             <Link
                                 isExternal
@@ -150,11 +150,11 @@ function Others() {
                                 vite-template
                             </Link>
                             &quot;,
-                        </Inline>
+                        </Phrase>
                         <Sp />
                         which is subject to the
                         <Sp />
-                        <Inline>
+                        <Phrase>
                             <Link
                                 isExternal
                                 className="text-tiny text-success"
@@ -163,14 +163,14 @@ function Others() {
                                 MIT License
                             </Link>
                             .
-                        </Inline>
+                        </Phrase>
                     </li>
 
                     <li>
                         Part of the components in this project are extracted
                         from
                         <Sp />
-                        <Inline>
+                        <Phrase>
                             <Link
                                 isExternal
                                 className="text-tiny text-primary"
@@ -179,10 +179,10 @@ function Others() {
                                 Amr Labib
                             </Link>
                             &apos;s
-                        </Inline>
+                        </Phrase>
                         <Sp />
                         &quot;
-                        <Inline>
+                        <Phrase>
                             <Link
                                 isExternal
                                 className="text-tiny text-primary"
@@ -191,11 +191,11 @@ function Others() {
                                 react-timer-hook
                             </Link>
                             &quot;,
-                        </Inline>
+                        </Phrase>
                         <Sp />
                         which is subject to the
                         <Sp />
-                        <Inline>
+                        <Phrase>
                             <Link
                                 isExternal
                                 className="text-tiny text-success"
@@ -204,7 +204,7 @@ function Others() {
                                 MIT License
                             </Link>
                             .
-                        </Inline>
+                        </Phrase>
                     </li>
                 </ul>
             </div>

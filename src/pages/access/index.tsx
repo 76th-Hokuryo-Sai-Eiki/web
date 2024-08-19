@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Routes } from "./routes";
 
 import { Fadein, FadeinSlide } from "@/components/animations";
-import { Inline } from "@/components/inline";
+import { Phrase } from "@/components/inline";
 import SectionHeader from "@/components/section-header";
 import { scrollIntoViewIfNeeded } from "@/functions/scroll";
 import { LocationCard } from "@/pages/common/location-card";
@@ -41,15 +41,15 @@ export default function AccessSection() {
                     }}
                 >
                     <FadeinSlide>
-                        <Inline>ご来場の際は</Inline>
+                        <Phrase>ご来場の際は</Phrase>
                     </FadeinSlide>
 
                     <FadeinSlide>
-                        <Inline>スリッパ等を</Inline>
+                        <Phrase>スリッパ等を</Phrase>
                     </FadeinSlide>
 
                     <FadeinSlide>
-                        <Inline>ご持参ください</Inline>
+                        <Phrase>ご持参ください</Phrase>
                     </FadeinSlide>
                 </p>
             </div>

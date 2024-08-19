@@ -1,5 +1,5 @@
 import { FadeinSlide } from "@/components/animations";
-import { Inline, InlineDiv } from "@/components/inline";
+import { Phrase, PhraseDiv } from "@/components/inline";
 import { subtitle } from "@/components/primitives";
 
 export default function Catchphrase() {
@@ -24,9 +24,9 @@ export default function Catchphrase() {
                         fontSize: "1.0625rem",
                     }}
                 >
-                    <Inline className="ml-1">
+                    <Phrase className="ml-1">
                         <FadeinSlide once distance={30} duration={1.4}>
-                            <InlineDiv
+                            <PhraseDiv
                                 style={{
                                     color: "royalblue",
                                     fontSize: "1.8125rem",
@@ -34,7 +34,7 @@ export default function Catchphrase() {
                                 }}
                             >
                                 湧
-                            </InlineDiv>
+                            </PhraseDiv>
                         </FadeinSlide>
                         き
                         <span
@@ -61,10 +61,10 @@ export default function Catchphrase() {
                             力
                         </span>
                         で
-                    </Inline>
+                    </Phrase>
 
-                    <Inline className="mr-1">
-                        <Inline className="ml-1">
+                    <Phrase className="mr-1">
+                        <Phrase className="ml-1">
                             <span
                                 style={{
                                     fontSize: "1.5rem",
@@ -103,10 +103,10 @@ export default function Catchphrase() {
                                 心
                             </span>
                             を
-                        </Inline>
-                        <Inline>
+                        </Phrase>
+                        <Phrase>
                             <FadeinSlide once distance={30} duration={1}>
-                                <InlineDiv
+                                <PhraseDiv
                                     style={{
                                         color: "violet",
                                         fontSize: "1.8125rem",
@@ -114,7 +114,7 @@ export default function Catchphrase() {
                                     }}
                                 >
                                     沸
-                                </InlineDiv>
+                                </PhraseDiv>
                             </FadeinSlide>
                             き
                             <span
@@ -142,8 +142,8 @@ export default function Catchphrase() {
                             >
                                 !
                             </span>
-                        </Inline>
-                    </Inline>
+                        </Phrase>
+                    </Phrase>
                 </div>
             </FadeinSlide>
         </div>
