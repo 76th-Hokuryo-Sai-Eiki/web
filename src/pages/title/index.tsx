@@ -219,7 +219,10 @@ export default function Title() {
                             >
                                 <FaDownload size={20} />
                                 <p className="text-large">
-                                    パンフレットをダウンロード
+                                    パンフレット
+                                    <span className="hidden xs:inline-block">
+                                        をダウンロード
+                                    </span>
                                     <Sp />
                                     <small className="ml-1 align-bottom">
                                         [50 MiB]

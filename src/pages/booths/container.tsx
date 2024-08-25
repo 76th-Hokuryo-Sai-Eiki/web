@@ -296,7 +296,7 @@ export default function ShopListContainer() {
                     </div>
 
                     <p className="absolute bottom-2 right-0 w-full text-right text-medium text-default-600">
-                        出店場所の詳細につきましてはパンフレットをご参照ください。
+                        出店場所の詳細はパンフレットにて
                     </p>
                 </div>
             </div>

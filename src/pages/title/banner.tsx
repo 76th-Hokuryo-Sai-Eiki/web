@@ -34,7 +34,7 @@ export function Banner({ className }: { className?: string }) {
                 <div
                     key={id}
                     style={{
-                        clipPath: "inset(50px 0px 10px 0px)",
+                        clipPath: "inset(30% 0px 10px 0px)",
                     }}
                 >
                     <Image
@@ -63,7 +63,7 @@ export function Banner({ className }: { className?: string }) {
 
     return (
         <div className="flex justify-center">
-            <div className="max-w-md sm:px-4">
+            <div className="mt-10 max-w-md sm:px-4 xl:mt-0">
                 <ParallaxY from={200} to={-70}>
                     <div className="flex flex-col items-center">
                         <Image
@@ -86,7 +86,7 @@ export function Banner({ className }: { className?: string }) {
                             onMouseLeave={() => window.clearInterval(timerId)}
                         />
 
-                        <div className="relative -mb-[40px] -mt-[100px] h-[170px] w-[416px]">
+                        <div className="relative -mt-[60px] w-full xs:-mt-[100px] xs:h-[170px] xs:w-[416px] md:-mb-[40px] xl:-mb-[40px] 2xl:-mb-[60px]">
                             {ruby.map((item, index) => (
                                 <div
                                     key={index}
