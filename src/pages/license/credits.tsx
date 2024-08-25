@@ -213,7 +213,7 @@ function Others() {
 }
 export function Credits() {
     return (
-        <>
+        <div className="simple-scrollbar overflow-y-auto">
             <Fonts />
 
             <Spacer y={4} />
@@ -221,6 +221,6 @@ export function Credits() {
             <Icons />
 
             <Others />
-        </>
+        </div>
     );
 }

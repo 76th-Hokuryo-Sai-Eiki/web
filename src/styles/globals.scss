@@ -154,6 +154,17 @@ body {
     --hook: 6px;
 }
 
+.transition-rotate-in {
+    animation:
+        fade-in 800ms ease-out both,
+        transform-x-in 800ms ease-out both;
+}
+.transition-rotate-out {
+    animation:
+        fade-out 800ms ease-out both,
+        transform-x-out 800ms ease-out both;
+}
+
 .fade-in {
     animation: fade-in var(--duration) var(--easing) backwards;
 }
@@ -192,5 +203,26 @@ body {
     }
     to {
         transform: translateY(0);
+    }
+}
+
+@keyframes transform-x-in {
+    from {
+        transform-origin: 0 50% 30px;
+        transform: rotateX(-90deg);
+    }
+    to {
+        transform-origin: 0 50% 30px;
+        transform: rotateX(0);
+    }
+}
+@keyframes transform-x-out {
+    from {
+        transform-origin: 0 50% 40px;
+        transform: rotateX(0);
+    }
+    to {
+        transform-origin: 0 50% 40px;
+        transform: rotateX(90deg);
     }
 }

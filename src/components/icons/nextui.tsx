@@ -8,6 +8,7 @@ export default function NextUILogo({
 }: IconSvgProps) {
     return (
         <svg
+            aria-hidden
             fill="none"
             height={height ?? size ?? 40}
             viewBox="0 0 161 32"

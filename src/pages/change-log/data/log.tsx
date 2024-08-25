@@ -5,4 +5,5 @@ export default [
     { date: "2024.07.16", description: "Main content designed" },
     { date: "2024.07.20", description: "Merge concept art" },
     { date: "2024.07.26", description: "0th edition compiled" },
+    { date: "2024.08.26", description: "1st edition compiled" },
 ];

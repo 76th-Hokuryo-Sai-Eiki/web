@@ -8,6 +8,7 @@ export default function GoogleCalendarIcon({
 }: IconSvgProps) {
     return (
         <svg
+            aria-hidden
             height={height ?? size}
             viewBox="0 0 200 200"
             width={width ?? size}

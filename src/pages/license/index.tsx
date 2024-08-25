@@ -8,7 +8,7 @@ import {
     ModalFooter,
     ModalHeader,
 } from "@nextui-org/modal";
-import { CircularProgress } from "@nextui-org/progress";
+import { Spinner } from "@nextui-org/spinner";
 import { Selection } from "@nextui-org/table";
 import {
     memo,
@@ -24,7 +24,6 @@ import { Credits } from "./credits";
 import _licenses from "./fetch-list";
 import { licenseRef } from "./ref";
 
-import cache from "@/classes/cache";
 import { Fadein } from "@/components/animations";
 import { FaEye } from "@/components/icons";
 
@@ -153,19 +152,10 @@ export function LicenseList({
         }
 
         const url = `./licenses/${hash}.txt`;
-        const cached = cache.get(url);
-
-        if (cached) {
-            setContent(cached as string);
-
-            return;
-        }
 
         fetch(url, { cache: "force-cache" })
             .then(async (res) => {
                 const data = await res.text();
-
-                cache.set(url, data);
 
                 return data;
             })
@@ -202,7 +192,7 @@ export function LicenseList({
                             <div className="simple-scrollbar h-full w-full overflow-scroll lg:w-full">
                                 <Suspense
                                     fallback={
-                                        <CircularProgress
+                                        <Spinner
                                             aria-label="Loading..."
                                             className="ml-8 mt-4"
                                         />

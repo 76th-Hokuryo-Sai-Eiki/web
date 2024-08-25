@@ -8,7 +8,7 @@ export default function ViteLogo({
 }: IconSvgProps) {
     return (
         <svg
-            aria-hidden="true"
+            aria-hidden
             className="iconify iconify--logos"
             height={height ?? size}
             preserveAspectRatio="xMidYMid meet"

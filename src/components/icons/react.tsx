@@ -8,6 +8,7 @@ export default function ReactLogo({
 }: IconSvgProps) {
     return (
         <svg
+            aria-hidden
             height={height ?? size}
             version="1.1"
             viewBox="0 0 569 512"

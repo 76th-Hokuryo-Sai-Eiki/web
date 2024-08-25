@@ -2,8 +2,9 @@ import { Spacer } from "@nextui-org/spacer";
 import { memo, Suspense, useRef } from "react";
 
 import AccessSection from "./access";
+import BoothsSection from "./booths";
 import Theme from "./common/theme";
-import ContentsSection from "./content";
+import GoodsSection from "./goods";
 import InfoSection from "./info";
 import MessagesSection from "./message";
 import NewsSection from "./news";
@@ -50,8 +51,14 @@ export default memo(function IndexPage() {
 
             <Spacer y={20} />
 
-            <section id="#contents">
-                <ContentsSection />
+            <section id="#booths">
+                <BoothsSection />
+            </section>
+
+            <Spacer y={20} />
+
+            <section id="#goods">
+                <GoodsSection />
             </section>
 
             <Spacer y={20} />

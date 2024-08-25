@@ -1,0 +1,11 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ruuri-draggable-grid {
+    .ruuri-draggable-item {
+        cursor: auto !important;
+        user-select: auto !important;
+    }
+}
+
+.search-results {
+    background-color: red;
+}

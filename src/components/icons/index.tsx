@@ -7,7 +7,6 @@ import lazyImport from "@/functions/lazy-import";
 
 export type { IconSvgProps } from "./internal/props";
 
-export { default as Banner } from "./banner";
 export { default as Logo } from "./logo";
 
 const MODULES = {
@@ -27,14 +26,17 @@ const MODULES = {
             "BsFillTelephoneFill",
 
             "FaCarAlt",
+            "FaDownload",
             "FaEye",
             "FaMoon",
             "FaRoute",
+            "FaSearch",
             "FaWalking",
 
             "FaBusSimple",
-            "FaLocationDot",
             "FaCircleInfo",
+            "FaFilter",
+            "FaLocationDot",
             "FaRegCircleQuestion",
             "FaSignsPost",
             "FaTrainSubway",
@@ -68,14 +70,17 @@ export const {
     BsFillTelephoneFill,
 
     FaCarAlt,
+    FaDownload,
     FaEye,
     FaMoon,
     FaRoute,
+    FaSearch,
     FaWalking,
 
     FaBusSimple,
-    FaLocationDot,
     FaCircleInfo,
+    FaFilter,
+    FaLocationDot,
     FaRegCircleQuestion,
     FaSignsPost,
     FaTrainSubway,

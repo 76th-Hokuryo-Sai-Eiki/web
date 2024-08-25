@@ -33,16 +33,16 @@ export default [
     },
     {
         date: "2024.08",
-        title: "出店・展示・企画 についての情報を掲載しました",
+        title: "出店・展示 についての情報を掲載しました",
         description: (
             <p className="text-large">
                 詳しくは
                 <Hashlink
                     className="hashlink mx-1"
                     style={{ fontFamily: "Kode Mono" }}
-                    to="#contents"
+                    to="#booths"
                 >
-                    Contents
+                    Booths
                 </Hashlink>
                 をご覧ください。
             </p>

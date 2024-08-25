@@ -14,12 +14,13 @@ import {
     useState,
     useSyncExternalStore,
 } from "react";
-import { FaDownload } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { useCountdown } from "usehooks-ts";
 
+import { Banner } from "./banner";
+
 import { Fadein, FadeinSlide } from "@/components/animations";
-import { Banner, GoogleCalendarIcon } from "@/components/icons";
+import { FaDownload, GoogleCalendarIcon } from "@/components/icons";
 import { ParallaxY } from "@/components/parallax";
 import { subtitle, title } from "@/components/primitives";
 import Sp from "@/components/sp";
@@ -248,6 +249,7 @@ export default function Title() {
                             {siteConfig.event.schedule[1].date}
                         </p>
                     </FadeinSlide>
+
                     <ParallaxY className="md:[--scroll-y-from:20px] md:[--scroll-y-to:-50px]">
                         <Link
                             isExternal

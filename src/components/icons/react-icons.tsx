@@ -1,10 +1,19 @@
 export { AiOutlineCopyright } from "react-icons/ai";
 export { BiSolidToTop } from "react-icons/bi";
 export { BsFillSunFill, BsFillTelephoneFill } from "react-icons/bs";
-export { FaCarAlt, FaEye, FaMoon, FaRoute, FaWalking } from "react-icons/fa";
+export {
+    FaCarAlt,
+    FaDownload,
+    FaEye,
+    FaMoon,
+    FaRoute,
+    FaSearch,
+    FaWalking,
+} from "react-icons/fa";
 export {
     FaBusSimple,
     FaCircleInfo,
+    FaFilter,
     FaLocationDot,
     FaRegCircleQuestion,
     FaSignsPost,

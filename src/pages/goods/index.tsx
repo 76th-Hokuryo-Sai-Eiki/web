@@ -1,0 +1,41 @@
+import { Image } from "@nextui-org/image";
+
+import SectionHeader from "@/components/section-header";
+import { getImageUrl } from "@/functions/utility";
+
+export default function GoodsSection() {
+    return (
+        <div className="m-2">
+            <SectionHeader hashlink="#booths">
+                <h2>Goods</h2>
+            </SectionHeader>
+
+            <div className="grid max-w-[50rem] grid-cols-2 gap-4 [grid-template-rows:fit-content_fit-content]">
+                <div className="col-start-1 row-start-1 flex-col items-center justify-center">
+                    <Image src={getImageUrl("/goods/0000.jpg")} />
+                    <p className="w-full text-center text-large">
+                        うちわ
+                        <span className="mx-2" />
+                        ¥100
+                    </p>
+                </div>
+                <div className="row-span-2 row-start-1 flex flex-col items-center justify-center">
+                    <Image src={getImageUrl("/goods/0001.jpg")} />
+                    <p className="w-full text-center text-large">
+                        クリアファイル
+                        <span className="mx-2" />
+                        ¥500
+                    </p>
+                </div>
+                <div className="col-start-1 row-start-2 flex flex-col items-center justify-center">
+                    <Image src={getImageUrl("/goods/0002.jpg")} />
+                    <p className="w-full text-center text-large">
+                        フェイスタオル
+                        <span className="mx-2" />
+                        ¥500
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+}

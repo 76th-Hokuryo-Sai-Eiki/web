@@ -186,7 +186,7 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/card/LICENSE",
         "hash": "ff465bc72c9f0a9688b3062160793be41c848e0980758c474de3459e2f5a7133"
     },
-    "@nextui-org/checkbox@2.1.2": {
+    "@nextui-org/checkbox@2.1.4": {
         "licenses": "MIT License",
         "repository": "https://github.com/nextui-org/nextui",
         "publisher": "Junior Garcia",
@@ -290,6 +290,14 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/progress/LICENSE",
         "hash": "5fc8690fd0a7951f2151f75a71d836a83d613118b8fa4b22f24cb7eac4fbf193"
     },
+    "@nextui-org/radio@2.1.4": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/nextui-org/nextui",
+        "publisher": "Junior Garcia",
+        "email": "jrgarciadev@gmail.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/radio/LICENSE",
+        "hash": "bf89910cf25105d3687dab7c3dd67466fd7764ca3b9fec19a74736101408de03"
+    },
     "@nextui-org/react-rsc-utils@2.0.13": {
         "licenses": "MIT License",
         "repository": "https://github.com/nextui-org/nextui",
@@ -362,7 +370,7 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/spacer/LICENSE",
         "hash": "9554dfb7590dbcd7aa1d13fd5790232910995ac2e0625734cfc3bd100cca6a6a"
     },
-    "@nextui-org/spinner@2.0.30": {
+    "@nextui-org/spinner@2.0.33": {
         "licenses": "MIT License",
         "repository": "https://github.com/nextui-org/nextui",
         "publisher": "Junior Garcia",
@@ -471,7 +479,7 @@
         "repository": "https://github.com/nextui-org/nextui",
         "publisher": "Junior Garcia",
         "email": "jrgarciadev@gmail.com",
-        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-disclosure/node_modules/@nextui-org/use-callback-ref/LICENSE",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@nextui-org/use-callback-ref/LICENSE",
         "hash": "cec97ad56eb760b66426bffa4434e7cf87d2918a496b4e6b735f13d14a7a8dc7"
     },
     "@nextui-org/use-clipboard@2.0.5": {
@@ -622,10 +630,10 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/grid/LICENSE",
         "hash": "c71ea208d1272e28762affe43b4f9e46c4af4958756bddf3e9f83393b7dad897"
     },
-    "@react-aria/i18n@3.12.0": {
+    "@react-aria/i18n@3.12.2": {
         "licenses": "Apache License, Version 2.0",
         "repository": "https://github.com/adobe/react-spectrum",
-        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/i18n/LICENSE",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/radio/node_modules/@react-aria/i18n/LICENSE",
         "hash": "436548425e84fb6bb401e717d1858d011e9eb61ff166c0030fe0b2c0f3f05d38"
     },
     "@react-aria/interactions@3.21.3": {
@@ -669,6 +677,12 @@
         "repository": "https://github.com/adobe/react-spectrum",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/progress/LICENSE",
         "hash": "70160f637469184cf7625f35df323888f4a5ed84087f3db88555c3d4990be7fd"
+    },
+    "@react-aria/radio@3.10.4": {
+        "licenses": "Apache License, Version 2.0",
+        "repository": "https://github.com/adobe/react-spectrum",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/radio/LICENSE",
+        "hash": "7ef62d62df8cf4d71b3a6139c822d143851d4021c7af356693cd0684325d61b5"
     },
     "@react-aria/selection@3.18.1": {
         "licenses": "Apache License, Version 2.0",
@@ -724,10 +738,10 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/tooltip/LICENSE",
         "hash": "90911ae0066c1f9145bf3bb0852f77056e733178136927e77ee2393e76baf27d"
     },
-    "@react-aria/utils@3.25.0": {
+    "@react-aria/utils@3.25.2": {
         "licenses": "Apache License, Version 2.0",
         "repository": "https://github.com/adobe/react-spectrum",
-        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-aria/utils/LICENSE",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/radio/node_modules/@react-aria/utils/LICENSE",
         "hash": "925ce44d6a064e0e9680e5063d7b1d8bb92e92e794492cd9f5fbf235ab66303e"
     },
     "@react-aria/visually-hidden@3.8.12": {
@@ -778,6 +792,12 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/overlays/LICENSE",
         "hash": "07ff6364406735f0d38c2d5c10d8bacbbfebe1e5f7e2459bae32b67c2a1032ce"
     },
+    "@react-stately/radio@3.10.4": {
+        "licenses": "Apache License, Version 2.0",
+        "repository": "https://github.com/adobe/react-spectrum",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/radio/LICENSE",
+        "hash": "65bfa600b5fcf5ce2c88c8d75b0aefc5c7288662463c22379a2da5a757aed129"
+    },
     "@react-stately/selection@3.15.1": {
         "licenses": "Apache License, Version 2.0",
         "repository": "https://github.com/adobe/react-spectrum",
@@ -820,10 +840,10 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-stately/tree/LICENSE",
         "hash": "72526c5903ca2329a78c31aee76c06307e9e63eb3a7c831f4fd3ceb8cdaa659a"
     },
-    "@react-stately/utils@3.10.2": {
+    "@react-stately/utils@3.10.3": {
         "licenses": "Apache License, Version 2.0",
         "repository": "https://github.com/adobe/react-spectrum",
-        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/slider/node_modules/@react-stately/utils/LICENSE",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-aria/radio/node_modules/@react-stately/utils/LICENSE",
         "hash": "aaed55c5646dbb9934fde379b4f6242aa4dd8adb35a8d219a2e97bdd11ebee31"
     },
     "@react-stately/virtualizer@3.7.1": {
@@ -892,6 +912,12 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/progress/LICENSE",
         "hash": "c793caede8812b6f938931dd73192d96ff2e91a34d7dcb0266ab49730fe571b8"
     },
+    "@react-types/radio@3.8.1": {
+        "licenses": "Apache License, Version 2.0",
+        "repository": "https://github.com/adobe/react-spectrum",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@react-types/radio/LICENSE",
+        "hash": "5e4cd7d9df6b09f818640e674c007d8830e18ed53bb40c35bb26abdf0bfadf5f"
+    },
     "@react-types/shared@3.24.1": {
         "licenses": "Apache License, Version 2.0",
         "repository": "https://github.com/adobe/react-spectrum",
@@ -950,6 +976,12 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@swc/helpers/LICENSE",
         "hash": "b436ae88b3a018ff62d8bd99b73947519f6ee259317ccda149330af264037577"
     },
+    "@types/js-cookie@2.2.7": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@types/js-cookie/LICENSE",
+        "hash": "ccbbca9aef4fd147833f4b40fc5ac86f80e3d5092d4fe39a6e74ddfe93d2d7e1"
+    },
     "@types/prop-types@15.7.12": {
         "licenses": "MIT License",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
@@ -991,6 +1023,15 @@
         "repository": "https://github.com/ascorbic/unpic-img",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@unpic/react/LICENSE",
         "hash": "f2e120ba9d3d16f27d6a2b40eaf761d631435c5df5f5a57cf4a63e7339f85b01"
+    },
+    "@xobotyi/scrollbar-width@1.9.5": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/xobotyi/scrollbar-width",
+        "publisher": "Anton Zinovyev",
+        "email": "xog3@yandex.ru",
+        "url": "https://github.com/xobotyi",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/@xobotyi/scrollbar-width/LICENSE",
+        "hash": "f6525f06f561b77738cd539cda784aa47831f246aa6f255920855d80a2184d39"
     },
     "ansi-regex@6.0.1": {
         "licenses": "MIT License",
@@ -1171,6 +1212,14 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/compute-scroll-into-view/LICENSE",
         "hash": "c8c98850419e97ccca81c30b55764c60d6106812e10f273a0a7855dc228b2eb7"
     },
+    "copy-to-clipboard@3.3.3": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/sudodoki/copy-to-clipboard",
+        "publisher": "sudodoki",
+        "email": "smd.deluzion@gmail.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/copy-to-clipboard/LICENSE",
+        "hash": "bf7a5a40f262e939d5386c9fd320c0ea37ba01bb22772661b71d76e54b381c5f"
+    },
     "cross-spawn@7.0.3": {
         "licenses": "MIT License",
         "repository": "https://github.com/moxystudio/node-cross-spawn",
@@ -1187,12 +1236,29 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-color-keywords/LICENSE",
         "hash": "e7536130d4f4c4a836be9dda588109df55e0d51974cf20039889c52e83a66ee7"
     },
+    "css-in-js-utils@3.1.0": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/robinweser/css-in-js-utils",
+        "publisher": "robinweser",
+        "email": "contact@weser.io",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-in-js-utils/LICENSE",
+        "hash": "fb5551e58ae15162205c0849503d296923c747103f5960e3a7d756290e163d8a"
+    },
     "css-to-react-native@3.2.0": {
         "licenses": "MIT License",
         "repository": "https://github.com/styled-components/css-to-react-native",
         "publisher": "Jacob Parker",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/css-to-react-native/LICENSE.md",
         "hash": "44c08de096806e0f42f2cb43e746de53f280e035cd8c6531948d8a3b7f9782b3"
+    },
+    "css-tree@1.1.3": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/csstree/csstree",
+        "publisher": "Roman Dvornov",
+        "email": "rdvornov@gmail.com",
+        "url": "https://github.com/lahmatiy",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nano-css/node_modules/css-tree/LICENSE",
+        "hash": "004a15f5ea91c963122311c32304fe9e8453eabccbd8fead5dda617bc8c73396"
     },
     "cssesc@3.0.0": {
         "licenses": "MIT License",
@@ -1262,6 +1328,19 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/emoji-regex/LICENSE-MIT.txt",
         "hash": "5ca71fcd263f1b79772f4761a4a9a7359763439c845c1fe407361219dbb3a37f"
     },
+    "error-stack-parser@2.1.4": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/stacktracejs/error-stack-parser",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/error-stack-parser/LICENSE",
+        "hash": "3f3c3d29d07f792d2ee02f5fcf04e7d2fd5fb8d55773e0d1f414df5aebe544a4"
+    },
+    "fast-deep-equal@3.1.3": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/epoberezkin/fast-deep-equal",
+        "publisher": "Evgeny Poberezkin",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fast-deep-equal/LICENSE",
+        "hash": "84c5c44e1fb060bb5ac3666cf80af351115fe882a12da43634d22836ca8e851d"
+    },
     "fast-glob@3.3.2": {
         "licenses": "MIT License",
         "repository": "https://github.com/mrmlnc/fast-glob",
@@ -1269,6 +1348,18 @@
         "url": "https://mrmlnc.com",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fast-glob/LICENSE",
         "hash": "7a23eb5ec61caea1ee931a1f625cab7eff50c98ac39f71a212cd66228ee4a20c"
+    },
+    "fast-shallow-equal@1.0.0": {
+        "licenses": "Public Domain",
+        "repository": "https://github.com/streamich/fast-shallow-equal",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fast-shallow-equal/LICENSE",
+        "hash": "d648cb208b33a6a6442867a15c83f7ef49c5b672372f8e4c0bea86c49498f479"
+    },
+    "fastest-stable-stringify@2.0.2": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/streamich/fastest-stable-stringify",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fastest-stable-stringify/LICENSE",
+        "hash": "a14d1872fc40d301f95214d9330ba1d2e17764d99f22ef495500c478afc1171a"
     },
     "fastq@1.17.1": {
         "licenses": "ISC License",
@@ -1319,6 +1410,15 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/function-bind/LICENSE",
         "hash": "2fc6470ace6883de0748241607e601ca6a40f415f2b5273b8a5ac75cef4d6284"
     },
+    "fuse.js@7.0.0": {
+        "licenses": "Apache License, Version 2.0",
+        "repository": "https://github.com/krisk/Fuse",
+        "publisher": "Kiro Risk",
+        "email": "kirollos@gmail.com",
+        "url": "http://kiro.me",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/fuse.js/LICENSE",
+        "hash": "7106d7d34e9b05e4e290578fd609fafef3cc2a9ea6e43ed3fc512a488eb63008"
+    },
     "get-nonce@1.0.1": {
         "licenses": "MIT License",
         "repository": "https://github.com/theKashey/get-nonce",
@@ -1352,6 +1452,21 @@
         "email": "ljharb@gmail.com",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/hasown/LICENSE",
         "hash": "f4d824be408a2018da26836597cb597c96344f49c11c53e1d199cb68f492174b"
+    },
+    "hyphenate-style-name@1.1.0": {
+        "licenses": "3-Clause BSD License",
+        "repository": "https://github.com/rexxars/hyphenate-style-name",
+        "publisher": "Espen Hovlandsdal",
+        "email": "espen@hovlandsdal.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/hyphenate-style-name/LICENSE",
+        "hash": "ddcb385dc3ca4b684c0426a70379359af81a17f0928abe0fe7616912a4b61dc6"
+    },
+    "inline-style-prefixer@7.0.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/robinweser/inline-style-prefixer",
+        "publisher": "Robin Weser",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/inline-style-prefixer/LICENSE",
+        "hash": "1ca17e0027b90b96a5b8908abe11c5e0be9e2c7cd0df941633f5da5599e32ead"
     },
     "intl-messageformat@10.5.14": {
         "licenses": "3-Clause BSD License",
@@ -1458,6 +1573,13 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/jpeg-js/LICENSE",
         "hash": "2bc7fed9daf253e36cc8ba317bf8216c025ab2c2fca28a4e8ab2e1c0351fb70f"
     },
+    "js-cookie@2.2.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/js-cookie/js-cookie",
+        "publisher": "Klaus Hartl",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/js-cookie/LICENSE",
+        "hash": "6a13173a31658cd744d76965069c2fe7d30e2851083997cff0c3c80a5baa882d"
+    },
     "js-sha256@0.11.0": {
         "licenses": "MIT License",
         "repository": "https://github.com/emn178/js-sha256",
@@ -1487,6 +1609,14 @@
         "email": "brian@donovans.cc",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lines-and-columns/LICENSE",
         "hash": "34bb2a58afbe358edd9d4d20d42c5e8fec1b9a07394c05a63eb21f7502e95ca3"
+    },
+    "lodash-es@4.17.21": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/lodash/lodash",
+        "publisher": "John-David Dalton",
+        "email": "john.david.dalton@gmail.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/lodash-es/LICENSE",
+        "hash": "0a63ce328b1c883b9919e9a7cc7ed6c6f502cb8202c27172f2d3530cc970c2a1"
     },
     "lodash.debounce@4.0.8": {
         "licenses": "MIT License",
@@ -1558,13 +1688,20 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/path-scurry/node_modules/lru-cache/LICENSE",
         "hash": "9872a5bb267f9a3a0a194693fd1b43bc428d9f77b12a9734045fa0964b806ea5"
     },
+    "mdn-data@2.0.14": {
+        "licenses": "CC0-1.0",
+        "repository": "https://github.com/mdn/data",
+        "publisher": "Mozilla Developer Network",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nano-css/node_modules/mdn-data/LICENSE",
+        "hash": "d43f56e42c203c2d633ac0c416550424e49ae3016b5736f5747abe264bc54e44"
+    },
     "merge2@1.4.1": {
         "licenses": "MIT License",
         "repository": "https://github.com/teambition/merge2",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/merge2/LICENSE",
         "hash": "392bd80a16859df5f31add3478a6b33db5050a6be3507bf929ab401a755c292b"
     },
-    "micromatch@4.0.7": {
+    "micromatch@4.0.8": {
         "licenses": "MIT License",
         "repository": "https://github.com/micromatch/micromatch",
         "publisher": "Jon Schlinkert",
@@ -1590,6 +1727,22 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/minipass/LICENSE",
         "hash": "d45225d2ecf644e94e81b472eb82271d91de725c51f30a289dd2131c7370f35b"
     },
+    "moji@0.5.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/niwaringo/moji",
+        "publisher": "@niwaringo",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/moji/LICENSE",
+        "hash": "6a2f7e3dbc8bff1ffea8aa5bfc04ac33fee1e8842e6139151eeb22f2d8948a79"
+    },
+    "muuri@0.9.5": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/haltu/muuri",
+        "publisher": "Niklas Rämö",
+        "email": "inramo@gmail.com",
+        "url": "https://github.com/niklasramo",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/muuri/LICENSE.md",
+        "hash": "5de71e838ece92965e8d3cc3199f08efc874da8dc1da840ab8770fc722f636ae"
+    },
     "mz@2.7.0": {
         "licenses": "MIT License",
         "repository": "https://github.com/normalize/mz",
@@ -1598,6 +1751,21 @@
         "url": "http://jongleberry.com",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/mz/LICENSE",
         "hash": "3ed0256da8da5eabae7aa1680886a2aa394dd7c002eb2f3b02e9f0f9ec9daa2c"
+    },
+    "n-gram@2.0.2": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/words/n-gram",
+        "publisher": "Titus Wormer",
+        "email": "tituswormer@gmail.com",
+        "url": "https://wooorm.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/n-gram/license",
+        "hash": "2312038e4b681b8aa2e46693ae78d5cd1d1eb4473d1c4c66fd63626de012526d"
+    },
+    "nano-css@5.6.2": {
+        "licenses": "Unlicense",
+        "repository": "https://github.com/streamich/nano-css",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nano-css/LICENSE",
+        "hash": "c4bbaadee51cf80e3a3efafb3d0ae2c9e889f23dfc6eb31200c1997ed083182a"
     },
     "nanoid@3.3.7": {
         "licenses": "MIT License",
@@ -1863,6 +2031,19 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-timer-hook/LICENSE",
         "hash": "77bcdaeea2106f22f1cf8168f8fac9262fbad3ba27e9d1b1da11a076c5355580"
     },
+    "react-universal-interface@0.6.2": {
+        "licenses": "Public Domain",
+        "repository": "https://github.com/streamich/react-universal-interface",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-universal-interface/LICENSE",
+        "hash": "a49914cc8a6ab32db1fdc07b24995b2a4408b49b9efbb09b5e35305922b30a02"
+    },
+    "react-use@17.5.1": {
+        "licenses": "Unlicense",
+        "repository": "https://github.com/streamich/react-use",
+        "publisher": "@streamich",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/react-use/LICENSE",
+        "hash": "0cc4893322ee03110fc12d9e129e924718debe20af8fb77b3085b850d4dbfde7"
+    },
     "react@18.3.1": {
         "licenses": "MIT License",
         "repository": "https://github.com/facebook/react",
@@ -1894,6 +2075,14 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/regenerator-runtime/LICENSE",
         "hash": "9260d2e6cca5e8c46d9efdc61aa1cc7f5fbf55bfa7961e8daa7eeb924e8e980a"
     },
+    "resize-observer-polyfill@1.5.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/que-etc/resize-observer-polyfill",
+        "publisher": "Denis Rul",
+        "email": "que.etc@gmail.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/resize-observer-polyfill/LICENSE",
+        "hash": "5677ffe061f45b0676c28c4984ff46e3e49f0b38b893ba97c5c66ab9b757c09e"
+    },
     "resolve@1.22.8": {
         "licenses": "MIT License",
         "repository": "https://github.com/browserify/resolve",
@@ -1911,6 +2100,15 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/reusify/LICENSE",
         "hash": "0333f0b769a6132995e92c96fb31beb2154a5d21bc97f54b8be0f15c8603b975"
     },
+    "rtl-css-js@1.16.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/kentcdodds/rtl-css-js",
+        "publisher": "Kent C. Dodds",
+        "email": "kent@doddsfamily.us",
+        "url": "http://kentcdodds.com/",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/rtl-css-js/LICENSE",
+        "hash": "787242abbb8da1be3f1f08d9bb2e5455c5fe9e00a452efe92f99f67e4775dd8f"
+    },
     "run-parallel@1.2.0": {
         "licenses": "MIT License",
         "repository": "https://github.com/feross/run-parallel",
@@ -1920,11 +2118,29 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/run-parallel/LICENSE",
         "hash": "8f342342a4004a6282fe8cdc527363709c0dfb118bf1f204ee0589f23a226d0e"
     },
+    "ruuri@2.1.0": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/vingeraycn/ruuri",
+        "publisher": "vingeraycn",
+        "email": "vingeray@gmail.com",
+        "url": "https://github.com/vingeraycn",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ruuri/LICENSE",
+        "hash": "a11b4b68ff184c85872134f96aa8ec70a0b37101f853a13f6efdbfb4dd4c7a84"
+    },
     "scheduler@0.23.2": {
         "licenses": "MIT License",
         "repository": "https://github.com/facebook/react",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scheduler/LICENSE",
         "hash": "a02ba163f3a02db22fdd14b310119f1a4c2f9e4a773a573f757904dd5433d4dd"
+    },
+    "screenfull@5.2.0": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/sindresorhus/screenfull.js",
+        "publisher": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/screenfull/license",
+        "hash": "f379ebc552edfdc8eb1bd7c20e1f657866ef4a6ecc500610b17ec60edc6e5df4"
     },
     "scroll-into-view-if-needed@3.0.10": {
         "licenses": "MIT License",
@@ -1932,6 +2148,14 @@
         "publisher": "Cody Olsen",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/scroll-into-view-if-needed/LICENSE",
         "hash": "925407b81cd2f7f0cd84907a9f1b27ac1154b04399987762d18570594f8dc39f"
+    },
+    "set-harmonic-interval@1.0.1": {
+        "licenses": "Unlicense",
+        "repository": "https://github.com/streamich/set-harmonic-interval",
+        "publisher": "streamich",
+        "url": "https://github.com/streamich",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/set-harmonic-interval/LICENSE",
+        "hash": "3bc5b9740ed599c6421f4e9c52c5672395321966cad5dafa164f3c57299277b4"
     },
     "shallowequal@1.1.0": {
         "licenses": "MIT License",
@@ -1983,6 +2207,38 @@
         "email": "v7rulnik@gmail.com",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/source-map-js/LICENSE",
         "hash": "56f37cdeb76471bacd3189d173abb4950ad00f90903d8de07b495d57050dcbf8"
+    },
+    "source-map@0.6.1": {
+        "licenses": "3-Clause BSD License",
+        "repository": "https://github.com/mozilla/source-map",
+        "publisher": "Nick Fitzgerald",
+        "email": "nfitzgerald@mozilla.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/nano-css/node_modules/source-map/LICENSE",
+        "hash": "fd2e37dce67af09e686328c4633012b79c7677a63f0d4f91fa14cc54a0c1a28b"
+    },
+    "stack-generator@2.0.10": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/stacktracejs/stack-generator",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stack-generator/LICENSE",
+        "hash": "0ebca107187c329c6f60e0ec7d03cb672d7babb0e29db08eefcdb947269f334a"
+    },
+    "stackframe@1.3.4": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/stacktracejs/stackframe",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stackframe/LICENSE",
+        "hash": "a22a20bb6dea692287a51ba739b0bcd4418ae938b606c35791b3e4bf264aed80"
+    },
+    "stacktrace-gps@3.1.2": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/stacktracejs/stacktrace-gps",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stacktrace-gps/LICENSE",
+        "hash": "8ffee3a6ca3650491d1e016f1c4528ddbe19e9b6cc004c3f3a17e9a28e9ffd2f"
+    },
+    "stacktrace-js@2.0.2": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/stacktracejs/stacktrace.js",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/stacktrace-js/LICENSE",
+        "hash": "0528aa19353dbe77fa4fb6ca367d053d19079ec98734af771cab142a8a63a09c"
     },
     "string-width@5.1.2": {
         "licenses": "MIT License",
@@ -2072,6 +2328,23 @@
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/thenify/LICENSE",
         "hash": "832da5fdb125ea7223ae612e3ae26bdfc5ca7b50909df5a023bbb89e01e1a92d"
     },
+    "throttle-debounce@3.0.1": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/niksy/throttle-debounce",
+        "publisher": "Ivan Nikolić",
+        "email": "niksy5@gmail.com",
+        "url": "http://ivannikolic.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/throttle-debounce/LICENSE.md",
+        "hash": "1c8365d2fe285f4384113f53e14dc25aba9724fac961ace18699f352bef8ab34"
+    },
+    "tiny-segmenter@0.2.0": {
+        "licenses": "MIT*",
+        "repository": "https://github.com/leungwensen/tiny-segmenter",
+        "publisher": "Taku Kudo",
+        "email": "taku@chasen.org",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tiny-segmenter/LICENSE",
+        "hash": "ddaaf6f633ebaea606e5c0e7941684b3ee2bbd30f49ea793f0776a88e465dc8e"
+    },
     "to-regex-range@5.0.1": {
         "licenses": "MIT License",
         "repository": "https://github.com/micromatch/to-regex-range",
@@ -2079,6 +2352,22 @@
         "url": "https://github.com/jonschlinkert",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/to-regex-range/LICENSE",
         "hash": "6b5479f7a510e1adf641eb71a8a81a0026753ff4ba009ea672743ce37aee1f68"
+    },
+    "toggle-selection@1.0.6": {
+        "licenses": "MIT License",
+        "repository": "https://github.com/sudodoki/toggle-selection",
+        "publisher": "sudodoki",
+        "email": "smd.deluzion@gmail.com",
+        "url": "sudodoki.name",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/toggle-selection/README.md",
+        "hash": "9ad0bcdebb4490f73e77c62eadbcf21e06569debaed9e1428393f15494178e09"
+    },
+    "ts-easing@0.2.0": {
+        "licenses": "Unlicense",
+        "repository": "https://github.com/streamich/ts-easing",
+        "publisher": "@streamich",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ts-easing/LICENSE",
+        "hash": "95af8568d193a78dd57da57433798732fc8d1451fbbf491cbe909a6ebd6528cb"
     },
     "ts-interface-checker@0.1.13": {
         "licenses": "Apache License, Version 2.0",
@@ -2093,6 +2382,15 @@
         "publisher": "Microsoft Corp.",
         "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/tslib/LICENSE.txt",
         "hash": "73d21c2a7fcc2a5741f740b9320733dfd302725b2ca4213fa919b1977e2bca59"
+    },
+    "type-fest@4.25.0": {
+        "licenses": "(MIT OR CC0-1.0)",
+        "repository": "https://github.com/sindresorhus/type-fest",
+        "publisher": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com",
+        "licenseFile": "/home/uni_kakurenbo/Web/76th_hokuryo-sai/node_modules/ruuri/node_modules/type-fest/readme.md",
+        "hash": "f8bc6415e9cefc291a0168724c309a5553b15dc06d88321a083f262191bec31c"
     },
     "ua-parser-js@1.0.38": {
         "licenses": "MIT License",
