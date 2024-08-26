@@ -99,6 +99,7 @@ body {
 }
 
 .header {
+    @apply uppercase;
     --hook: 8px;
     position: relative;
     line-height: 1.4;
