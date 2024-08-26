@@ -21,7 +21,7 @@ export function Banner({ className }: { className?: string }) {
     useEffect(() => {
         const id = setInterval(() => {
             setCount((prev) => (prev + 1) % 2);
-        }, 3600);
+        }, 4800);
 
         return () => {
             clearInterval(id);
@@ -64,40 +64,38 @@ export function Banner({ className }: { className?: string }) {
     return (
         <div className="flex justify-center">
             <div className="mt-10 max-w-md sm:px-4 xl:mt-0">
-                <ParallaxY from={200} to={-70}>
-                    <div className="flex flex-col items-center">
-                        <Image
-                            disableSkeleton
-                            isBlurred
-                            isZoomed
-                            alt="banner"
-                            className={`dark:hue-rotate-0 xs:h-[257.03px] xs:w-[432px] ${className}`}
-                            classNames={{ zoomedWrapper: "overflow-visible" }}
-                            src={getImageUrl(`banner/main.${theme}.png`)}
-                            style={{
-                                filter: `hue-rotate(${rotate}deg)`,
-                            }}
-                            onClick={() => setRotate(50)}
-                            onMouseEnter={() =>
-                                setTimerId(
-                                    window.setInterval(setRotate, 100, 1),
-                                )
-                            }
-                            onMouseLeave={() => window.clearInterval(timerId)}
-                        />
+                {/* <ParallaxY from={200} to={-70}> */}
+                <div className="flex flex-col items-center">
+                    <Image
+                        disableSkeleton
+                        isBlurred
+                        isZoomed
+                        alt="banner"
+                        className={`dark:hue-rotate-0 xs:h-[257.03px] xs:w-[432px] ${className}`}
+                        classNames={{ zoomedWrapper: "overflow-visible" }}
+                        src={getImageUrl(`banner/main.${theme}.png`)}
+                        style={{
+                            filter: `hue-rotate(${rotate}deg)`,
+                        }}
+                        onClick={() => setRotate(50)}
+                        onMouseEnter={() =>
+                            setTimerId(window.setInterval(setRotate, 100, 1))
+                        }
+                        onMouseLeave={() => window.clearInterval(timerId)}
+                    />
 
-                        <div className="relative -mt-[60px] w-full xs:-mt-[100px] xs:h-[170px] xs:w-[416px] md:-mb-[40px] xl:-mb-[40px] 2xl:-mb-[60px]">
-                            {ruby.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`absolute inset-0 z-50 ${index === count ? "transition-rotate-out" : "transition-rotate-in"} `}
-                                >
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
+                    <div className="relative -mb-[60px] -mt-[60px] h-[170px] w-full xs:-mb-[40px] xs:-mt-[100px] xs:w-[416px] 2xl:-mb-[60px]">
+                        {ruby.map((item, index) => (
+                            <div
+                                key={index}
+                                className={`absolute inset-0 z-50 ${index === count ? "transition-rotate-in" : "transition-rotate-out"} `}
+                            >
+                                {item}
+                            </div>
+                        ))}
                     </div>
-                </ParallaxY>
+                </div>
+                {/* </ParallaxY> */}
             </div>
         </div>
     );

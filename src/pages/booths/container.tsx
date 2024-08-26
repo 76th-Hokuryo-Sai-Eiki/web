@@ -5,6 +5,7 @@ import { difference } from "lodash-es";
 import { Item } from "muuri";
 import {
     Dispatch,
+    KeyboardEvent,
     Suspense,
     useCallback,
     useEffect,
@@ -257,7 +258,7 @@ export default function ShopListContainer() {
                     }
                     textValue="tools"
                     title={<h3 className="text-xl text-default-600">ツール</h3>}
-                    onKeyDown={(e) => e.stopPropagation()}
+                    onKeyDown={(e: KeyboardEvent) => e.stopPropagation()}
                 >
                     <ShopListPanel
                         selectors={selectors}
@@ -269,9 +270,9 @@ export default function ShopListContainer() {
             </Accordion>
 
             <div className="blurred-border relative border-x-1">
-                <div className="simple-scrollbar overflow-x-scroll py-5">
+                <div className="simple-scrollbar overflow-y-clip overflow-x-scroll py-5">
                     <div
-                        className={`flex ${["h-[35.5rem]", "h-[31rem]", "h-[35rem]"][Number(sizeSelector)]}`}
+                        className={`flex ${["h-[37.5rem]", "h-[31rem]", "h-[35rem]"][Number(sizeSelector)]}`}
                     >
                         <Suspense
                             fallback={

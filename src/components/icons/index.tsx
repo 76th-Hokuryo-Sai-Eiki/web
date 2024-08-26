@@ -34,6 +34,7 @@ const MODULES = {
             "FaWalking",
 
             "FaBusSimple",
+            "FaChevronDown",
             "FaCircleInfo",
             "FaFilter",
             "FaLocationDot",
@@ -78,6 +79,7 @@ export const {
     FaWalking,
 
     FaBusSimple,
+    FaChevronDown,
     FaCircleInfo,
     FaFilter,
     FaLocationDot,

@@ -60,7 +60,7 @@ export const ShopList = memo(function ShopList_({
         <DraggableGrid
             ref={ref}
             layoutOnInit
-            className="h-[35rem]"
+            className="h-full"
             data={shopData}
             dragEnabled={false}
             dragSort={false}

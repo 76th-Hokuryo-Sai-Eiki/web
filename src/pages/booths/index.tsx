@@ -24,7 +24,7 @@ export default function BoothsSection() {
             <div>
                 <h3 className="text-3xl text-default-600">スタンプラリー</h3>
 
-                <div className="indent-4 text-large text-default-600">
+                <div className="pl-4 text-large text-default-600">
                     <p>
                         文化部の出店をまわって文字を集め、クイズを完成させよう！
                     </p>

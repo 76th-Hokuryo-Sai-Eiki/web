@@ -17,12 +17,12 @@ export default function ChangeLog() {
 
     return (
         <>
-            <div className="relative inline-flex items-center">
+            <div className="relative">
                 <Button
                     disableRipple
                     isIconOnly
                     aria-label="Show changelog"
-                    className="mt-0.5 inline-flex items-center bg-inherit"
+                    className="inline-flex items-center bg-inherit"
                     radius="none"
                     onPress={onOpen}
                 >
