@@ -1,10 +1,9 @@
+import { Spacer } from "@nextui-org/spacer";
+import { Spinner } from "@nextui-org/spinner";
 import { lazy, Suspense } from "react";
 
 import SectionHeader from "@/components/section-header";
-
 import "@/styles/content.scss";
-import { Spacer } from "@nextui-org/spacer";
-import { Spinner } from "@nextui-org/spinner";
 
 const ShopListContainer = lazy(() => import("./container"));
 

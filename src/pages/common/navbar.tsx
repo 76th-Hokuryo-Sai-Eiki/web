@@ -1,4 +1,10 @@
 import {
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+} from "@nextui-org/dropdown";
+import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
@@ -7,24 +13,18 @@ import {
     NavbarMenuToggle,
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
-import {
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    DropdownTrigger,
-} from "@nextui-org/dropdown";
 import { useCallback, useState } from "react";
 
-import ChangeLog from "./change-log";
+import ChangeLog from "../change-log";
 
 import Hashlink from "@/components/hashlink";
 import { FaChevronDown, Logo } from "@/components/icons";
+import { Phrase } from "@/components/inline";
 import { OpacitySlider } from "@/components/opacity-slider";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
-import { Phrase } from "@/components/inline";
 
-export function Navbar() {
+export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleIsMenuOpen = useCallback(() => {
@@ -92,12 +92,12 @@ export function Navbar() {
                                 </NavbarItem>
 
                                 <DropdownMenu
-                                    variant="flat"
                                     aria-label="Content"
                                     className="w-30 ml-10 rounded-md bg-default-50"
                                     itemClasses={{
                                         base: "gap-4 pl-2 data-[hover=true]:bg-transparent cursor-auto",
                                     }}
+                                    variant="flat"
                                 >
                                     {item.details.map((item) => (
                                         <DropdownItem key={item.href}>

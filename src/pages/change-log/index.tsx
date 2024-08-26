@@ -1,4 +1,3 @@
-import { TbLicense } from "@/components/icons";
 import { Button } from "@nextui-org/button";
 import {
     Modal,
@@ -11,6 +10,8 @@ import {
 import { ReactNode } from "react";
 
 import data from "./data/log";
+
+import { TbLicense } from "@/components/icons";
 
 export default function ChangeLog() {
     const { isOpen, onOpen, onClose } = useDisclosure();

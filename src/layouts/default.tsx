@@ -5,8 +5,8 @@ import { Fadein } from "@/components/animations";
 import { PagePreferenceContext } from "@/context/page-preference";
 import { useOpacity } from "@/hooks/opacity";
 import Footer from "@/pages/footer";
-import { Navbar } from "@/pages/navbar";
 
+const Navbar = lazy(() => import("@/pages/common/navbar"));
 const Background = lazy(() => import("./internal/background"));
 
 export default function DefaultLayout({ children }: { children: ReactNode }) {
@@ -32,7 +32,9 @@ export default function DefaultLayout({ children }: { children: ReactNode }) {
                     ref={containerRef}
                     className="relative flex h-fit flex-col"
                 >
-                    <Navbar />
+                    <Suspense>
+                        <Navbar />
+                    </Suspense>
 
                     <header id="#head" />
 

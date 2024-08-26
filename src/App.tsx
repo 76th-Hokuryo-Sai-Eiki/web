@@ -8,7 +8,7 @@ import { ThemeContext } from "@/context/theme";
 import isCrawler from "@/functions/is-crawler";
 import { useLoadingConfig } from "@/hooks/loading-screen";
 import { useTheme } from "@/hooks/theme";
-import LoadingScreen from "@/pages/loading";
+import LoadingScreen from "@/pages/common/loading";
 
 const IndexPage = lazy(() => import("@/pages"));
 
