@@ -1,4 +1,5 @@
 import { Image } from "@nextui-org/image";
+import { Spacer } from "@nextui-org/spacer";
 import { useContext, useEffect, useMemo, useReducer, useState } from "react";
 
 import { ThemeContext } from "@/context/theme";
@@ -19,7 +20,7 @@ export function Banner({ className }: { className?: string }) {
     useEffect(() => {
         const id = setInterval(() => {
             setCount((prev) => (prev + 1) % 2);
-        }, 4800);
+        }, 2400);
 
         return () => {
             clearInterval(id);
@@ -29,18 +30,13 @@ export function Banner({ className }: { className?: string }) {
     const ruby = useMemo(
         () =>
             [0, 1].map((id) => (
-                <div
-                    key={id}
-                    style={{
-                        clipPath: "inset(30% 0px 10px 0px)",
-                    }}
-                >
+                <div key={id}>
                     <Image
                         disableSkeleton
                         isBlurred
                         isZoomed
-                        alt="wakuwaku/futsuyo"
-                        className={`dark:hue-rotate-0 ${className}`}
+                        alt={["wakuwaku", "futsuyo"][id]}
+                        className={className}
                         classNames={{
                             zoomedWrapper: "overflow-visible",
                         }}
@@ -61,16 +57,20 @@ export function Banner({ className }: { className?: string }) {
 
     return (
         <div className="flex justify-center">
-            <div className="mt-10 max-w-md sm:px-4 xl:mt-0">
+            <div className="mt-16 max-w-md sm:px-4">
                 {/* <ParallaxY from={200} to={-70}> */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center px-2">
                     <Image
                         disableSkeleton
                         isBlurred
                         isZoomed
                         alt="banner"
-                        className={`dark:hue-rotate-0 xs:h-[257.03px] xs:w-[432px] ${className}`}
-                        classNames={{ zoomedWrapper: "overflow-visible" }}
+                        className={className}
+                        classNames={{
+                            zoomedWrapper: "overflow-visible ",
+                            blurredImg: "px-4",
+                            img: "px-4",
+                        }}
                         src={getImageUrl(`banner/main.${theme}.png`)}
                         style={{
                             filter: `hue-rotate(${rotate}deg)`,
@@ -82,11 +82,13 @@ export function Banner({ className }: { className?: string }) {
                         onMouseLeave={() => window.clearInterval(timerId)}
                     />
 
-                    <div className="relative -mb-[60px] -mt-[60px] h-[170px] w-full xs:-mb-[40px] xs:-mt-[100px] xs:w-[416px] 2xl:-mb-[60px]">
+                    <Spacer y={3} />
+
+                    <div className="relative h-14 w-full">
                         {ruby.map((item, index) => (
                             <div
                                 key={index}
-                                className={`absolute inset-0 z-50 ${index === count ? "transition-rotate-in" : "transition-rotate-out"} `}
+                                className={`absolute inset-0 z-50 max-w-[416px] ${index === count ? "transition-rotate-in" : "transition-rotate-out"} `}
                             >
                                 {item}
                             </div>

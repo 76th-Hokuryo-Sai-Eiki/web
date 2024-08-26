@@ -67,6 +67,9 @@ export function ShopCard({
                                     alt="test"
                                     className={`float-start contrast-[160%]`}
                                     src={posterURL}
+                                    style={{
+                                        clipPath: "inset(0.5%)",
+                                    }}
                                 />
                             </div>
                         )}
