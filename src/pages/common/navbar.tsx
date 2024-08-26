@@ -43,26 +43,24 @@ export default function Navbar() {
             position="sticky"
             onMenuOpenChange={toggleIsMenuOpen}
         >
-            <NavbarContent className="max-w-min" justify="start">
-                <NavbarBrand className="min-w-max max-w-fit gap-3">
-                    <Hashlink
-                        className="flex items-center justify-start gap-1"
-                        color="foreground"
-                        to="#head"
-                        onClick={setMenuClosed}
-                    >
-                        <Logo />
-                    </Hashlink>
-                </NavbarBrand>
-            </NavbarContent>
+            <NavbarBrand className="min-w-max max-w-fit gap-3">
+                <Hashlink
+                    className="flex items-center justify-start gap-1"
+                    color="foreground"
+                    to="#head"
+                    onClick={setMenuClosed}
+                >
+                    <Logo />
+                </Hashlink>
+            </NavbarBrand>
 
             <NavbarContent
                 className="ml-2 hidden justify-start gap-6 lg:flex"
                 justify="start"
             >
-                {siteConfig.navItems.map((item) => (
-                    <NavbarItem key={item.href}>
-                        {typeof item.href === "string" ? (
+                {siteConfig.navItems.map((item) =>
+                    typeof item.href === "string" ? (
+                        <NavbarItem key={item.label}>
                             <Hashlink color="foreground" to={item.href}>
                                 <span
                                     className="hashlink"
@@ -73,54 +71,60 @@ export default function Navbar() {
                                     {item.label}
                                 </span>
                             </Hashlink>
-                        ) : (
-                            <Dropdown className="bg-transparent shadow-none">
-                                <NavbarItem>
-                                    <DropdownTrigger>
-                                        <span
-                                            className="cursor-pointer bg-transparent p-0 text-medium data-[hover=true]:bg-transparent"
-                                            style={{ fontFamily: "Kode Mono" }}
-                                        >
-                                            <span className="hashlink inline-block">
-                                                {item.label}
-                                                <Phrase className="ml-2">
-                                                    <FaChevronDown size={12} />
-                                                </Phrase>
-                                            </span>
+                        </NavbarItem>
+                    ) : (
+                        <Dropdown
+                            key={item.label}
+                            className="bg-transparent shadow-none"
+                        >
+                            <NavbarItem>
+                                <DropdownTrigger>
+                                    <span
+                                        className="cursor-pointer bg-transparent p-0 text-medium data-[hover=true]:bg-transparent"
+                                        role="button"
+                                        style={{ fontFamily: "Kode Mono" }}
+                                    >
+                                        <span className="hashlink inline-block">
+                                            {item.label}
+                                            <Phrase className="ml-2">
+                                                <FaChevronDown size={12} />
+                                            </Phrase>
                                         </span>
-                                    </DropdownTrigger>
-                                </NavbarItem>
+                                    </span>
+                                </DropdownTrigger>
+                            </NavbarItem>
 
-                                <DropdownMenu
-                                    aria-label="Content"
-                                    className="w-30 ml-10 rounded-md bg-default-50"
-                                    itemClasses={{
-                                        base: "gap-4 pl-2 data-[hover=true]:bg-transparent cursor-auto",
-                                    }}
-                                    variant="flat"
-                                >
-                                    {item.details.map((item) => (
-                                        <DropdownItem key={item.href}>
-                                            <Hashlink
-                                                color="foreground"
-                                                to={item.href}
+                            <DropdownMenu
+                                className="w-30 ml-10 rounded-md bg-default-50"
+                                itemClasses={{
+                                    base: "gap-4 pl-2 data-[hover=true]:bg-transparent cursor-auto",
+                                }}
+                                variant="flat"
+                            >
+                                {item.details.map((item) => (
+                                    <DropdownItem
+                                        key={item.label}
+                                        textValue={item.label}
+                                    >
+                                        <Hashlink
+                                            color="foreground"
+                                            to={item.href}
+                                        >
+                                            <span
+                                                className="hashlink w-fit"
+                                                style={{
+                                                    fontFamily: "Kode Mono",
+                                                }}
                                             >
-                                                <span
-                                                    className="hashlink w-fit"
-                                                    style={{
-                                                        fontFamily: "Kode Mono",
-                                                    }}
-                                                >
-                                                    {item.label}
-                                                </span>
-                                            </Hashlink>
-                                        </DropdownItem>
-                                    ))}
-                                </DropdownMenu>
-                            </Dropdown>
-                        )}
-                    </NavbarItem>
-                ))}
+                                                {item.label}
+                                            </span>
+                                        </Hashlink>
+                                    </DropdownItem>
+                                ))}
+                            </DropdownMenu>
+                        </Dropdown>
+                    ),
+                )}
             </NavbarContent>
 
             <NavbarContent
@@ -166,12 +170,9 @@ export default function Navbar() {
                     <OpacitySlider className="block xs:hidden" />
                 </NavbarMenuItem>
 
-                {siteConfig.navItems.map((item, index) =>
+                {siteConfig.navItems.map((item) =>
                     typeof item.href === "string" ? (
-                        <NavbarMenuItem
-                            key={`${item}-${index}`}
-                            className="ml-4 mt-1"
-                        >
+                        <NavbarMenuItem key={item.label} className="ml-4 mt-1">
                             <Hashlink
                                 color="foreground"
                                 to={item.href}
@@ -188,7 +189,7 @@ export default function Navbar() {
                     ) : (
                         item.details.map((item) => (
                             <NavbarMenuItem
-                                key={`${item}-${index}`}
+                                key={item.label}
                                 className="ml-4 mt-1"
                             >
                                 <Hashlink
