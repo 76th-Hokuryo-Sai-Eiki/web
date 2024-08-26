@@ -77,7 +77,7 @@ export function ShopListPanel({
                         <Checkbox value="1f">本棟1階</Checkbox>
                         <Checkbox value="2f">本棟2階</Checkbox>
                         <Checkbox value="3f">本棟3階</Checkbox>
-                        <Checkbox value="outdoor">外</Checkbox>
+                        <Checkbox value="outdoor">屋外</Checkbox>
                         <Checkbox value="">その他</Checkbox>
                         <Divider />
                         <Checkbox value="all">全て</Checkbox>
