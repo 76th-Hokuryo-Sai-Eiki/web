@@ -46,8 +46,18 @@ export const siteConfig = {
             href: "#info",
         },
         {
-            label: "Booths",
-            href: "#booths",
+            label: "Content",
+            details: [
+                {
+                    label: "Messages",
+                    href: "#messages",
+                },
+                {
+                    label: "Booths",
+                    href: "#booths",
+                },
+                { label: "Goods", href: "#goods" },
+            ],
         },
         {
             label: "Credits",

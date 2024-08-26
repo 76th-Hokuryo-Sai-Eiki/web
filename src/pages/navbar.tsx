@@ -7,15 +7,22 @@ import {
     NavbarMenuToggle,
     Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
+import {
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+} from "@nextui-org/dropdown";
 import { useCallback, useState } from "react";
 
 import ChangeLog from "./change-log";
 
 import Hashlink from "@/components/hashlink";
-import { Logo } from "@/components/icons";
+import { FaChevronDown, Logo } from "@/components/icons";
 import { OpacitySlider } from "@/components/opacity-slider";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
+import { Phrase } from "@/components/inline";
 
 export function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,27 +35,6 @@ export function Navbar() {
         setIsMenuOpen(false);
     }, [setIsMenuOpen]);
 
-    // const searchInput = (
-    //     <Input
-    //         aria-label="Search"
-    //         classNames={{
-    //             inputWrapper: "bg-default-100",
-    //             input: "text-sm",
-    //         }}
-    //         endContent={
-    //             <Kbd className="hidden lg:inline-block" keys={["command"]}>
-    //                 K
-    //             </Kbd>
-    //         }
-    //         labelPlacement="outside"
-    //         placeholder="Search..."
-    //         startContent={
-    //             <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-    //         }
-    //         type="search"
-    //     />
-    // );
-
     return (
         <NextUINavbar
             height={`${siteConfig.navbarHeight}px`}
@@ -57,88 +43,120 @@ export function Navbar() {
             position="sticky"
             onMenuOpenChange={toggleIsMenuOpen}
         >
-            <NavbarBrand className="min-w-max max-w-fit gap-3">
-                <Hashlink
-                    className="flex items-center justify-start gap-1"
-                    color="foreground"
-                    to="#head"
-                    onClick={setMenuClosed}
-                >
-                    <Logo />
-                </Hashlink>
-            </NavbarBrand>
+            <NavbarContent className="max-w-min" justify="start">
+                <NavbarBrand className="min-w-max max-w-fit gap-3">
+                    <Hashlink
+                        className="flex items-center justify-start gap-1"
+                        color="foreground"
+                        to="#head"
+                        onClick={setMenuClosed}
+                    >
+                        <Logo />
+                    </Hashlink>
+                </NavbarBrand>
+            </NavbarContent>
 
             <NavbarContent
-                className="ml-2 hidden basis-1/6 justify-start gap-6 sm:basis-full md:flex"
+                className="ml-2 hidden justify-start gap-6 lg:flex"
                 justify="start"
             >
                 {siteConfig.navItems.map((item) => (
                     <NavbarItem key={item.href}>
-                        <Hashlink color="foreground" to={item.href}>
-                            <span
-                                className="hashlink"
-                                style={{
-                                    fontFamily: "Kode Mono",
-                                }}
-                            >
-                                {item.label}
-                            </span>
-                        </Hashlink>
+                        {typeof item.href === "string" ? (
+                            <Hashlink color="foreground" to={item.href}>
+                                <span
+                                    className="hashlink"
+                                    style={{
+                                        fontFamily: "Kode Mono",
+                                    }}
+                                >
+                                    {item.label}
+                                </span>
+                            </Hashlink>
+                        ) : (
+                            <Dropdown className="bg-transparent shadow-none">
+                                <NavbarItem>
+                                    <DropdownTrigger>
+                                        <span
+                                            className="cursor-pointer bg-transparent p-0 text-medium data-[hover=true]:bg-transparent"
+                                            style={{ fontFamily: "Kode Mono" }}
+                                        >
+                                            <span className="hashlink inline-block">
+                                                {item.label}
+                                                <Phrase className="ml-2">
+                                                    <FaChevronDown size={12} />
+                                                </Phrase>
+                                            </span>
+                                        </span>
+                                    </DropdownTrigger>
+                                </NavbarItem>
+
+                                <DropdownMenu
+                                    variant="flat"
+                                    aria-label="Content"
+                                    className="w-30 ml-10 rounded-md bg-default-50"
+                                    itemClasses={{
+                                        base: "gap-4 pl-2 data-[hover=true]:bg-transparent cursor-auto",
+                                    }}
+                                >
+                                    {item.details.map((item) => (
+                                        <DropdownItem key={item.href}>
+                                            <Hashlink
+                                                color="foreground"
+                                                to={item.href}
+                                            >
+                                                <span
+                                                    className="hashlink w-fit"
+                                                    style={{
+                                                        fontFamily: "Kode Mono",
+                                                    }}
+                                                >
+                                                    {item.label}
+                                                </span>
+                                            </Hashlink>
+                                        </DropdownItem>
+                                    ))}
+                                </DropdownMenu>
+                            </Dropdown>
+                        )}
                     </NavbarItem>
                 ))}
             </NavbarContent>
 
             <NavbarContent
-                className="hidden basis-1/5 md:flex md:basis-full"
+                className="hidden basis-1/5 lg:flex lg:basis-full"
                 justify="end"
             >
-                <NavbarItem className="hidden gap-2 md:flex">
+                <NavbarItem>
                     <ChangeLog />
-                    <ThemeSwitch />
-                    <OpacitySlider />
-                    {/* <Link isExternal href={siteConfig.links.discord}>
-                        <DiscordIcon className="text-default-500" />
-                    </Link> */}
-                    {/* <Link isExternal href={siteConfig.links.github}>
-                        <FaGithub className="text-default-500" size={22} />
-                    </Link> */}
                 </NavbarItem>
-                {/* <NavbarItem className="hidden lg:flex">
-                    {searchInput}
-                </NavbarItem> */}
-                {/* <NavbarItem className="hidden md:flex">
-                    <Button
-                        isExternal
-                        as={Link}
-                        className="text-sm font-normal text-default-600 bg-default-100"
-                        href={siteConfig.links.sponsor}
-                        startContent={
-                            <HeartFilledIcon className="text-danger" />
-                        }
-                        variant="flat"
-                    >
-                        Sponsor
-                    </Button>
-                </NavbarItem> */}
+
+                <NavbarItem className="h-full">
+                    <ThemeSwitch className="h-full" />
+                </NavbarItem>
+
+                <NavbarItem>
+                    <OpacitySlider />
+                </NavbarItem>
             </NavbarContent>
 
             <NavbarContent
-                className="basis-1 gap-2 pl-4 md:hidden"
+                className="basis-1 gap-2 pl-4 lg:hidden"
                 justify="end"
             >
                 <NavbarItem>
                     <ChangeLog />
                 </NavbarItem>
 
-                <NavbarItem>
-                    <ThemeSwitch />
+                <NavbarItem className="h-full">
+                    <ThemeSwitch className="h-full" />
                 </NavbarItem>
 
                 <NavbarItem>
                     <OpacitySlider className="hidden xs:block" />
                 </NavbarItem>
 
-                <NavbarItem>
+                <NavbarItem className="h-full">
                     <NavbarMenuToggle />
                 </NavbarItem>
             </NavbarContent>
@@ -147,26 +165,48 @@ export function Navbar() {
                 <NavbarMenuItem key="opacity-slider" className="mb-1 ml-2 mt-2">
                     <OpacitySlider className="block xs:hidden" />
                 </NavbarMenuItem>
-                {/* {searchInput} */}
-                {siteConfig.navItems.map((item, index) => (
-                    <NavbarMenuItem
-                        key={`${item}-${index}`}
-                        className="ml-4 mt-1"
-                    >
-                        <Hashlink
-                            color="foreground"
-                            to={item.href}
-                            onClick={setMenuClosed}
+
+                {siteConfig.navItems.map((item, index) =>
+                    typeof item.href === "string" ? (
+                        <NavbarMenuItem
+                            key={`${item}-${index}`}
+                            className="ml-4 mt-1"
                         >
-                            <span
-                                className="hashlink"
-                                style={{ fontFamily: "Kode Mono" }}
+                            <Hashlink
+                                color="foreground"
+                                to={item.href}
+                                onClick={setMenuClosed}
                             >
-                                {item.label}
-                            </span>
-                        </Hashlink>
-                    </NavbarMenuItem>
-                ))}
+                                <span
+                                    className="hashlink"
+                                    style={{ fontFamily: "Kode Mono" }}
+                                >
+                                    {item.label}
+                                </span>
+                            </Hashlink>
+                        </NavbarMenuItem>
+                    ) : (
+                        item.details.map((item) => (
+                            <NavbarMenuItem
+                                key={`${item}-${index}`}
+                                className="ml-4 mt-1"
+                            >
+                                <Hashlink
+                                    color="foreground"
+                                    to={item.href}
+                                    onClick={setMenuClosed}
+                                >
+                                    <span
+                                        className="hashlink"
+                                        style={{ fontFamily: "Kode Mono" }}
+                                    >
+                                        {item.label}
+                                    </span>
+                                </Hashlink>
+                            </NavbarMenuItem>
+                        ))
+                    ),
+                )}
             </NavbarMenu>
         </NextUINavbar>
     );

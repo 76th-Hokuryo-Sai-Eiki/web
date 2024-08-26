@@ -121,7 +121,6 @@ body {
     &:before {
         border-left: solid 1px var(--color);
         border-top: solid 1px var(--color);
-        /* border-bottom: solid 1px var(--color); */
         left: 0;
     }
     &:after {
@@ -150,7 +149,7 @@ body {
 .hashlink {
     @extend .header;
     line-height: 1.1;
-    padding: 2px 5px;
+    padding: 2px 5px 1px 5px;
     --hook: 6px;
 }
 

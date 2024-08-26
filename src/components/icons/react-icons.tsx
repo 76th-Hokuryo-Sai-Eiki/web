@@ -13,6 +13,7 @@ export {
 export {
     FaBusSimple,
     FaCircleInfo,
+    FaChevronDown,
     FaFilter,
     FaLocationDot,
     FaRegCircleQuestion,

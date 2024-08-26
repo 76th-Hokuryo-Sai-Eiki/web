@@ -75,7 +75,7 @@ export function ShopCard({
             </Modal>
 
             <Card
-                className={`card-base ${["h-[17rem]", "h-[30rem]", "h-[34rem]"][size]} ${["w-64", "w-52", "w-72"][size]} py-2`}
+                className={`card-base ${["h-[18rem]", "h-[30rem]", "h-[34rem]"][size]} ${["w-64", "w-52", "w-72"][size]} py-2`}
             >
                 <CardHeader
                     className={`flex-col items-start ${["px-4", "px-3", "px-4"][size]} py-2`}
