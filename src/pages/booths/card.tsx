@@ -185,7 +185,10 @@ export function ShopCard({
                     <>
                         <Divider />
 
-                        <CardFooter className="flex-grow items-start">
+                        <CardFooter
+                            className="flex-grow items-start"
+                            onClick={onOpen}
+                        >
                             <FadeinSlide distance={20} duration={0.4}>
                                 <div
                                     className={`w-full ${["", "text-small", "text-medium"][size]}`}
