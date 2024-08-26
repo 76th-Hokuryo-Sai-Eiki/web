@@ -7,8 +7,8 @@ import SectionHeader from "@/components/section-header";
 export default function MessagesSection() {
     return (
         <div>
-            <SectionHeader hashlink="#message">
-                <h2>Message</h2>
+            <SectionHeader hashlink="#messages">
+                <h2>Messages</h2>
             </SectionHeader>
 
             <div className="w-ful mt-5 grid grid-rows-2 gap-4 lg:grid-cols-2 lg:grid-rows-1">

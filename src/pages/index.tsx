@@ -6,7 +6,7 @@ import BoothsSection from "./booths";
 import Theme from "./common/theme";
 import GoodsSection from "./goods";
 import InfoSection from "./info";
-import MessagesSection from "./message";
+import MessagesSection from "./messages";
 import NewsSection from "./news";
 import Title from "./title";
 
