@@ -15,7 +15,8 @@
         "test:firefox": "playwright test --headed --browser=firefox",
         "test:safari": "playwright test --headed --browser=webkit",
         "licenses": "node license-list.js",
-        "release": "rm -rf dist && run-p 'build relative' 'build path-root' 'build domain-root'"
+        "release*": "rm -rf dist && run-p 'build relative' 'build path-root' 'build domain-root'",
+        "release": "npm run build relative"
     },
     "dependencies": {
         "@discordjs/collection": "^2.1.0",

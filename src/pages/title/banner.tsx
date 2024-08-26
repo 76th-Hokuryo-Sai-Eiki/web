@@ -1,8 +1,6 @@
 import { Image } from "@nextui-org/image";
 import { useContext, useEffect, useMemo, useReducer, useState } from "react";
 
-import { ParallaxY } from "../../components/parallax";
-
 import { ThemeContext } from "@/context/theme";
 import { getImageUrl, randomRange } from "@/functions/utility";
 

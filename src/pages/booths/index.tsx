@@ -22,15 +22,15 @@ export default function BoothsSection() {
             <Spacer y={10} />
 
             <div>
-                <h3 className="text-3xl text-default-600">スタンプラリー</h3>
+                <h3 className="text-3xl text-default-600">ワードラリー</h3>
 
                 <div className="pl-4 text-large text-default-600">
                     <p>
                         文化部の出店をまわって文字を集め、クイズを完成させよう！
+                        <br />
+                        完成したクイズに答えて、数量限定の景品をゲット！
                     </p>
-                    <p>
-                        完成したクイズに答えて、記念品売り場で数量限定の景品をゲット！
-                    </p>
+                    <small className="ml-4">※本校生徒は参加できません。</small>
                 </div>
             </div>
         </div>

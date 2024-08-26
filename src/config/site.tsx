@@ -49,6 +49,10 @@ export const siteConfig = {
             label: "Content",
             details: [
                 {
+                    label: "Messages",
+                    href: "#messages",
+                },
+                {
                     label: "Booths",
                     href: "#booths",
                 },

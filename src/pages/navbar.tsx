@@ -22,7 +22,6 @@ import { FaChevronDown, Logo } from "@/components/icons";
 import { OpacitySlider } from "@/components/opacity-slider";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
-import { Button } from "@nextui-org/button";
 import { Phrase } from "@/components/inline";
 
 export function Navbar() {
@@ -79,7 +78,7 @@ export function Navbar() {
                                 <NavbarItem>
                                     <DropdownTrigger>
                                         <span
-                                            className="bg-transparent p-0 text-medium data-[hover=true]:bg-transparent"
+                                            className="cursor-pointer bg-transparent p-0 text-medium data-[hover=true]:bg-transparent"
                                             style={{ fontFamily: "Kode Mono" }}
                                         >
                                             <span className="hashlink inline-block">
@@ -93,11 +92,11 @@ export function Navbar() {
                                 </NavbarItem>
 
                                 <DropdownMenu
-                                    variant="shadow "
+                                    variant="flat"
                                     aria-label="Content"
                                     className="w-30 ml-10 rounded-md bg-default-50"
                                     itemClasses={{
-                                        base: "gap-4 ml-2",
+                                        base: "gap-4 pl-2 data-[hover=true]:bg-transparent cursor-auto",
                                     }}
                                 >
                                     {item.details.map((item) => (

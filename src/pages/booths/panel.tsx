@@ -58,7 +58,7 @@ export function ShopListPanel({
                     <CheckboxGroup
                         label="ORGANIZATION"
                         {...selectors.organization}
-                        className="w-max lg:col-start-1 lg:row-start-1"
+                        className="w-32 lg:col-start-1 lg:row-start-1"
                     >
                         <Checkbox value="1st">1年生</Checkbox>
                         <Checkbox value="2nd">2年生</Checkbox>
@@ -70,7 +70,7 @@ export function ShopListPanel({
                     </CheckboxGroup>
 
                     <CheckboxGroup
-                        className="w-max lg:col-start-2 lg:row-start-1"
+                        className="w-32 lg:col-start-2 lg:row-start-1"
                         label="LOCATION"
                         {...selectors.locations}
                     >
@@ -95,7 +95,7 @@ export function ShopListPanel({
 
                     <div className="flex flex-row items-start gap-4">
                         <RadioGroup
-                            className="w-max"
+                            className="w-32"
                             label="SORT"
                             {...selectors.order}
                         >
@@ -105,7 +105,7 @@ export function ShopListPanel({
                             <Radio value="search">検索一致順</Radio>
                         </RadioGroup>
 
-                        <div>
+                        <div className="w-32">
                             <p className="text-default-500">REVERSE</p>
                             <Spacer y={2} />
                             <Switch {...selectors.reverse} size="sm">
