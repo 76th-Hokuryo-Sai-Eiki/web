@@ -7,13 +7,13 @@ import { getImageUrl } from "@/functions/utility";
 export default function GoodsSection() {
     return (
         <div className="m-2">
-            <SectionHeader hashlink="#booths">
+            <SectionHeader hashlink="#goods">
                 <h2>Goods</h2>
             </SectionHeader>
 
             <div className="grid max-w-[50rem] grid-cols-2 gap-4 [grid-template-rows:fit-content_fit-content]">
                 <div className="col-start-1 row-start-1 flex-col items-center justify-center">
-                    <Image alt="fan" src={getImageUrl("/goods/0000.jpg")} />
+                    <Image alt="fan" src={getImageUrl("/goods/0000.png")} />
                     <p className="w-full text-center text-large">
                         <Phrase className="mx-1">うちわ</Phrase>
                         <Phrase className="mx-1">¥100</Phrase>
@@ -26,7 +26,7 @@ export default function GoodsSection() {
                     />
                     <p className="w-full text-center text-large">
                         <Phrase className="mx-1">クリアファイル</Phrase>
-                        <Phrase className="mx-1">¥500</Phrase>
+                        <Phrase className="mx-1">¥200</Phrase>
                     </p>
                 </div>
                 <div className="col-start-1 row-start-2 flex flex-col items-center justify-center">

@@ -23,7 +23,7 @@ export function ShopListPanel({
     setSearchQuery: Dispatch<string>;
 }) {
     return (
-        <section className="flex flex-row flex-wrap pb-2">
+        <section className=" flex flex-row flex-wrap pb-2">
             <div className="w-[50%] flex-grow bg-transparent px-4 pb-3">
                 <div>
                     <h4 className="text-2xl">絞り込み</h4>
@@ -70,7 +70,7 @@ export function ShopListPanel({
                     </CheckboxGroup>
 
                     <CheckboxGroup
-                        className="w-32 lg:col-start-2 lg:row-start-1"
+                        className="w-24 lg:col-start-2 lg:row-start-1"
                         label="LOCATION"
                         {...selectors.locations}
                     >
@@ -95,7 +95,7 @@ export function ShopListPanel({
 
                     <div className="flex flex-row items-start gap-4">
                         <RadioGroup
-                            className="w-32"
+                            className="w-28"
                             label="SORT"
                             {...selectors.order}
                         >
@@ -105,7 +105,7 @@ export function ShopListPanel({
                             <Radio value="search">検索一致順</Radio>
                         </RadioGroup>
 
-                        <div className="w-32">
+                        <div className="w-20">
                             <p className="text-default-500">REVERSE</p>
                             <Spacer y={2} />
                             <Switch {...selectors.reverse} size="sm">

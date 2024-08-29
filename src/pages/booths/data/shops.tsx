@@ -94,7 +94,7 @@ export default [
         id: 9,
         name: "茶処壹岐休め (息休)",
         organization: "1-8",
-        locations: ["3F 3-8"],
+        locations: ["1F 1-8"],
         description: (
             <p>
                 団子、どら焼き、金平糖…だけじゃない！ ？

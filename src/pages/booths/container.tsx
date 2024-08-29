@@ -249,10 +249,13 @@ export default function ShopListContainer() {
                         : []
                 }
                 variant="shadow"
+                className="card-base"
             >
                 <AccordionItem
                     key="0"
-                    classNames={{ content: "py-0" }}
+                    classNames={{
+                        content: "py-0",
+                    }}
                     startContent={
                         <FaFilter className="text-default-500" size={18} />
                     }
